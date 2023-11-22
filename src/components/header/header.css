@@ -53,9 +53,6 @@
     color: var(--title-color-dark);
 }
 
-
-/* BREAKPOINTS!! */
-
 @media screen and (max-width:768px) {
     .header {
         top: initial;

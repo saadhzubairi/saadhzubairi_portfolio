@@ -1,0 +1,32 @@
+[
+    {
+        "image": "https://camo.githubusercontent.com/dc9e7e657b4cd5ba7d819d1a9ce61434bd0ddbb94287d7476b186bd783b62279/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e2f69636f6e732f6769742f6769742d6f726967696e616c2e737667",
+        "name": "Git",
+        "diff": "Proficient"
+    },
+    {
+        "image": "https://camo.githubusercontent.com/cdd289ae72f33665800bc6a63936d5afa0454214d520945780894151112a055f/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e2f69636f6e732f6669676d612f6669676d612d6f726967696e616c2e737667",
+        "name": "Figma",
+        "diff": "Proficient"
+    },
+    {
+        "image": "https://camo.githubusercontent.com/5fa137d222dde7b69acd22c6572a065ce3656e6ffa1f5e88c1b5c7a935af3cc6/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e2f69636f6e732f7673636f64652f7673636f64652d6f726967696e616c2e737667",
+        "name": "VSCode",
+        "diff": "Advanced"
+    },
+    {
+        "image": "https://camo.githubusercontent.com/21a3b356c5e7cd3375e855ff162adc60bfbf7981e9c5b159afecc2bd416ab745/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e2f69636f6e732f70686f746f73686f702f70686f746f73686f702d6c696e652e737667",
+        "name": "Photoshop",
+        "diff": "Advanced"
+    },
+    {
+        "image": "https://th.bing.com/th/id/R.d2f22180a270af1783240cf4b0dba345?rik=I8J0bnpWHDyDRg&pid=ImgRaw&r=0",
+        "name": "CLion",
+        "diff": "Proficient"
+    },
+    {
+        "image": "https://th.bing.com/th/id/R.98865e06d77faca32b3e118df119049e?rik=AU0%2bE0ROLAbnog&riu=http%3a%2f%2flogonoid.com%2fimages%2fintellij-idea-logo.png&ehk=CapqYnZAeX0cbsUWxFNWr913YwdQDC7OFt%2ftIAEb%2fBU%3d&risl=&pid=ImgRaw&r=0",
+        "name": "IntelliJ",
+        "diff": "Proficient"
+    }
+]

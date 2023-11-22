@@ -23,5 +23,10 @@
     "name": ".NET Core",
     "image": "https://th.bing.com/th/id/R.da33983229bb45d7b2196257bb8754db?rik=2Li9NiRNjUGrAQ&pid=ImgRaw&r=0",
     "diff": "Beginner"
+  },
+  {
+    "name": "SDL 2.0",
+    "image": "https://th.bing.com/th/id/R.de39ae6fe2d66fecf63ef09b9b53cb32?rik=3IDAKNU6GqYefQ&pid=ImgRaw&r=0",
+    "diff": "Profficient"
   }
 ]

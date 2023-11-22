@@ -1,0 +1,34 @@
+[
+  {
+    "img": "https://img.icons8.com/fluency/48/multiple-smartphones.png",
+    "name": "Mobile App Dev"
+  },
+  {
+    "img": "https://img.icons8.com/fluency/48/multiple-devices.png",
+    "name": "Web App Dev"
+  },
+  {
+    "img": "https://img.icons8.com/3d-fluency/94/robot.png",
+    "name": "Automation"
+  },
+  {
+    "img": "https://img.icons8.com/3d-fluency/94/controller.png",
+    "name": "Game Dev"
+  },
+  {
+    "img": "https://img.icons8.com/3d-fluency/94/fantasy.png",
+    "name": "UI/UX Design"
+  },
+  {
+    "img": "https://img.icons8.com/3d-fluency/94/mind-map.png",
+    "name": "AI/ML and NLP"
+  },
+  {
+    "img": "https://img.icons8.com/3d-fluency/94/design.png",
+    "name": "Graphic Design"
+  },
+  {
+    "img": "https://img.icons8.com/3d-fluency/94/camera.png",
+    "name": "Photography"
+  }
+]

@@ -1,5 +1,12 @@
+.skills{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
 .skills__container {
-    grid-template-columns: repeat(2, 400px);
+    grid-template-columns: repeat(2, 500px);
     column-gap: 3rem;
     justify-content: center;
 }
@@ -91,7 +98,6 @@
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
     /* Adjust the gap according to your preference */
 }
 
@@ -100,28 +106,28 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    border: #e1e1e1 solid 1px;
+    padding: 0.25rem;
+    padding-top: 1rem;
+    margin: 0.25rem;
+    background: white;
+    border-radius: 1rem;
 }
 
 .skill__icon {
-    width: 5rem;
-    /* Adjust the width of the image */
-    height: 5rem;
-    /* Adjust the height of the image */
+    width: 3rem;
+    height: 3rem;
     object-fit: cover;
-    /* Maintain aspect ratio of the image */
-    border-radius: 1rem;
-    /* For a circular image, adjust as needed */
-    margin-bottom: 10px;
-    /* Adjust the margin as needed */
+    border-radius: 0.5rem;
 }
 
-.skills_name {
-    margin: 5px 0;
+.skills__name__and__level {
+    margin: 1rem 0.5rem;
 }
 
 .skills__level {
     color: #555;
-    /* Adjust text color as needed */
+    font-size: 0.75rem;
 }
 
 .skills__heading {
@@ -141,9 +147,75 @@
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 
-@media screen and (max-width:768px) {
+.services__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin: 2rem 2rem;
+    width: 90vw;
+    max-width: 65.5rem;
+    background: #f4f4f4;
+    border: solid rgb(218, 218, 218) 1px;
+    border-radius: 1rem;
+    padding: 2rem 0.5rem;
+    flex-wrap: wrap;
+    
+}
+
+.skillls__service {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 5rem;
+}
+
+.service__img {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.service__name {
+    font-size: 0.75rem;
+}
+
+.section_subtitle{
+    justify-content: center;        
+    display: flex;
+}
+
+@media screen and (max-width:1000px) {
     .skills__container {
         display: flex;
         flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .skills__data {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border: #e1e1e1 solid 1px;
+        background: white;
+        border-radius: 1rem;
+        min-width: 8rem;
+    }
+
+    .services__container {
+        margin: 2rem 2rem;
+    }
+
+    .grid-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .skills_seciton_container{
+        padding: 2rem 0rem;
     }
 }
