@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Next.js",
+    "image": "https://seeklogo.com/images/N/next-js-icon-logo-EE302D5DBD-seeklogo.com.png",
+    "diff": "Intermediate"
+  },
+  {
+    "name": "ReactJS",
+    "image": "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-1024.png",
+    "diff": "Profficient"
+  },
+  {
+    "name": "Flutter",
+    "image": "https://bekey.io/static/images/flutter/flutter-logo.png",
+    "diff": "Intermediate"
+  },
+  {
+    "name": "JavaFX",
+    "image": "https://i2.wp.com/gluonhq.com/wp-content/uploads/2015/02/SceneBuilderLogo.png?fit=781%2C781&ssl=1",
+    "diff": "Profficient"
+  },
+  {
+    "name": ".NET Core",
+    "image": "https://th.bing.com/th/id/R.da33983229bb45d7b2196257bb8754db?rik=2Li9NiRNjUGrAQ&pid=ImgRaw&r=0",
+    "diff": "Beginner"
+  }
+]

@@ -1,10 +1,10 @@
 .skills__container {
-    grid-template-columns: repeat(2, 350px);
+    grid-template-columns: repeat(2, 400px);
     column-gap: 3rem;
     justify-content: center;
 }
 
-.skills__content {
+/* .skills__content {
     background-color: var(--container-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 2rem 4rem;
@@ -57,6 +57,15 @@
     }
 }
 
+*/
+.skill__icon {
+    margin-top: 0.25rem;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+/*
+
 @media screen and (max-width: 768px) {}
 
 @media screen and (max-width: 576px) {
@@ -75,5 +84,66 @@
     }
     .skills__name{
         font-size: var(--small-font-size);
+    }
+} */
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    /* Adjust the gap according to your preference */
+}
+
+.skills__data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.skill__icon {
+    width: 5rem;
+    /* Adjust the width of the image */
+    height: 5rem;
+    /* Adjust the height of the image */
+    object-fit: cover;
+    /* Maintain aspect ratio of the image */
+    border-radius: 1rem;
+    /* For a circular image, adjust as needed */
+    margin-bottom: 10px;
+    /* Adjust the margin as needed */
+}
+
+.skills_name {
+    margin: 5px 0;
+}
+
+.skills__level {
+    color: #555;
+    /* Adjust text color as needed */
+}
+
+.skills__heading {
+    font-size: large;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+.skills_seciton_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border: solid rgb(218, 218, 218) 1px;
+    border-radius: 1rem;
+    background-color: #f4f4f4;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+@media screen and (max-width:768px) {
+    .skills__container {
+        display: flex;
+        flex-wrap: wrap;
     }
 }
