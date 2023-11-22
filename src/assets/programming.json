@@ -1,0 +1,32 @@
+[
+    {
+        "image": "https://camo.githubusercontent.com/20ffa1c9a31e2c991c8b52b0cb7be938de51db4b7a9299658fef28efb0cc845a/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e2f69636f6e732f6a6176612f6a6176612d6f726967696e616c2e737667",
+        "name": "Java",
+        "diff": "Proficient"
+    },
+    {
+        "image": "https://camo.githubusercontent.com/91be18bebd8afe5f89a4fb59eeb04ab47b5729a29c868185ee5221407a741c87/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e2f69636f6e732f63706c7573706c75732f63706c7573706c75732d6f726967696e616c2e737667",
+        "name": "C++",
+        "diff": "Intermediate"
+    },
+    {
+        "image": "https://camo.githubusercontent.com/dd8b0601cdfefe534a6a26f4c29c7f8a5fcfc315002655f519c73121f7bad8bc/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e2f69636f6e732f707974686f6e2f707974686f6e2d6f726967696e616c2e737667",
+        "name": "Python",
+        "diff": "Advanced"
+    },
+    {
+        "image": "https://th.bing.com/th/id/R.0183637498f8c05cfcd3bd0f41587584?rik=UJ%2fP7XhupRSlmA&pid=ImgRaw&r=0",
+        "name": "Dart",
+        "diff": "Advanced"
+    },
+    {
+        "image": "https://camo.githubusercontent.com/442c452cb73752bb1914ce03fce2017056d651a2099696b8594ddf5ccc74825e/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e2f69636f6e732f6a6176617363726970742f6a6176617363726970742d6f726967696e616c2e737667",
+        "name": "Javascript",
+        "diff": "Intermediate"
+    },
+    {
+        "image": "https://th.bing.com/th/id/OIP.znaXGSRVRr_WguIrjjgBnQHaHa?w=490&h=490&rs=1&pid=ImgDetMain",
+        "name": "TypeScript",
+        "diff": "Intermediate"
+    }
+]
