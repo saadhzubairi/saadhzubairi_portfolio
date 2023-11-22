@@ -1,10 +1,10 @@
 import "./skills.css"
 import Programming from "./Auto"
-import data from "../../assets/services.json"
-import data_one from "../../assets/programming.json"
-import data_two from "../../assets/frameworks.json"
-import data_three from "../../assets/backend.json"
-import data_four from "../../assets/tools.json"
+import data from "../../assets/skills_data/services.json"
+import data_one from "../../assets/skills_data/programming.json"
+import data_two from "../../assets/skills_data/frameworks.json"
+import data_three from "../../assets/skills_data/backend.json"
+import data_four from "../../assets/skills_data/tools.json"
 import Services from "./Services"
 
 function Skills(props) {

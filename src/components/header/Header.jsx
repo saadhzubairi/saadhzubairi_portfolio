@@ -2,7 +2,7 @@ import { useState } from "react"
 import "./header.css"
 
 function Header(props) {
-    const [toggle, setToggle] = useState();
+    const [toggle, setToggle] = useState(false);
 
     return (
         <header className="header">
@@ -31,11 +31,11 @@ function Header(props) {
                             </a>
                         </li>
                 
-                        {/* <li className="nav__item">
+                        <li className="nav__item">
                             <a href="" className="nav__link">
-                                <i className="uil uil-briefcase-alt nav__icon"></i> 
+                                <i className="uil uil-briefcase-alt nav__icon"></i>Experience 
                             </a>
-                        </li> */}
+                        </li>
                 
                         <li className="nav__item">
                             <a href="#Portfolio" className="nav__link">
@@ -48,7 +48,6 @@ function Header(props) {
                                 <i className="uil uil-message nav__icon"></i> Contact
                             </a>
                         </li>
-                
                     </ul>
                     <i className="uil uil-times nav__close" onClick={() => setToggle(!toggle)}></i>
                 </div>
