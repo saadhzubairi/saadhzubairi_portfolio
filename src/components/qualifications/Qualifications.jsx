@@ -1,10 +1,38 @@
 import { useState } from "react"
 import "./qualifications.css"
-import IBA from "../../assets/EDXP_logos/IBA.png"
-import FHGS from "../../assets/EDXP_logos/FHGS.png"
-import GDSC from "../../assets/EDXP_logos/GDSC.jpeg"
+
+import ed_data from "../../assets/EDXP_data/education.json"
+import xp_data from "../../assets/EDXP_data/experience.json"
+
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal'
+import Fade from '@mui/material/Fade';
+import Popup from "./PopUp";
+import ShopUp from "./ShopUp";
+
+const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 'auto',
+    bgcolor: 'background.paper',
+    border: '2px dashed #fff',
+    borderRadius: 8,
+    boxShadow: 24,
+    p: 4,
+};
 
 function Qualifications(props) {
+
+    const [openModalIndex, setOpenModalIndex] = useState(null);
+    const handleOpen = (index) => {setOpenModalIndex(index);};
+    const handleClose = () => {setOpenModalIndex(null);};
+    
+    const [openModalIndex_, setOpenModalIndex_] = useState(null);
+    const handleOpen_ = (index) => {setOpenModalIndex_(index);};
+    const handleClose_ = () => {setOpenModalIndex_(null);};
+
     const [toggle, setToggle] = useState(0);
 
     const toggleTab = (n) => {
@@ -31,106 +59,58 @@ function Qualifications(props) {
 
                 <div className="qual__sections">
                     <div className={toggle === 0 ? "qual__content qual__content-active" : "qual__content qual__content"}>
-
-                        <div className="qual__data">
-                            <div>
-                                <h3 className="qual__title">BSc. Computer Science</h3>
-                                <div className="qual__subtitle_img__and__text">
-                                    <img src={IBA} alt="" className="qual__subtitle_img" />
-                                    <span className="qual__subtitle">Institute Of Business Administration, Karachi</span>
+                        {ed_data.map((item, index) => (
+                            <>
+                                <div className="qual__data" onClick={() => handleOpen(index)}>
+                                    <h3 className="qual__title">{item.degree}</h3>
+                                    <div className="qual__subtitle_img__and__text">
+                                        <img src={item.logo} alt="" className="qual__subtitle_img" />
+                                        <div className="qual__subtitile__section">
+                                            <span className="qual__subtitle">{item.institute}</span>
+                                        </div>
+                                    </div>
+                                    <div className="qual__calendar"><i class="uil uil-schedule"></i>{item.years}</div>
                                 </div>
-                                <div className="qual__calendar"><i class="uil uil-schedule"></i>2019 - 2023</div>
-                            </div>
-                            <div className="qual__whitespace">
-                                <span className="qual__rounder"></span>
-                                <span className="qual__line"></span>
-                            </div>
-                        </div>
-
-                        <div className="qual__data">
-                            <div className="qual__whitespace"></div>
-                            <div className="qual__whitespace">
-                                <span className="qual__rounder"></span>
-                                <span className="qual__line"></span>
-                            </div>
-                            <div>
-                                <h3 className="qual__title">Intermediate, Pre-Engineering</h3>
-                                <div className="qual__subtitle_img__and__text">
-                                    <img src={GDSC} alt="" className="qual__subtitle_img" />
-                                    <span className="qual__subtitle">Govt. Degree College, Gulshan-e-Iqbal</span>
-                                </div>
-                                <div className="qual__calendar"><i class="uil uil-schedule"></i>2016 - 2018</div>
-                            </div>
-                        </div>
-
-                        <div className="qual__data">
-                            <div>
-                                <h3 className="qual__title">Matriculation</h3>
-                                <div className="qual__subtitle_img__and__text">
-                                    <img src={FHGS} alt="" className="qual__subtitle_img" />
-                                    <span className="qual__subtitle">Falconhouse Grammar School</span>
-                                </div>
-                                <div className="qual__calendar"><i class="uil uil-schedule"></i>2019 - 2023</div>
-                            </div>
-                            <div className="qual__whitespace">
-                                <span className="qual__rounder"></span>
-                                <span className="qual__line"></span>
-                            </div>
-                        </div>
+                                <Modal
+                                    open={openModalIndex === index}
+                                    onClose={handleClose}
+                                >
+                                    <Fade in={openModalIndex === index}>
+                                        <Box sx={style}>
+                                            <Popup data={item} />
+                                        </Box>
+                                    </Fade>
+                                </Modal>
+                            </>
+                        ))}
                     </div>
-
 
                     <div className={toggle === 1 ? "qual__content qual__content-active" : "qual__content qual__content"}>
 
-                        <div className="qual__data">
-                            <div>
-                                <h3 className="qual__title">LALA</h3>
-                                <span className="qual__subtitle">Institute of Business Administration, Karachi</span>
-                                <div className="qual__calendar"><i class="uil uil-schedule"></i>2019 - 2023</div>
-                            </div>
-                            <div className="qual__whitespace">
-                                <span className="qual__rounder"></span>
-                                <span className="qual__line"></span>
-                            </div>
-                        </div>
-
-                        <div className="qual__data">
-                            <div className="qual__whitespace"></div>
-                            <div className="qual__whitespace">
-                                <span className="qual__rounder"></span>
-                                <span className="qual__line"></span>
-                            </div>
-                            <div>
-                                <h3 className="qual__title">LALA</h3>
-                                <span className="qual__subtitle">Institute of Business Administration, Karachi</span>
-                                <div className="qual__calendar"><i class="uil uil-schedule"></i>2019 - 2023</div>
-                            </div>
-                        </div>
-
-                        <div className="qual__data">
-                            <div>
-                                <h3 className="qual__title">LALA</h3>
-                                <span className="qual__subtitle">Institute of Business Administration, Karachi</span>
-                                <div className="qual__calendar"><i class="uil uil-schedule"></i>2019 - 2023</div>
-                            </div>
-                            <div className="qual__whitespace">
-                                <span className="qual__rounder"></span>
-                                <span className="qual__line"></span>
-                            </div>
-                        </div>
-
-                        <div className="qual__data">
-                            <div className="qual__whitespace"></div>
-                            <div className="qual__whitespace">
-                                <span className="qual__rounder"></span>
-                                <span className="qual__line"></span>
-                            </div>
-                            <div>
-                                <h3 className="qual__title">LALA</h3>
-                                <span className="qual__subtitle">Institute of Business Administration, Karachi</span>
-                                <div className="qual__calendar"><i className="uil uil- qual__icon"></i>2019 - 2023</div>
-                            </div>
-                        </div>
+                        {xp_data.map((item,index) => (
+                            <>
+                                <div className="qual__data" onClick={() => handleOpen_(index)} >
+                                    <h3 className="qual__title">{item.desg}</h3>
+                                    <div className="qual__subtitle_img__and__text">
+                                        <img src={item.logo} alt="" className="qual__subtitle_img" />
+                                        <div className="qual__subtitile__section">
+                                            <span className="qual__subtitle">{item.company}</span>
+                                        </div>
+                                    </div>
+                                    <div className="qual__calendar"><i class="uil uil-schedule"></i>{item.years}</div>
+                                </div>
+                                <Modal
+                                    open={openModalIndex_ === index}
+                                    onClose={handleClose_}
+                                >
+                                    <Fade in={openModalIndex_ === index}>
+                                        <Box sx={style}>
+                                            {<ShopUp data={item}/>}
+                                        </Box>
+                                    </Fade>
+                                </Modal>
+                            </>
+                        ))}
 
                     </div>
                 </div>

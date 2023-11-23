@@ -1,0 +1,115 @@
+[
+    {
+        "desg": "Technology Analyst",
+        "company": "United Bank Limited",
+        "years": "July 2023 - Present",
+        "logo": "/XP_logos/united_bank_limited_logo.jpeg",
+        "website": "https://www.ubldigital.com/",
+        "linkedIn": "https://www.linkedin.com/company/united-bank-limited",
+        "about": "United Bank Limited (UBL) is a prominent financial institution headquartered in Karachi, Pakistan. Established in 1959, UBL has grown into a leading bank, providing a wide range of financial services globally. With a focus on innovation and customer satisfaction, UBL plays a vital role in the economic development of Pakistan.",
+        "desc": "Part of the Tech Talent Hunt '23 batch. Among the 15 candidates selected out of 4000+ applicants.",
+        "resps": [
+            "Actively coding and enhancing both front-end and back-end components for the upcoming mobile app built on top of Temenos Infinity.",
+            "Working within a diverse team of designers, product managers, and engineers to implement app features and optimize performance.",
+            "Troubleshooting and resolving technical issues, ensuring smooth user experience across app functionalities."
+        ],
+        "skills": [
+            "Back-End Development",
+            "Java",
+            "Temenos Infinity",
+            "Java",
+            "JavaScript",
+            "Visualizer & Fabric"
+        ]
+    },
+    {
+        "desg": "Junior Software Developer",
+        "company": "MCB Funds",
+        "years": "May 2023 - July 2023",
+        "logo": "/XP_logos/mcbfunds_logo.jpeg",
+        "website": "https://www.ubldigital.com/",
+        "linkedIn": "https://www.linkedin.com/company/united-bank-limited",
+        "about": "",
+        "desc": "",
+        "resps": [
+            "",
+            ""
+        ],
+        "skills": [
+            "",
+            ""
+        ]
+    },
+    {
+        "desg": "Unity and UI/UX Intern",
+        "company": "Run Sports, LLC (New York)",
+        "years": "Dec 2022 - Jan 2023",
+        "logo": "/XP_logos/run_sports_app_logo.jpeg",
+        "website": "https://www.ubldigital.com/",
+        "linkedIn": "https://www.linkedin.com/company/united-bank-limited",
+        "about": "",
+        "desc": "",
+        "resps": [
+            "",
+            ""
+        ],
+        "skills": [
+            "",
+            ""
+        ]
+    },
+    {
+        "desg": "Game Programming Intern",
+        "company": "Mindstorm Studios",
+        "years": "July 2022 - September 2022",
+        "logo": "/XP_logos/mindstorm_studios_logo.jpeg",
+        "website": "https://www.ubldigital.com/",
+        "linkedIn": "https://www.linkedin.com/company/united-bank-limited",
+        "about": "",
+        "desc": "",
+        "resps": [
+            "",
+            ""
+        ],
+        "skills": [
+            "",
+            ""
+        ]
+    },
+    {
+        "desg": "Teaching Assistant",
+        "company": "Institute of Business Administration, Karachi",
+        "years": "January 2021 - May 2023",
+        "logo": "/EDXP_logos/IBA.png",
+        "website": "https://www.ubldigital.com/",
+        "linkedIn": "https://www.linkedin.com/company/united-bank-limited",
+        "about": "",
+        "desc": "",
+        "resps": [
+            "",
+            ""
+        ],
+        "skills": [
+            "",
+            ""
+        ]
+    },
+    {
+        "desg": "Graphic Designer",
+        "company": "IBA Career Development Centre",
+        "years": "Jan 2021 - Jan 2022",
+        "logo": "/XP_logos/logo-cdc2.png",
+        "website": "https://www.ubldigital.com/",
+        "linkedIn": "https://www.linkedin.com/company/united-bank-limited",
+        "about": "",
+        "desc": "",
+        "resps": [
+            "",
+            ""
+        ],
+        "skills": [
+            "",
+            ""
+        ]
+    }
+]

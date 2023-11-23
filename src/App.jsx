@@ -1,5 +1,6 @@
 import './App.css';
 import About from './components/about/About';
+import Connect from './components/connect/Connect';
 import Header from './components/header/Header';
 import Home from "./components/home/Home"
 import Qualifications from './components/qualifications/Qualifications';
@@ -14,6 +15,7 @@ function App() {
         <About />
         <Skills />
         <Qualifications />
+        <Connect/>
       </main>
     </>
 

@@ -1,0 +1,107 @@
+[
+    {
+        "degree": "Bachelor's in Computer Science",
+        "institute": "Institute of Business Administration, Karachi",
+        "years": "2019 - 2023",
+        "logo": "/EDXP_logos/IBA.png",
+        "about": "Established in 1955, the Institute of Business Administration (IBA) Karachi stands as a prestigious academic institution in Pakistan. Renowned for its commitment to excellence, IBA offers a diverse range of undergraduate and graduate programs in business, economics, and social sciences. With a rich history, IBA Karachi continues to shape future leaders through rigorous education and a focus on practical skills, contributing significantly to the country's business and academic landscape.",
+        "website": "https://www.iba.edu.pk/",
+        "linkedIn": "https://www.linkedin.com/school/institute-of-business-administration-karachi/",
+        "cgpa": "CGPA 3.44/4.00",
+        "session": "August 2019 - May 2023",
+        "moreInfo": [
+            {
+                "Heading": "Courses",
+                "List": [
+                    "Tech Product Development",
+                    "Mobile App Development",
+                    "Computer Graphics",
+                    "Game Design & Development",
+                    "Web App Development",
+                    "Data Mining",
+                    "Computer Vision"
+                ]
+            },
+            {
+                "Heading": "Extra & Co-curriculars",
+                "List": [
+                    "Master of Ceremony (Lead Host) for Convocation 2022, Orientation 2022, and other official events at IBA",
+                    "IBA Mathematics & Astronomy Club - Chief Finance Officer",
+                    "IBA Entrepreneurship Society - Executive Director Creatives for HULT at IBA",
+                    "IBA Leadership Club - Core Team Member (Operations, Creatives & Corporate Affairs)",
+                    "IBA Community Welfare Society"
+                ]
+            }
+        ]
+    },
+    {
+        "degree": "Intermediate, Pre-Engineering",
+        "institute": "Govt. Degree College, Gulshan-e-Iqbal",
+        "years": "2016-2018",
+        "logo": "EDXP_logos/GDSC.jpeg",
+        "about": "Established in 1955, the Institute of Business Administration (IBA) Karachi stands as a prestigious academic institution in Pakistan. Renowned for its commitment to excellence, IBA offers a diverse range of undergraduate and graduate programs in business, economics, and social sciences. With a rich history, IBA Karachi continues to shape future leaders through rigorous education and a focus on practical skills, contributing significantly to the country's business and academic landscape.",
+        "website": "https://www.iba.edu.pk/",
+        "linkedIn": "https://www.linkedin.com/school/institute-of-business-administration-karachi/",
+        "cgpa": "A",
+        "session": "August 2019 - May 2023",
+        "moreInfo": [
+            {
+                "Heading": "Courses",
+                "List": [
+                    "Tech Product Development",
+                    "Mobile App Development",
+                    "Computer Graphics",
+                    "Game Design & Development",
+                    "Web App Development",
+                    "Data Mining",
+                    "Computer Vision"
+                ]
+            },
+            {
+                "Heading": "Extra & Co-curriculars",
+                "List": [
+                    "Master of Ceremony (Lead Host) for Convocation 2022, Orientation 2022, and other official events at IBA",
+                    "IBA Mathematics & Astronomy Club - Chief Finance Officer",
+                    "IBA Entrepreneurship Society - Executive Director Creatives for HULT at IBA",
+                    "IBA Leadership Club - Core Team Member (Operations, Creatives & Corporate Affairs)",
+                    "IBA Community Welfare Society"
+                ]
+            }
+        ]
+    },
+    {
+        "degree": "Matriculation, Computer Science",
+        "institute": "Falconhouse Grammar School",
+        "years": "2008-2016",
+        "logo": "/EDXP_logos/FHGS.png",
+        "about": "Established in 1955, the Institute of Business Administration (IBA) Karachi stands as a prestigious academic institution in Pakistan. Renowned for its commitment to excellence, IBA offers a diverse range of undergraduate and graduate programs in business, economics, and social sciences. With a rich history, IBA Karachi continues to shape future leaders through rigorous education and a focus on practical skills, contributing significantly to the country's business and academic landscape.",
+        "website": "https://www.iba.edu.pk/",
+        "linkedIn": "https://www.linkedin.com/school/institute-of-business-administration-karachi/",
+        "cgpa": "A+",
+        "session": "August 2019 - May 2023",
+        "moreInfo": [
+            {
+                "Heading": "Courses",
+                "List": [
+                    "Tech Product Development",
+                    "Mobile App Development",
+                    "Computer Graphics",
+                    "Game Design & Development",
+                    "Web App Development",
+                    "Data Mining",
+                    "Computer Vision"
+                ]
+            },
+            {
+                "Heading": "Extra & Co-curriculars",
+                "List": [
+                    "Master of Ceremony (Lead Host) for Convocation 2022, Orientation 2022, and other official events at IBA",
+                    "IBA Mathematics & Astronomy Club - Chief Finance Officer",
+                    "IBA Entrepreneurship Society - Executive Director Creatives for HULT at IBA",
+                    "IBA Leadership Club - Core Team Member (Operations, Creatives & Corporate Affairs)",
+                    "IBA Community Welfare Society"
+                ]
+            }
+        ]
+    }
+]
