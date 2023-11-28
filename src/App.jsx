@@ -4,6 +4,7 @@ import FrontPage from './components/FrontPage/FrontPage';
 import Header from './components/header/Header';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PortfolioPage from './components/PortfolioPage/PortfolioPage';
+import ProjectPage from './components/ProjectPage/ProjectPage';
 
 const Layout = ({ children }) => {
   return (
@@ -21,6 +22,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout><FrontPage /></Layout>}/>
           <Route path="/Portfolio" element={<Layout><PortfolioPage /></Layout>}/>
+          <Route path="/Portfolio/:projectId" element={<Layout><ProjectPage /></Layout>}/>
+
         </Routes>
       </main>
     </BrowserRouter>

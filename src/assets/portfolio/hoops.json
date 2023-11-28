@@ -1,0 +1,8 @@
+{
+    "id":"hoops",
+    "image":"/Projects/hoops.jpeg",
+    "title":"Hoops",
+    "subtitle":"A different kind of Social Media.",
+    "techs":["MongoDB","Express","React","Node.js","Material UI"],
+    "desc":"Hoops is a unique social media application where users can connect and chat with each other using letters while being completely anonymous."
+}

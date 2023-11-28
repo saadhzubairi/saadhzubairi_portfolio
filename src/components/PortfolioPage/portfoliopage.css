@@ -1,0 +1,91 @@
+*{
+    transition: 300ms;
+    transition: all;
+}
+
+.portfolio_heading {
+    margin-top: 15vh;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #4b4b4b;
+    letter-spacing: -0.01em;
+    user-select: none;
+}
+
+.portfolio_subText {
+    text-align: center;
+    letter-spacing: 0.2rem;
+    font-size: 0.75rem;
+    user-select: none;
+    font-weight: 600;
+}
+
+.portfolio_body {
+    display: flex;
+    margin-top: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+/* portfoliopage.css */
+.custom-scroll-buttons {
+    display: flex !important;
+    padding: 1rem;
+    background-color: #dadada;
+    border-radius: 1rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.pcard_container {
+    max-width: 316px;
+}
+
+.pcard_container:hover {
+    cursor: pointer;
+}
+
+.pcard_pane {
+    display: flex;
+}
+
+.pcard_pane_left {
+    border-radius: 1rem;
+    border: #d9d8d8 1px solid;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: 300ms;
+}
+
+.pcard_pane_left:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+}
+
+.pcard_title {
+    font-size: 2rem;
+    margin-left: 1rem;
+    font-weight: 900;
+    color: #565656;
+}
+
+.pcard_subtitle {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.pcard_pane_right {
+    display: none;
+}
+
+
+.MuiTypography-root{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
