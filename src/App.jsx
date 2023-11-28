@@ -1,25 +1,37 @@
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
-import About from './components/about/About';
-import Connect from './components/connect/Connect';
+import FrontPage from './components/FrontPage/FrontPage';
 import Header from './components/header/Header';
-import Home from "./components/home/Home"
-import Qualifications from './components/qualifications/Qualifications';
-import Skills from './components/skills/Skills';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import PortfolioPage from './components/PortfolioPage/PortfolioPage';
+
+const Layout = ({ children }) => {
+  return (
+    <div className="mainAppContainer">
+      <Header />
+      {children}
+    </div>
+  );
+};
 
 function App() {
   return (
-    <>
-      <Header />
-      <main className="main">
-        <Home />
-        <About />
-        <Skills />
-        <Qualifications />
-        <Connect/>
+    <BrowserRouter>
+      <main>
+        <Routes>
+          <Route path="/" element={<Layout><FrontPage /></Layout>}/>
+          <Route path="/Portfolio" element={<Layout><PortfolioPage /></Layout>}/>
+        </Routes>
       </main>
-    </>
-
+    </BrowserRouter>
   );
 }
 
 export default App;
+
+/* <>
+      <Header />
+      <main className="main">
+        <FrontPage />
+      </main>
+    </> */

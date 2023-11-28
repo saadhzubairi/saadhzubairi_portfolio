@@ -5,7 +5,7 @@ import "./home.css"
 
 function Home(props) {
     return (
-        <section className="home section" id="home">
+        <section className="home section" id="Home">
             <div className="home__container container grid">
                 <div className="home__content grid">
                     <Social />

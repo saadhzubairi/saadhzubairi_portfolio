@@ -46,6 +46,14 @@ header {
     transition: 300ms;
 }
 
+.nav__portfolio_button{
+    background-color: #333;
+    color: rgb(214, 214, 214);
+    padding: 0.65em 1.25em;
+    border-radius: 1em;
+    font-weight: bold;
+}
+
 /* active link */
 
 .active-link,
@@ -57,6 +65,10 @@ header {
 /* BREAKPOINTS!! */
 
 @media screen and (max-width:768px) {
+    .nav__portfolio_button{
+        
+    }
+    
     .header {
         top: inherit;
         bottom: 0;

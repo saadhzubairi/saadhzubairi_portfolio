@@ -18,11 +18,11 @@ const Popup = ({ data }) => {
                             <div className="popup__text">{data.institute}</div>
                         </div>
                         <div className="popup__links">
-                            <a href={data.website} className="webLink">
+                            <a href={data.website} target='_blank' className="webLink">
                                 <LanguageIcon fontSize='0.5rem' /> Website
                             </a>
 
-                            <a href={data.linkedIn} className="webLink">
+                            <a href={data.linkedIn} target='_blank' className="webLink">
                                 <LinkedInIcon fontSize='0.5rem' /> LinkedIn
                             </a>
 

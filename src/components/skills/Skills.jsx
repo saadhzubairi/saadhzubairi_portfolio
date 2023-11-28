@@ -9,7 +9,7 @@ import Services from "./Services"
 
 function Skills(props) {
     return (
-        <section className="skills section" id="skills">
+        <section className="skills section" id="Skills">
             <h2 className="section__title">Skills</h2>
             <span className="section_subtitle">Following are my technical expertise</span>
             <Services data={data} />

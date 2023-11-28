@@ -40,7 +40,7 @@ function Qualifications(props) {
     }
 
     return (
-        <section className="qualifications section" id="qualifications">
+        <section className="qualifications section" id="Qual">
             <h2 className="section__title">Qualifications</h2>
             <span className="section__subtitle">A glimpse into my journey</span>
 
