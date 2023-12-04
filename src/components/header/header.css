@@ -25,9 +25,13 @@ header {
     font-weight: var(--font-medium);
 }
 
+.nav__logo {
+    font-weight: 700;
+}
+
 .nav__list {
     display: flex;
-    column-gap: 2rem;
+    column-gap: 0.5rem;
 }
 
 .nav__icon,
@@ -46,12 +50,32 @@ header {
     transition: 300ms;
 }
 
-.nav__portfolio_button{
+.portfolio_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: var(--small-font-size);
+    background-color: #4c4c4c;
+}
+
+.portfolio_button:hover {
     background-color: #333;
-    color: rgb(214, 214, 214);
-    padding: 0.65em 1.25em;
-    border-radius: 1em;
-    font-weight: bold;
+    color: rgb(255, 255, 255) !important;
+}
+
+.portfolio_button:hover .portfolio_link {
+    color: white !important;
+}
+.portfolio_button .portfolio_link {
+    color: #ddd !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 /* active link */
@@ -61,14 +85,18 @@ header {
     color: var(--title-color-dark);
 }
 
+.nav__item {
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.5rem;
+}
+
+.nav__item:hover {
+    background-color: #eee;
+}
 
 /* BREAKPOINTS!! */
 
 @media screen and (max-width:768px) {
-    .nav__portfolio_button{
-        
-    }
-    
     .header {
         top: inherit;
         bottom: 0;

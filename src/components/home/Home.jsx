@@ -4,6 +4,7 @@ import Social from "./Social"
 import "./home.css"
 
 function Home(props) {
+
     return (
         <section className="home section" id="Home">
             <div className="home__container container grid">
@@ -12,7 +13,7 @@ function Home(props) {
                     <div className="home__img"></div>
                     <Data />
                 </div>
-                <ScrollDown />
+                <ScrollDown hash={"About"} />
             </div>
         </section>
     )

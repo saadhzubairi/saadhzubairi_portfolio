@@ -7,15 +7,14 @@ function About(props) {
     return (
         <section className="about section" id="About">
             <h2 className="section__title">About me</h2>
-            <span className="section__subtitle">My introduction</span>
+            <span className="section__subtitle">Get to know more</span>
             <div className="about__container container grid">
                 <img src={pic} alt="" className="about__img" />
                 <div className="about__data">
                     <Info />
-                    <p className="about__description">A crazy developer, i have tons of experience and my clients are always happy with my work, im sure you will like my work too!! Stay tuned for more projects coming soon.</p>
+                    <p className="about__description">As an emerging developer, I bring a fresh perspective and enthusiasm to every project. Excited to showcase my skills and deliver excellent results.</p>
 
                     <a href={cv} target="_blank" className="button button--flex">Download CV</a>
-
                 </div>
             </div>
         </section>

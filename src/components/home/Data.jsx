@@ -9,9 +9,9 @@ function Data(props) {
                 Software Developer
             </h3>
             <p className="home__description">
-                A full stack generalist based in Karachi, PK. Loves playing tennis and cricket, develops web apps to pass time.
+                A Full Stack Designer and Developer Transforming Ideas into Reality with Innovative Software Solutions.
             </p>
-            <a href="#contact" className="button button-flex">
+            <a target="_blank" href="https://discord.com/users/saadhzubairi#1469" className="button button-flex">
                 <i class="uil uil-message"></i>  Drop a DM!
             </a>
         </div>

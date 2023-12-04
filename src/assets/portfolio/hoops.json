@@ -1,8 +1,85 @@
 {
-    "id":"hoops",
-    "image":"/Projects/hoops.jpeg",
-    "title":"Hoops",
-    "subtitle":"A different kind of Social Media.",
-    "techs":["MongoDB","Express","React","Node.js","Material UI"],
-    "desc":"Hoops is a unique social media application where users can connect and chat with each other using letters while being completely anonymous."
+    "id": "hoops",
+    "image": "/Projects/hoops/hoops.jpeg",
+    "name": "Hoops",
+    "titleImg": "/Projects/hoops/title.png",
+    "subtitle": "A different kind of Social Media.",
+    "techs": [
+        "MongoDB",
+        "Express",
+        "React",
+        "Node.js",
+        "Material UI"
+    ],
+    "desc": "Hoops is a unique social media application where users can connect and chat with each other using letters while being completely anonymous.",
+    "sections": [
+        {
+            "sectionheading": "Onboarding",
+            "sectionText": "A smooth and beautifully designed onboarding and login.",
+            "sectionData": [
+                {
+                    "alignment": "l",
+                    "image": "/Projects/hoops/login.png",
+                    "text": "Login and Sign up screens with proper validators on available usernames and passwords constraints checking. Each keystroke triggers and API call that checks for available usernames from a staging database. Username is later verfied from actual database when clicking next."
+                },
+                {
+                    "alignment": "r",
+                    "image": "/Projects/hoops/interests.png",
+                    "text": "Users are able to add their interests from a wide range of options so they can connect with people who have similar interest as theres."
+                },
+                {
+                    "alignment": "l",
+                    "image": "/Projects/hoops/sched.png",
+                    "text": "Users can also add their class schedules to better coordinate potential future meetups."
+                },
+                {
+                    "alignment": "r",
+                    "image": "/Projects/hoops/avatar.png",
+                    "text": "We strongly discourage the use of profile pictures to negate any kind of bias. Users can add fun avatars randomly generated from their names and change them whenever they want."
+                }
+            ]
+        },
+        {
+            "sectionheading": "Write away and make friends!",
+            "sectionText": "A user journey that keeps you writing!",
+            "sectionData": [
+                {
+                    "alignment": "l",
+                    "image": "/Projects/hoops/home.png",
+                    "text": "The home screen is kept simple with an ample amount of white space and a sidebar that gives you a quick access to all your friends and shows you which of your friends are online. In addition, there's also a text box to post any updates along with pictures."
+                },
+                {
+                    "alignment": "r",
+                    "image": "/Projects/hoops/sugg.png",
+                    "text": "Friend suggestions are right on your finger tips, with the feed showing you the people with the most number of common interests and a compatible personality using the Myers-Briggs rubrick."
+                },
+                {
+                    "alignment": "l",
+                    "image": "/Projects/hoops/write.png",
+                    "text": "The platform encourages the users to make meaningful conversations using our constraint of at least 600 characters per letter."
+                },
+                {
+                    "alignment": "r",
+                    "image": "/Projects/hoops/friend.png",
+                    "text": "All letters from a specific friend shown in the friend's screen, easily accessible by clicking on a friend in the sidebar."
+                },
+                {
+                    "alignment": "l",
+                    "image": "/Projects/hoops/read.png",
+                    "text": "Users can view any recieved or sent letters from and to a friend from the friend screen in a nice canvas."
+                }
+            ]
+        },
+        {
+            "sectionheading": "Settings",
+            "sectionText": "A user journey that keeps you writing!",
+            "sectionData": [
+                {
+                    "alignment": "l",
+                    "image": "/Projects/hoops/setting.png",
+                    "text": "The home screen is kept simple with an ample amount of white space and a sidebar that gives you a quick access to all your friends and shows you which of your friends are online. In addition, there's also a text box to post any updates along with pictures."
+                }
+            ]
+        }
+    ]
 }

@@ -1,0 +1,18 @@
+{
+    "id": "talenthive",
+    "image": "/Projects/talenthive/talenthive.png",
+    "name": "Talent Hive",
+    "subtitle": "Shortlist 100s or resumes using a powerful AI.",
+    "techs": [
+        "MongoDB",
+        "Express",
+        "React",
+        "Node.js",
+        "Material UI",
+        "Spacy",
+        "Fast API",
+        "AWS",
+        "Firebase"
+    ],
+    "desc": "Hoops is a unique social media application where users can connect and chat with each other using letters while being completely anonymous."
+}

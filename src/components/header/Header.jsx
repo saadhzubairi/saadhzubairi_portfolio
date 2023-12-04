@@ -1,53 +1,72 @@
-import { useState } from "react"
 import "./header.css"
+import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 function Header(props) {
     const [toggle, setToggle] = useState(false);
 
+    const location = useLocation();
+    const [hash, setHash] = useState('');
+
+    useEffect(() => {
+        if (hash && location.pathname === '/') {
+            setTimeout(() => {
+                const element = document.getElementById(hash);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 312);
+        }
+    }, [hash, location]);
+
     return (
         <header className="header">
             <nav className="nav container">
-                <a href="index.html" className="nav__logo">Saad</a>
+                <a href="/" className="nav__logo">Saad</a>
 
                 <div className={toggle ? "nav__menu show-menu" : "nav__menu"}>
 
                     <ul className="nav__list grid">
 
                         <li className="nav__item">
-                            <a href="/#Home" className="nav__link active-link">
+                            <Link to="/#Home" className="nav__link active-link" onClick={() => setHash('Home')}>
                                 <i className="uil uil-estate nav__icon"></i> Home
-                            </a>
+                            </Link>
                         </li>
 
                         <li className="nav__item">
-                            <a href="/#About" className="nav__link">
+                            <Link to="/#About" className="nav__link" onClick={() => setHash('About')} >
                                 <i className="uil uil-user nav__icon"></i> About
-                            </a>
+                            </Link>
                         </li>
 
                         <li className="nav__item">
-                            <a href="/#Skills" className="nav__link">
+                            <Link
+                                to="/#Skills"
+                                className="nav__link"
+                                onClick={() => setHash('Skills')}
+                            >
                                 <i className="uil uil-file-alt nav__icon"></i> Skills
-                            </a>
+                            </Link>
                         </li>
 
                         <li className="nav__item">
-                            <a href="/#Qual" className="nav__link">
+                            <Link to="/#Qual" className="nav__link" onClick={() => setHash('Qual')} >
                                 <i className="uil uil-briefcase-alt nav__icon"></i>Qualifications
-                            </a>
+                            </Link>
                         </li>
 
 
                         <li className="nav__item">
-                            <a href="/#Contact" className="nav__link">
+                            <Link to="/#Contact" className="nav__link" onClick={() => setHash('Contact')}>
                                 <i className="uil uil-message nav__icon"></i> Contact
-                            </a>
+                            </Link>
                         </li>
 
-                        <li className="nav__item ">
-                            <a href="/Portfolio" className="nav__link">
+                        <li className="portfolio_button" id="">
+                            <Link to="/Portfolio" className="portfolio_link" id="">
                                 <i className="uil uil-scenery nav__icon"></i> Portfolio
-                            </a>
+                            </Link>
                         </li>
 
                     </ul>
