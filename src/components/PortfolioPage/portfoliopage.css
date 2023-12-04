@@ -6,6 +6,7 @@
     color: #4b4b4b;
     letter-spacing: -0.01em;
     user-select: none;
+
 }
 
 .portfolio_subText {
@@ -166,7 +167,7 @@
 }
 
 @media screen and (max-width: 768px) {
-    .pcard_pane_right{
+    .pcard_pane_right {
         display: none;
     }
 }

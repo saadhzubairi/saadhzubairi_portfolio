@@ -9,11 +9,8 @@
     justify-content: center;
     margin-bottom: var(--mb-2);
     flex-wrap: wrap;
-    gap: 1rem
-    ;
+    gap: 1rem;
 }
-
-
 
 .qual__button {
     font-size: var(--h3-font-size);
@@ -143,4 +140,3 @@
     background-color: var(--text-color);
     transform: translate(6px, -7px);
 }
-

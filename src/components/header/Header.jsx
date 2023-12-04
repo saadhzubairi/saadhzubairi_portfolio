@@ -15,7 +15,7 @@ function Header(props) {
                 if (element) {
                     element.scrollIntoView({ behavior: 'smooth' });
                 }
-            }, 312);
+            }, 100);
         }
     }, [hash, location]);
 

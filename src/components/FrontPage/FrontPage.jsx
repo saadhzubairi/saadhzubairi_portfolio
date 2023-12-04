@@ -17,7 +17,7 @@ const FrontPage = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const delay = 300; // 2 seconds in milliseconds
+        const delay = 50; // 2 seconds in milliseconds
 
         const timeoutId = setTimeout(() => {
             setLoading(false);

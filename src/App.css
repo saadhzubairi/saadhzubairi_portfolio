@@ -197,6 +197,44 @@ img {
   align-items: center;
 }
 
+/* Targeting the scrollbar track */
+::-webkit-scrollbar {
+  width: 5px;
+  /* Set the width of the scrollbar */
+}
+
+/* Targeting the scrollbar handle (thumb) */
+::-webkit-scrollbar-thumb {
+  background-color: #777;
+  /* Set the color of the scrollbar thumb */
+  border-radius: 6px;
+  /* Set the border radius of the scrollbar thumb */
+}
+
+/* Targeting the scrollbar track when the handle is being dragged */
+::-webkit-scrollbar-thumb:active {
+  background-color: #444;
+  /* Set the color of the scrollbar thumb when active (being dragged) */
+}
+::-webkit-scrollbar-thumb:active {
+  background-color: #222;
+  /* Set the color of the scrollbar thumb when active (being dragged) */
+}
+
+/* Targeting the scrollbar track (background) */
+::-webkit-scrollbar-track {
+  background-color: #ecf0f1;
+  /* Set the color of the scrollbar track */
+  border-radius: 10px;
+  /* Set the border radius of the scrollbar track */
+}
+
+/* Targeting the scrollbar corner (where the vertical and horizontal scrollbars meet) */
+::-webkit-scrollbar-corner {
+  background-color: #ecf0f1;
+  /* Set the color of the scrollbar corner */
+}
+
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
 @media screen and (max-width: 992px) {
