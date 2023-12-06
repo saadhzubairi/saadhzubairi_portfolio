@@ -6,7 +6,6 @@ import Typography from '@mui/material/Typography';
 import "./portfoliopage.css"
 import ProjectCard from "./projectCard";
 import CircularProgress from '@mui/material/CircularProgress';
-import LinearProgress from '@mui/material/LinearProgress';
 import Fade from '@mui/material/Fade';
 
 
