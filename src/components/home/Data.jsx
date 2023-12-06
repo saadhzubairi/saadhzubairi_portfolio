@@ -11,9 +11,14 @@ function Data(props) {
             <p className="home__description">
                 A Full Stack Designer and Developer Transforming Ideas into Reality with Innovative Software Solutions.
             </p>
-            <a target="_blank" href="https://discord.com/users/saadhzubairi#1469" className="button button-flex">
-                <i class="uil uil-message"></i>  Drop a DM!
-            </a>
+            <div className="home_buttons_list">
+                <a href="/Portfolio" className="button button--flex">
+                    <i class="bx bxs-component"></i>  View Portfolio
+                </a>
+                <a href="#Contact" className="button_ol button--flex">
+                    <i class="uil uil-message"></i>  Let's Connect!
+                </a>
+            </div>
         </div>
     );
 }

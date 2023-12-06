@@ -1,26 +1,19 @@
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import EmailIcon from '@mui/icons-material/Email';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import ForumIcon from '@mui/icons-material/Forum';
-
-
 function Social(props) {
     return (
         <div>
             <div className="home__social">
                 <a href="mailto:saadhzubairi@outlook.com" className="home__social-icon" target="_blank">
-                    <i class='bx bxs-envelope' style={{color:"#777"}}></i>
+                    <i id="email_Ico" class='social_media_icons bx bxs-envelope'></i>
                 </a>
                 <a href="https://www.linkedin.com/in/saadhzubairi/" className="home__social-icon" target="_blank">
-                    <i class='bx bxl-linkedin' style={{color:"#777"}}></i>
+                    <i id="linkedIn_Ico" class='social_media_icons bx bxl-linkedin'></i>
                 </a>
                 <a href="https://github.com/saadhzubairi/" className="home__social-icon" target="_blank">
-                    <i class='bx bxl-github' style={{color:"#777"}}></i>
+                    <i id="github_Ico" class='social_media_icons bx bxl-github'></i>
                 </a>
                 <a href="https://discord.com/users/saadhzubairi#1469" className="home__social-icon" target="_blank">
-                    <i class='bx bxl-discord-alt'style={{color:"#777"}}></i>
+                    <i id="discord_Ico" class='social_media_icons bx bxl-discord-alt'></i>
                 </a>
-
             </div>
         </div>)
 }

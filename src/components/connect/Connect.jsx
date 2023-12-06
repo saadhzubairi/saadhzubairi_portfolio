@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState, useRef, Fragment } from 'react'
 import TextField from '@mui/material/TextField';
 import "./connect.css"
-import { alpha, styled } from '@mui/material/styles';
-import InputBase from '@mui/material/InputBase';
+import { styled } from '@mui/material/styles';
+import emailjs from '@emailjs/browser';
+import CircularProgress from '@mui/material/CircularProgress';
+import Snackbar from '@mui/material/Snackbar';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
 
 const CssTextField = styled(TextField)({
   '& label.Mui-focused': {
@@ -30,6 +34,61 @@ const CssTextField = styled(TextField)({
 
 const Connect = () => {
 
+  const [sending, setSending] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [open2, setOpen2] = useState(false);
+  const [full_name, setFullName] = useState("");
+  const [subject, setSubject] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const form = useRef();
+  const sendEmail = (e) => {
+    setSending(true)
+    e.preventDefault();
+
+    emailjs.sendForm('sedrickhoffman', 'basic_sedrick', form.current, 'aYAQ5JFb9VXU4N5K9')
+      .then((result) => {
+        console.log(result.text);
+        setOpen(true)
+        document.getElementById("sendmessage_form").reset();
+        setSending(false)
+        resetForm();
+      }, (error) => {
+        console.log(error.text);
+        setOpen2(true)
+        setSending(false)
+      });
+  };
+
+  const resetForm = () => {
+    setFullName('');
+    setEmail('');
+    setSubject('');
+    setMessage('');
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setOpen(false);
+    setOpen2(false);
+  };
+
+  const action = (
+    <Fragment>
+      <IconButton
+        size="small"
+        aria-label="close"
+        color="inherit"
+        onClick={handleClose}
+      >
+        <CloseIcon fontSize="small" />
+      </IconButton>
+    </Fragment>
+  );
+
   return (
     <div className="connect__container" id='Contact'>
       <div className="connect_right">
@@ -48,20 +107,46 @@ const Connect = () => {
       <div className="connect_left">
         <div className="sendmessage_float">
           <div className="sendmessage_float_heading">Send me a message!</div>
-          <div className="sendmessage_float_form">
-            <CssTextField id="custom-css-outlined-input" label="Full name*" variant="outlined" />
-            <CssTextField id="custom-css-outlined-input" label="Email address*" variant="outlined" />
-            <CssTextField label="Subject" id="custom-css-outlined-input" />
+          <form className="sendmessage_float_form" id='sendmessage_form' onSubmit={sendEmail} ref={form}>
+
+            <CssTextField disabled={sending} value={full_name} onChange={(e) => setFullName(e.target.value)} required variant="outlined" name='full_name' id="full_name" label="Full name" />
+            <CssTextField disabled={sending} value={email} onChange={(e) => setEmail(e.target.value)} type='email' required variant="outlined" name='email' id="email" label="Email address" />
+            <CssTextField disabled={sending} value={subject} onChange={(e) => setSubject(e.target.value)} id="subject" name='subject' label="Subject" />
             <div className="sendmessage_float_tell">Tell me everything about your project*</div>
-            <CssTextField id="outlined-multiline-static" label="" multiline rows={4} />
+            <CssTextField disabled={sending} value={message} onChange={(e) => setMessage(e.target.value)} id="message" name='message' label="" multiline rows={4} />
             <div className="sendmessage_float_button_div">
-              <button className="sendmessage_float_button">
-                Send Message
+              <button disabled={sending} className="sendmessage_float_button" type="submit">
+                {sending
+
+                  ?
+                  <>
+                    <CircularProgress size="1rem" color='inherit' /> Sending...
+                  </>
+                  :
+                  <>
+                    Send Message
+                  </>
+                }
+
+
               </button>
             </div>
-          </div>
+
+          </form>
         </div>
       </div>
+      <Snackbar
+        open={open}
+        autoHideDuration={6000}
+        message="Email Sent!"
+        action={action}
+      />
+      <Snackbar
+        open={open2}
+        autoHideDuration={6000}
+        message="Unable to send email."
+        action={action}
+      />
     </div>
   )
 }

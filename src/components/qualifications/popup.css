@@ -24,7 +24,7 @@
     padding: 0.5rem 1rem;
     border-radius: 1rem;
     color: rgb(234, 234, 234);
-    font-weight: 900;
+    font-weight: 600;
     font-size: 1.25rem;
 }
 
@@ -163,5 +163,12 @@
     .popup__top {
         flex-direction: column;
         gap: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .popup__wrapper{
+        padding: 0.5rem 0.25rem;
+        width: 75vw;
     }
 }

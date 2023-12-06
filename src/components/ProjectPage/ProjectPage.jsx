@@ -5,8 +5,10 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal'
 import Fade from '@mui/material/Fade';
 import CircularProgress from '@mui/material/CircularProgress';
-import { Close } from "@mui/icons-material";
+import { ArrowBack, Close } from "@mui/icons-material";
+import IconButton from '@mui/material/IconButton';
 import ScrollDown from "../home/ScrollDown";
+import { useNavigate } from 'react-router-dom';
 
 /* import data from `../../assets/portfolio/${projectId}.json`
  */
@@ -84,6 +86,11 @@ const ProjectPage = () => {
 
     }, []);
 
+    const nav = useNavigate();
+    const goBack = () => {
+        nav(-1);
+    }
+
     return (
         loading ? <div className="portfolio_circular_progress">
             <div className="portfolio_wrapper">
@@ -110,7 +117,12 @@ const ProjectPage = () => {
                                     <Fade>
                                         <Box sx={style}>
                                             <img src={img} alt="" className="" />
-                                            <div className="modal_close_button" onClick={handleClose}><Close sx={{ fontSize: "2rem", color: "#ffe2e2" }} /></div>
+                                            <div className="modal_close_button">
+                                                <IconButton color="#ffe2e2" onClick={handleClose}>
+                                                    <Close />
+                                                </IconButton>
+                                            </div>
+                                            <div  ></div>
                                         </Box>
                                     </Fade>
                                 </Modal>
@@ -165,8 +177,11 @@ const ProjectPage = () => {
                     }
 
                 </div >
-
                 <a href="#projectPage_bottom" className={isScrolled ? "Scroll_down_shizzle scroll_down_hide" : "Scroll_down_shizzle "}><ScrollDown hash={"projectPage_bottom"} /></a>
+                <div onClick={goBack} className={`projectPage_back_button ${isScrolled ? "scrolled" : ""}`}>
+                    <ArrowBack fontSize="0.5rem" />
+                    <span>{isScrolled ? null : "GO BACK"}</span>
+                </div>
             </>
     )
 }

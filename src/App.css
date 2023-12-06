@@ -182,10 +182,25 @@ img {
   padding: 1.25rem 2rem;
   border-radius: 1rem;
   font-weight: var(--font-medium);
+  border: 1.5px solid var(--title-color);
+}
+
+.button_ol {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--title-color);
+  padding: 1.25rem 2rem;
+  border-radius: 1rem;
+  border: 1.5px solid var(--title-color);
+  font-weight: var(--font-medium);
 }
 
 .button:hover {
   background-color: var(--title-color-dark);
+}
+.button_ol:hover {
+  background-color: var(--title-color-dark);
+  color: var(--container-color);
 }
 
 .button__icon {
@@ -195,11 +210,12 @@ img {
 .button--flex {
   display: inline-flex;
   align-items: center;
+  gap: 15px;
 }
 
 /* Targeting the scrollbar track */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 4px;
   /* Set the width of the scrollbar */
 }
 
@@ -216,6 +232,7 @@ img {
   background-color: #444;
   /* Set the color of the scrollbar thumb when active (being dragged) */
 }
+
 ::-webkit-scrollbar-thumb:active {
   background-color: #222;
   /* Set the color of the scrollbar thumb when active (being dragged) */

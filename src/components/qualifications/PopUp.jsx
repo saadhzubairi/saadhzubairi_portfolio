@@ -2,6 +2,8 @@ import React from 'react'
 import "./popup.css"
 import LanguageIcon from '@mui/icons-material/Language';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { Close } from "@mui/icons-material";
+import IconButton from '@mui/material/IconButton';
 
 const Popup = ({ data }) => {
     return (

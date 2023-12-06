@@ -10,6 +10,10 @@ import Fade from '@mui/material/Fade';
 import Popup from "./PopUp";
 import ShopUp from "./ShopUp";
 
+import { Close } from "@mui/icons-material";
+import IconButton from '@mui/material/IconButton';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+
 const style = {
     position: 'absolute',
     top: '50%',
@@ -72,6 +76,9 @@ function Qualifications(props) {
                                                 </div>
                                             </div>
                                             <div className="qual__calendar"><i class="uil uil-schedule"></i>{item.years}</div>
+                                            <div className="qual__data_openIcon">
+                                                Expand <OpenInNewIcon fontSize="0.5rem" />
+                                            </div>
                                         </div>
                                         <Modal
                                             open={openModalIndex === index}
@@ -80,6 +87,11 @@ function Qualifications(props) {
                                             <Fade in={openModalIndex === index}>
                                                 <Box sx={style}>
                                                     <Popup data={item} />
+                                                    <div className="modal_close_button">
+                                                        <IconButton color="#ffe2e2" onClick={handleClose}>
+                                                            <Close />
+                                                        </IconButton>
+                                                    </div>
                                                 </Box>
                                             </Fade>
                                         </Modal>
@@ -104,6 +116,9 @@ function Qualifications(props) {
                                                 </div>
                                             </div>
                                             <div className="qual__calendar"><i class="uil uil-schedule"></i>{item.years}</div>
+                                            <div className="qual__data_openIcon_xp">
+                                                <OpenInNewIcon fontSize="0.5rem" />
+                                            </div>
                                         </div>
                                         <Modal
                                             open={openModalIndex_ === index}
@@ -112,6 +127,11 @@ function Qualifications(props) {
                                             <Fade in={openModalIndex_ === index}>
                                                 <Box sx={style}>
                                                     {<ShopUp data={item} />}
+                                                    <div className="modal_close_button">
+                                                        <IconButton color="#ffe2e2" onClick={handleClose_}>
+                                                            <Close />
+                                                        </IconButton>
+                                                    </div>
                                                 </Box>
                                             </Fade>
                                         </Modal>

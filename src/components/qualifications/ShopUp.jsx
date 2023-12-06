@@ -3,6 +3,7 @@ import "./popup.css"
 import LanguageIcon from '@mui/icons-material/Language';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
+
 const ShopUp = ({ data }) => {
     return (
         <div className="popup__container">
