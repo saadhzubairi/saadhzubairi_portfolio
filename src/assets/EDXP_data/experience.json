@@ -27,17 +27,19 @@
         "company": "MCB Funds",
         "years": "May 2023 - July 2023",
         "logo": "/XP_logos/mcbfunds_logo.jpeg",
-        "website": "https://www.ubldigital.com/",
-        "linkedIn": "https://www.linkedin.com/company/united-bank-limited",
-        "about": "",
-        "desc": "",
+        "website": "https://www.mcbfunds.com/",
+        "linkedIn": "https://www.linkedin.com/company/mcbfunds/",
+        "about": "MCB Funds is an Asset Management Company, listed on the Pakistan Stock Exchange and regulated under the Securities & Exchange Commission of Pakistan (SECP). The Company was established in the year 2000 and in March 2002, two of its flagship Funds, the MCB Pakistan Stock Market Fund (MCB-PSM) and the Pakistan Income Fund (PIF) were launched. MCB Funds manages 15 Mutual Funds, 2 Voluntary Pension schemes and various Investment Plans in its product portfolio to meet the investment needs of its growing clientele. It is also a member of the Mutual Funds Association of Pakistan (MUFAP). MCB Funds has the highest management quality rating of AM1, which bespeaks of its excellent management and quality standards in the industry.",
+        "desc": "Onboarded as a Junior Software Developer as a lateral hire for the backend operations team after 3 screening rounds.",
         "resps": [
-            "",
-            ""
+            "Collaborated on updating dependencies of legacy codebase, ensuring the application's maintainability and security.",
+            "Developed and implemented file compression utilities, boosting data transfer speeds by 20% and reducing storage requirements by 30%"
         ],
         "skills": [
-            "",
-            ""
+            "C++",
+            "Python",
+            "ASP.NET Core",
+            "Back-End Development"
         ]
     },
     {
@@ -45,17 +47,24 @@
         "company": "Run Sports, LLC (New York)",
         "years": "Dec 2022 - Jan 2023",
         "logo": "/XP_logos/run_sports_app_logo.jpeg",
-        "website": "https://www.ubldigital.com/",
-        "linkedIn": "https://www.linkedin.com/company/united-bank-limited",
-        "about": "",
-        "desc": "",
+        "website": "https://www.runhoops.com/",
+        "linkedIn": "https://www.linkedin.com/company/run-sports-app/",
+        "about": "RUN Sports is a technology company that is digitally reinventing player pick-up sports by enabling users of our mobile application to find, create and play in local pick-up games. Our Intelligent Roster System™ embedded in our App helps our players avoid pick-up games that are not competitively balanced or appropriate for the particular player, which helps solve a common occurrence when new players try to connect to play games. In addition, our App allows our players to communicate with other players via the chat function, and receive rewards such as badges and a gamer score by staying active. Our players think of our App as a real life version of the My Player mode found in the NBA 2K video game series.",
+        "desc": "Onboarded as a Unity Intern for the wintern internship cohort through wellfound (formerly angel.co).",
         "resps": [
-            "",
-            ""
+            "Designed 15 user journey wireframes, prototypes, and mockups for a gamified social media app using Figma.",
+            "Elevated engagement and retention by 37% by introducing a reward system and a leaderboard experience.",
+            "Programmed 20+ interactive UI elements and 5+ animations in Unity for user interface development.",
+            "Worked closely with the engineering team to ensure design specifications were implemented accurately and effectively.",
+            "Conducted 3 user research and usability testing to gather feedback and insights."
         ],
         "skills": [
-            "",
-            ""
+            "Product Design",
+            "UX Research",
+            "GUI Design",
+            "Figma",
+            "C#",
+            "Unity"
         ]
     },
     {
@@ -63,17 +72,23 @@
         "company": "Mindstorm Studios",
         "years": "July 2022 - September 2022",
         "logo": "/XP_logos/mindstorm_studios_logo.jpeg",
-        "website": "https://www.ubldigital.com/",
-        "linkedIn": "https://www.linkedin.com/company/united-bank-limited",
-        "about": "",
-        "desc": "",
+        "website": "https://mindstormstudios.com/",
+        "linkedIn": "https://www.linkedin.com/company/mindstorm-studios/",
+        "about": "We bring fun to life on the mobile with games that entertain millions all around the world. With over 15 years of game development experience and hits in the bag, including critically acclaimed PC titles like Cricket Revolution and the ICC 2011 official world cup cricket game, Cricket Power, we are now focused on disrupting the mobile casual and hypercasual markets with world class game launches and experiences. We are partnered with the top publishers in the mobile gaming world and are leading the charge to make Pakistan a mobile gaming powerhouse!",
+        "desc": "Part of the 2022 summer game jam internship program.",
         "resps": [
-            "",
-            ""
+            "Completed 20 hours of training programs with seasoned game design professionals",
+            "Built 3 hands-on game projects to cultivate a solid understanding of the SDLC.",
+            "Enhanced Unity and C# scripting abilities through 5+ intermediate level projects.",
+            "Lead a team of 4 people to develop a production ready game as our final capstone submission."
         ],
         "skills": [
-            "",
-            ""
+            "Game Development",
+            "Unity",
+            "Blender",
+            "C++",
+            "AI",
+            "Algorithms"
         ]
     },
     {
@@ -81,17 +96,26 @@
         "company": "Institute of Business Administration, Karachi",
         "years": "January 2021 - May 2023",
         "logo": "/EDXP_logos/IBA.png",
-        "website": "https://www.ubldigital.com/",
-        "linkedIn": "https://www.linkedin.com/company/united-bank-limited",
-        "about": "",
-        "desc": "",
+        "website": "https://www.iba.edu.pk/",
+        "linkedIn": "https://www.linkedin.com/school/institute-of-business-administration-karachi/",
+        "about": "Established in 1955, the Institute of Business Administration (IBA) Karachi stands as a prestigious academic institution in Pakistan. Renowned for its commitment to excellence, IBA offers a diverse range of undergraduate and graduate programs in business, economics, and social sciences. With a rich history, IBA Karachi continues to shape future leaders through rigorous education and a focus on practical skills, contributing significantly to the country's business and academic landscape.",
+        "desc": "Teaching assistant for 3 Prgramming and Computer Networking courses and two Faculty Members for 4 semesters",
         "resps": [
-            "",
-            ""
+            "Facilitated 70+ students with their learning via conducting tutorials and assisting in home-assignments.",
+            "Provided timely and frequent feedback to students through exam, quizzes, and assignment reviews.",
+            "Assisted the professors in improving the assignments to make sure they fit the students understanding.",
+            "Maintained student progress records and efficiently managed any issues faced during online mode classes whenever it was applicable.",
+            "Graded 200+ assignments throughout the term, lab tasks, and quizzes."
+
         ],
         "skills": [
-            "",
-            ""
+            "Java",
+            "Python",
+            "Cisco Packet Tracer",
+            "Teaching",
+            "Lecturing",
+            "Grading & Assessment",
+            "Academic Bookkeeping"
         ]
     },
     {
@@ -99,17 +123,19 @@
         "company": "IBA Career Development Centre",
         "years": "Jan 2021 - Jan 2022",
         "logo": "/XP_logos/logo-cdc2.png",
-        "website": "https://www.ubldigital.com/",
-        "linkedIn": "https://www.linkedin.com/company/united-bank-limited",
-        "about": "",
-        "desc": "",
+        "website": "https://cdc.iba.edu.pk/",
+        "linkedIn": "https://www.linkedin.com/in/ibacdckarachi/",
+        "about": "Career Development Center (CDC) is dedicated to provide necessary tools and resources to students for managing their career goals. We are committed to connect employers with qualified candidates who meet their recruiting needs. The Centre’s Corporate Relations Office is dedicated to strengthen the connections between students and employers for maximizing their opportunities to understand each other. We endeavor to provide Employers with excellent service that is professional, tailored to their specific needs. We partner with employers to define the most appropriate and effective means for them to get to know and recruit our graduates for internships and jobs.",
+        "desc": "Interned for the post-covid virtual career fair organizing team as part of an on-campus internship",
         "resps": [
-            "",
-            ""
+            "Digitally designed posters/banners for marketing campaigns for the first ever Virtual Career Fair.",
+            "Promoted the campaigns through social media marketing, causing an inpour of 4,000+ organic followers.",
+            "Spearheaded video tutorials designing for the Virtual Career Fair system, that proved vital for future projects."
         ],
         "skills": [
-            "",
-            ""
+            "Graphic Design",
+            "Adobe Photoshop",
+            "Adobe Illustrator"
         ]
     }
 ]

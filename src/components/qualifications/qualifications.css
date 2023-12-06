@@ -21,6 +21,8 @@
     cursor: pointer;
     padding: 0.25rem 1rem;
     transition: 300ms;
+    border: 2px dashed #aeaeae;
+    border-radius: 0.8rem;
 }
 
 .qual__active:hover {
@@ -38,6 +40,7 @@
     background-color: rgb(56, 56, 56);
     padding: 0.25rem 1rem;
     border-radius: 1rem;
+    border: 2px dashed rgb(56, 56, 56);
 }
 
 

@@ -39,32 +39,30 @@
         "institute": "Govt. Degree College, Gulshan-e-Iqbal",
         "years": "2016-2018",
         "logo": "EDXP_logos/GDSC.jpeg",
-        "about": "Ghareebon ka college",
-        "website": "https://www.iba.edu.pk/",
-        "linkedIn": "https://www.linkedin.com/school/institute-of-business-administration-karachi/",
+        "about": "The Government Degree Science and Commerce College is located in Gulshan-e-Iqbal Block # 7, Karachi, Pakistan. It is situated near the popular Safari Park. This college is known for its focus on science and commerce education. It has a significant presence on social media, with thousands of followers and a high level of engagement. The college is well-regarded in the community, and it continues to contribute to the academic growth of its students.",
+        "website": "https://web.facebook.com/GovtDegreeCollegeGulshanEIqbalBlock7",
+        "linkedIn": "https://web.facebook.com/GovtDegreeCollegeGulshanEIqbalBlock7",
         "cgpa": "A",
         "session": "August 2016 - May 2018",
         "moreInfo": [
             {
                 "Heading": "Courses",
                 "List": [
-                    "Fucked up economics",
-                    "Mobile App Development",
-                    "Computer Graphics",
-                    "Game Design & Development",
-                    "Web App Development",
-                    "Data Mining",
-                    "Computer Vision"
+                    "Physics",
+                    "Mathematics",
+                    "Chemistry",
+                    "English",
+                    "Pakistan History",
+                    "Islamiat",
+                    "Urdu"
                 ]
             },
             {
                 "Heading": "Extra & Co-curriculars",
                 "List": [
-                    "Master of Ceremony (Lead Host) for Convocation 2022, Orientation 2022, and other official events at IBA",
-                    "IBA Mathematics & Astronomy Club - Chief Finance Officer",
-                    "IBA Entrepreneurship Society - Executive Director Creatives for HULT at IBA",
-                    "IBA Leadership Club - Core Team Member (Operations, Creatives & Corporate Affairs)",
-                    "IBA Community Welfare Society"
+                    "Lead bowler of the college cricket team",
+                    "Participated in community fund rasing",
+                    "Organizing Committee Member of GMUN"
                 ]
             }
         ]
@@ -74,32 +72,31 @@
         "institute": "Falconhouse Grammar School",
         "years": "2008-2016",
         "logo": "/EDXP_logos/FHGS.png",
-        "about": "Established in 1955, the Institute of Business Administration (IBA) Karachi stands as a prestigious academic institution in Pakistan. Renowned for its commitment to excellence, IBA offers a diverse range of undergraduate and graduate programs in business, economics, and social sciences. With a rich history, IBA Karachi continues to shape future leaders through rigorous education and a focus on practical skills, contributing significantly to the country's business and academic landscape.",
-        "website": "https://www.iba.edu.pk/",
-        "linkedIn": "https://www.linkedin.com/school/institute-of-business-administration-karachi/",
+        "about": "Established in 1984, Falconhouse Grammar School (FGS) has evolved into a prominent chain of educational institutions with 12 campuses in Karachi, as well as locations in Hyderabad and Multan. Affiliated with the University of Cambridge, London, and the Board of Secondary Education, FGS celebrates its 34th year of Academic Excellence. The school, known for its rigorous educational programs. FGS is recognized as one of the largest private English medium school systems in Pakistan, accommodating over 6000 students.",
+        "website": "http://www.falconhouse.edu.pk/",
+        "linkedIn": "https://www.linkedin.com/company/falconhouse-grammar-school",
         "cgpa": "A+",
-        "session": "August 2019 - May 2023",
+        "session": "May 2008 - May 2016",
         "moreInfo": [
             {
                 "Heading": "Courses",
                 "List": [
-                    "Tech Product Development",
-                    "Mobile App Development",
-                    "Computer Graphics",
-                    "Game Design & Development",
-                    "Web App Development",
-                    "Data Mining",
-                    "Computer Vision"
+                    "Hard Sciences",
+                    "Social Sciences",
+                    "Basic Languages",
+                    "Logic & Religious Studies",
+                    "Grammar and Composition",
+                    "Literature"
                 ]
             },
             {
                 "Heading": "Extra & Co-curriculars",
                 "List": [
-                    "Master of Ceremony (Lead Host) for Convocation 2022, Orientation 2022, and other official events at IBA",
-                    "IBA Mathematics & Astronomy Club - Chief Finance Officer",
-                    "IBA Entrepreneurship Society - Executive Director Creatives for HULT at IBA",
-                    "IBA Leadership Club - Core Team Member (Operations, Creatives & Corporate Affairs)",
-                    "IBA Community Welfare Society"
+                    "Spelling Bee Rep 2011 & 2016",
+                    "National Math Olympiad Rep (2012)",
+                    "Hosted annual result day ceremonies",
+                    "Cricket team member",
+                    "Community welfare initiative member"
                 ]
             }
         ]

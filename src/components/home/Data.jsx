@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 function Data(props) {
     return (
@@ -12,9 +13,9 @@ function Data(props) {
                 A Full Stack Designer and Developer Transforming Ideas into Reality with Innovative Software Solutions.
             </p>
             <div className="home_buttons_list">
-                <a href="/Portfolio" className="button button--flex">
+                <Link to="/Portfolio" className="button button--flex">
                     <i class="bx bxs-component"></i>  View Portfolio
-                </a>
+                </Link>
                 <a href="#Contact" className="button_ol button--flex">
                     <i class="uil uil-message"></i>  Let's Connect!
                 </a>
