@@ -1,0 +1,12 @@
+{
+    "id": "halpert",
+    "image": "/Projects/halpert/halpert.png",
+    "name": "Halpert's Booking",
+    "subtitle": "Hotel booking website made with HTML & CSS.",
+    "techs": [
+        "HTML",
+        "CSS",
+        "Node.js"
+    ],
+    "desc": "Hoops is a unique social media application where users can connect and chat with each other using letters while being completely anonymous."
+}

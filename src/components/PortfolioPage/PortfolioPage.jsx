@@ -3,13 +3,17 @@ import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from '@mui/material/Typography';
-import hoops from "../../assets/portfolio/hoops.json"
-import talenthive from "../../assets/portfolio/talenthive.json"
 import "./portfoliopage.css"
 import ProjectCard from "./projectCard";
 import CircularProgress from '@mui/material/CircularProgress';
 import LinearProgress from '@mui/material/LinearProgress';
 import Fade from '@mui/material/Fade';
+
+
+import hoops from "../../assets/portfolio/hoops.json"
+import talenthive from "../../assets/portfolio/talenthive.json"
+import halpert from "../../assets/portfolio/halpert.json"
+
 
 
 function CustomTabPanel(props) {
@@ -184,7 +188,7 @@ const PortfolioPage = () => {
               <CustomTabPanel value={value} index={0}>
                 <ProjectCard data={hoops} />
                 <ProjectCard data={talenthive} />
-                <ProjectCard data={hoops} />
+                <ProjectCard data={halpert} />
               </CustomTabPanel>
               <CustomTabPanel value={value} index={1}>
                 Item Two

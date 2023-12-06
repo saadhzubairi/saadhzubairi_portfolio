@@ -72,7 +72,7 @@
 }
 
 .pcard_title {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     font-weight: 900;
     color: #373737;
 }
@@ -125,7 +125,7 @@
 
 .pcard_img_cont {
     width: 18rem;
-    height: 15rem;
+    height: auto;
     border-radius: 1rem;
 
 }
@@ -142,7 +142,7 @@
 
 .pcard_img {
     width: 18rem;
-    height: 15rem;
+    height: auto;
     object-fit: cover;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
