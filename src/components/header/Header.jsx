@@ -41,6 +41,12 @@ function Header(props) {
                         </li>
 
                         <li className="nav__item">
+                            <Link to="/#Qual" className="nav__link" onClick={() => setHash('Qual')} >
+                                <i className="uil uil-briefcase-alt nav__icon"></i>Qualifications
+                            </Link>
+                        </li>
+
+                        <li className="nav__item">
                             <Link
                                 to="/#Skills"
                                 className="nav__link"
@@ -51,15 +57,8 @@ function Header(props) {
                         </li>
 
                         <li className="nav__item">
-                            <Link to="/#Qual" className="nav__link" onClick={() => setHash('Qual')} >
-                                <i className="uil uil-briefcase-alt nav__icon"></i>Qualifications
-                            </Link>
-                        </li>
-
-
-                        <li className="nav__item">
                             <Link to="/#Contact" className="nav__link" onClick={() => setHash('Contact')}>
-                                <i className="uil uil-message nav__icon"></i> Contact
+                                <i className="uil uil-message nav__icon"></i> Connect
                             </Link>
                         </li>
 

@@ -22,20 +22,12 @@ function CustomTabPanel(props) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const delay = 200; // 2 seconds in milliseconds
-
-    const timeoutId = setTimeout(() => {
-      setLoading(false);
-    }, delay);
-
-    return () => clearTimeout(timeoutId); // Clear the timeout if the component unmounts
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    setLoading(false);
   }, []);
 
   return (
     loading ?
-      <LinearProgress style={{ height: "0.5rem", width: "50%", marginTop: "2rem", backgroundColor: "#888" }} />
+      <></>
       :
       <div
         className="portfolio_tabpane"
