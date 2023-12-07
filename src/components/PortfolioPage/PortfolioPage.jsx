@@ -180,12 +180,19 @@ const PortfolioPage = () => {
                 <ProjectCard data={hoops} />
                 <ProjectCard data={talenthive} />
                 <ProjectCard data={halpert} />
+                <ProjectCard data={talenthive} />
               </CustomTabPanel>
               <CustomTabPanel value={value} index={1}>
-                Item Two
+                <ProjectCard data={talenthive} />
+                <ProjectCard data={hoops} />
+                <ProjectCard data={talenthive} />
+                <ProjectCard data={halpert} />
               </CustomTabPanel>
               <CustomTabPanel value={value} index={2}>
-                Item Three
+                <ProjectCard data={talenthive} />
+                <ProjectCard data={halpert} />
+                <ProjectCard data={talenthive} />
+                <ProjectCard data={hoops} />
               </CustomTabPanel>
               <CustomTabPanel value={value} index={3}>
                 Item Four

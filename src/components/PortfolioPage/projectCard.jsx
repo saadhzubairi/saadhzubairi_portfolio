@@ -1,6 +1,7 @@
 import "./portfoliopage.css"
 import React from 'react'
 import { useNavigate } from "react-router-dom"
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 const ProjectCard = ({ data }) => {
     const navigate = useNavigate();
@@ -23,9 +24,14 @@ const ProjectCard = ({ data }) => {
                     <div className="pcard_pane_left_bottom">
                         <div className="pcard_title">{data.name}</div>
                         <div className="pcard_subtitle">{data.subtitle}</div>
+                        <div className="pcard_openIcon">
+                            OPEN<OpenInNewIcon fontSize="0.5rem" />
+                        </div>
                     </div>
+
                 </div>
             </div>
+
         </div>
     )
 }

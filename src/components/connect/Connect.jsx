@@ -96,13 +96,13 @@ const Connect = () => {
           Let's chat.<br />Tell me about your project.
         </div>
         <div className="connect_smallshot">Let's create something together 🤘</div>
-        <div className="connect_mailme">
+        <a className="connect_mailme" href="mailto:saadhzubairi@outlook.com" style={{textDecoration:"none",color:"inherit"}}>
           <i class='bx bx-envelope connect_mailme_mailbutton' ></i>
           <div className="connect_mailme_col">
             <div className="connect_mailme_col_text">Mail me at</div>
             <div className="connect_mailme_col_email"><a href="mailto:saadhzubairi@outlook.com" className="connect_mailme_col_email_actual">saadhzubairi@outlook.com</a></div>
           </div>
-        </div>
+        </a>
       </div>
       <div className="connect_left">
         <div className="sendmessage_float">

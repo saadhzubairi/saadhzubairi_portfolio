@@ -136,7 +136,7 @@
     align-items: start;
     justify-content: end;
     height: 8rem;
-    width: 16rem;
+    width: 17.5rem;
     padding: 1.2rem 1.3rem;
 }
 
@@ -166,8 +166,27 @@
     height: calc(89vh);
 }
 
+.pcard_openIcon{
+    position: absolute;
+    bottom:6.5rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 0.7rem;
+    gap: 0.5rem;
+}
+
 @media screen and (max-width: 768px) {
     .pcard_pane_right {
         display: none;
+    }
+
+    .portfolio_body{
+        padding-bottom: 6rem;
+    }
+
+    .portfolio_heading{
+        margin-top: 5vh;
     }
 }

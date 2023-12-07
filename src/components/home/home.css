@@ -152,6 +152,17 @@
 }
 
 @media screen and (max-width: 768px) {
+    .home__content {
+        display: flex;
+        flex-direction: column;
+        padding-top: 1.5rem;
+    }
+    .home__social{
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
     .home_buttons_list {
         display: flex;
         flex-direction: column;
@@ -174,10 +185,7 @@
         width: 10px;
     }
 
-    .home__content {
-        grid-template-columns: 0.5fr 3fr;
-        padding-top: 3.5rem;
-    }
+
 
     .home__img {
         order: initial;
