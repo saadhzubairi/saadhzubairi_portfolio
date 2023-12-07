@@ -67,6 +67,7 @@
 .popup__text {
     font-size: 0.9rem;
     color: rgb(65, 65, 65);
+    font-weight: 600;
 }
 
 .popup__links {
@@ -110,10 +111,12 @@
     background-color: #f7f7f7;
     padding: 1rem 2rem;
     border-radius: 2rem;
+    font-weight: 500;
+    color: #333;
 }
 
 .pop__section__heading {
-    color: #3b3b3b;
+    color: #333;
     font-size: 1rem;
     font-style: normal;
     font-weight: 700;
@@ -122,8 +125,9 @@
 }
 
 .pop__section__content {
-    font-weight: 400;
+    font-weight: 500;
     font-size: 0.8rem;
+    color: #333;
 }
 
 .pop__list {

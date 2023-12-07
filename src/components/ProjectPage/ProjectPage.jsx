@@ -75,16 +75,13 @@ const ProjectPage = () => {
             setLoading(false);
         }, delay);
 
-        return () => clearTimeout(timeoutId); // Clear the timeout if the component unmounts
-
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+        return () => clearTimeout(timeoutId);
     }, []);
 
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
-            // You can adjust the scroll threshold based on your requirements
             const scrollThreshold = 50;
             const currentScrollPos = window.scrollY;
 
@@ -108,31 +105,33 @@ const ProjectPage = () => {
 
     const [chImg, setChImg] = useState(false)
 
-    const [slideDirection, setSlideDirection] = useState('left');
 
     const nextImg = () => {
-        setSlideDirection('left');
-        setChImg(false)
-        var ind = images.findIndex(image => image === img);
+/*         setSlideDirection('left');
+        setChImg(!chImg)
+ */        var ind = images.findIndex(image => image === img);
         console.log(ind);
-        if (ind === (images.length - 1) || ind === -1) {
+        if (ind === (images.length - 1) ) {
+        }
+        else if(ind === -1){
+            setImg(images[0])
         }
         else {
             setImg(images[ind + 1])
         }
-        setChImg(true)
+
     }
     const prevImg = () => {
-        setSlideDirection('right');
-        setChImg(false)
-        var ind = images.findIndex(image => image === img);
+/*         setSlideDirection('right');
+        setChImg(!chImg)
+ */        var ind = images.findIndex(image => image === img);
         console.log(ind);
         if (ind === 0 || ind === -1) {
         }
         else {
             setImg(images[ind - 1])
         }
-        setChImg(true)
+
     }
 
 
@@ -163,9 +162,9 @@ const ProjectPage = () => {
                                 <Modal open={open} onClose={handleClose}>
                                     <Fade>
                                         <Box sx={style} ref={containerRef}>
-                                            <Slide key={`${img}-${chImg}`} direction={slideDirection} in={chImg} container={containerRef.current}>
-                                                <img src={img} alt="" className="" />
-                                            </Slide>
+                                            {/* <Slide key={`${img}_${slideDirection}`} direction={slideDirection} in={chImg} container={containerRef.current}> */}
+                                            <img src={img} alt="" className="" />
+                                            {/* </Slide> */}
                                             <div className="modal_close_button">
                                                 <IconButton color="#ffe2e2" onClick={handleClose}>
                                                     <Close />
