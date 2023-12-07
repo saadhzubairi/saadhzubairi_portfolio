@@ -1,14 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./projectPage.css"
 import { useParams } from "react-router-dom"
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal'
 import Fade from '@mui/material/Fade';
 import CircularProgress from '@mui/material/CircularProgress';
-import { ArrowBack, Close } from "@mui/icons-material";
+import { ArrowBack, ArrowLeft, ArrowRight, Close } from "@mui/icons-material";
 import IconButton from '@mui/material/IconButton';
 import ScrollDown from "../home/ScrollDown";
 import { useNavigate } from 'react-router-dom';
+import Slide from '@mui/material/Slide';
 
 /* import data from `../../assets/portfolio/${projectId}.json`
  */
@@ -35,17 +36,29 @@ const ProjectPage = () => {
 
     const [open, setOpen] = useState(false);
     const handleOpen = (imgIn) => {
+        setChImg(true)
         setImg(imgIn);
         setOpen(true);
     }
     const handleClose = () => setOpen(false);
 
     useEffect(() => {
+
+        const images = [];
+
+        const clicker = () => {
+            for (let i = 0; i < jsonData.sections.length; i++) {
+                for (let j = 0; j < jsonData.sections[i].sectionData.length; j++) {
+                    images.push(jsonData.sections[i].sectionData[j].image);
+                }
+            }
+        }
         const fetchData = async () => {
             try {
                 const module = await import(`../../assets/portfolio/${projectId}.json`);
                 setJsonData(module.default);
-                console.log(jsonData)
+                clicker();
+                setImages(images);
             } catch (error) {
                 console.error('Error importing JSON:', error);
             }
@@ -91,6 +104,40 @@ const ProjectPage = () => {
         nav(-1);
     }
 
+    const [images, setImages] = useState([]);
+
+    const [chImg, setChImg] = useState(false)
+
+    const [slideDirection, setSlideDirection] = useState('left');
+
+    const nextImg = () => {
+        setSlideDirection('left');
+        setChImg(false)
+        var ind = images.findIndex(image => image === img);
+        console.log(ind);
+        if (ind === (images.length - 1) || ind === -1) {
+        }
+        else {
+            setImg(images[ind + 1])
+        }
+        setChImg(true)
+    }
+    const prevImg = () => {
+        setSlideDirection('right');
+        setChImg(false)
+        var ind = images.findIndex(image => image === img);
+        console.log(ind);
+        if (ind === 0 || ind === -1) {
+        }
+        else {
+            setImg(images[ind - 1])
+        }
+        setChImg(true)
+    }
+
+
+    const containerRef = useRef(null);
+
     return (
         loading ? <div className="portfolio_circular_progress">
             <div className="portfolio_wrapper">
@@ -115,14 +162,25 @@ const ProjectPage = () => {
 
                                 <Modal open={open} onClose={handleClose}>
                                     <Fade>
-                                        <Box sx={style}>
-                                            <img src={img} alt="" className="" />
+                                        <Box sx={style} ref={containerRef}>
+                                            <Slide key={`${img}-${chImg}`} direction={slideDirection} in={chImg} container={containerRef.current}>
+                                                <img src={img} alt="" className="" />
+                                            </Slide>
                                             <div className="modal_close_button">
                                                 <IconButton color="#ffe2e2" onClick={handleClose}>
                                                     <Close />
                                                 </IconButton>
                                             </div>
-                                            <div  ></div>
+                                            <div className="modal_next_button">
+                                                <IconButton color="#ffe2e2" onClick={nextImg}>
+                                                    <ArrowRight />
+                                                </IconButton>
+                                            </div>
+                                            <div className="modal_prev_button">
+                                                <IconButton color="#ffe2e2" onClick={prevImg}>
+                                                    <ArrowLeft />
+                                                </IconButton>
+                                            </div>
                                         </Box>
                                     </Fade>
                                 </Modal>

@@ -93,7 +93,7 @@ const Connect = () => {
     <div className="connect__container" id='Contact'>
       <div className="connect_right">
         <div className="connect_bigshot">
-          Let's chat.<br />Tell me about your project.
+          Let's chat.<br />Tell me about your work.
         </div>
         <div className="connect_smallshot">Let's create something together 🤘</div>
         <a className="connect_mailme" href="mailto:saadhzubairi@outlook.com" style={{textDecoration:"none",color:"inherit"}}>
@@ -112,7 +112,7 @@ const Connect = () => {
             <CssTextField disabled={sending} value={full_name} onChange={(e) => setFullName(e.target.value)} required variant="outlined" name='full_name' id="full_name" label="Full name" />
             <CssTextField disabled={sending} value={email} onChange={(e) => setEmail(e.target.value)} type='email' required variant="outlined" name='email' id="email" label="Email address" />
             <CssTextField disabled={sending} value={subject} onChange={(e) => setSubject(e.target.value)} id="subject" name='subject' label="Subject" />
-            <div className="sendmessage_float_tell">Tell me everything about your project*</div>
+            <div className="sendmessage_float_tell">Tell me something about your work*</div>
             <CssTextField disabled={sending} value={message} onChange={(e) => setMessage(e.target.value)} id="message" name='message' label="" multiline rows={4} />
             <div className="sendmessage_float_button_div">
               <button disabled={sending} className="sendmessage_float_button" type="submit">
