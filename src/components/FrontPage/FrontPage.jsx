@@ -43,7 +43,7 @@ const FrontPage = () => {
                 <About />
                 <Qualifications />
                 <Skills />
-                <Connect />
+                <Connect page={0}/>
             </div>
     )
 }

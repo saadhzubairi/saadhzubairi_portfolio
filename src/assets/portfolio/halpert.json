@@ -3,10 +3,39 @@
     "image": "/Projects/halpert/halpert.png",
     "name": "Halpert's Booking",
     "subtitle": "Hotel booking website made with HTML & CSS.",
+    "titleImg": "/Projects/halpert/halpert.png",
     "techs": [
         "HTML",
         "CSS",
         "Node.js"
     ],
-    "desc": "Hoops is a unique social media application where users can connect and chat with each other using letters while being completely anonymous."
+    "desc": "Hoops is a unique social media application where users can connect and chat with each other using letters while being completely anonymous.",
+    "sections": [
+        {
+            "sectionheading": "A powerful NLP Engine",
+            "sectionText": "A smooth and beautifully designed onboarding and login.",
+            "sectionData": [
+                {
+                    "alignment": "l",
+                    "image": "/Projects/halpert/home.png",
+                    "text": "We have used SpaCy as our primary deep learning model and have trained it over 100s of resumes to filter out the perfect candidates according to the job description."
+                },
+                {
+                    "alignment": "r",
+                    "image": "/Projects/halpert/view.png",
+                    "text": "The algorithm works by parsing information from the PDF, categorizing the information and extracting primary hard and soft skills, and scoring the profile against a job description to present the perfect candidate."
+                },
+                {
+                    "alignment": "l",
+                    "image": "/Projects/halpert/list.png",
+                    "text": "We have used SpaCy as our primary deep learning model and have trained it over 100s of resumes to filter out the perfect candidates according to the job description."
+                },
+                {
+                    "alignment": "r",
+                    "image": "/Projects/halpert/calendar.png",
+                    "text": "The algorithm works by parsing information from the PDF, categorizing the information and extracting primary hard and soft skills, and scoring the profile against a job description to present the perfect candidate."
+                }
+            ]
+        }
+    ]
 }

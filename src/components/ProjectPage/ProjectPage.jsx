@@ -10,6 +10,7 @@ import IconButton from '@mui/material/IconButton';
 import ScrollDown from "../home/ScrollDown";
 import { useNavigate } from 'react-router-dom';
 import Slide from '@mui/material/Slide';
+import Connect from "../connect/Connect";
 
 /* import data from `../../assets/portfolio/${projectId}.json`
  */
@@ -111,9 +112,9 @@ const ProjectPage = () => {
         setChImg(!chImg)
  */        var ind = images.findIndex(image => image === img);
         console.log(ind);
-        if (ind === (images.length - 1) ) {
+        if (ind === (images.length - 1)) {
         }
-        else if(ind === -1){
+        else if (ind === -1) {
             setImg(images[0])
         }
         else {
@@ -208,7 +209,9 @@ const ProjectPage = () => {
                                                                                     <img src={d.image} alt="" />
                                                                                 </div>
                                                                                 <div className="projectPage_section_subText">
-                                                                                    {d.text}
+                                                                                    <div className="projectPage_section_subText_actualText">
+                                                                                        {d.text}
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
                                                                         )}
@@ -234,6 +237,7 @@ const ProjectPage = () => {
                     }
 
                 </div >
+                <Connect page={1}/>
                 <a href="#projectPage_bottom" className={isScrolled ? "Scroll_down_shizzle scroll_down_hide" : "Scroll_down_shizzle "}><ScrollDown hash={"projectPage_bottom"} /></a>
                 <div onClick={goBack} className={`projectPage_back_button ${isScrolled ? "scrolled" : ""}`}>
                     <ArrowBack fontSize="0.5rem" />

@@ -12,6 +12,8 @@ import Fade from '@mui/material/Fade';
 import hoops from "../../assets/portfolio/hoops.json"
 import talenthive from "../../assets/portfolio/talenthive.json"
 import halpert from "../../assets/portfolio/halpert.json"
+import StandardImageList from "./ImageList";
+import MasonryImageList from "./ImageList";
 
 
 
@@ -180,7 +182,6 @@ const PortfolioPage = () => {
                 <ProjectCard data={hoops} />
                 <ProjectCard data={talenthive} />
                 <ProjectCard data={halpert} />
-                <ProjectCard data={talenthive} />
               </CustomTabPanel>
               <CustomTabPanel value={value} index={1}>
                 <ProjectCard data={talenthive} />
@@ -204,7 +205,7 @@ const PortfolioPage = () => {
                 Item Six
               </CustomTabPanel>
               <CustomTabPanel value={value} index={6}>
-                Item Seven
+                <MasonryImageList />
               </CustomTabPanel>
 
             </Box>

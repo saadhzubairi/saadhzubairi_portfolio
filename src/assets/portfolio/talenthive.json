@@ -15,21 +15,128 @@
         "AWS",
         "Firebase"
     ],
-    "desc": "talenthive is a unique social media application where users can connect and chat with each other using letters while being completely anonymous.",
+    "desc": "Talent Hive simplifies talent supply chain for HR managers and candidates by using a powerful AI to shortlist candidates with an intuitive and simple UI.",
     "sections": [
         {
             "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
+            "sectionText": "Parsing information and scoring profiles made easy!",
             "sectionData": [
                 {
                     "alignment": "l",
                     "image": "/Projects/talenthive/nlp.png",
-                    "text": "Login and Sign up screens with proper validators on available usernames and passwords constraints checking. Each keystroke triggers and API call that checks for available usernames from a staging database. Username is later verfied from actual database when clicking next."
+                    "text": "We have used SpaCy as our primary deep learning model and have trained it over 100s of resumes to filter out the perfect candidates according to the job description."
                 },
                 {
                     "alignment": "r",
                     "image": "/Projects/talenthive/npl_.png",
-                    "text": "Users are able to add their interests from a wide range of options so they can connect with people who have similar interest as theres."
+                    "text": "The algorithm works by parsing information from the PDF, categorizing the information and extracting primary hard and soft skills, and scoring the profile against a job description to present the perfect candidate."
+                }
+            ]
+        },
+        {
+            "sectionheading": "The perfect tool for HR Managers",
+            "sectionText": "Parsing information and scoring profiles made easy!",
+            "sectionData": [
+                {
+                    "alignment": "r",
+                    "image": "/Projects/talenthive/hr_home.png",
+                    "text": "The algorithm works by parsing information from the PDF, categorizing the information and extracting primary hard and soft skills, and scoring the profile against a job description to present the perfect candidate."
+                },
+                {
+                    "alignment": "l",
+                    "image": "/Projects/talenthive/hr_createJob.png",
+                    "text": "We have used SpaCy as our primary deep learning model and have trained it over 100s of resumes to filter out the perfect candidates according to the job description."
+                },
+                {
+                    "alignment": "r",
+                    "image": "/Projects/talenthive/hr_previewJob.png",
+                    "text": "We have used SpaCy as our primary deep learning model and have trained it over 100s of resumes to filter out the perfect candidates according to the job description."
+                },
+                {
+                    "alignment": "l",
+                    "image": "/Projects/talenthive/hr_job.png",
+                    "text": "The algorithm works by parsing information from the PDF, categorizing the information and extracting primary hard and soft skills, and scoring the profile against a job description to present the perfect candidate."
+                },
+                {
+                    "alignment": "r",
+                    "image": "/Projects/talenthive/hr_viewCand.png",
+                    "text": "The algorithm works by parsing information from the PDF, categorizing the information and extracting primary hard and soft skills, and scoring the profile against a job description to present the perfect candidate."
+                },
+                {
+                    "alignment": "l",
+                    "image": "/Projects/talenthive/hr_intCand.png",
+                    "text": "We have used SpaCy as our primary deep learning model and have trained it over 100s of resumes to filter out the perfect candidates according to the job description."
+                },
+                {
+                    "alignment": "r",
+                    "image": "/Projects/talenthive/hr_company.png",
+                    "text": "We have used SpaCy as our primary deep learning model and have trained it over 100s of resumes to filter out the perfect candidates according to the job description."
+                },
+                {
+                    "alignment": "l",
+                    "image": "/Projects/talenthive/hr_company2.png",
+                    "text": "We have used SpaCy as our primary deep learning model and have trained it over 100s of resumes to filter out the perfect candidates according to the job description."
+                },
+                {
+                    "alignment": "r",
+                    "image": "/Projects/talenthive/hr_company3.png",
+                    "text": "The algorithm works by parsing information from the PDF, categorizing the information and extracting primary hard and soft skills, and scoring the profile against a job description to present the perfect candidate."
+                },
+                {
+                    "alignment": "l",
+                    "image": "/Projects/talenthive/hr_addHRM.png",
+                    "text": "The algorithm works by parsing information from the PDF, categorizing the information and extracting primary hard and soft skills, and scoring the profile against a job description to present the perfect candidate."
+                }
+            ]
+        },
+        {
+            "sectionheading": "A powerful NLP Engine",
+            "sectionText": "Parsing information and scoring profiles made easy!",
+            "sectionData": [
+                {
+                    "alignment": "r",
+                    "image": "/Projects/talenthive/cand_home.png",
+                    "text": "The algorithm works by parsing information from the PDF, categorizing the information and extracting primary hard and soft skills, and scoring the profile against a job description to present the perfect candidate."
+                },
+                {
+                    "alignment": "l",
+                    "image": "/Projects/talenthive/cand_job.png",
+                    "text": "The algorithm works by parsing information from the PDF, categorizing the information and extracting primary hard and soft skills, and scoring the profile against a job description to present the perfect candidate."
+                },
+                {
+                    "alignment": "r",
+                    "image": "/Projects/talenthive/cand_apply.png",
+                    "text": "We have used SpaCy as our primary deep learning model and have trained it over 100s of resumes to filter out the perfect candidates according to the job description."
+                },
+                {
+                    "alignment": "l",
+                    "image": "/Projects/talenthive/cand_apply2.png",
+                    "text": "The algorithm works by parsing information from the PDF, categorizing the information and extracting primary hard and soft skills, and scoring the profile against a job description to present the perfect candidate."
+                },
+                {
+                    "alignment": "r",
+                    "image": "/Projects/talenthive/cand_apply3.png",
+                    "text": "We have used SpaCy as our primary deep learning model and have trained it over 100s of resumes to filter out the perfect candidates according to the job description."
+                },
+                {
+                    "alignment": "l",
+                    "image": "/Projects/talenthive/cand_appliedJobs.png",
+                    "text": "The algorithm works by parsing information from the PDF, categorizing the information and extracting primary hard and soft skills, and scoring the profile against a job description to present the perfect candidate."
+                },
+                {
+                    "alignment": "r",
+                    "image": "/Projects/talenthive/cand_applied.png",
+                    "text": "asdasdasdasWe have used SpaCy as our primary deep learning model and have trained it over 100s of resumes to filter out the perfect candidates according to the job description."
+                },
+                {
+                    "alignment": "l",
+                    "image": "/Projects/talenthive/cand_info.png",
+                    "text": "We have used SpaCy as our primary deep learning model and have trained it over 100s of resumes to filter out the perfect candidates according to the job description."
+                },
+                {
+                    "alignment": "r",
+                    "image": "/Projects/talenthive/cand_jobPage.png",
+                    "text": "We have used SpaCy as our primary deep learning model and have trained it over 100s of resumes to filter out the perfect candidates according to the job description."
                 }
             ]
         }
