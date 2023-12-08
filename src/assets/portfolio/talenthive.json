@@ -2,6 +2,7 @@
     "id": "talenthive",
     "image": "/Projects/talenthive/talenthive.png",
     "name": "Talent Hive",
+    "titleImg": "/Projects/talenthive/talenthive.png",
     "subtitle": "Shortlist 100s or resumes using a powerful AI.",
     "techs": [
         "MongoDB",
@@ -14,5 +15,23 @@
         "AWS",
         "Firebase"
     ],
-    "desc": "Hoops is a unique social media application where users can connect and chat with each other using letters while being completely anonymous."
+    "desc": "talenthive is a unique social media application where users can connect and chat with each other using letters while being completely anonymous.",
+    "sections": [
+        {
+            "sectionheading": "A powerful NLP Engine",
+            "sectionText": "A smooth and beautifully designed onboarding and login.",
+            "sectionData": [
+                {
+                    "alignment": "l",
+                    "image": "/Projects/talenthive/nlp.png",
+                    "text": "Login and Sign up screens with proper validators on available usernames and passwords constraints checking. Each keystroke triggers and API call that checks for available usernames from a staging database. Username is later verfied from actual database when clicking next."
+                },
+                {
+                    "alignment": "r",
+                    "image": "/Projects/talenthive/npl_.png",
+                    "text": "Users are able to add their interests from a wide range of options so they can connect with people who have similar interest as theres."
+                }
+            ]
+        }
+    ]
 }
