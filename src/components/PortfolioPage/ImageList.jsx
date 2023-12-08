@@ -1,5 +1,11 @@
 import * as React from 'react';
+
 import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal'
+import Fade from '@mui/material/Fade';
+import { Close } from "@mui/icons-material";
+import IconButton from '@mui/material/IconButton';
+
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import { useTheme } from '@mui/material/styles';
@@ -15,15 +21,22 @@ export default function MasonryImageList() {
 
     let cols;
     if (matchesXS) {
-        cols = 1;
-    } else if (matchesSM) {
         cols = 2;
-    } else if (matchesMD) {
+    } else if (matchesSM) {
         cols = 3;
+    } else if (matchesMD) {
+        cols = 4;
     } else if (matchesLG) {
         cols = 5;
     } else {
-        cols = 4;
+        cols = 5;
+    }
+
+    const [modImg, setModImg] = React.useState();
+    const [open, setOpen] = React.useState();
+
+    const handleClose = () => {
+        setOpen(false)
     }
 
     return (
@@ -35,10 +48,22 @@ export default function MasonryImageList() {
                             srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                             src={`${item.img}?w=248&fit=crop&auto=format`}
                             loading="lazy"
+                            onClick={() => { setModImg(item.img); setOpen(true) }}
+                            className='photography_portfolio_image'
                         />
                     </ImageListItem>
                 ))}
             </ImageList>
+            <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+            >
+                <div className="modal_preview_image_photography_container">
+                    <img src={modImg} alt="" className="modal_image_preview_photography" />
+                </div>
+            </Modal>
         </Box>
     );
 }

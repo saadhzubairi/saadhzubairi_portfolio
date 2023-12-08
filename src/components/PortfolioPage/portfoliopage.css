@@ -177,6 +177,18 @@
     gap: 0.5rem;
 }
 
+.modal_preview_image_photography_container{
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photography_portfolio_image{
+    cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
     .pcard_pane_right {
         display: none;
@@ -188,5 +200,13 @@
 
     .portfolio_heading{
         margin-top: 5vh;
+    }
+
+    .portfolio_tabpane{
+        padding: 0rem 0rem;
+    }
+
+    .MuiBox-root{
+        padding: 1rem 0rem !important;
     }
 }
