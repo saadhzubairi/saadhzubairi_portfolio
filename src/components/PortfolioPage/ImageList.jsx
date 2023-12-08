@@ -27,7 +27,7 @@ export default function MasonryImageList() {
     }
 
     return (
-        <Box sx={{ width: "100%", height: "60vh", overflowY: 'scroll' }}>
+        <Box sx={{ width: "100%", height: "100%", overflowY: 'scroll' }}>
             <ImageList variant="masonry" cols={cols} gap={8}>
                 {itemData.map((item) => (
                     <ImageListItem key={item.img}>
