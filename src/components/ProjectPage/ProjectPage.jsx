@@ -204,8 +204,8 @@ const ProjectPage = () => {
                                                                                     <img src={d.image} alt="" />
                                                                                 </div>
                                                                                 <div className="projectPage_section_subText">
-                                                                                    <div className="projectPage_section_subText_actualText">
-                                                                                        {d.text}
+                                                                                    <div className="projectPage_section_subText_actualText" dangerouslySetInnerHTML={{ __html: d.text }}>
+
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -236,7 +236,7 @@ const ProjectPage = () => {
                 <a href="#projectPage_bottom" className={isScrolled ? "Scroll_down_shizzle scroll_down_hide" : "Scroll_down_shizzle "}><ScrollDown hash={"projectPage_bottom"} /></a>
                 <div onClick={goBack} className={`projectPage_back_button ${isScrolled ? "scrolled" : ""}`}>
                     <ArrowBack fontSize="0.5rem" />
-                    <span>{isScrolled ? null : "GO BACK"}</span>
+                    <span className={`go_back_text ${isScrolled ? "scrolled" : ""}`}>GO BACK</span>
                 </div>
             </>
     )

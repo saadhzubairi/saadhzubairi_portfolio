@@ -213,6 +213,10 @@
     -moz-box-shadow: 0px 18px 38px 0px rgba(255, 255, 255, 0.36);
 }
 
+.photography_portfolio_image {
+    border-radius: 0.5rem;
+}
+
 .photography_portfolio_image:hover {
     box-shadow: 0px 16px 56px -14px rgba(0, 0, 0, 0.54);
     -webkit-box-shadow: 0px 16px 56px -14px rgba(0, 0, 0, 0.54);
@@ -220,12 +224,14 @@
     filter: brightness(129%) contrast(92%);
     -webkit-filter: brightness(129%) contrast(92%);
     -moz-filter: brightness(129%) contrast(92%);
+    opacity: 1;
 }
 
 .photography_portfolio_image:active {
-    transform: scale(0.9);
-    -webkit-transform: scale(0.9);
-    -moz-transform: scale(0.9);
+    transform: scale(0.97);
+    -webkit-transform: scale(0.97);
+    -moz-transform: scale(0.97);
+    
 }
 
 .photography_portfolio_image {

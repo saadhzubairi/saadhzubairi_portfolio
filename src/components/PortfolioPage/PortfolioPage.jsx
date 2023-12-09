@@ -7,12 +7,14 @@ import "./portfoliopage.css"
 import ProjectCard from "./projectCard";
 import CircularProgress from '@mui/material/CircularProgress';
 import Fade from '@mui/material/Fade';
-import hoops from "../../assets/portfolio/hoops.json"
-import talenthive from "../../assets/portfolio/talenthive.json"
-import halpert from "../../assets/portfolio/halpert.json"
+
 import MasonryImageList from "./ImageList";
 import { useParams } from 'react-router-dom'
 
+import hoops from "../../assets/portfolio/hoops.json"
+import talenthive from "../../assets/portfolio/talenthive.json"
+import halpert from "../../assets/portfolio/halpert.json"
+import credx from "../../assets/portfolio/credx.json"
 
 
 function CustomTabPanel(props) {
@@ -202,7 +204,7 @@ const PortfolioPage = () => {
                 <ProjectCard data={hoops} />
               </CustomTabPanel>
               <CustomTabPanel value={value} index={3}>
-                Item Four
+                <ProjectCard data={credx} />
               </CustomTabPanel>
               <CustomTabPanel value={value} index={4}>
                 Item Five

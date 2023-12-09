@@ -29,7 +29,7 @@
                 {
                     "alignment": "r",
                     "image": "/Projects/talenthive/npl_.png",
-                    "text": "The algorithm works by parsing information from the PDF, categorizing the information and extracting primary hard and soft skills, and scoring the profile against a job description to present the perfect candidate."
+                    "text": "The algorithm works by parsing information from the PDF, categorizing the information and extracting primary hard and soft skills, and scoring the profile against a job description to present the perfect candidate.<br/><br/> <b>The parsing happens with the built-in NER model trained over our resume pool and the scoring is done using cosine similarity and correlation between the job description and the profile.</b>"
                 }
             ]
         },
@@ -40,103 +40,103 @@
                 {
                     "alignment": "r",
                     "image": "/Projects/talenthive/hr_home.png",
-                    "text": "The algorithm works by parsing information from the PDF, categorizing the information and extracting primary hard and soft skills, and scoring the profile against a job description to present the perfect candidate."
+                    "text": "The dashboard is laid out in a simple manner with all posted jobs on one panel and jobs posted by other HRMS in the panel below. <br/><br/> HRMs can also view scheduled interviews from the right bar and the persistent left navigation bar provides access to all app routes from all screens."
                 },
                 {
                     "alignment": "l",
                     "image": "/Projects/talenthive/hr_createJob.png",
-                    "text": "We have used SpaCy as our primary deep learning model and have trained it over 100s of resumes to filter out the perfect candidates according to the job description."
+                    "text": "The HRM can easily create a new job simply by clicking the create job button from the left panel."
                 },
                 {
                     "alignment": "r",
                     "image": "/Projects/talenthive/hr_previewJob.png",
-                    "text": "We have used SpaCy as our primary deep learning model and have trained it over 100s of resumes to filter out the perfect candidates according to the job description."
+                    "text": "Before creating the job, the HRM can preview the job before publishing.<br/><br/>Upon publishing, the job can be viewed on the user dashboard screen."
                 },
                 {
                     "alignment": "l",
                     "image": "/Projects/talenthive/hr_job.png",
-                    "text": "The algorithm works by parsing information from the PDF, categorizing the information and extracting primary hard and soft skills, and scoring the profile against a job description to present the perfect candidate."
+                    "text": "HRMS can then view the job easily in their dashboard under the created jobs window.<br/><br/>Once they access it, they can view the posted job with various options and also the applications of the candidates who applied.<br/><br/><b>This is where the NLP shortlists candidates by scoring each application and presenting the top candidates under the shortlisted tab.</b><br/><br/>"
                 },
                 {
                     "alignment": "r",
                     "image": "/Projects/talenthive/hr_viewCand.png",
-                    "text": "The algorithm works by parsing information from the PDF, categorizing the information and extracting primary hard and soft skills, and scoring the profile against a job description to present the perfect candidate."
+                    "text": "Candidates can then view the application response to their job post of the specific candidate by clicking on their applicaiton.<br/><br/><b>The NLP engine parses all the information from the resume and presents it in this beautiful format along with the resume score which is simple and clutter free.</b>"
                 },
                 {
                     "alignment": "l",
                     "image": "/Projects/talenthive/hr_intCand.png",
-                    "text": "We have used SpaCy as our primary deep learning model and have trained it over 100s of resumes to filter out the perfect candidates according to the job description."
+                    "text": "HRMs can then simple accept, reject, or schedule an interview with the candidates without any hassle.<br/><br/>The candidates will be sent a notification if the interview is scheduled."
                 },
                 {
                     "alignment": "r",
                     "image": "/Projects/talenthive/hr_company.png",
-                    "text": "We have used SpaCy as our primary deep learning model and have trained it over 100s of resumes to filter out the perfect candidates according to the job description."
+                    "text": "The HRMs can further administer and manage compnay details as well as other HRMs within the company in the company screen."
                 },
                 {
                     "alignment": "l",
                     "image": "/Projects/talenthive/hr_company2.png",
-                    "text": "We have used SpaCy as our primary deep learning model and have trained it over 100s of resumes to filter out the perfect candidates according to the job description."
+                    "text": "<b>HRM Admins can add company logos and edit company details.</b>"
                 },
                 {
                     "alignment": "r",
                     "image": "/Projects/talenthive/hr_company3.png",
-                    "text": "The algorithm works by parsing information from the PDF, categorizing the information and extracting primary hard and soft skills, and scoring the profile against a job description to present the perfect candidate."
+                    "text": "The HRM admin can also make other people admins or remove them from adminship."
                 },
                 {
                     "alignment": "l",
                     "image": "/Projects/talenthive/hr_addHRM.png",
-                    "text": "The algorithm works by parsing information from the PDF, categorizing the information and extracting primary hard and soft skills, and scoring the profile against a job description to present the perfect candidate."
+                    "text": "HRM admin can also add or delete new HRMs to the company by creating their accounts."
                 }
             ]
         },
         {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "Parsing information and scoring profiles made easy!",
+            "sectionheading": "Applying to jobs made easy",
+            "sectionText": "No need to manually enter information anymore!",
             "sectionData": [
                 {
                     "alignment": "r",
                     "image": "/Projects/talenthive/cand_home.png",
-                    "text": "The algorithm works by parsing information from the PDF, categorizing the information and extracting primary hard and soft skills, and scoring the profile against a job description to present the perfect candidate."
+                    "text": "Job seekers can browse through our job-board without needing an account.<br/><br/>The job board is laid out in a very simple but at the same time informative fashion that makes it accessible for people to access the job-board."
                 },
                 {
                     "alignment": "l",
                     "image": "/Projects/talenthive/cand_job.png",
-                    "text": "The algorithm works by parsing information from the PDF, categorizing the information and extracting primary hard and soft skills, and scoring the profile against a job description to present the perfect candidate."
+                    "text": "Jobs can also be viewed without needing an account before applying to them.<br/><br/>The screen is informative and contains information about the HRM who posted the job along with their Email and LinkedIn details <b>(if they choose to show it)</b>."
                 },
                 {
                     "alignment": "r",
                     "image": "/Projects/talenthive/cand_apply.png",
-                    "text": "We have used SpaCy as our primary deep learning model and have trained it over 100s of resumes to filter out the perfect candidates according to the job description."
+                    "text": "The job application screen is where the magic happens.<br/><br/><b>Upon uploading of the CV, our server uploads it to an AWS bucket, then it goes through our NLP engine, and it fields below are filled with the parsed output.</b>"
                 },
                 {
                     "alignment": "l",
                     "image": "/Projects/talenthive/cand_apply2.png",
-                    "text": "The algorithm works by parsing information from the PDF, categorizing the information and extracting primary hard and soft skills, and scoring the profile against a job description to present the perfect candidate."
+                    "text": "We've carefully made the fields modular to cater to multiple professional experiences and educational records."
                 },
                 {
                     "alignment": "r",
                     "image": "/Projects/talenthive/cand_apply3.png",
-                    "text": "We have used SpaCy as our primary deep learning model and have trained it over 100s of resumes to filter out the perfect candidates according to the job description."
+                    "text": "All these fields are changeable and users can add as many fields as they like.<br/><br/>The website initially adds the same number of experiences listed on the resume, but users have the freedom to delete or add as many entries as they please."
                 },
                 {
                     "alignment": "l",
                     "image": "/Projects/talenthive/cand_appliedJobs.png",
-                    "text": "The algorithm works by parsing information from the PDF, categorizing the information and extracting primary hard and soft skills, and scoring the profile against a job description to present the perfect candidate."
+                    "text": "The applicant can view the job applied in the applied screen."
                 },
                 {
                     "alignment": "r",
                     "image": "/Projects/talenthive/cand_applied.png",
-                    "text": "asdasdasdasWe have used SpaCy as our primary deep learning model and have trained it over 100s of resumes to filter out the perfect candidates according to the job description."
+                    "text": "The status of the application changes when the engine shortlists the application or the job poster chooses to accept or reject the application.<br/><br/>Applicants get the notification of the application status on the right bar, along with the interview timing."
                 },
                 {
                     "alignment": "l",
                     "image": "/Projects/talenthive/cand_info.png",
-                    "text": "We have used SpaCy as our primary deep learning model and have trained it over 100s of resumes to filter out the perfect candidates according to the job description."
+                    "text": "Applicants can always edit their info and add new pictures from the edit screen."
                 },
                 {
                     "alignment": "r",
                     "image": "/Projects/talenthive/cand_jobPage.png",
-                    "text": "We have used SpaCy as our primary deep learning model and have trained it over 100s of resumes to filter out the perfect candidates according to the job description."
+                    "text": "Applying to jobs after creating your account becomes a breeze. Our job board personalizes to the applicants core competencies and candidates can directly apply to jobs after answering optional questions posed by the job posters."
                 }
             ]
         }

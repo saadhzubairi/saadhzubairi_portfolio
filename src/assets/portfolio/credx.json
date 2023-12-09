@@ -1,0 +1,22 @@
+{
+    "id": "credx",
+    "image": "/Projects/credx/title.png",
+    "name": "CREDX",
+    "subtitle": "A socialized online retail platform.",
+    "titleImg": "/Projects/credx/title.png",
+    "techs": [],
+    "desc": "CREDX is socialized online retail platform that makes it easy for customers to find credible sellers by a unique social algorithm and credibility analysing techniques.",
+    "sections": [
+        {
+            "sectionheading": "A powerful NLP Engine",
+            "sectionText": "A smooth and beautifully designed onboarding and login.",
+            "sectionData": [
+                {
+                    "alignment": "l",
+                    "image": "/Projects/credx/home.png",
+                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
+                }
+            ]
+        }
+    ]
+}
