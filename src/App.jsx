@@ -2,7 +2,7 @@ import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import FrontPage from './components/FrontPage/FrontPage';
 import Header from './components/header/Header';
-import { BrowserRouter as Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import PortfolioPage from './components/PortfolioPage/PortfolioPage';
 import ProjectPage from './components/ProjectPage/ProjectPage';
 import { useEffect, useState } from 'react';
