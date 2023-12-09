@@ -7,8 +7,6 @@ import "./portfoliopage.css"
 import ProjectCard from "./projectCard";
 import CircularProgress from '@mui/material/CircularProgress';
 import Fade from '@mui/material/Fade';
-
-
 import hoops from "../../assets/portfolio/hoops.json"
 import talenthive from "../../assets/portfolio/talenthive.json"
 import halpert from "../../assets/portfolio/halpert.json"
