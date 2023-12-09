@@ -13,6 +13,8 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 export default function MasonryImageList() {
 
+    const [imgLoadingFull, setImageLoadingFull] = React.useState(true);
+
     const theme = useTheme();
     const matchesXS = useMediaQuery(theme.breakpoints.down('xs'));
     const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
@@ -50,7 +52,7 @@ export default function MasonryImageList() {
         left: '50%',
         transform: 'translate(-50%, -50%)',
         width: '100vw',
-        height: '100vh',
+        height: '100%',
         bgcolor: 'transparent',
     };
 
@@ -110,7 +112,8 @@ export default function MasonryImageList() {
             <Modal open={open} onClose={handleClose}>
                 <Fade in={open}>
                     <Box sx={style} ref={containerRef}>
-                        <img src={modImg} alt="" className="" />
+                        
+                        <img src={modImg} alt="" className="photography_portfolio_modal_image" />
                         <div className="modal_close_button">
                             <IconButton color="#ffe2e2" onClick={handleClose}>
                                 <Close />
