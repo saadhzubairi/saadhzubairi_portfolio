@@ -12,8 +12,8 @@ import Fade from '@mui/material/Fade';
 import hoops from "../../assets/portfolio/hoops.json"
 import talenthive from "../../assets/portfolio/talenthive.json"
 import halpert from "../../assets/portfolio/halpert.json"
-import StandardImageList from "./ImageList";
 import MasonryImageList from "./ImageList";
+import { useParams } from 'react-router-dom'
 
 
 
@@ -23,7 +23,7 @@ function CustomTabPanel(props) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(false);
+    setLoading(false)
   }, []);
 
   return (
@@ -59,6 +59,17 @@ function a11yProps(index) {
 
 const PortfolioPage = () => {
   const [value, setValue] = useState(0);
+
+  const { ind } = useParams();
+
+  useEffect(() => {
+    if (ind === "" || ind === undefined || ind === null) {
+
+    }
+    else {
+      setValue(parseInt(ind))
+    }
+  }, [])
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
