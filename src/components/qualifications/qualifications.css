@@ -97,7 +97,7 @@
 .qual__subtitle_img__and__text {
     display: flex;
     align-items: start;
-    justify-content: start;
+    justify-content: flex-start;
     gap: 0.5em;
     margin-bottom: 0.5rem;
 }

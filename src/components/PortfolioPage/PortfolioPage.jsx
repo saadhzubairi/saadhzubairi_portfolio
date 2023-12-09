@@ -69,7 +69,7 @@ const PortfolioPage = () => {
     else {
       setValue(parseInt(ind))
     }
-  }, [])
+  }, [ind])
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -112,7 +112,6 @@ const PortfolioPage = () => {
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
-              alignItems: "center"
             }}>
 
               <Box
@@ -124,8 +123,6 @@ const PortfolioPage = () => {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    alignItems: "center"
-
                   }
                 }
               >

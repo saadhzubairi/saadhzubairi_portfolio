@@ -9,7 +9,6 @@ import { ArrowBack, ArrowLeft, ArrowRight, Close } from "@mui/icons-material";
 import IconButton from '@mui/material/IconButton';
 import ScrollDown from "../home/ScrollDown";
 import { useNavigate } from 'react-router-dom';
-import Slide from '@mui/material/Slide';
 import Connect from "../connect/Connect";
 
 /* import data from `../../assets/portfolio/${projectId}.json`
@@ -37,7 +36,7 @@ const ProjectPage = () => {
 
     const [open, setOpen] = useState(false);
     const handleOpen = (imgIn) => {
-        setChImg(true)
+
         setImg(imgIn);
         setOpen(true);
     }
@@ -65,7 +64,7 @@ const ProjectPage = () => {
             }
         };
         fetchData();
-    }, [jsonData]);
+    }, [jsonData, projectId]);
 
     const [loading, setLoading] = useState(true);
 
@@ -104,12 +103,9 @@ const ProjectPage = () => {
 
     const [images, setImages] = useState([]);
 
-    const [chImg, setChImg] = useState(false)
-
-
     const nextImg = () => {
         /*         setSlideDirection('left');
-                setChImg(!chImg)
+                
          */
         var ind = images.findIndex(image => image === img);
         console.log(ind);
@@ -125,7 +121,7 @@ const ProjectPage = () => {
     }
     const prevImg = () => {
 /*         setSlideDirection('right');
-        setChImg(!chImg)
+        
  */        var ind = images.findIndex(image => image === img);
         console.log(ind);
         if (ind === 0 || ind === -1) {

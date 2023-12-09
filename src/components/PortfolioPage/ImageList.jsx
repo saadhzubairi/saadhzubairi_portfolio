@@ -87,7 +87,7 @@ export default function MasonryImageList() {
         return () => {
             document.removeEventListener('keydown', handleKeyPress);
         };
-    }, [modImg]);
+    });
 
     return (
         <Box sx={{ width: "100%", height: "100%", overflowY: 'scroll' }}>
@@ -98,6 +98,7 @@ export default function MasonryImageList() {
                             srcSet={`${item}?w=248&fit=crop&auto=format&dpr=2 2x`}
                             src={`${item}?w=248&fit=crop&auto=format`}
                             loading="lazy"
+                            alt='~'
                             onClick={() => { setModImg(item); setOpen(true) }}
                             className='photography_portfolio_image'
                         />
