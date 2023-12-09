@@ -108,9 +108,10 @@ const ProjectPage = () => {
 
 
     const nextImg = () => {
-/*         setSlideDirection('left');
-        setChImg(!chImg)
- */        var ind = images.findIndex(image => image === img);
+        /*         setSlideDirection('left');
+                setChImg(!chImg)
+         */
+        var ind = images.findIndex(image => image === img);
         console.log(ind);
         if (ind === (images.length - 1)) {
         }
@@ -163,9 +164,7 @@ const ProjectPage = () => {
                                 <Modal open={open} onClose={handleClose}>
                                     <Fade>
                                         <Box sx={style} ref={containerRef}>
-                                            {/* <Slide key={`${img}_${slideDirection}`} direction={slideDirection} in={chImg} container={containerRef.current}> */}
                                             <img src={img} alt="" className="" />
-                                            {/* </Slide> */}
                                             <div className="modal_close_button">
                                                 <IconButton color="#ffe2e2" onClick={handleClose}>
                                                     <Close />
@@ -237,7 +236,7 @@ const ProjectPage = () => {
                     }
 
                 </div >
-                <Connect page={1}/>
+                <Connect page={1} />
                 <a href="#projectPage_bottom" className={isScrolled ? "Scroll_down_shizzle scroll_down_hide" : "Scroll_down_shizzle "}><ScrollDown hash={"projectPage_bottom"} /></a>
                 <div onClick={goBack} className={`projectPage_back_button ${isScrolled ? "scrolled" : ""}`}>
                     <ArrowBack fontSize="0.5rem" />

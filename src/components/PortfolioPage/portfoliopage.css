@@ -140,6 +140,26 @@
     padding: 1.2rem 1.3rem;
 }
 
+.modal_next_button_gallery {
+    position: absolute;
+    top: 45%;
+    right: 2rem;
+    border-radius: 100%;
+    background-color: #fefefea7;
+    color: #ffe2e2;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.modal_prev_button_gallery {
+    position: absolute;
+    top: 45%;
+    left: 2rem;
+    border-radius: 100%;
+    background-color: #fefefea7;
+    color: #ffe2e2;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
 .pcard_img {
     width: 18rem;
     height: auto;
@@ -166,9 +186,9 @@
     height: calc(89vh);
 }
 
-.pcard_openIcon{
+.pcard_openIcon {
     position: absolute;
-    bottom:6.5rem;
+    bottom: 6.5rem;
     right: 1rem;
     display: flex;
     align-items: center;
@@ -177,7 +197,7 @@
     gap: 0.5rem;
 }
 
-.modal_preview_image_photography_container{
+.modal_preview_image_photography_container {
     width: 100vw;
     height: 100%;
     display: flex;
@@ -185,7 +205,22 @@
     align-items: center;
 }
 
-.photography_portfolio_image{
+.photography_portfolio_image:hover {
+    box-shadow: 0px 16px 56px -14px rgba(0, 0, 0, 0.54);
+    -webkit-box-shadow: 0px 16px 56px -14px rgba(0, 0, 0, 0.54);
+    -moz-box-shadow: 0px 16px 56px -14px rgba(0, 0, 0, 0.54);
+    filter: brightness(129%) contrast(92%);
+    -webkit-filter: brightness(129%) contrast(92%);
+    -moz-filter: brightness(129%) contrast(92%);
+}
+
+.photography_portfolio_image:active {
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+}
+
+.photography_portfolio_image {
     cursor: pointer;
 }
 
@@ -194,19 +229,20 @@
         display: none;
     }
 
-    .portfolio_body{
+    .portfolio_body {
         padding-bottom: 6rem;
     }
 
-    .portfolio_heading{
+    .portfolio_heading {
         margin-top: 5vh;
     }
 
-    .portfolio_tabpane{
+    .portfolio_tabpane {
         padding: 0rem 0rem;
     }
 
-    .MuiBox-root{
-        padding: 1rem 0rem !important;
+    .MuiBox-root {
+        padding-left: 0rem !important;
+        padding-right: 0rem !important;
     }
 }
