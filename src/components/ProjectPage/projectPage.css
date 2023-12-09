@@ -22,9 +22,9 @@
 
 .projectPage_titleImage:hover {
     cursor: pointer;
-    transform: scale(1.05);
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
+    transform: scale(1.01);
+    -webkit-transform: scale(1.01);
+    -moz-transform: scale(1.01);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
@@ -103,11 +103,11 @@
 }
 
 .projectPage_section_subImg:hover {
-    transform: scale(1.15);
-    -webkit-transform: scale(1.15);
-    -moz-transform: scale(1.15);
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    box-shadow: #111 0px 0px 0px 2px inset, transparent 10px -10px 0px -3px, #444 10px -10px, transparent 20px -20px 0px -3px, #666 20px -20px, transparent 30px -30px 0px -3px, #888 30px -30px, transparent 40px -40px 0px -3px, #888 40px -40px;
+    box-shadow: transparent 10px -10px 0px -3px, #ccc 10px -10px, transparent 20px -20px 0px -3px, #bbb 20px -20px, transparent 30px -30px 0px -3px, #aaa 30px -30px;
     cursor: pointer;
 }
 

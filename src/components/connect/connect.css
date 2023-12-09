@@ -163,7 +163,7 @@
         flex-direction: column;
         height: fit-content;
         gap: 2rem;
-        margin-bottom: 5rem;
+        padding-bottom: 6rem !important;
     }
 
     .connect__container {
@@ -181,7 +181,7 @@
         text-align: center;
         margin: 0rem 1rem;
         font-size: 1.5rem;
-        padding-bottom: 1rem;
+        padding-bottom: 0rem;
     }
 
 

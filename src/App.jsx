@@ -46,7 +46,7 @@ function App() {
           <Route path="/" element={<Layout><FrontPage /></Layout>} />
           <Route path="/Portfolio/" element={<Layout><PortfolioPage /></Layout>} />
           <Route path="/Portfolio/:ind" element={<Layout><PortfolioPage /></Layout>} />
-          <Route path="/Portfolio/:projectId" element={<Layout><ProjectPage /></Layout>} />
+          <Route path="/Portfolio/Project/:projectId" element={<Layout><ProjectPage /></Layout>} />
 
         </Routes>
       </main>

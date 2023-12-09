@@ -133,7 +133,8 @@ header {
     .nav__list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 0.3rem;
+        column-gap: 0.3rem;
+        row-gap: 1rem;
     }
 
     .nav__icon {
@@ -164,10 +165,14 @@ header {
         cursor: pointer;
     }
 
-    .nav__logo{
+    .nav__logo {
         font-size: 1.5rem;
         font-weight: 700;
         color: #525252;
+    }
+
+    .nav__item {
+        background-color: #eee;
     }
 
     @media screen and (max-width:350px) {

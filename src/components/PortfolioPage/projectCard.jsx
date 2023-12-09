@@ -7,7 +7,7 @@ const ProjectCard = ({ data }) => {
     const navigate = useNavigate();
 
     const onClickFun = () => {
-        navigate(`/Portfolio/${data.id}`)
+        navigate(`/Portfolio/Project/${data.id}`)
     }
 
     return (
