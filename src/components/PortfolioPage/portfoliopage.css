@@ -22,6 +22,11 @@
     margin-top: 1.5rem;
     align-items: center;
     justify-content: center;
+    width: 100%;
+}
+
+.css-1qzjkda {
+    width: 100% !important;
 }
 
 /* portfoliopage.css */
@@ -231,7 +236,7 @@
     transform: scale(0.97);
     -webkit-transform: scale(0.97);
     -moz-transform: scale(0.97);
-    
+
 }
 
 .photography_portfolio_image {
@@ -239,6 +244,7 @@
 }
 
 @media screen and (max-width: 768px) {
+    
     .pcard_pane_right {
         display: none;
     }
@@ -249,15 +255,15 @@
 
     .portfolio_heading {
         margin-top: 5vh;
+        font-size: 3rem;
+    }
+
+    .portfolio_subText{
+        letter-spacing: 0.1 rem;
     }
 
     .portfolio_tabpane {
         padding: 0rem 0rem;
-    }
-
-    .MuiBox-root {
-        padding-left: 0rem !important;
-        padding-right: 0rem !important;
     }
 
     .photography_portfolio_modal_image {
@@ -266,6 +272,11 @@
         box-shadow: 0px 18px 38px 0px rgba(255, 255, 255, 0.36);
         -webkit-box-shadow: 0px 18px 38px 0px rgba(255, 255, 255, 0.36);
         -moz-box-shadow: 0px 18px 38px 0px rgba(255, 255, 255, 0.36);
+    }
+
+    .css-19kzrtu {
+        padding-right: 0.7rem !important;
+        padding-left: 0.7rem !important;
     }
 
     .modal_next_button_gallery {

@@ -11,7 +11,7 @@ import ScrollDown from "../home/ScrollDown";
 import { useNavigate } from 'react-router-dom';
 import Connect from "../connect/Connect";
 
-/* import data from `../../assets/portfolio/${projectId}.json`
+/* import data from `../../assets/portfolio/${projectId}.json`o
  */
 
 const style = {
