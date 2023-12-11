@@ -10,10 +10,15 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import CircularProgress from '@mui/material/CircularProgress';
 
 export default function MasonryImageList() {
 
     const [imgLoadingFull, setImageLoadingFull] = React.useState(true);
+
+    const handleImgLoad = () => {
+        setImageLoadingFull(false)
+    }
 
     const theme = useTheme();
     const matchesXS = useMediaQuery(theme.breakpoints.down('xs'));
@@ -112,8 +117,11 @@ export default function MasonryImageList() {
             <Modal open={open} onClose={handleClose}>
                 <Fade in={open}>
                     <Box sx={style} ref={containerRef}>
-                        
-                        <img src={modImg} alt="" className="photography_portfolio_modal_image" />
+                        {imgLoadingFull ? <CircularProgress sx={{color:"#fff"}}/> : null}
+                        <img src={modImg} alt=""
+                            className="photography_portfolio_modal_image"
+                            onLoad={handleImgLoad}
+                            style={{ display: imgLoadingFull ? 'none' : 'block' }} />
                         <div className="modal_close_button">
                             <IconButton color="#ffe2e2" onClick={handleClose}>
                                 <Close />

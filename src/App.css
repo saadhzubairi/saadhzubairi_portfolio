@@ -218,7 +218,7 @@ img {
 
 /* Targeting the scrollbar track */
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 1px;
   /* Set the width of the scrollbar */
 }
 

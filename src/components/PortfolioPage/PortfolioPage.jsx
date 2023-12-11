@@ -199,9 +199,6 @@ const PortfolioPage = () => {
               </CustomTabPanel>
               <CustomTabPanel value={value} index={2}>
                 <ProjectCard data={talenthive} />
-                <ProjectCard data={halpert} />
-                <ProjectCard data={talenthive} />
-                <ProjectCard data={hoops} />
               </CustomTabPanel>
               <CustomTabPanel value={value} index={3}>
                 <ProjectCard data={credx} />
