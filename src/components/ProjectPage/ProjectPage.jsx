@@ -176,7 +176,7 @@ const ProjectPage = () => {
                                 <img src={jsonData.titleImg} alt="" onClick={() => handleOpen(jsonData.titleImg)} className="projectPage_titleImage" />
 
                                 <Modal open={open} onClose={handleClose}>
-                                    <Fade>
+                                    <Fade in={!img===null}>
                                         <Box sx={style} ref={containerRef}>
                                             {imgLoadingFull ? <CircularProgress sx={{ color: "#fff" }} /> : null}
                                             <Fade in={!imgLoadingFull}>
