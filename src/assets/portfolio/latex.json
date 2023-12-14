@@ -1,0 +1,91 @@
+{
+    "id": "latex",
+    "image": "/Projects/latex/latex.png",
+    "name": "Latex Lite",
+    "subtitle": "Make Latex documents with ease.",
+    "titleImg": "/Projects/latex/latex.png",
+    "techs": [
+        "HTML",
+        "CSS",
+        "Node.js"
+    ],
+    "desc": "Halper's booking is a simple HTML5 and CSS3 demonstration of a beautifully designed web-app for hotel booking and reservation.",
+    "sections": [
+        {
+            "sectionheading": "A powerful NLP Engine",
+            "sectionText": "A smooth and beautifully designed onboarding and login.",
+            "sectionData": [
+                {
+                    "alignment": "l",
+                    "image": "/Projects/latex/1.png",
+                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
+                },
+                {
+                    "alignment": "r",
+                    "image": "/Projects/latex/2.png",
+                    "text": "A beautiful array of destinations and hotel types is laid out neatly to give you a holistic understanding of where to go."
+                },
+                {
+                    "alignment": "l",
+                    "image": "/Projects/latex/3.png",
+                    "text": "The search screen is made to be very minimal with a persistent colorful search helper pane sticked to the left side and all the search results neatly displayed on the right."
+                },
+                {
+                    "alignment": "r",
+                    "image": "/Projects/latex/4.png",
+                    "text": "The project also uses simple UI modules such as this beautiful calendar model which make it simple to select a date range for a specific trip."
+                },
+                {
+                    "alignment": "l",
+                    "image": "/Projects/latex/5.png",
+                    "text": "The search screen is made to be very minimal with a persistent colorful search helper pane sticked to the left side and all the search results neatly displayed on the right."
+                },
+                {
+                    "alignment": "r",
+                    "image": "/Projects/latex/6.png",
+                    "text": "The project also uses simple UI modules such as this beautiful calendar model which make it simple to select a date range for a specific trip."
+                },
+                {
+                    "alignment": "l",
+                    "image": "/Projects/latex/7.png",
+                    "text": "The search screen is made to be very minimal with a persistent colorful search helper pane sticked to the left side and all the search results neatly displayed on the right."
+                },
+                {
+                    "alignment": "r",
+                    "image": "/Projects/latex/8.png",
+                    "text": "The project also uses simple UI modules such as this beautiful calendar model which make it simple to select a date range for a specific trip."
+                },
+                {
+                    "alignment": "l",
+                    "image": "/Projects/latex/9.png",
+                    "text": "The search screen is made to be very minimal with a persistent colorful search helper pane sticked to the left side and all the search results neatly displayed on the right."
+                },
+                {
+                    "alignment": "r",
+                    "image": "/Projects/latex/10.png",
+                    "text": "The project also uses simple UI modules such as this beautiful calendar model which make it simple to select a date range for a specific trip."
+                },
+                {
+                    "alignment": "l",
+                    "image": "/Projects/latex/11.png",
+                    "text": "The search screen is made to be very minimal with a persistent colorful search helper pane sticked to the left side and all the search results neatly displayed on the right."
+                },
+                {
+                    "alignment": "r",
+                    "image": "/Projects/latex/12.png",
+                    "text": "The project also uses simple UI modules such as this beautiful calendar model which make it simple to select a date range for a specific trip."
+                },
+                {
+                    "alignment": "l",
+                    "image": "/Projects/latex/13.png",
+                    "text": "The search screen is made to be very minimal with a persistent colorful search helper pane sticked to the left side and all the search results neatly displayed on the right."
+                },
+                {
+                    "alignment": "r",
+                    "image": "/Projects/latex/14.png",
+                    "text": "The project also uses simple UI modules such as this beautiful calendar model which make it simple to select a date range for a specific trip."
+                }
+            ]
+        }
+    ]
+}

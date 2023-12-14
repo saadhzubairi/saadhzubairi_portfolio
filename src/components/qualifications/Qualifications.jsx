@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import "./qualifications.css"
 
 import ed_data from "../../assets/EDXP_data/education.json"
@@ -42,6 +42,26 @@ function Qualifications(props) {
     const toggleTab = (n) => {
         setToggle(n);
     }
+
+    const handleScroll = () => {
+        const element = document.getElementById('Qual');
+        const rect = element.getBoundingClientRect();
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const offset = rect.top + scrollTop;
+        const height = element.offsetHeight;
+
+        // Check if we've scrolled past 10% of the element
+        if (scrollTop > offset + height * 0.1) {
+            toggleTab(1);
+        } else {
+            toggleTab(0);
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return (
         <section className="qualifications section" id="Qual">

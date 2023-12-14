@@ -256,10 +256,24 @@
     opacity: 0;
 }
 
-.projectPage_back_button.scrolled{
+
+
+.projectPage_back_button.scrolled {
     gap: 0rem;
     padding: 0.3rem 0.5rem;
 }
+
+.projectPage_back_button.scrolled:hover .go_back_text.scrolled{
+    font-size: 1rem !important;
+    opacity: 1;
+    
+}
+.projectPage_back_button.scrolled:hover{
+    gap: 0.5rem;
+    padding: 0.3rem 1rem;
+}
+
+
 
 /* .projectPage_back_button span {
     opacity: 1;

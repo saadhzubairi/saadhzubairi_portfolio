@@ -32,7 +32,7 @@ const CssTextField = styled(TextField)({
   },
 });
 
-const Connect = ({page}) => {
+const Connect = ({ page }) => {
 
   const [sending, setSending] = useState(false);
   const [open, setOpen] = useState(false);
@@ -90,63 +90,65 @@ const Connect = ({page}) => {
   );
 
   return (
-    <div className="connect__container" id='Contact'>
-      <div className="connect_right">
-        <div className="connect_bigshot">
-          {page===0?"Let's chat.":"Liked what you saw?"}<br />{page===0?"Tell me about your work.":"Tell me more!"}
-        </div>
-        <div className="connect_smallshot">{page===0?"Let's create something together 🤘":"Tell me what you liked about this!"}</div>
-        <a className="connect_mailme" href="mailto:saadhzubairi@outlook.com" style={{textDecoration:"none",color:"inherit"}}>
-          <i class='bx bx-envelope connect_mailme_mailbutton' ></i>
-          <div className="connect_mailme_col">
-            <div className="connect_mailme_col_text">Mail me at</div>
-            <div className="connect_mailme_col_email"><a href="mailto:saadhzubairi@outlook.com" className="connect_mailme_col_email_actual">saadhzubairi@outlook.com</a></div>
+    <div className="connect__wrapper">
+      <div className="connect__container" id='Contact'>
+        <div className="connect_right">
+          <div className="connect_bigshot">
+            {page === 0 ? "Let's chat." : "Liked what you saw?"}<br />{page === 0 ? "Tell me about your work." : "Tell me more!"}
           </div>
-        </a>
-      </div>
-      <div className="connect_left">
-        <div className="sendmessage_float">
-          <div className="sendmessage_float_heading">Send me a message!</div>
-          <form className="sendmessage_float_form" id='sendmessage_form' onSubmit={sendEmail} ref={form}>
-
-            <CssTextField disabled={sending} value={full_name} onChange={(e) => setFullName(e.target.value)} required variant="outlined" name='full_name' id="full_name" label="Full name" />
-            <CssTextField disabled={sending} value={email} onChange={(e) => setEmail(e.target.value)} type='email' required variant="outlined" name='email' id="email" label="Email address" />
-            <CssTextField disabled={sending} value={subject} onChange={(e) => setSubject(e.target.value)} id="subject" name='subject' label="Subject" />
-            <div className="sendmessage_float_tell">{page===0?"Tell me something about your work*":"Write your feedback and quesions here*"}</div>
-            <CssTextField disabled={sending} value={message} onChange={(e) => setMessage(e.target.value)} required id="message" name='message' label="" multiline rows={4} />
-            <div className="sendmessage_float_button_div">
-              <button disabled={sending} className="sendmessage_float_button" type="submit">
-                {sending
-
-                  ?
-                  <>
-                    <CircularProgress size="1rem" color='inherit' /> Sending...
-                  </>
-                  :
-                  <>
-                    Send Message
-                  </>
-                }
-
-
-              </button>
+          <div className="connect_smallshot">{page === 0 ? "Let's create something together 🤘" : "Tell me what you liked about this!"}</div>
+          <a className="connect_mailme" href="mailto:saadhzubairi@outlook.com" style={{ textDecoration: "none", color: "inherit" }}>
+            <i class='bx bx-envelope connect_mailme_mailbutton' ></i>
+            <div className="connect_mailme_col">
+              <div className="connect_mailme_col_text">Mail me at</div>
+              <div className="connect_mailme_col_email"><a href="mailto:saadhzubairi@outlook.com" className="connect_mailme_col_email_actual">saadhzubairi@outlook.com</a></div>
             </div>
-
-          </form>
+          </a>
         </div>
+        <div className="connect_left">
+          <div className="sendmessage_float">
+            <div className="sendmessage_float_heading">Send me a message!</div>
+            <form className="sendmessage_float_form" id='sendmessage_form' onSubmit={sendEmail} ref={form}>
+
+              <CssTextField disabled={sending} value={full_name} onChange={(e) => setFullName(e.target.value)} required variant="outlined" name='full_name' id="full_name" label="Full name" />
+              <CssTextField disabled={sending} value={email} onChange={(e) => setEmail(e.target.value)} type='email' required variant="outlined" name='email' id="email" label="Email address" />
+              <CssTextField disabled={sending} value={subject} onChange={(e) => setSubject(e.target.value)} id="subject" name='subject' label="Subject" />
+              <div className="sendmessage_float_tell">{page === 0 ? "Tell me something about your work*" : "Write your feedback and quesions here*"}</div>
+              <CssTextField disabled={sending} value={message} onChange={(e) => setMessage(e.target.value)} required id="message" name='message' label="" multiline rows={4} />
+              <div className="sendmessage_float_button_div">
+                <button disabled={sending} className="sendmessage_float_button" type="submit">
+                  {sending
+
+                    ?
+                    <>
+                      <CircularProgress size="1rem" color='inherit' /> Sending...
+                    </>
+                    :
+                    <>
+                      Send Message
+                    </>
+                  }
+
+
+                </button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+        <Snackbar
+          open={open}
+          autoHideDuration={6000}
+          message="Email Sent!"
+          action={action}
+        />
+        <Snackbar
+          open={open2}
+          autoHideDuration={6000}
+          message="Unable to send email."
+          action={action}
+        />
       </div>
-      <Snackbar
-        open={open}
-        autoHideDuration={6000}
-        message="Email Sent!"
-        action={action}
-      />
-      <Snackbar
-        open={open2}
-        autoHideDuration={6000}
-        message="Unable to send email."
-        action={action}
-      />
     </div>
   )
 }

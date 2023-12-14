@@ -18,11 +18,20 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: end;
 }
 
 .connect__container {
+    display: flex;
     padding: 1.5rem 10rem;
+    max-width: 1500px;
+}
+
+.connect__wrapper{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .connect_bigshot {
