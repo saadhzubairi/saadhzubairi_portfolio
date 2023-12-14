@@ -40,6 +40,11 @@ const ProjectPage = () => {
         setImg(imgIn);
         setOpen(true);
     }
+    const [imgLoadingFull, setImageLoadingFull] = useState(true);
+    const handleImgLoad = () => {
+        setImageLoadingFull(false)
+    }
+    
     const handleClose = () => setOpen(false);
 
     useEffect(() => {
@@ -104,9 +109,7 @@ const ProjectPage = () => {
     const [images, setImages] = useState([]);
 
     const nextImg = () => {
-        /*         setSlideDirection('left');
-                
-         */
+        setImageLoadingFull(true)
         var ind = images.findIndex(image => image === img);
         console.log(ind);
         if (ind === (images.length - 1)) {
@@ -120,9 +123,8 @@ const ProjectPage = () => {
 
     }
     const prevImg = () => {
-/*         setSlideDirection('right');
-        
- */        var ind = images.findIndex(image => image === img);
+        setImageLoadingFull(true)
+        var ind = images.findIndex(image => image === img);
         console.log(ind);
         if (ind === 0 || ind === -1) {
         }
@@ -176,7 +178,10 @@ const ProjectPage = () => {
                                 <Modal open={open} onClose={handleClose}>
                                     <Fade>
                                         <Box sx={style} ref={containerRef}>
-                                            <img src={img} alt="" className="project_modal_image" />
+                                            {imgLoadingFull ? <CircularProgress sx={{ color: "#fff" }} /> : null}
+                                            <Fade in={!imgLoadingFull}>
+                                                <img src={img} alt="" onLoad={handleImgLoad} className="project_modal_image" />
+                                            </Fade>
                                             <div className="modal_close_button">
                                                 <IconButton color="#ffe2e2" onClick={handleClose}>
                                                     <Close />
