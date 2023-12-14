@@ -63,6 +63,7 @@ export default function MasonryImageList() {
     };
 
     const nextImg = () => {
+        setImageLoadingFull(true)
         const currentIndex = itemData.indexOf(modImg);
         if (currentIndex === (itemData.length - 1)) {
             setModImg(itemData[0]);
@@ -72,6 +73,7 @@ export default function MasonryImageList() {
         }
     }
     const prevImg = () => {
+        setImageLoadingFull(true)
         const currentIndex = itemData.indexOf(modImg);
         if (currentIndex === 0) {
             setModImg(itemData[itemData.length - 1]);
@@ -118,13 +120,11 @@ export default function MasonryImageList() {
             <Modal open={open} onClose={handleClose}>
                 <Fade in={open}>
                     <Box sx={style} ref={containerRef}>
-                        {imgLoadingFull ? <CircularProgress sx={{ color: "#fff" }} /> : null}
-                        <Slide direction="left" in={!imgLoadingFull} mountOnEnter unmountOnExit>
-                            <img src={modImg} alt=""
-                                className="photography_portfolio_modal_image"
-                                onLoad={handleImgLoad}
-                                style={{ display: imgLoadingFull ? 'none' : 'block' }} />
-                        </Slide>
+                        {imgLoadingFull ? <CircularProgress sx={{color:"#fff"}}/> : null}
+                        <img src={modImg} alt=""
+                            className="photography_portfolio_modal_image"
+                            onLoad={handleImgLoad}
+                            style={{ display: imgLoadingFull ? 'none' : 'block' }} />
                         <div className="modal_close_button">
                             <IconButton color="#ffe2e2" onClick={handleClose}>
                                 <Close />
