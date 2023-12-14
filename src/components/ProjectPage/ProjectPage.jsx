@@ -147,6 +147,8 @@ const ProjectPage = () => {
         };
     });
 
+    const iframeString = `<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FqhxuJFQzIfxZncSjhuwGmz%2FCREDX%3Fpage-id%3D33%253A128%26type%3Ddesign%26node-id%3D71-572%26viewport%3D704%252C262%252C0.07%26t%3DO1PF6S6PwGoSUHNE-1%26scaling%3Dscale-down%26starting-point-node-id%3D71%253A572%26mode%3Ddesign" allowfullscreen></iframe>`;
+
     const containerRef = useRef(null);
 
     return (
