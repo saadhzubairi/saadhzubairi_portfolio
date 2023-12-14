@@ -11,7 +11,6 @@ import ImageListItem from '@mui/material/ImageListItem';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import CircularProgress from '@mui/material/CircularProgress';
-import Slide from '@mui/material/Slide';
 
 export default function MasonryImageList() {
 
@@ -120,11 +119,13 @@ export default function MasonryImageList() {
             <Modal open={open} onClose={handleClose}>
                 <Fade in={open}>
                     <Box sx={style} ref={containerRef}>
-                        {imgLoadingFull ? <CircularProgress sx={{color:"#fff"}}/> : null}
-                        <img src={modImg} alt=""
-                            className="photography_portfolio_modal_image"
-                            onLoad={handleImgLoad}
-                            style={{ display: imgLoadingFull ? 'none' : 'block' }} />
+                        {imgLoadingFull ? <CircularProgress sx={{ color: "#fff" }} /> : null}
+                        <Fade in={!imgLoadingFull}>
+                            <img src={modImg} alt=""
+                                className="photography_portfolio_modal_image"
+                                onLoad={handleImgLoad}
+                                style={{ display: imgLoadingFull ? 'none' : 'block' }} />
+                        </Fade>
                         <div className="modal_close_button">
                             <IconButton color="#ffe2e2" onClick={handleClose}>
                                 <Close />

@@ -219,7 +219,7 @@
 
 .photography_portfolio_modal_image {
     height: 98vh;
-    border-radius: 1rem;
+    max-width: 98vw;
     box-shadow: 0px 18px 38px 0px rgba(255, 255, 255, 0.36);
     -webkit-box-shadow: 0px 18px 38px 0px rgba(255, 255, 255, 0.36);
     -moz-box-shadow: 0px 18px 38px 0px rgba(255, 255, 255, 0.36);
@@ -275,7 +275,7 @@
 
     .photography_portfolio_modal_image {
         height: auto;
-        border-radius: 1rem;
+        border-radius: 0.5rem;
         box-shadow: 0px 18px 38px 0px rgba(255, 255, 255, 0.36);
         -webkit-box-shadow: 0px 18px 38px 0px rgba(255, 255, 255, 0.36);
         -moz-box-shadow: 0px 18px 38px 0px rgba(255, 255, 255, 0.36);
