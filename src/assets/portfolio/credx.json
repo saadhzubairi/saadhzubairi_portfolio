@@ -13,7 +13,7 @@
             "sectionData": [
                 {
                     "alignment": "l",
-                    "image": "/Projects/credx/home.png",
+                    "image": "/Projects/credx/buyProduct.png",
                     "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
                 }
             ]
@@ -22,157 +22,185 @@
             "sectionheading": "A powerful NLP Engine",
             "sectionText": "A smooth and beautifully designed onboarding and login.",
             "sectionData": [
-                {
-                    "alignment": "l",
-                    "image": "/Projects/credx/addProduct.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                }
-            ]
-        },
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "l",
-                    "image": "/Projects/credx/buy_page.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                }
-            ]
-        },
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "l",
-                    "image": "/Projects/credx/credibility.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                }
-            ]
-        },
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "l",
-                    "image": "/Projects/credx/credibility_notification_after_chat.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                }
-            ]
-        },
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "l",
-                    "image": "/Projects/credx/customerSupport.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                }
-            ]
-        },
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "l",
-                    "image": "/Projects/credx/editProduct.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                }
-            ]
-        },
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "l",
-                    "image": "/Projects/credx/favorites.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                }
-            ]
-        },
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "l",
-                    "image": "/Projects/credx/home.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                }
-            ]
-        },
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "l",
-                    "image": "/Projects/credx/home_notifications.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                }
-            ]
-        },
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "l",
-                    "image": "/Projects/credx/messages.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                }
-            ]
-        },
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "l",
-                    "image": "/Projects/credx/reportItem.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                }
-            ]
-        },
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "l",
-                    "image": "/Projects/credx/title.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                }
-            ]
-        },
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "l",
-                    "image": "/Projects/credx/userReport.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                }
-            ]
-        },
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "l",
-                    "image": "/Projects/credx/yourProfile_1.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                },
                 {
                     "alignment": "r",
-                    "image": "/Projects/credx/yourProfile_2.png",
+                    "image": "/Projects/credx/Chat.png",
+                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
+                }
+            ]
+        },
+        {
+            "sectionheading": "A powerful NLP Engine",
+            "sectionText": "A smooth and beautifully designed onboarding and login.",
+            "sectionData": [
+                {
+                    "alignment": "l",
+                    "image": "/Projects/credx/credibilityAndNotifications.png",
+                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
+                }
+            ]
+        },
+        {
+            "sectionheading": "A powerful NLP Engine",
+            "sectionText": "A smooth and beautifully designed onboarding and login.",
+            "sectionData": [
+                {
+                    "alignment": "r",
+                    "image": "/Projects/credx/CustomerSupport.png",
+                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
+                }
+            ]
+        },
+        {
+            "sectionheading": "A powerful NLP Engine",
+            "sectionText": "A smooth and beautifully designed onboarding and login.",
+            "sectionData": [
+                {
+                    "alignment": "l",
+                    "image": "/Projects/credx/CustomerSupport0.png",
+                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
+                }
+            ]
+        },
+        {
+            "sectionheading": "A powerful NLP Engine",
+            "sectionText": "A smooth and beautifully designed onboarding and login.",
+            "sectionData": [
+                {
+                    "alignment": "r",
+                    "image": "/Projects/credx/favs.png",
+                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
+                }
+            ]
+        },
+        {
+            "sectionheading": "A powerful NLP Engine",
+            "sectionText": "A smooth and beautifully designed onboarding and login.",
+            "sectionData": [
+                {
+                    "alignment": "l",
+                    "image": "/Projects/credx/homeAndBuy.png",
+                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
+                }
+            ]
+        },
+        {
+            "sectionheading": "A powerful NLP Engine",
+            "sectionText": "A smooth and beautifully designed onboarding and login.",
+            "sectionData": [
+                {
+                    "alignment": "r",
+                    "image": "/Projects/credx/Inbox.png",
+                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
+                }
+            ]
+        },
+        {
+            "sectionheading": "A powerful NLP Engine",
+            "sectionText": "A smooth and beautifully designed onboarding and login.",
+            "sectionData": [
+                {
+                    "alignment": "l",
+                    "image": "/Projects/credx/Inbox2.png",
+                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
+                }
+            ]
+        },
+        {
+            "sectionheading": "A powerful NLP Engine",
+            "sectionText": "A smooth and beautifully designed onboarding and login.",
+            "sectionData": [
+                {
+                    "alignment": "r",
+                    "image": "/Projects/credx/myProducts.png",
+                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
+                }
+            ]
+        },
+        {
+            "sectionheading": "A powerful NLP Engine",
+            "sectionText": "A smooth and beautifully designed onboarding and login.",
+            "sectionData": [
+                {
+                    "alignment": "l",
+                    "image": "/Projects/credx/notifModal.png",
+                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
+                }
+            ]
+        },
+        {
+            "sectionheading": "A powerful NLP Engine",
+            "sectionText": "A smooth and beautifully designed onboarding and login.",
+            "sectionData": [
+                {
+                    "alignment": "r",
+                    "image": "/Projects/credx/Profile.png",
+                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
+                }
+            ]
+        },
+        {
+            "sectionheading": "A powerful NLP Engine",
+            "sectionText": "A smooth and beautifully designed onboarding and login.",
+            "sectionData": [
+                {
+                    "alignment": "l",
+                    "image": "/Projects/credx/Profile2.png",
+                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
+                }
+            ]
+        },
+        {
+            "sectionheading": "A powerful NLP Engine",
+            "sectionText": "A smooth and beautifully designed onboarding and login.",
+            "sectionData": [
+                {
+                    "alignment": "r",
+                    "image": "/Projects/credx/Profile3.png",
+                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
+                }
+            ]
+        },
+        {
+            "sectionheading": "A powerful NLP Engine",
+            "sectionText": "A smooth and beautifully designed onboarding and login.",
+            "sectionData": [
+                {
+                    "alignment": "l",
+                    "image": "/Projects/credx/ReportItem.png",
+                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
+                }
+            ]
+        },
+        {
+            "sectionheading": "A powerful NLP Engine",
+            "sectionText": "A smooth and beautifully designed onboarding and login.",
+            "sectionData": [
+                {
+                    "alignment": "r",
+                    "image": "/Projects/credx/ReportUser.png",
+                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
+                }
+            ]
+        },
+        {
+            "sectionheading": "A powerful NLP Engine",
+            "sectionText": "A smooth and beautifully designed onboarding and login.",
+            "sectionData": [
+                {
+                    "alignment": "l",
+                    "image": "/Projects/credx/search.png",
+                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
+                }
+            ]
+        },
+        {
+            "sectionheading": "A powerful NLP Engine",
+            "sectionText": "A smooth and beautifully designed onboarding and login.",
+            "sectionData": [
+                {
+                    "alignment": "r",
+                    "image": "/Projects/credx/search2.png",
                     "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
                 }
             ]

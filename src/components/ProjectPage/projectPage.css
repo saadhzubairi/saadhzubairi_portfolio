@@ -20,6 +20,10 @@
     transition: 300ms;
 }
 
+.project_modal_image{
+    height: 98vh;
+}
+
 .projectPage_titleImage:hover {
     cursor: pointer;
     transform: scale(1.01);

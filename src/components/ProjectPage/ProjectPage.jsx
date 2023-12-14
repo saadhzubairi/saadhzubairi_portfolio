@@ -129,9 +129,23 @@ const ProjectPage = () => {
         else {
             setImg(images[ind - 1])
         }
-
     }
 
+    const handleKeyPress = (event) => {
+        if (event.key === 'ArrowLeft') {
+            prevImg();
+        } else if (event.key === 'ArrowRight') {
+            nextImg();
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener('keydown', handleKeyPress);
+
+        return () => {
+            document.removeEventListener('keydown', handleKeyPress);
+        };
+    });
 
     const containerRef = useRef(null);
 
@@ -160,7 +174,7 @@ const ProjectPage = () => {
                                 <Modal open={open} onClose={handleClose}>
                                     <Fade>
                                         <Box sx={style} ref={containerRef}>
-                                            <img src={img} alt="" className="" />
+                                            <img src={img} alt="" className="project_modal_image" />
                                             <div className="modal_close_button">
                                                 <IconButton color="#ffe2e2" onClick={handleClose}>
                                                     <Close />
