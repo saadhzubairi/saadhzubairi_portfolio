@@ -1,0 +1,104 @@
+{
+    "id": "crickex",
+    "image": "/Projects/crickex/crickex.png",
+    "name": "Crick-Ex One",
+    "subtitle": "A Beautiful Digital Cricket Scorebook.",
+    "titleImg": "/Projects/crickex/title.png",
+    "techs": [
+        "Java",
+        "JavaFX",
+        "Oracle-19c",
+        "SQL"
+    ],
+    "desc": "Crick-Ex One is a Digital Cricket Scorebook I made for my OOP course. It's a full fledged Scorebook and tournament maintanence app with many rich features and customizations.",
+    "sections": [
+        {
+            "sectionheading": "Adding Teams and players",
+            "sectionText": "A smooth and beautifully designed team addition and player creation interface.",
+            "sectionData": [
+                {
+                    "alignment": "l",
+                    "image": "/Projects/crickex/1.png",
+                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
+                },
+                {
+                    "alignment": "r",
+                    "image": "/Projects/crickex/2.png",
+                    "text": "A beautiful array of destinations and hotel types is laid out neatly to give you a holistic understanding of where to go."
+                },
+                {
+                    "alignment": "l",
+                    "image": "/Projects/crickex/3.png",
+                    "text": "The search screen is made to be very minimal with a persistent colorful search helper pane sticked to the left side and all the search results neatly displayed on the right."
+                },
+                {
+                    "alignment": "r",
+                    "image": "/Projects/crickex/4.png",
+                    "text": "The project also uses simple UI modules such as this beautiful calendar model which make it simple to select a date range for a specific trip."
+                },
+                {
+                    "alignment": "l",
+                    "image": "/Projects/crickex/4.png",
+                    "text": "The search screen is made to be very minimal with a persistent colorful search helper pane sticked to the left side and all the search results neatly displayed on the right."
+                },
+                {
+                    "alignment": "r",
+                    "image": "/Projects/crickex/5.png",
+                    "text": "The project also uses simple UI modules such as this beautiful calendar model which make it simple to select a date range for a specific trip."
+                },
+                {
+                    "alignment": "l",
+                    "image": "/Projects/crickex/6.png",
+                    "text": "The search screen is made to be very minimal with a persistent colorful search helper pane sticked to the left side and all the search results neatly displayed on the right."
+                }
+            ]
+        },
+        {
+            "sectionheading": "Start a new match",
+            "sectionText": "A simple and error free process to select the teams and match configurations to begin play.",
+            "sectionData": [
+                {
+                    "alignment": "l",
+                    "image": "/Projects/crickex/7.png",
+                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
+                },
+                {
+                    "alignment": "r",
+                    "image": "/Projects/crickex/8.png",
+                    "text": "A beautiful array of destinations and hotel types is laid out neatly to give you a holistic understanding of where to go."
+                }
+            ]
+        },
+        {
+            "sectionheading": "Let the game begin",
+            "sectionText": "An intuitive scoreboard UI to record and view scoreboard which is also designed to be projected.",
+            "sectionData": [
+                {
+                    "alignment": "r",
+                    "image": "/Projects/crickex/10.png",
+                    "text": "The project also uses simple UI modules such as this beautiful calendar model which make it simple to select a date range for a specific trip."
+                },
+                {
+                    "alignment": "l",
+                    "image": "/Projects/crickex/11.png",
+                    "text": "The search screen is made to be very minimal with a persistent colorful search helper pane sticked to the left side and all the search results neatly displayed on the right."
+                },
+                {
+                    "alignment": "r",
+                    "image": "/Projects/crickex/12.png",
+                    "text": "The project also uses simple UI modules such as this beautiful calendar model which make it simple to select a date range for a specific trip."
+                },
+                {
+                    "alignment": "l",
+                    "image": "/Projects/crickex/13.png",
+                    "text": "The project also uses simple UI modules such as this beautiful calendar model which make it simple to select a date range for a specific trip."
+                },
+                {
+                    "alignment": "r",
+                    "image": "/Projects/crickex/14.png",
+                    "text": "The project also uses simple UI modules such as this beautiful calendar model which make it simple to select a date range for a specific trip."
+                }
+            ]
+        }
+    ]
+}

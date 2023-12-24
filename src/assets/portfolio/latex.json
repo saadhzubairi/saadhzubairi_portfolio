@@ -5,30 +5,30 @@
     "subtitle": "Make Latex documents with ease.",
     "titleImg": "/Projects/latex/latex.png",
     "techs": [
-        "HTML",
-        "CSS",
-        "Node.js"
+        "Java",
+        "JavaFX",
+        "CSS3"
     ],
-    "desc": "Halper's booking is a simple HTML5 and CSS3 demonstration of a beautifully designed web-app for hotel booking and reservation.",
+    "desc": "LaTeX Lite is a simple desktop app that enables people new to LaTeX to generate LaTeX code without much prior knowledge.",
     "sections": [
         {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
+            "sectionheading": "A simple user interface",
+            "sectionText": "A smooth and intuitive interface that starts with a simple form",
             "sectionData": [
                 {
                     "alignment": "l",
                     "image": "/Projects/latex/1.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
+                    "text": "The first screen is very simple with a neat form for different attributes to be added to the document.<br/><br/>Users can select multiple document types and other preset attributes set within latex.<br/><br/>This acts as an introduction to the users of multiple kinds of formats offered by latex for document type, paper size, and font style."
                 },
                 {
                     "alignment": "r",
                     "image": "/Projects/latex/2.png",
-                    "text": "A beautiful array of destinations and hotel types is laid out neatly to give you a holistic understanding of where to go."
+                    "text": "All the options can be accessed through these custom CSS3 designed combo-boxes.<br/><br/>Users will only be able to select certain values for these from the combo-box."
                 },
                 {
                     "alignment": "l",
                     "image": "/Projects/latex/3.png",
-                    "text": "The search screen is made to be very minimal with a persistent colorful search helper pane sticked to the left side and all the search results neatly displayed on the right."
+                    "text": "The homescreen is very simple with a proper layout. <br/><br/>The left pane holds all the control and the right pane holds the persistent preview pane that users can zoom in and out and also <b>undo</b> any operation if they want to."
                 },
                 {
                     "alignment": "r",
@@ -38,52 +38,52 @@
                 {
                     "alignment": "l",
                     "image": "/Projects/latex/5.png",
-                    "text": "The search screen is made to be very minimal with a persistent colorful search helper pane sticked to the left side and all the search results neatly displayed on the right."
+                    "text": "The ‘Paragraphs & Sections’ tab is a versatile feature that enhances text organization and formatting. It allows users to create structured content by adding headings accompanied by body text, forming distinct sections or sub-sections.<br/><br/> Users can also add standalone paragraphs without headings.<br/><br/> The feature also includes the option to insert line breaks, facilitating improved readability and flow of text."
                 },
                 {
                     "alignment": "r",
                     "image": "/Projects/latex/6.png",
-                    "text": "The project also uses simple UI modules such as this beautiful calendar model which make it simple to select a date range for a specific trip."
+                    "text": "The ‘Items’ feature allows users to create structured content by adding ordered and unordered lists. As items are added, changes are dynamically reflected in the preview pane, providing real-time feedback. To ensure proper formatting, <b>other features are temporarily disabled until the list is concluded using the ‘End List’ button.</b>"
                 },
                 {
                     "alignment": "l",
                     "image": "/Projects/latex/7.png",
-                    "text": "The search screen is made to be very minimal with a persistent colorful search helper pane sticked to the left side and all the search results neatly displayed on the right."
+                    "text": "Users have the option to utilize an alternative user interface for adding lists. This interface provides the added benefit of <b>allowing users to restructure the list prior to integrating</b> it into the main document code."
                 },
                 {
                     "alignment": "r",
                     "image": "/Projects/latex/8.png",
-                    "text": "The project also uses simple UI modules such as this beautiful calendar model which make it simple to select a date range for a specific trip."
+                    "text": "Items in the list can be added using the neat dialogue box as shown here."
                 },
                 {
                     "alignment": "l",
                     "image": "/Projects/latex/9.png",
-                    "text": "The search screen is made to be very minimal with a persistent colorful search helper pane sticked to the left side and all the search results neatly displayed on the right."
+                    "text": "Users have the ability to incorporate <b>code</b> into their documents. The inserted code is <b>automatically formatted and highlighted</b> using a LaTeX library, ensuring clear readability. Additionally, the code is displayed in a <b>monospace font</b>, further enhancing its presentation"
                 },
                 {
                     "alignment": "r",
                     "image": "/Projects/latex/10.png",
-                    "text": "The project also uses simple UI modules such as this beautiful calendar model which make it simple to select a date range for a specific trip."
+                    "text": "As you can see, the code will be presented in the preview to peruse."
                 },
                 {
                     "alignment": "l",
                     "image": "/Projects/latex/11.png",
-                    "text": "The search screen is made to be very minimal with a persistent colorful search helper pane sticked to the left side and all the search results neatly displayed on the right."
+                    "text": "Users have the capability to insert file paths and directories into their documents.<br/><br/>These elements are neatly formatted within a box for clear distinction and are displayed in a monospace font, ensuring uniformity and enhancing readability."
                 },
                 {
                     "alignment": "r",
                     "image": "/Projects/latex/12.png",
-                    "text": "The project also uses simple UI modules such as this beautiful calendar model which make it simple to select a date range for a specific trip."
+                    "text": "Users are provided with the flexibility to modify the initial information, preferences, and parameters of the documents at any point before the final code generation. This allows for greater control and customization, ensuring the output aligns with the user’s requirements."
                 },
                 {
                     "alignment": "l",
                     "image": "/Projects/latex/13.png",
-                    "text": "The search screen is made to be very minimal with a persistent colorful search helper pane sticked to the left side and all the search results neatly displayed on the right."
+                    "text": "To generate the final document, users simply need to click the ‘Generate’ button. The resulting text can then be copied and pasted into a LaTeX compiler, such as MiKTeX. The output will be a valid LaTeX document that compiles exactly as previewed, ensuring a seamless transition from the editor to the final document."
                 },
                 {
                     "alignment": "r",
                     "image": "/Projects/latex/14.png",
-                    "text": "The project also uses simple UI modules such as this beautiful calendar model which make it simple to select a date range for a specific trip."
+                    "text": "As you can observe, the documents are <b>consistent with the intended design and layout</b>. This is an impressive feature, isn’t it?"
                 }
             ]
         }

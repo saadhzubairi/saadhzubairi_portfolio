@@ -54,6 +54,10 @@
 .projectPage_desc {
     text-align: center;
     max-width: 500px;
+    margin: 2rem 0rem;
+    font-weight: 500;
+    color: #111;
+    font-size: 1rem;
 }
 
 .bottomBody {
@@ -273,7 +277,7 @@
 }
 
 .projectPage_back_button.scrolled:hover .go_back_text.scrolled{
-    font-size: 1rem !important;
+    font-size: 0.8rem !important;
     opacity: 1;
     
 }

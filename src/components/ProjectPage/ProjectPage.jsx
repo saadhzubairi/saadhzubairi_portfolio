@@ -44,7 +44,7 @@ const ProjectPage = () => {
     const handleImgLoad = () => {
         setImageLoadingFull(false)
     }
-    
+
     const handleClose = () => setOpen(false);
 
     useEffect(() => {
@@ -149,8 +149,6 @@ const ProjectPage = () => {
         };
     });
 
-    const iframeString = `<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FqhxuJFQzIfxZncSjhuwGmz%2FCREDX%3Fpage-id%3D33%253A128%26type%3Ddesign%26node-id%3D71-572%26viewport%3D704%252C262%252C0.07%26t%3DO1PF6S6PwGoSUHNE-1%26scaling%3Dscale-down%26starting-point-node-id%3D71%253A572%26mode%3Ddesign" allowfullscreen></iframe>`;
-
     const containerRef = useRef(null);
 
     return (
@@ -173,15 +171,16 @@ const ProjectPage = () => {
                                 <div className="projectPage_techs">
                                     {jsonData.techs.map(t => (<div className="projectPage_techs_chip">{t}</div>))}
                                 </div>
+                                <div className="projectPage_desc">{jsonData.desc}</div>
                                 <img src={jsonData.titleImg} alt="" onClick={() => handleOpen(jsonData.titleImg)} className="projectPage_titleImage" />
 
                                 <Modal open={open} onClose={handleClose}>
-                                    <Fade in={!img===null}>
+                                    <Fade in={!img === null}>
                                         <Box sx={style} ref={containerRef}>
                                             {imgLoadingFull ? <CircularProgress sx={{ color: "#fff" }} /> : null}
-                                            <Fade in={!imgLoadingFull}>
-                                                <img src={img} alt="" onLoad={handleImgLoad} className="project_modal_image" />
-                                            </Fade>
+
+                                            <img src={img} alt="" onLoad={handleImgLoad} className="project_modal_image" />
+
                                             <div className="modal_close_button">
                                                 <IconButton color="#ffe2e2" onClick={handleClose}>
                                                     <Close />
@@ -200,7 +199,7 @@ const ProjectPage = () => {
                                         </Box>
                                     </Fade>
                                 </Modal>
-                                <div className="projectPage_desc">{jsonData.desc}</div>
+
                                 <div className="bottomBody" id="projectPage_bottom">
                                     {
 
@@ -249,9 +248,7 @@ const ProjectPage = () => {
 
                                 </div>
                             </div>
-
                     }
-
                 </div >
                 <Connect page={1} />
                 <a href="#projectPage_bottom" className={isScrolled ? "Scroll_down_shizzle scroll_down_hide" : "Scroll_down_shizzle "}><ScrollDown hash={"projectPage_bottom"} /></a>

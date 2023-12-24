@@ -14,6 +14,7 @@ import { Close } from "@mui/icons-material";
 import IconButton from '@mui/material/IconButton';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
+
 const style = {
     position: 'absolute',
     top: '50%',
@@ -44,7 +45,7 @@ function Qualifications(props) {
     }
 
     const handleScroll = () => {
-        const element = document.getElementById('Qual');
+        /* const element = document.getElementById('Qual');
         const rect = element.getBoundingClientRect();
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         const offset = rect.top + scrollTop;
@@ -55,7 +56,7 @@ function Qualifications(props) {
             toggleTab(1);
         } else {
             toggleTab(0);
-        }
+        } */
     }
 
     useEffect(() => {
@@ -80,91 +81,88 @@ function Qualifications(props) {
                         <i className="uil uil-briefcase-alt qual__icon"></i> Experience
                     </div>
                 </div>
-
-                <div className="qual__sections">
-                    <Box sx={{ display: 'flex' }}>
-                        <Fade in={(toggle === 0)}>
-                            <div className={toggle === 0 ? "qual__content qual__content-active" : "qual__content qual__content"}>
-                                {ed_data.map((item, index) => (
-                                    <>
-                                        <div className="qual__data" onClick={() => handleOpen(index)}>
-                                            <h3 className="qual__title">{item.degree}</h3>
-                                            <div className="qual__subtitle_img__and__text">
-                                                <img src={item.logo} alt="" className="qual__subtitle_img" />
-                                                <div className="qual__subtitile__section">
-                                                    <span className="qual__subtitle">{item.institute}</span>
+                    <div className="qual__sections">
+                        <Box sx={{ display: 'flex' }}>
+                            <Fade in={(toggle === 0)}>
+                                <div className={toggle === 0 ? "qual__content qual__content-active" : "qual__content qual__content"}>
+                                    {ed_data.map((item, index) => (
+                                        <>
+                                            <div className="qual__data" onClick={() => handleOpen(index)}>
+                                                <h3 className="qual__title">{item.degree}</h3>
+                                                <div className="qual__subtitle_img__and__text">
+                                                    <img src={item.logo} alt="" className="qual__subtitle_img" />
+                                                    <div className="qual__subtitile__section">
+                                                        <span className="qual__subtitle">{item.institute}</span>
+                                                    </div>
+                                                </div>
+                                                <div className="qual__calendar"><i class="uil uil-schedule"></i>{item.years}</div>
+                                                <div className="qual__data_openIcon">
+                                                    Expand <OpenInNewIcon fontSize="0.5rem" />
                                                 </div>
                                             </div>
-                                            <div className="qual__calendar"><i class="uil uil-schedule"></i>{item.years}</div>
-                                            <div className="qual__data_openIcon">
-                                                Expand <OpenInNewIcon fontSize="0.5rem" />
-                                            </div>
-                                        </div>
-                                        <Modal
-                                            open={openModalIndex === index}
-                                            onClose={handleClose}
-                                        >
-                                            <Fade in={openModalIndex === index}>
-                                                <Box sx={style}>
-                                                    <Popup data={item} />
-                                                    <div className="modal_close_button">
-                                                        <IconButton color="#ffe2e2" onClick={handleClose}>
-                                                            <Close />
-                                                        </IconButton>
+                                            <Modal
+                                                open={openModalIndex === index}
+                                                onClose={handleClose}
+                                            >
+                                                <Fade in={openModalIndex === index}>
+                                                    <Box sx={style}>
+                                                        <Popup data={item} />
+                                                        <div className="modal_close_button">
+                                                            <IconButton color="#ffe2e2" onClick={handleClose}>
+                                                                <Close />
+                                                            </IconButton>
+                                                        </div>
+                                                    </Box>
+                                                </Fade>
+                                            </Modal>
+                                        </>
+                                    ))}
+                                </div>
+                            </Fade>
+                        </Box>
+
+                        <Box sx={{ display: 'flex' }}>
+                            <Fade in={(toggle === 1)}>
+                                <div className={toggle === 1 ? "qual__content qual__content-active" : "qual__content qual__content"}>
+
+                                    {xp_data.map((item, index) => (
+                                        <>
+                                            <div className="qual__data" onClick={() => handleOpen_(index)} >
+                                                <h3 className="qual__title">{item.desg}</h3>
+                                                <div className="qual__subtitle_img__and__text">
+                                                    <img src={item.logo} alt="" className="qual__subtitle_img" />
+                                                    <div className="qual__subtitile__section">
+                                                        <span className="qual__subtitle">{item.company}</span>
                                                     </div>
-                                                </Box>
-                                            </Fade>
-                                        </Modal>
-                                    </>
-                                ))}
-                            </div>
-                        </Fade>
-                    </Box>
-
-                    <Box sx={{ display: 'flex' }}>
-                        <Fade in={(toggle === 1)}>
-                            <div className={toggle === 1 ? "qual__content qual__content-active" : "qual__content qual__content"}>
-
-                                {xp_data.map((item, index) => (
-                                    <>
-                                        <div className="qual__data" onClick={() => handleOpen_(index)} >
-                                            <h3 className="qual__title">{item.desg}</h3>
-                                            <div className="qual__subtitle_img__and__text">
-                                                <img src={item.logo} alt="" className="qual__subtitle_img" />
-                                                <div className="qual__subtitile__section">
-                                                    <span className="qual__subtitle">{item.company}</span>
+                                                </div>
+                                                <div className="qual__calendar"><i class="uil uil-schedule"></i>{item.years}</div>
+                                                <div className="qual__data_openIcon_xp">
+                                                    <OpenInNewIcon fontSize="0.5rem" />
                                                 </div>
                                             </div>
-                                            <div className="qual__calendar"><i class="uil uil-schedule"></i>{item.years}</div>
-                                            <div className="qual__data_openIcon_xp">
-                                                <OpenInNewIcon fontSize="0.5rem" />
-                                            </div>
-                                        </div>
-                                        <Modal
-                                            open={openModalIndex_ === index}
-                                            onClose={handleClose_}
-                                        >
-                                            <Fade in={openModalIndex_ === index}>
-                                                <Box sx={style}>
-                                                    {<ShopUp data={item} />}
-                                                    <div className="modal_close_button">
-                                                        <IconButton color="#ffe2e2" onClick={handleClose_}>
-                                                            <Close />
-                                                        </IconButton>
-                                                    </div>
-                                                </Box>
-                                            </Fade>
-                                        </Modal>
-                                    </>
-                                ))}
+                                            <Modal
+                                                open={openModalIndex_ === index}
+                                                onClose={handleClose_}
+                                            >
+                                                <Fade in={openModalIndex_ === index}>
+                                                    <Box sx={style}>
+                                                        {<ShopUp data={item} />}
+                                                        <div className="modal_close_button">
+                                                            <IconButton color="#ffe2e2" onClick={handleClose_}>
+                                                                <Close />
+                                                            </IconButton>
+                                                        </div>
+                                                    </Box>
+                                                </Fade>
+                                            </Modal>
+                                        </>
+                                    ))}
 
-                            </div>
-                        </Fade>
-                    </Box>
-                </div>
-
+                                </div>
+                            </Fade>
+                        </Box>
+                    </div>
             </div>
-
         </section>
     )
 }

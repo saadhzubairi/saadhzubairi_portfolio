@@ -2,7 +2,7 @@
     "id": "hoops",
     "image": "/Projects/hoops/hoops.png",
     "name": "Hoops",
-    "titleImg": "/Projects/hoops/hoops.png",
+    "titleImg": "/Projects/hoops/title.png",
     "subtitle": "A different kind of Social Media.",
     "techs": [
         "MongoDB",

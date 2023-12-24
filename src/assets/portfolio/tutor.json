@@ -1,0 +1,69 @@
+{
+    "id": "tutor",
+    "image": "/Projects/tutor/tutor.png",
+    "name": "Tutor Finder",
+    "subtitle": "A smart tutor and student pairing application.",
+    "titleImg": "/Projects/tutor/title.png",
+    "techs": [
+        "Java",
+        "JavaFX",
+        "CSS3",
+        "SQL"
+    ],
+    "desc": "Tutor finder is an app designed for the demonstration of data structure concepts. It uses multiple algorithms and data structures to pair students and tutors based on their requirements.",
+    "sections": [
+        {
+            "sectionheading": "A powerful NLP Engine",
+            "sectionText": "A smooth and beautifully designed onboarding and login.",
+            "sectionData": [
+                {
+                    "alignment": "l",
+                    "image": "/Projects/tutor/1.png",
+                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
+                },
+                {
+                    "alignment": "r",
+                    "image": "/Projects/tutor/2.png",
+                    "text": "A beautiful array of destinations and hotel types is laid out neatly to give you a holistic understanding of where to go."
+                },
+                {
+                    "alignment": "l",
+                    "image": "/Projects/tutor/3.png",
+                    "text": "The search screen is made to be very minimal with a persistent colorful search helper pane sticked to the left side and all the search results neatly displayed on the right."
+                }
+            ]
+        },
+        {
+            "sectionheading": "A powerful NLP Engine",
+            "sectionText": "A smooth and beautifully designed onboarding and login.",
+            "sectionData": [
+                {
+                    "alignment": "l",
+                    "image": "/Projects/tutor/4.png",
+                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
+                },
+                {
+                    "alignment": "r",
+                    "image": "/Projects/tutor/5.png",
+                    "text": "A beautiful array of destinations and hotel types is laid out neatly to give you a holistic understanding of where to go."
+                }
+            ]
+        },
+        {
+            "sectionheading": "A powerful NLP Engine",
+            "sectionText": "A smooth and beautifully designed onboarding and login.",
+            "sectionData": [
+                {
+                    "alignment": "l",
+                    "image": "/Projects/tutor/6.png",
+                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
+                },
+                {
+                    "alignment": "r",
+                    "image": "/Projects/tutor/7.png",
+                    "text": "A beautiful array of destinations and hotel types is laid out neatly to give you a holistic understanding of where to go."
+                }
+            ]
+        }
+    ]
+}

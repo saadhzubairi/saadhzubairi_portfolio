@@ -16,7 +16,8 @@ import talenthive from "../../assets/portfolio/talenthive.json"
 import halpert from "../../assets/portfolio/halpert.json"
 import credx from "../../assets/portfolio/credx.json"
 import latex from "../../assets/portfolio/latex.json"
-
+import crickex from "../../assets/portfolio/crickex.json"
+import tutor from "../../assets/portfolio/tutor.json"
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -191,16 +192,14 @@ const PortfolioPage = () => {
                 <ProjectCard data={hoops} />
                 <ProjectCard data={talenthive} />
                 <ProjectCard data={halpert} />
-                <ProjectCard data={latex} />
               </CustomTabPanel>
               <CustomTabPanel value={value} index={1}>
-                <ProjectCard data={talenthive} />
-                <ProjectCard data={hoops} />
-                <ProjectCard data={talenthive} />
-                <ProjectCard data={halpert} />
+
               </CustomTabPanel>
               <CustomTabPanel value={value} index={2}>
-                <ProjectCard data={talenthive} />
+                <ProjectCard data={latex} />
+                <ProjectCard data={crickex} />
+                <ProjectCard data={tutor} />
               </CustomTabPanel>
               <CustomTabPanel value={value} index={3}>
                 <ProjectCard data={credx} />
