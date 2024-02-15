@@ -18,6 +18,10 @@ import credx from "../../assets/portfolio/credx.json"
 import latex from "../../assets/portfolio/latex.json"
 import crickex from "../../assets/portfolio/crickex.json"
 import tutor from "../../assets/portfolio/tutor.json"
+import topdown from "../../assets/portfolio/topdown.json"
+import tetromania from "../../assets/portfolio/tetromania.json"
+import hidenseek from "../../assets/portfolio/hidenseek.json"
+import pixelcut from "../../assets/portfolio/pixelcut.json"
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -183,8 +187,7 @@ const PortfolioPage = () => {
                   <Tab label="Desktop"        {...a11yProps(2)} />
                   <Tab label="UI/UX"          {...a11yProps(3)} />
                   <Tab label="Game Design"    {...a11yProps(4)} />
-                  <Tab label="Graphic Design" {...a11yProps(5)} />
-                  <Tab label="Photography"    {...a11yProps(6)} />
+                  <Tab label="Photography"    {...a11yProps(5)} />
                 </Tabs>
               </Box>
 
@@ -205,12 +208,13 @@ const PortfolioPage = () => {
                 <ProjectCard data={credx} />
               </CustomTabPanel>
               <CustomTabPanel value={value} index={4}>
-                Item Five
+                <ProjectCard data={pixelcut} />
+                <ProjectCard data={tetromania} />
+                <ProjectCard data={topdown} />
+                <ProjectCard data={hidenseek} />
               </CustomTabPanel>
+              
               <CustomTabPanel value={value} index={5}>
-                Item Six
-              </CustomTabPanel>
-              <CustomTabPanel value={value} index={6}>
                 <MasonryImageList />
               </CustomTabPanel>
 

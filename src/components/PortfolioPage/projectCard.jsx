@@ -7,7 +7,12 @@ const ProjectCard = ({ data }) => {
     const navigate = useNavigate();
 
     const onClickFun = () => {
-        navigate(`/Portfolio/Project/${data.id}`)
+        if (data.type === "game") {
+            navigate(`/Portfolio/Project/Game/${data.id}`)
+        }
+        else {
+            navigate(`/Portfolio/Project/${data.id}`)
+        }
     }
 
     return (

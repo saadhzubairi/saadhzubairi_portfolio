@@ -7,6 +7,8 @@ import PortfolioPage from './components/PortfolioPage/PortfolioPage';
 import ProjectPage from './components/ProjectPage/ProjectPage';
 import { useEffect, useState } from 'react';
 import CircularProgress from '@mui/material/CircularProgress';
+import { GameProjectPage } from './components/ProjectPage/GameProjectPage/GameProjectPage';
+import { Quillian } from './components/utils/Quillian';
 
 const Layout = ({ children }) => {
   return (
@@ -47,6 +49,8 @@ function App() {
           <Route path="/Portfolio/" element={<Layout><PortfolioPage /></Layout>} />
           <Route path="/Portfolio/:ind" element={<Layout><PortfolioPage /></Layout>} />
           <Route path="/Portfolio/Project/:projectId" element={<Layout><ProjectPage /></Layout>} />
+          <Route path="/Portfolio/Project/Game/:projectId" element={<Layout><GameProjectPage /></Layout>} />
+          <Route path="/quillian" element={<Quillian />} />
 
         </Routes>
       </main>

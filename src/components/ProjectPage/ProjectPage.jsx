@@ -221,11 +221,11 @@ const ProjectPage = () => {
                                                                         {s.sectionData.map(d =>
                                                                             <div className={`projectPage_section_sub ${d.alignment}`}>
                                                                                 <div onClick={() => handleOpen(d.image)} className="projectPage_section_subImg">
-                                                                                    <img src={d.image} alt="" />
+                                                                                    <img className="projectPage_section_subImg_IMAGE" src={d.image} alt="" />
                                                                                 </div>
                                                                                 <div className="projectPage_section_subText">
+                                                                                    <div className="projectPage_section_blackBar"></div>
                                                                                     <div className="projectPage_section_subText_actualText" dangerouslySetInnerHTML={{ __html: d.text }}>
-
                                                                                     </div>
                                                                                 </div>
                                                                             </div>

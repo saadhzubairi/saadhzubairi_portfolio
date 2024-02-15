@@ -1,0 +1,34 @@
+{
+    "id": "pixelcut",
+    "image": "/Projects/pixelcut/pixelcut.png",
+    "name": "Pixel Cut",
+    "subtitle": "A 2D platformer game made using Unity.",
+    "titleImg": "/Projects/pixelcut/pixelcut.png",
+    "type": "game",
+    "techs": [
+        "C#",
+        "Unity 2D"
+    ],
+    "desc": "A Simple 2D platformer game for a rather satisfying and frustrating experience. With simple controls and easy to navigate levels (but not enough to stop the steam rolling on the temples).",
+    "introText": "In my quest to delve into 2D platformer games, I undertook the challenge of creating Pixel Cut, a visually appealing and enjoyable game with vibrant graphics and amusing sound effects. I utilized Pixel Adventure Assets from the Unity store, along with sound effects from the same source. My journey began with a YouTube tutorial that guided me through the creation of a very simple first level. Inspired, I expanded the game by designing additional levels, each featuring intricate traps and obstacles. Pixel Cut is the most comprehensive game I’ve made to date.",
+    "techImg": "/Projects/pixelcut/techImg.png",
+    "techHead": "Unity 2D",
+    "techText": "The game was developed using Unity 2D with it’s simple and intuitive scripting and drag-and-drop based UI with easy to use component mapping and asset management.",
+    "structureText": "<p>The code structure is straightforward, featuring key elements such as prefabs for reusable game objects. These prefabs include Burners, Moving Platforms, Players, Fans, Saws, Finishes, Spike Rocks, the Main Camera, and Melons.</p><p><br></p><p>Scenes, representing different game levels, are organized in the 'Scenes' directory. </p><p><br></p><p>All scripts are conveniently located in the './Scripts' directory. These scripts handle various functionalities, such as player movement, camera control, scene changes, and interactions with game objects. </p><p><br></p><p>The Pixel Adventure assets are organized into two main folders. In './Pixel Adventure 1,' you'll find Fonts, Prefabs, and Traps. The Traps directory contains subdirectories for Spikes and Trampoline, with associated images and materials.</p><p><br></p><p>Overall, the code utilizes serializable fields, providing flexibility for dynamic parameter adjustments throughout the game. The structure is designed for simplicity and reusability, making it easy to manage and extend for different levels and game elements.</p>",
+    
+    "assetText": "The game features graphics and sound exclusively from the Unity Asset Store. All elements, including sprites, background images, and sound effects, are sourced directly from the Unity Asset Store. The terrain and background utilize tilemaps for a streamlined design.",
+    "assets": [
+        "/Projects/pixelcut/asset_1.png"
+    ],
+    "screenshots": [
+        "/Projects/pixelcut/screenshot1.png",
+        "/Projects/pixelcut/screenshot2.png",
+        "/Projects/pixelcut/screenshot3.png",
+        "/Projects/pixelcut/screenshot4.png"
+    ],
+    "youtubeLink": "https://www.youtube.com/embed/LxfaDAV0TXQ?si=x71IOmpuSJ_YOLPh",
+    "lessonsLearned": "Designing levels was a dynamic process, requiring thoughtful planning for themes, trap placements, and melon locations. For this, Initial sketches on paper paved the way for improvisation during  the actual development. I also delved quite a lot with asset management, particularly with prefabs, as the whole experience offered insights into efficient organization of game assets and reusability. Through this unity scripting, I believe I have deepened my understanding of game mechanics through a very fun practical application.",
+    "links": [
+        "https://github.com/saadhzubairi/Pixel-Cut.git"
+    ]
+}
