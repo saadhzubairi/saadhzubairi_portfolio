@@ -113,11 +113,11 @@ header {
     .header_for_phone {
         display: flex;
         position: fixed;
-        top: 93%;
+        bottom: 0%;
         left: 50%;
         transform: translate(-50%, -50%);
-        height: 3.5rem;
-        width: 80%;
+        height: 5rem;
+        width: 85%;
         background-color: rgba(255, 255, 255, 0.655);
         backdrop-filter: blur(10px);
         z-index: 9999;
@@ -136,10 +136,8 @@ header {
     .menu_panel_for_phone {
         display: flex;
         position: fixed;
-        top: 70%;
         left: 50%;
         transform: translate(-50%, -50%);
-        height: 15rem;
         width: 80%;
         background-color: rgba(255, 255, 255, 0.655);
         backdrop-filter: blur(10px);
@@ -157,15 +155,15 @@ header {
 
     .menu_panel_for_phone.opened {
         opacity: 1;
-        height: 15rem;
-        top: 70%;
+        height: 20rem;
+        bottom: 0%;
     }
 
     .menu_panel_for_phone.closed {
         opacity: 0;
         pointer-events: none;
         height: 0rem;
-        top: 93%;
+        bottom: 7%;
         width: 0%;
         left: 80%;
     }
