@@ -5,6 +5,7 @@ import Skills from '../skills/Skills'
 import Qualifications from '../qualifications/Qualifications'
 import Connect from '../connect/Connect'
 import CircularProgress from '@mui/material/CircularProgress';
+import { ProjectH } from '../projectHighlights/ProjectH'
 
 
 const FrontPage = () => {
@@ -41,9 +42,10 @@ const FrontPage = () => {
             <div>
                 <Home />
                 <About />
+                <ProjectH />
                 <Qualifications />
                 <Skills />
-                <Connect page={0}/>
+                <Connect page={0} />
             </div>
     )
 }

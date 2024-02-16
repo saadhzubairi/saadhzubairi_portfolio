@@ -171,3 +171,22 @@
     font-weight: 700;
     color: rgb(99, 99, 128);
 }
+
+.qual__data_openIcon_cert {
+    border: 1px rgb(99, 99, 128) solid;
+    background-color: rgb(234, 236, 247);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-weight: 700;
+    color: rgb(99, 99, 128);
+    justify-content: center;
+    margin-top: 0.25rem;
+}
+
+.cert__data{
+    height: 12rem;
+}

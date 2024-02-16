@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Google UX Design Specialization",
+        "institute": "Google",
+        "issued": "Dec 2023",
+        "credentialId": "https://coursera.org/verify/professional-cert/8YYFBRUE4BDK",
+        "logo": "/EDXP_logos/google.png"
+    },
+    {
+        "name": "IT Automation with Python",
+        "institute": "Google",
+        "issued": "Sep 2020",
+        "credentialId": "https://www.coursera.org/account/accomplishments/specialization/certificate/J4L484LNUQK2",
+        "logo": "/EDXP_logos/google.png"
+    },
+    {
+        "name": "Python 3 Specialization",
+        "institute": "University of Michigan",
+        "issued": "Aug 2020",
+        "credentialId": "https://www.coursera.org/account/accomplishments/specialization/certificate/ZV72KA6BZMWW",
+        "logo": "/EDXP_logos/UM.jpeg"
+    }
+]
