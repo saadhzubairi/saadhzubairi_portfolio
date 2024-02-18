@@ -53,7 +53,7 @@ function Qualifications(props) {
     const handleOpen_ = (index) => { setOpenModalIndex_(index); };
     const handleClose_ = () => { setOpenModalIndex_(null); };
 
-    const [toggle, setToggle] = useState(0);
+    const [toggle, setToggle] = useState(1);
 
     const toggleTab = (n) => {
         setToggle(n);
@@ -87,13 +87,13 @@ function Qualifications(props) {
             <div className="qual__container container">
 
                 <div className="qual__tabs">
-                    <div className={toggle === 0 ? "qual__button qual__active button--flex" : "qual__button button--flex"}
-                        onClick={() => toggleTab(0)}>
-                        <i className="uil uil-graduation-cap qual__icon"></i> Education
-                    </div>
                     <div className={toggle === 1 ? "qual__button qual__active button--flex" : "qual__button button--flex"}
                         onClick={() => toggleTab(1)}>
                         <i className="uil uil-briefcase-alt qual__icon"></i> Experience
+                    </div>
+                    <div className={toggle === 0 ? "qual__button qual__active button--flex" : "qual__button button--flex"}
+                        onClick={() => toggleTab(0)}>
+                        <i className="uil uil-graduation-cap qual__icon"></i> Education & Certifications
                     </div>
                 </div>
                 <div className="qual__sections">
