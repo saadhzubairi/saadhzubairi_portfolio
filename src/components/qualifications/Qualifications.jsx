@@ -16,6 +16,7 @@ import IconButton from '@mui/material/IconButton';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 
+
 const style = {
     position: 'absolute',
     top: '50%',
@@ -29,6 +30,19 @@ const style = {
     p: 4,
 };
 
+/* const style_small = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 'auto',
+    bgcolor: 'background.paper',
+    border: '2px dashed #fff',
+    borderRadius: 8,
+    boxShadow: 24,
+    p: 4,
+};
+ */
 function Qualifications(props) {
 
     const [openModalIndex, setOpenModalIndex] = useState(null);

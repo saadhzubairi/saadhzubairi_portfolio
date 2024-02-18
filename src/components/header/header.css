@@ -118,7 +118,7 @@ header {
         transform: translate(-50%, -50%);
         height: 5rem;
         width: 85%;
-        background-color: rgba(255, 255, 255, 0.655);
+        background-color: rgba(255, 255, 255, 0.855);
         backdrop-filter: blur(10px);
         z-index: 9999;
         border-radius: 10rem;
@@ -131,6 +131,20 @@ header {
     .menu {
         color: var(--title-color);
         font-weight: var(--font-medium);
+        padding: 0.5rem 0.75rem !important;
+        background-color: rgba(255, 255, 255, 0.855);
+        border-radius: 1rem;
+    }
+
+    .menu.opened {
+        background-color: rgb(216, 216, 216);
+        color: #4c4c4c;
+    }
+
+    .menu.closed {
+        background-color: white;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        color: var(--title-color);
     }
 
     .menu_panel_for_phone {
@@ -139,7 +153,7 @@ header {
         left: 50%;
         transform: translate(-50%, -50%);
         width: 80%;
-        background-color: rgba(255, 255, 255, 0.655);
+        background-color: rgba(255, 255, 255, 0.855);
         backdrop-filter: blur(10px);
         z-index: 9999;
         border-radius: 10rem;
@@ -148,7 +162,7 @@ header {
         align-items: start;
         justify-content: space-between;
         padding: 1.5rem;
-        flex-direction: column; 
+        flex-direction: column;
         transition: opacity 0.3s ease, height 1s ease;
         overflow: hidden;
     }
@@ -165,7 +179,7 @@ header {
         height: 0rem;
         bottom: 7%;
         width: 0%;
-        left: 80%;
+        left: 61%;
     }
 
     .menu_panel_phone_nav_link {
@@ -175,32 +189,33 @@ header {
         gap: 1rem;
     }
 
-    .menu_panel_for_phone_backdrop{
+    .menu_panel_for_phone_backdrop {
         position: fixed;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        height: 100vh;
+        height: 150vh;
         width: 100vw;
         background-color: rgba(0, 0, 0, 0.123);
         backdrop-filter: blur(2px);
         transition: all 300ms;
-        
+
     }
 
-    .menu_panel_for_phone_backdrop.opened{
-        z-index: 9998;   
+    .menu_panel_for_phone_backdrop.opened {
+        z-index: 9998;
         opacity: 1;
         transition: all 300ms;
     }
-    .menu_panel_for_phone_backdrop.closed{
-        z-index: -9999;   
+
+    .menu_panel_for_phone_backdrop.closed {
+        z-index: -9999;
         opacity: 0;
         pointer-events: none;
         transition: all 300ms;
     }
 
-    .button_on_mobilenav{
+    .button_on_mobilenav {
         height: 100%;
         display: flex;
         align-items: center;
@@ -209,15 +224,49 @@ header {
         gap: 0.5rem;
     }
 
-    .menu_panel_phone_nav_link{
+    .menu_panel_phone_nav_link {
         width: 100%;
-        padding: 0.6rem 0.6rem;
+        padding: 1rem 1.2rem;
         border-radius: 1rem;
         transition: all 300ms;
     }
 
-    .menu_panel_phone_nav_link:active{
+    .menu_panel_phone_nav_link:active {
         transition: all 300ms;
         background-color: #afafaf;
     }
+
+    .menu_panel_phone_nav_link.portfolio {
+        background-color: #333;
+        color: white;
+    }
+
+    .menu_sec {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .dark_mode {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: white;
+        height: 3rem;
+        width: 3rem;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+
+    .dark_mode.on {
+        background-color: #333;
+        color: white;
+    }
+
+    .dark_mode.off {
+        color: #333;
+        background-color: white;
+    }
+
 }

@@ -15,8 +15,8 @@
     "techHead": "Unity 2D",
     "techText": "The game was developed using Unity 2D with it’s simple and intuitive scripting and drag-and-drop based UI with easy to use component mapping and asset management.",
     "structureText": "<p>The code structure is straightforward, featuring key elements such as prefabs for reusable game objects. These prefabs include Burners, Moving Platforms, Players, Fans, Saws, Finishes, Spike Rocks, the Main Camera, and Melons.</p><p><br></p><p>Scenes, representing different game levels, are organized in the 'Scenes' directory. </p><p><br></p><p>All scripts are conveniently located in the './Scripts' directory. These scripts handle various functionalities, such as player movement, camera control, scene changes, and interactions with game objects. </p><p><br></p><p>The Pixel Adventure assets are organized into two main folders. In './Pixel Adventure 1,' you'll find Fonts, Prefabs, and Traps. The Traps directory contains subdirectories for Spikes and Trampoline, with associated images and materials.</p><p><br></p><p>Overall, the code utilizes serializable fields, providing flexibility for dynamic parameter adjustments throughout the game. The structure is designed for simplicity and reusability, making it easy to manage and extend for different levels and game elements.</p>",
-    
     "assetText": "The game features graphics and sound exclusively from the Unity Asset Store. All elements, including sprites, background images, and sound effects, are sourced directly from the Unity Asset Store. The terrain and background utilize tilemaps for a streamlined design.",
+    "assetFull": "yes",
     "assets": [
         "/Projects/pixelcut/asset_1.png"
     ],

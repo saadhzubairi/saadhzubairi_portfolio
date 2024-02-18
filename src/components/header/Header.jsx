@@ -10,6 +10,8 @@ function Header(props) {
 
     const [menuOpen, setMenuOpen] = useState(false);
 
+    const [isDark, setIsDark] = useState(true);
+
     useEffect(() => {
         if (hash && location.pathname === '/') {
             setTimeout(() => {
@@ -24,6 +26,12 @@ function Header(props) {
     const toggleMenu = () => {
         setMenuOpen(prevState => !prevState);
     };
+
+    const toggleDark = () => {
+        setIsDark(prevState => !prevState);
+    };
+
+
 
     return (
         <>
@@ -86,27 +94,30 @@ function Header(props) {
                 </nav>
             </header>
 
-            <div className="header_for_phone">
-                <a href="/" className="nav__logo button_on_mobilenav"><i class='bx bxs-home'></i> Home</a>
-                <div className="menu button_on_mobilenav" onClick={toggleMenu}>More <i class='bx bx-menu-alt-right' ></i></div>
 
-            </div>
             <div className={`menu_panel_for_phone ${menuOpen ? "opened" : "closed"}`}>
                 <Link to="/#About" className="menu_panel_phone_nav_link" onClick={() => { setMenuOpen(prevState => !prevState); setHash('About') }}>
-                    <i className="uil uil-user"></i> About
+                    <i class='bx bxs-user'></i> About
                 </Link>
                 <Link to="/#Qual" className="menu_panel_phone_nav_link" onClick={() => { setMenuOpen(prevState => !prevState); setHash('Qual') }}>
-                    <i className="uil uil-briefcase-alt"></i>Qualifications
+                    <i class='bx bxs-briefcase' ></i> Qualifications
                 </Link>
                 <Link to="/#Skills" className="menu_panel_phone_nav_link" onClick={() => { setMenuOpen(prevState => !prevState); setHash('Skills') }}>
-                    <i className="uil uil-file-alt"></i> Skills
+                    <i class='bx bxs-file' ></i> Skills
                 </Link>
                 <Link to="/#Contact" className="menu_panel_phone_nav_link" onClick={() => { setMenuOpen(prevState => !prevState); setHash('Contact') }}>
-                    <i className="uil uil-message"></i> Connect
+                    <i class='bx bxs-message' ></i> Connect
                 </Link>
-                <Link to="/Portfolio" className="menu_panel_phone_nav_link" id="" onClick={() => { setMenuOpen(prevState => !prevState); }}>
-                    <i className="uil uil-scenery"></i> Portfolio
+                <Link to="/Portfolio" className="menu_panel_phone_nav_link portfolio" id="" onClick={() => { setMenuOpen(prevState => !prevState); }}>
+                    <i class='bx bx-code-alt'></i> Portfolio
                 </Link>
+            </div >
+            <div className="header_for_phone">
+                <a href="/" className="nav__logo button_on_mobilenav"><i class='bx bxs-home'></i> Home</a>
+                <div className="menu_sec">
+                    <div className={menuOpen ? "menu opened" : "menu closed"} onClick={toggleMenu}>More <i class='bx bx-menu-alt-right' ></i></div>
+                    <div className={isDark ? "dark_mode on" : "dark_mode off"} onClick={toggleDark}><i class='bx bxs-moon'></i></div>
+                </div>
             </div >
 
             <div className={`menu_panel_for_phone_backdrop ${menuOpen ? "opened" : "closed"}`} onClick={toggleMenu}></div>

@@ -151,12 +151,12 @@
 }
 
 @media screen and (max-width: 1150px) {
-    .popup__container{
+    .popup__container {
         height: 85vh;
         overflow-y: scroll;
     }
 
-    .popup__wrapper{
+    .popup__wrapper {
         height: 100%;
     }
 
@@ -168,11 +168,18 @@
         flex-direction: column;
         gap: 0.5rem;
     }
+
+    .popup__heading {
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 768px) {
-    .popup__wrapper{
+    .popup__wrapper {
         padding: 0.5rem 0.25rem;
         width: 75vw;
+        margin-bottom: 18rem;
     }
+
+
 }

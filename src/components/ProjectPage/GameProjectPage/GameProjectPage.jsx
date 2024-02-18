@@ -14,13 +14,22 @@ export const GameProjectPage = () => {
       try {
         const module = await import(`../../../assets/portfolio/${projectId}.json`);
         setJsonData(module.default);
-        setLoading(false)
       } catch (error) {
         console.error('Error importing JSON:', error);
       }
     };
     fetchData();
   }, [jsonData, projectId])
+
+  useEffect(() => {
+    const delay = 750; // 2 seconds in milliseconds
+
+    const timeoutId = setTimeout(() => {
+      setLoading(false);
+    }, delay);
+
+    return () => clearTimeout(timeoutId);
+  }, []);
 
   console.log(jsonData)
 
@@ -86,7 +95,7 @@ export const GameProjectPage = () => {
               <div className="gameAssetsSec_desc">{jsonData.assetText}</div>
               <div className="gameAssetsSec_assetGallery">
                 {jsonData.assets.map((asset, index) => (
-                  <img key={index} src={asset} alt="" className="gameAssetImg" />
+                  <img key={index} src={asset} alt="" className={jsonData.assetFull? "gameSSImg" : "gameAssetImg"} />
                 ))}
               </div>
             </div>
