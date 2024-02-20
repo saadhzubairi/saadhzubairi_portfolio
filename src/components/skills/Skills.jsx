@@ -11,7 +11,7 @@ function Skills(props) {
     return (
         <section className="skills section" id="Skills">
             <h2 className="section__title">Skills</h2>
-            <span className="section_subtitle">Following are my technical expertise</span>
+            <span className="section__subtitle">Following are my technical expertise</span>
             <Services data={data} />
             <div className="skills__container container grid">
                 <Programming header={"Programming"} data={data_one} />

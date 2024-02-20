@@ -96,6 +96,9 @@ function Header(props) {
 
 
             <div className={`menu_panel_for_phone ${menuOpen ? "opened" : "closed"}`}>
+                <Link to="/#Home" className="menu_panel_phone_nav_link" onClick={() => { setMenuOpen(prevState => !prevState); setHash('Home') }}>
+                    <i class='bx bxs-home-alt-2'></i> Home
+                </Link>
                 <Link to="/#About" className="menu_panel_phone_nav_link" onClick={() => { setMenuOpen(prevState => !prevState); setHash('About') }}>
                     <i class='bx bxs-user'></i> About
                 </Link>
@@ -113,7 +116,7 @@ function Header(props) {
                 </Link>
             </div >
             <div className="header_for_phone">
-                <a href="/" className="nav__logo button_on_mobilenav"><i class='bx bxs-home'></i> Home</a>
+                <a href="/" className="nav__logo button_on_mobilenav"><i class='bx bxs-home'></i> Saad</a>
                 <div className="menu_sec">
                     <div className={menuOpen ? "menu opened" : "menu closed"} onClick={toggleMenu}>More <i class='bx bx-menu-alt-right' ></i></div>
                     <div className={isDark ? "dark_mode on" : "dark_mode off"} onClick={toggleDark}><i class='bx bxs-moon'></i></div>

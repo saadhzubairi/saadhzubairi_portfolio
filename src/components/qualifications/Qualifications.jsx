@@ -15,8 +15,6 @@ import { Close } from "@mui/icons-material";
 import IconButton from '@mui/material/IconButton';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
-
-
 const style = {
     position: 'absolute',
     top: '50%',

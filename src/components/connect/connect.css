@@ -27,7 +27,7 @@
     max-width: 1500px;
 }
 
-.connect__wrapper{
+.connect__wrapper {
     display: flex;
     width: 100%;
     align-items: center;
@@ -155,17 +155,17 @@
     }
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 992px) {
     .connect__container {
-        padding: 1.5rem 1rem;
+        padding: 1rem 2rem;
+    }
+
+    .sendmessage_float{
+        padding: 2rem;
     }
 }
 
-@media screen and (max-width: 1200px) {
-    .connect__container {
-        padding: 1.5rem 7rem;
-    }
-}
+
 
 @media screen and (max-width: 768px) {
     .connect__container {
@@ -195,5 +195,3 @@
 
 
 }
-
-
