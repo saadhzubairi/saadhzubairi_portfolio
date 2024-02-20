@@ -197,7 +197,7 @@ const PortfolioPage = () => {
                 <ProjectCard data={halpert} />
               </CustomTabPanel>
               <CustomTabPanel value={value} index={1}>
-
+                Coming Soon
               </CustomTabPanel>
               <CustomTabPanel value={value} index={2}>
                 <ProjectCard data={latex} />
@@ -213,7 +213,6 @@ const PortfolioPage = () => {
                 <ProjectCard data={topdown} />
                 <ProjectCard data={hidenseek} />
               </CustomTabPanel>
-              
               <CustomTabPanel value={value} index={5}>
                 <MasonryImageList />
               </CustomTabPanel>
