@@ -119,7 +119,7 @@ function Header(props) {
                 <a href="/" className="nav__logo button_on_mobilenav"><i class='bx bxs-home'></i> Saad</a>
                 <div className="menu_sec">
                     <div className={menuOpen ? "menu opened" : "menu closed"} onClick={toggleMenu}>More <i class='bx bx-menu-alt-right' ></i></div>
-                    <div className={isDark ? "dark_mode on" : "dark_mode off"} onClick={toggleDark}><i class='bx bxs-moon'></i></div>
+                    {/* <div className={isDark ? "dark_mode on" : "dark_mode off"} onClick={toggleDark}><i class='bx bxs-moon'></i></div> */}
                 </div>
             </div >
 

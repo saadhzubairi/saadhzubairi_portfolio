@@ -169,7 +169,7 @@ header {
 
     .menu_panel_for_phone.opened {
         opacity: 1;
-        height: 22rem;
+        height: 24rem;
         bottom: 0%;
     }
 
