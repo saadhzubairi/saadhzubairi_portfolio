@@ -1,6 +1,7 @@
 import "./header.css"
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useMediaQuery } from "react-responsive";
 
 function Header(props) {
     const [toggle, setToggle] = useState(false);
@@ -31,7 +32,13 @@ function Header(props) {
         setIsDark(prevState => !prevState);
     };
 
-
+    const systemPrefersDark = useMediaQuery(
+        {
+            query: "(prefers-color-scheme: dark)",
+        },
+        undefined,
+        (isSystemDark) => setIsDark(isSystemDark)
+    );
 
     return (
         <>
@@ -82,7 +89,6 @@ function Header(props) {
                                     <i className="uil uil-scenery nav__icon"></i> Portfolio
                                 </Link>
                             </li>
-
                         </ul>
                         <i className="uil uil-times nav__close" onClick={() => setToggle(!toggle)}></i>
                     </div>
@@ -119,7 +125,7 @@ function Header(props) {
                 <a href="/" className="nav__logo button_on_mobilenav"><i class='bx bxs-home'></i> Saad</a>
                 <div className="menu_sec">
                     <div className={menuOpen ? "menu opened" : "menu closed"} onClick={toggleMenu}>More <i class='bx bx-menu-alt-right' ></i></div>
-                    {/* <div className={isDark ? "dark_mode on" : "dark_mode off"} onClick={toggleDark}><i class='bx bxs-moon'></i></div> */}
+                    <div className={isDark ? "dark_mode on" : "dark_mode off"} onClick={() => { toggleDark(); setIsDark(!isDark) }}><i class='bx bxs-moon'></i></div>
                 </div>
             </div >
 

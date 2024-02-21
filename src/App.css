@@ -12,20 +12,18 @@
 
 /*=============== VARIABLES CSS ===============*/
 :root {
-  /* Hide scrollbars */
-
   max-height: 100vh;
   width: 100%;
   height: 100%;
-
   --header-height: 3rem;
   /*========== Colors ==========*/
+
   /*Color mode HSL(hue, saturation, lightness)*/
   --hue: 0;
   --sat: 0%;
   --title-color: hsl(var(--hue), var(--sat), 20%);
   --title-color-dark: hsl(var(--hue), var(--sat), 0%);
-  --text-color: hsl(var(--hue), var(--sat), 46%);
+  --text-color: hsl(var(--hue), var(--sat), 35%);
   --body-color: hsl(var(--hue), var(--sat), 98%);
   --container-color: #fff;
 
@@ -63,6 +61,18 @@
   --z-fixed: 100;
   --z-modal: 1000;
 }
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --hue: 0;
+    --sat: 0%;
+    --title-color: #ddd;
+    --title-color-dark: #ffffff;
+    --text-color: #ccc;
+    --body-color: #222222;
+    --container-color: #292929;
+  }
+} */
 
 /* Responsive typography */
 @media screen and (max-width: 992px) {
@@ -201,6 +211,7 @@ img {
   border-radius: 1rem;
   border: 1.5px solid var(--title-color);
   font-weight: var(--font-medium);
+  border-color: #aaa !important;
 }
 
 .button:hover {
@@ -208,8 +219,9 @@ img {
 }
 
 .button_ol:hover {
-  background-color: var(--title-color-dark);
-  color: var(--container-color);
+  background-color: #ddd;
+  color: #000;
+  border-color: #222 !important;
 }
 
 .button__icon {
@@ -220,6 +232,7 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 15px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 /* Targeting the scrollbar track */
@@ -271,6 +284,7 @@ img {
 
   .button {
     padding: 1rem 1.75rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
 
   .button__icon {

@@ -8,6 +8,7 @@
     width: 350px;
     border-radius: 1.5rem;
     justify-self: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .about__info {
@@ -24,6 +25,7 @@
     padding: 1rem 1.25rem;
     display: flex;
     flex-direction: column;
+    box-shadow: rgba(50, 50, 93, 0.1) 0px 50px 100px -20px, rgba(0, 0, 0, 0.2) 0px 30px 60px -30px;
 }
 
 .about__icon {
@@ -88,5 +90,5 @@
     .about__info {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
 }

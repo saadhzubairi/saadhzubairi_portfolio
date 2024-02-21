@@ -188,8 +188,10 @@ const PortfolioPage = () => {
                   <Tab label="UI/UX"          {...a11yProps(3)} />
                   <Tab label="Game Design"    {...a11yProps(4)} />
                   <Tab label="Photography"    {...a11yProps(5)} />
+                  
                 </Tabs>
               </Box>
+
 
               <CustomTabPanel value={value} index={0}>
                 <ProjectCard data={hoops} />
@@ -216,11 +218,9 @@ const PortfolioPage = () => {
               <CustomTabPanel value={value} index={5}>
                 <MasonryImageList />
               </CustomTabPanel>
-
             </Box>
           </div>
         </div>
-
       </div>
 
   );

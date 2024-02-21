@@ -9,6 +9,12 @@
     align-items: center;
 }
 
+.home__scroll-button{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .home__social {
     display: grid;
     grid-template-columns: max-content;

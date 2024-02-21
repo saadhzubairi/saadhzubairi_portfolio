@@ -1,7 +1,7 @@
 function ScrollDown({hash}) {
     return (
         <div className="home__scroll">
-            <a href={`#${hash}`} className="home__scroll-button button--flex">
+            <a href={`#${hash}`} className="home__scroll-button">
                 <svg
                     width="32px"
                     height="32px"

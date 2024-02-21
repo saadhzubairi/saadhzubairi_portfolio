@@ -26,7 +26,7 @@ export const ProjectH = () => {
             </div>
             <div className="portfolio_button_cont">
                 <Link to="/Portfolio">
-                    <div className="portfolio_button highlight_portfolio_button">
+                    <div className="button button--flex">
                         View Full Portfolio <i class='bx bxs-chevron-right-circle'></i>
                     </div>
                 </Link>

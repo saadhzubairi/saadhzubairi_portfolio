@@ -12,15 +12,6 @@ function About(props) {
                 <img src={pic} alt="" className="about__img" />
                 <div className="about__data">
                     <Info />
-                    <p className="about__description">
-                        <ul>
-                            <li> I’ve been building things using computers since the age of 16</li>
-                            <li>I currently work as a Backend Developer at a major private bank</li>
-                            <li>I do graphics design and can use the full adobe suite</li>
-                            <li>I used to teach SAT English! I still do it on the weekends</li>
-                        </ul>
-                    </p>
-
                     <p className="about__description">I am highly self-motivated, always willing to improve and push the boundaries in any way possible. I keep myself up to date with recent technologies and diversify my professional work so I can grow an extensive skillset in different areas.</p>
 
                     <a href={cv} target="_blank" className="button button--flex">Download CV</a>
