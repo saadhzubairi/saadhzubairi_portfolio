@@ -87,19 +87,17 @@
     visibility: hidden;
     opacity: 0;
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.65);
+    background-color: rgba(255, 255, 255, 0.80);
     backdrop-filter: blur(10px);
     font-weight: 600;
     width: 18rem;
     padding: 2rem;
-    z-index: 9999;
+    z-index: 99;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     bottom: 7rem;
     border: #ffffff solid 1px;
-    /* transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out !important;
-    transition: all 300ms ease-in-out; */
     transition: 300ms all ease-in-out;
 }
 
@@ -129,7 +127,7 @@
 }
 
 .pcard_checkout_button:hover {
-    background-color: rgb(27, 27, 114);
+    background-color: rgb(36, 36, 145);
     box-shadow: 0px 10px 20px -6px rgba(49, 109, 213, 0.61);
     -webkit-box-shadow: 0px 10px 20px -6px rgba(49, 109, 213, 0.61);
     -moz-box-shadow: 0px 10px 20px -6px rgba(49, 109, 213, 0.61);

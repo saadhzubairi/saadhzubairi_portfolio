@@ -14,15 +14,20 @@
 }
 
 .qual__button {
-    font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
     color: var(--title-color);
     margin: 0 var(--mb-1);
     cursor: pointer;
-    padding: 0.25rem 1rem;
     transition: 300ms;
-    border: 2px dashed #aeaeae;
+    border: 1px solid #aaa;
     border-radius: 0.8rem;
+    padding: 0.75rem 2rem;
+}
+
+.qual__button:hover {
+    background-color: #ddd;
+    color: #000;
+    border-color: #222 !important;
 }
 
 .qual__active:hover {
@@ -31,18 +36,17 @@
 }
 
 .qual__icon {
-    font-size: 1.8rem;
-    margin-right: var(--mb-0-25);
+    font-size: 1rem;
+    /* margin-right: var(--mb-0-25); */
 }
 
 .qual__active {
-    color: rgb(209, 209, 209);
-    background-color: rgb(56, 56, 56);
-    padding: 0.25rem 1rem;
+    color: var(--container-color);
+    background-color: #333333;
+    padding: 0.75rem 2rem;
     border-radius: 1rem;
-    border: 2px dashed rgb(56, 56, 56);
+    border: 1px solid rgb(56, 56, 56);
 }
-
 
 
 .qual__sections {
@@ -187,6 +191,6 @@
     margin-top: 0.25rem;
 }
 
-.cert__data{
+.cert__data {
     height: 12rem;
 }

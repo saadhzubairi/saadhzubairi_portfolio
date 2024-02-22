@@ -159,10 +159,11 @@ img {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
-  padding: 6rem 0 2rem;
+  padding: 6rem 0 6rem;
 }
 
 .section__title {
+  margin-top: 1rem;
   font-size: var(--h1-font-size);
   color: var(--title-color);
   font-weight: 900;
@@ -171,7 +172,7 @@ img {
 .section__subtitle {
   display: block;
   font-size: var(--small-font-size);
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   font-weight: 700;
 }
 
@@ -201,6 +202,7 @@ img {
   border-radius: 1rem;
   font-weight: var(--font-medium);
   border: 1.5px solid var(--title-color);
+  box-shadow: rgba(50, 50, 93, 0.1) 0px 50px 100px -20px, rgba(0, 0, 0, 0.2) 0px 30px 60px -30px !important;
 }
 
 .button_ol {
@@ -212,6 +214,7 @@ img {
   border: 1.5px solid var(--title-color);
   font-weight: var(--font-medium);
   border-color: #aaa !important;
+  box-shadow: rgba(50, 50, 93, 0.1) 0px 50px 100px -20px, rgba(0, 0, 0, 0.2) 0px 30px 60px -30px !important;
 }
 
 .button:hover {
@@ -232,7 +235,7 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 15px;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(50, 50, 93, 0.1) 0px 50px 100px -20px, rgba(0, 0, 0, 0.2) 0px 30px 60px -30px;
 }
 
 /* Targeting the scrollbar track */
