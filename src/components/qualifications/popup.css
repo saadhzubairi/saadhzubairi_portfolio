@@ -83,7 +83,7 @@
     align-items: center;
     justify-content: center;
     gap: 0.25rem;
-    background-color: rgb(150, 150, 193);
+    background-color: rgb(55, 55, 104);
     padding: 0.35rem 0rem;
     width: 100%;
     color: white;
@@ -94,7 +94,10 @@
 }
 
 .webLink:hover {
-    background-color: rgb(100, 100, 139);
+    background-color: rgb(36, 36, 145);
+    box-shadow: 0px 10px 20px -6px rgba(49, 109, 213, 0.61);
+    -webkit-box-shadow: 0px 10px 20px -6px rgba(49, 109, 213, 0.61);
+    -moz-box-shadow: 0px 10px 20px -6px rgba(49, 109, 213, 0.61);
     cursor: pointer;
 }
 
@@ -156,26 +159,26 @@
 }
 
 /* for the popup */
-.css-snwxfu{
+.css-snwxfu {
     width: 50vw !important;
     height: auto !important;
     z-index: 9999;
 }
 
 @media screen and (max-width: 1450px) {
-    .css-snwxfu{
+    .css-snwxfu {
         width: 65vw !important;
     }
 }
 
 @media screen and (max-width: 1150px) {
-    .css-snwxfu{
+    .css-snwxfu {
         width: 72vw !important;
     }
 }
 
 @media screen and (max-width: 992px) {
-    .css-snwxfu{
+    .css-snwxfu {
         width: 80vw !important;
     }
 }

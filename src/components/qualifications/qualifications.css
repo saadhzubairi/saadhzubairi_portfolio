@@ -3,17 +3,23 @@
     flex-direction: column;
     align-items: center;
     min-height: 52vh;
+    justify-content: center;
 }
 
 .qual__tabs {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-bottom: var(--mb-2);
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.5rem;
+    width: 88%;
 }
 
 .qual__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: var(--font-medium);
     color: var(--title-color);
     margin: 0 var(--mb-1);
@@ -22,6 +28,8 @@
     border: 1px solid #aaa;
     border-radius: 0.8rem;
     padding: 0.75rem 2rem;
+    min-width: 45%;
+    max-width: 100%;
 }
 
 .qual__button:hover {
@@ -189,6 +197,10 @@
     color: rgb(99, 99, 128);
     justify-content: center;
     margin-top: 0.25rem;
+}
+
+.qual__data_openIcon_cert:hover {
+    background-color: rgb(217, 219, 233);
 }
 
 .cert__data {
