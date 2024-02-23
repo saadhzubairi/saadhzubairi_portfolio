@@ -19,7 +19,10 @@ function LinearProgressWithLabel(props) {
     return (
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <Box sx={{ width: '100%', mr: 1 }}>
-                <LinearProgress sx={{ color: "#666" }} variant="determinate" {...props} />
+                <LinearProgress variant="determinate" {...props} sx={{
+                    color: '#333333', // Change color to your desired color
+                    height: 8, // Change thickness to your desired thickness
+                }} />
             </Box>
             <Box sx={{ minWidth: 35 }}>
                 <Typography variant="body2" color="text.secondary">{`${Math.round(
@@ -54,10 +57,6 @@ export function LinearWithValueLabel() {
 export default function MasonryImageList() {
 
     const [imgLoadingFull, setImageLoadingFull] = React.useState(true);
-
-    const handleImgLoad = () => {
-        setImageLoadingFull(false)
-    }
 
     const theme = useTheme();
     const matchesXS = useMediaQuery(theme.breakpoints.down('xs'));
@@ -137,7 +136,7 @@ export default function MasonryImageList() {
         };
     });
 
-    var imagesLoaded = 0;
+    const [imagesLoaded, setImagesLoaded] = React.useState(0);
 
     const [allImgsLoaded, setAllImgsLoaded] = React.useState(false)
 
@@ -148,65 +147,80 @@ export default function MasonryImageList() {
     const [val, setVal] = React.useState(0);
 
     const updateLoadeds = () => {
-        imagesLoaded = imagesLoaded + 1;
-        setVal((imagesLoaded / itemData.length) * 100);
-        if (val > 95) {
+        // Increment the count of loaded images
+        setImagesLoaded(prevCount => prevCount + 1);
+
+        // Calculate the loaded percentage
+        const loadedPercentage = (imagesLoaded + 1) / itemData.length * 100;
+        setVal(loadedPercentage);
+
+        // Check if all images are loaded
+        if (loadedPercentage > 95) {
             isAllLoaded();
         }
-    }
+    };
+
+    const handleImgLoad = () => {
+        // Call updateLoadeds function only if the image is not already loaded
+        if (!allImgsLoaded) {
+            updateLoadeds();
+        }
+    };
 
     return (
         <>
-            <div className={`masonry_image_loading_bar ${allImgsLoaded ? "loaded" : "loading"}`}>
-                <LinearProgressWithLabel value={val} />
+            <div className="masonry_image_pane_container">
+                <div className={`masonry_image_loading_bar ${allImgsLoaded ? "loaded" : "loading"}`}>
+                    <LinearProgressWithLabel value={val} />
+                </div>
+
+                <Box sx={{ width: "100%", height: "100%", overflowY: 'scroll' }}>
+                    <ImageList variant="masonry" cols={cols} gap={8}>
+                        {itemData.map((item) => (
+                            <ImageListItem key={item}>
+                                <img
+                                    srcSet={`${item}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                                    src={`${item}?w=248&fit=crop&auto=format`}
+                                    alt='~'
+                                    onClick={() => { setModImg(item); setOpen(true) }}
+                                    className='photography_portfolio_image'
+                                    onLoad={updateLoadeds}
+                                />
+                            </ImageListItem>
+                        ))}
+                    </ImageList>
+
+
+                    <Modal open={open} onClose={handleClose}>
+                        <Fade in={open}>
+                            <Box sx={style} ref={containerRef}>
+                                {imgLoadingFull ? <CircularProgress sx={{ color: "#fff" }} /> : null}
+                                <Fade in={!imgLoadingFull}>
+                                    <img src={modImg} alt=""
+                                        className="photography_portfolio_modal_image"
+                                        onLoad={handleImgLoad}
+                                        style={{ display: imgLoadingFull ? 'none' : 'block' }} />
+                                </Fade>
+                                <div className="modal_close_button">
+                                    <IconButton color="#ffe2e2" onClick={handleClose}>
+                                        <Close />
+                                    </IconButton>
+                                </div>
+                                <div className="modal_next_button_gallery">
+                                    <IconButton color="#ffe2e2" onClick={nextImg}>
+                                        <ArrowRight />
+                                    </IconButton>
+                                </div>
+                                <div className="modal_prev_button_gallery">
+                                    <IconButton color="#ffe2e2" onClick={prevImg}>
+                                        <ArrowLeft />
+                                    </IconButton>
+                                </div>
+                            </Box>
+                        </Fade>
+                    </Modal>
+                </Box >
             </div>
-
-            <Box sx={{ width: "100%", height: "100%", overflowY: 'scroll' }}>
-                <ImageList variant="masonry" cols={cols} gap={8}>
-                    {itemData.map((item) => (
-                        <ImageListItem key={item}>
-                            <img
-                                srcSet={`${item}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                                src={`${item}?w=248&fit=crop&auto=format`}
-                                alt='~'
-                                onClick={() => { setModImg(item); setOpen(true) }}
-                                className='photography_portfolio_image'
-                                onLoad={updateLoadeds}
-                            />
-                        </ImageListItem>
-                    ))}
-                </ImageList>
-
-
-                <Modal open={open} onClose={handleClose}>
-                    <Fade in={open}>
-                        <Box sx={style} ref={containerRef}>
-                            {imgLoadingFull ? <CircularProgress sx={{ color: "#fff" }} /> : null}
-                            <Fade in={!imgLoadingFull}>
-                                <img src={modImg} alt=""
-                                    className="photography_portfolio_modal_image"
-                                    onLoad={handleImgLoad}
-                                    style={{ display: imgLoadingFull ? 'none' : 'block' }} />
-                            </Fade>
-                            <div className="modal_close_button">
-                                <IconButton color="#ffe2e2" onClick={handleClose}>
-                                    <Close />
-                                </IconButton>
-                            </div>
-                            <div className="modal_next_button_gallery">
-                                <IconButton color="#ffe2e2" onClick={nextImg}>
-                                    <ArrowRight />
-                                </IconButton>
-                            </div>
-                            <div className="modal_prev_button_gallery">
-                                <IconButton color="#ffe2e2" onClick={prevImg}>
-                                    <ArrowLeft />
-                                </IconButton>
-                            </div>
-                        </Box>
-                    </Fade>
-                </Modal>
-            </Box >
         </>
     );
 }

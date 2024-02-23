@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react';
 import CircularProgress from '@mui/material/CircularProgress';
 import { GameProjectPage } from './components/ProjectPage/GameProjectPage/GameProjectPage';
 import { Quillian } from './components/utils/Quillian';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const Layout = ({ children }) => {
   return (
@@ -18,6 +19,14 @@ const Layout = ({ children }) => {
     </div>
   );
 };
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#333333', // Replace with your desired color
+    },
+  },
+});
 
 function App() {
 
@@ -42,19 +51,21 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
-      <main>
-        <Routes>
-          <Route path="/" element={<Layout><FrontPage /></Layout>} />
-          <Route path="/Portfolio/" element={<Layout><PortfolioPage /></Layout>} />
-          <Route path="/Portfolio/:ind" element={<Layout><PortfolioPage /></Layout>} />
-          <Route path="/Portfolio/Project/:projectId" element={<Layout><ProjectPage /></Layout>} />
-          <Route path="/Portfolio/Project/Game/:projectId" element={<Layout><GameProjectPage /></Layout>} />
-          <Route path="/quillian" element={<Quillian />} />
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <main>
+          <Routes>
+            <Route path="/" element={<Layout><FrontPage /></Layout>} />
+            <Route path="/Portfolio/" element={<Layout><PortfolioPage /></Layout>} />
+            <Route path="/Portfolio/:ind" element={<Layout><PortfolioPage /></Layout>} />
+            <Route path="/Portfolio/Project/:projectId" element={<Layout><ProjectPage /></Layout>} />
+            <Route path="/Portfolio/Project/Game/:projectId" element={<Layout><GameProjectPage /></Layout>} />
+            <Route path="/quillian" element={<Quillian />} />
 
-        </Routes>
-      </main>
-    </BrowserRouter>
+          </Routes>
+        </main>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

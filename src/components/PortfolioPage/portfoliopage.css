@@ -252,14 +252,23 @@
 
 .masonry_image_loading_bar {
     width: 98%;
+    opacity: 100%;
+    
 }
 
 .masonry_image_loading_bar.loaded {
     height: 0rem;
+    opacity: 0%;
+    padding: 0rem;
 }
 
 .masonry_image_loading_bar.loading {
     height: fit-content;
+    padding: 1rem 0rem 2.5rem;
+}
+
+.masonry_image_pane_container{
+    width: 100%;
 }
 
 @media screen and (max-width: 768px) {
