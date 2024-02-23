@@ -250,6 +250,18 @@
     cursor: pointer;
 }
 
+.masonry_image_loading_bar {
+    width: 98%;
+}
+
+.masonry_image_loading_bar.loaded {
+    height: 0rem;
+}
+
+.masonry_image_loading_bar.loading {
+    height: fit-content;
+}
+
 @media screen and (max-width: 768px) {
 
     .pcard_pane_right {

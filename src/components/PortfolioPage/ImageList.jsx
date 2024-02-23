@@ -19,7 +19,7 @@ function LinearProgressWithLabel(props) {
     return (
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <Box sx={{ width: '100%', mr: 1 }}>
-                <LinearProgress variant="determinate" {...props} />
+                <LinearProgress sx={{ color: "#666" }} variant="determinate" {...props} />
             </Box>
             <Box sx={{ minWidth: 35 }}>
                 <Typography variant="body2" color="text.secondary">{`${Math.round(
@@ -137,17 +137,30 @@ export default function MasonryImageList() {
         };
     });
 
-    const [imagesLoaded, setImagesLoaded] = React.useState(0);
+    var imagesLoaded = 0;
 
-    const updateLoadeds = async () => {
-        setImagesLoaded(imagesLoaded + 1);
+    const [allImgsLoaded, setAllImgsLoaded] = React.useState(false)
+
+    const isAllLoaded = () => {
+        setAllImgsLoaded(prevState => !prevState)
+    }
+
+    const [val, setVal] = React.useState(0);
+
+    const updateLoadeds = () => {
+        imagesLoaded = imagesLoaded + 1;
+        setVal((imagesLoaded / itemData.length) * 100);
+        if (val > 95) {
+            isAllLoaded();
+        }
     }
 
     return (
         <>
-            <Box sx={{ width: '100%' }}>
-                <LinearProgressWithLabel value={(imagesLoaded / itemData.length) * 100} />
-            </Box>
+            <div className={`masonry_image_loading_bar ${allImgsLoaded ? "loaded" : "loading"}`}>
+                <LinearProgressWithLabel value={val} />
+            </div>
+
             <Box sx={{ width: "100%", height: "100%", overflowY: 'scroll' }}>
                 <ImageList variant="masonry" cols={cols} gap={8}>
                     {itemData.map((item) => (
@@ -155,7 +168,6 @@ export default function MasonryImageList() {
                             <img
                                 srcSet={`${item}?w=248&fit=crop&auto=format&dpr=2 2x`}
                                 src={`${item}?w=248&fit=crop&auto=format`}
-                                loading="lazy"
                                 alt='~'
                                 onClick={() => { setModImg(item); setOpen(true) }}
                                 className='photography_portfolio_image'
