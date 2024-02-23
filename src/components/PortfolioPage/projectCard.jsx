@@ -1,10 +1,16 @@
 import "./portfoliopage.css"
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom"
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import CircularProgress from '@mui/material/CircularProgress';
 
 const ProjectCard = ({ data }) => {
     const navigate = useNavigate();
+    const [imgLoadingFull, setImageLoadingFull] = useState(true);
+
+    const handleImgLoad = () => {
+        setImageLoadingFull(false)
+    }
 
     const onClickFun = () => {
         if (data.type === "game") {
@@ -24,7 +30,13 @@ const ProjectCard = ({ data }) => {
                 </div>
                 <div className="pcard_pane_left">
                     <div className="pcard_img_cont">
-                        <img src={data.image} className="pcard_img" />
+                        {imgLoadingFull ? <CircularProgress sx={{ color: "#666" }} /> : null}
+                        <img
+                            src={data.image}
+                            className="pcard_img"
+                            onLoad={handleImgLoad}
+                            style={{ display: imgLoadingFull ? 'none' : 'block' }}
+                        />
                     </div>
                     <div className="pcard_pane_left_bottom">
                         <div className="pcard_title">{data.name}</div>

@@ -11,6 +11,45 @@ import ImageListItem from '@mui/material/ImageListItem';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import CircularProgress from '@mui/material/CircularProgress';
+import LinearProgress from '@mui/material/LinearProgress';
+import Typography from '@mui/material/Typography';
+import PropTypes from 'prop-types';
+
+function LinearProgressWithLabel(props) {
+    return (
+        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            <Box sx={{ width: '100%', mr: 1 }}>
+                <LinearProgress variant="determinate" {...props} />
+            </Box>
+            <Box sx={{ minWidth: 35 }}>
+                <Typography variant="body2" color="text.secondary">{`${Math.round(
+                    props.value,
+                )}%`}</Typography>
+            </Box>
+        </Box>
+    );
+}
+
+LinearProgressWithLabel.propTypes = {
+    /**
+     * The value of the progress indicator for the determinate and buffer variants.
+     * Value between 0 and 100.
+     */
+    value: PropTypes.number.isRequired,
+};
+
+export function LinearWithValueLabel() {
+    const [progress, setProgress] = React.useState(10);
+
+    React.useEffect(() => {
+        const timer = setInterval(() => {
+            setProgress((prevProgress) => (prevProgress >= 100 ? 10 : prevProgress + 10));
+        }, 800);
+        return () => {
+            clearInterval(timer);
+        };
+    }, []);
+}
 
 export default function MasonryImageList() {
 
@@ -98,55 +137,65 @@ export default function MasonryImageList() {
         };
     });
 
+    const [imagesLoaded, setImagesLoaded] = React.useState(0);
+
+    const updateLoadeds = async () => {
+        setImagesLoaded(imagesLoaded + 1);
+    }
+
     return (
-        <Box sx={{ width: "100%", height: "100%", overflowY: 'scroll' }}>
-            <ImageList variant="masonry" cols={cols} gap={8}>
-                {itemData.map((item) => (
-                    <ImageListItem key={item}>
-                        <img
-                            srcSet={`${item}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                            src={`${item}?w=248&fit=crop&auto=format`}
-                            loading="lazy"
-                            alt='~'
-                            onClick={() => { setModImg(item); setOpen(true) }}
-                            className='photography_portfolio_image'
-                        />
-                    </ImageListItem>
-                ))}
-            </ImageList>
+        <>
+            <Box sx={{ width: '100%' }}>
+                <LinearProgressWithLabel value={(imagesLoaded / itemData.length) * 100} />
+            </Box>
+            <Box sx={{ width: "100%", height: "100%", overflowY: 'scroll' }}>
+                <ImageList variant="masonry" cols={cols} gap={8}>
+                    {itemData.map((item) => (
+                        <ImageListItem key={item}>
+                            <img
+                                srcSet={`${item}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                                src={`${item}?w=248&fit=crop&auto=format`}
+                                loading="lazy"
+                                alt='~'
+                                onClick={() => { setModImg(item); setOpen(true) }}
+                                className='photography_portfolio_image'
+                                onLoad={updateLoadeds}
+                            />
+                        </ImageListItem>
+                    ))}
+                </ImageList>
 
 
-            <Modal open={open} onClose={handleClose}>
-                <Fade in={open}>
-                    <Box sx={style} ref={containerRef}>
-                        {imgLoadingFull ? <CircularProgress sx={{ color: "#fff" }} /> : null}
-                        <Fade in={!imgLoadingFull}>
-                            <img src={modImg} alt=""
-                                className="photography_portfolio_modal_image"
-                                onLoad={handleImgLoad}
-                                style={{ display: imgLoadingFull ? 'none' : 'block' }} />
-                        </Fade>
-                        <div className="modal_close_button">
-                            <IconButton color="#ffe2e2" onClick={handleClose}>
-                                <Close />
-                            </IconButton>
-                        </div>
-                        <div className="modal_next_button_gallery">
-                            <IconButton color="#ffe2e2" onClick={nextImg}>
-                                <ArrowRight />
-                            </IconButton>
-                        </div>
-                        <div className="modal_prev_button_gallery">
-                            <IconButton color="#ffe2e2" onClick={prevImg}>
-                                <ArrowLeft />
-                            </IconButton>
-                        </div>
-                    </Box>
-                </Fade>
-            </Modal>
-
-
-        </Box >
+                <Modal open={open} onClose={handleClose}>
+                    <Fade in={open}>
+                        <Box sx={style} ref={containerRef}>
+                            {imgLoadingFull ? <CircularProgress sx={{ color: "#fff" }} /> : null}
+                            <Fade in={!imgLoadingFull}>
+                                <img src={modImg} alt=""
+                                    className="photography_portfolio_modal_image"
+                                    onLoad={handleImgLoad}
+                                    style={{ display: imgLoadingFull ? 'none' : 'block' }} />
+                            </Fade>
+                            <div className="modal_close_button">
+                                <IconButton color="#ffe2e2" onClick={handleClose}>
+                                    <Close />
+                                </IconButton>
+                            </div>
+                            <div className="modal_next_button_gallery">
+                                <IconButton color="#ffe2e2" onClick={nextImg}>
+                                    <ArrowRight />
+                                </IconButton>
+                            </div>
+                            <div className="modal_prev_button_gallery">
+                                <IconButton color="#ffe2e2" onClick={prevImg}>
+                                    <ArrowLeft />
+                                </IconButton>
+                            </div>
+                        </Box>
+                    </Fade>
+                </Modal>
+            </Box >
+        </>
     );
 }
 

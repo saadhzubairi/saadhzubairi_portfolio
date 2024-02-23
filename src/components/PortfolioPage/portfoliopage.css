@@ -135,9 +135,11 @@
 
 .pcard_img_cont {
     width: 18rem;
-    height: auto;
+    height: 216px;
     border-radius: 1rem;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .pcard_pane_left_bottom {
