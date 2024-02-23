@@ -157,6 +157,11 @@ img {
   height: auto;
 }
 
+.css-i9fmh8-MuiBackdrop-root-MuiModal-backdrop {
+  background-color: #7b7b7bb0 !important;
+  backdrop-filter: blur(14px) !important;
+}
+
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
   padding: 6rem 0 6rem;
