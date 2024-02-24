@@ -251,24 +251,35 @@
 }
 
 .masonry_image_loading_bar {
-    width: 98%;
-    opacity: 100%;
-    
+    border: 1px #ddd solid;
+    background-color: white;
 }
 
 .masonry_image_loading_bar.loaded {
     height: 0rem;
     opacity: 0%;
+    margin: 0rem;
     padding: 0rem;
+    border-radius: 0rem;
+    box-shadow: rgba(100, 100, 111, 0) 0px 0px 0px 0px;
+    width: 0%;
 }
 
 .masonry_image_loading_bar.loading {
     height: fit-content;
-    padding: 1rem 0rem 2.5rem;
+    margin: 0.5rem 0rem 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 85%;
 }
 
 .masonry_image_pane_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
+    flex-direction: column;
 }
 
 @media screen and (max-width: 768px) {

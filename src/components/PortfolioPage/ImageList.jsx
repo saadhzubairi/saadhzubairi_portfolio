@@ -25,9 +25,9 @@ function LinearProgressWithLabel(props) {
                 }} />
             </Box>
             <Box sx={{ minWidth: 35 }}>
-                <Typography variant="body2" color="text.secondary">{`${Math.round(
-                    props.value,
-                )}%`}</Typography>
+                <Typography color="text.secondary">
+                    {`${Math.round(props.value,)}%`}
+                </Typography>
             </Box>
         </Box>
     );
@@ -151,11 +151,11 @@ export default function MasonryImageList() {
         setImagesLoaded(prevCount => prevCount + 1);
 
         // Calculate the loaded percentage
-        const loadedPercentage = (imagesLoaded + 1) / itemData.length * 100;
+        const loadedPercentage = ((imagesLoaded + 1) / itemData.length) * 100;
         setVal(loadedPercentage);
 
         // Check if all images are loaded
-        if (loadedPercentage > 95) {
+        if (loadedPercentage > 90) {
             isAllLoaded();
         }
     };
