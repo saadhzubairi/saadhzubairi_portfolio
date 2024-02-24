@@ -136,36 +136,54 @@ export default function MasonryImageList() {
         };
     });
 
+    const [lastUpdateTimestamp, setLastUpdateTimestamp] = React.useState(Date.now());
     const [imagesLoaded, setImagesLoaded] = React.useState(0);
-
     const [allImgsLoaded, setAllImgsLoaded] = React.useState(false)
-
-    const isAllLoaded = () => {
-        setAllImgsLoaded(prevState => !prevState)
-    }
-
     const [val, setVal] = React.useState(0);
 
-    const updateLoadeds = () => {
-        // Increment the count of loaded images
-        setImagesLoaded(prevCount => prevCount + 1);
+    const isAllLoaded = () => {
+        setAllImgsLoaded(true)
+    }
 
-        // Calculate the loaded percentage
+    const updateLoadeds = () => {
+        setImagesLoaded(prevCount => prevCount + 1);
         const loadedPercentage = ((imagesLoaded + 1) / itemData.length) * 100;
         setVal(loadedPercentage);
-
-        // Check if all images are loaded
-        if (loadedPercentage > 90) {
-            isAllLoaded();
-        }
     };
 
     const handleImgLoad = () => {
-        // Call updateLoadeds function only if the image is not already loaded
         if (!allImgsLoaded) {
             updateLoadeds();
         }
     };
+
+    const checkUpdateTimeout = () => {
+        const currentTime = Date.now();
+        if (currentTime - lastUpdateTimestamp > 1500) {
+            const newVal = Math.min(val + 1, 100); // Increase val by 1, but not beyond 100
+            setVal(newVal);
+        }
+    };
+
+    React.useEffect(() => {
+        const timeoutId = setTimeout(checkUpdateTimeout, 25); // Check every 100ms
+        return () => clearTimeout(timeoutId);
+    }, [val, lastUpdateTimestamp]);
+
+    React.useEffect(() => {
+        const timeoutId = setTimeout(checkUpdateTimeout, 1500);
+        return () => clearTimeout(timeoutId);
+    }, [val]);
+
+    React.useEffect(() => {
+        setLastUpdateTimestamp(Date.now());
+    }, [imagesLoaded]);
+
+    React.useEffect(() => {
+        if (val > 99) {
+            isAllLoaded();
+        }
+    })
 
     return (
         <>
