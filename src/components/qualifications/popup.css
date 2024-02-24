@@ -216,3 +216,10 @@
 
 
 }
+
+@media screen and (max-width: 600px) {
+    .css-snwxfu {
+        width: 100vw !important;
+        border-radius: 0rem !important;
+    }
+}

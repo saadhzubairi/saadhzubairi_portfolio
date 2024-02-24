@@ -185,7 +185,7 @@ header {
     .menu_panel_for_phone.opened {
         opacity: 1;
         height: 25rem;
-        bottom: 0%;
+        bottom: -6%;
     }
 
     .menu_panel_for_phone.closed {
