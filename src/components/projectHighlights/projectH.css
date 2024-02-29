@@ -1,4 +1,4 @@
-.projecth{
+.projecth {
     width: 100%;
     display: flex;
     align-items: center;
@@ -6,7 +6,7 @@
     flex-direction: column;
 }
 
-.projectShowcaseFlex{
+.projectShowcaseFlex {
     display: flex;
     flex-wrap: wrap;
     max-width: 992px;
@@ -15,13 +15,13 @@
     gap: 1rem;
 }
 
-.portfolio_button_cont{
+.portfolio_button_cont {
     margin-top: 3rem;
     margin-left: 1rem;
     margin-right: 1rem;
 }
 
-.highlight_portfolio_button{
+.highlight_portfolio_button {
     font-size: 1.5rem !important;
     padding: 1rem !important;
     display: flex !important;
@@ -30,4 +30,22 @@
     cursor: pointer !important;
     user-select: none !important;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.blurDown {
+    filter: grayscale(100%);
+    opacity: 0;
+    filter: blur(10px);
+    transform: translate(0px, 108px);
+    -webkit-transform: translate(0px, 108px);
+    -moz-transform: translate(0px, 108px);
+}
+
+.bdOn {
+    filter: grayscale(0%);
+    opacity: 1;
+    filter: blur(0px);
+    transform: translate(0px, 0px);
+    -webkit-transform: translate(0px, 0px);
+    -moz-transform: translate(0px, 0px);
 }

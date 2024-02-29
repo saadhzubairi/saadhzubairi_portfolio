@@ -5,11 +5,11 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal'
 import Fade from '@mui/material/Fade';
 import CircularProgress from '@mui/material/CircularProgress';
-import { ArrowBack, ArrowLeft, ArrowRight, Close } from "@mui/icons-material";
+import { ArrowLeft, ArrowRight, Close } from "@mui/icons-material";
 import IconButton from '@mui/material/IconButton';
 import ScrollDown from "../home/ScrollDown";
-import { useNavigate } from 'react-router-dom';
 import Connect from "../connect/Connect";
+import BackButton from "../utils/BackButton";
 
 /* import data from `../../assets/portfolio/${projectId}.json`o
  */
@@ -100,11 +100,6 @@ const ProjectPage = () => {
         };
 
     }, []);
-
-    const nav = useNavigate();
-    const goBack = () => {
-        nav(-1);
-    }
 
     const [images, setImages] = useState([]);
 
@@ -252,10 +247,11 @@ const ProjectPage = () => {
                 </div >
                 <Connect page={1} />
                 <a href="#projectPage_bottom" className={isScrolled ? "Scroll_down_shizzle scroll_down_hide" : "Scroll_down_shizzle "}><ScrollDown hash={"projectPage_bottom"} /></a>
-                <div onClick={goBack} className={`projectPage_back_button ${isScrolled ? "scrolled" : ""}`}>
+                {/* <div onClick={goBack} className={`projectPage_back_button ${isScrolled ? "scrolled" : ""}`}>
                     <ArrowBack fontSize="0.5rem" />
                     <span className={`go_back_text ${isScrolled ? "scrolled" : ""}`}>GO BACK</span>
-                </div>
+                </div> */}
+                <BackButton />
             </>
     )
 }

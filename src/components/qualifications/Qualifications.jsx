@@ -77,6 +77,24 @@ function Qualifications(props) {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry);
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('bdOn');
+                }
+            });
+        }, { threshold: 0.7 });
+
+        const hiddenElements = document.querySelectorAll('.blurDownq');
+        hiddenElements.forEach((el) => observer.observe(el));
+
+        return () => {
+            hiddenElements.forEach((el) => observer.unobserve(el));
+        };
+    }, []);
+
     return (
         <section className="qualifications section" id="Qual">
             <h2 className="section__title">Qualifications</h2>
@@ -84,12 +102,12 @@ function Qualifications(props) {
 
             <div className="qual__container container">
 
-                <div className="qual__tabs">
-                    <div className={toggle === 1 ? "qual__button qual__active button--flex" : "qual__button button--flex"}
+                <div className="qual__tabs ">
+                    <div className={toggle === 1 ? "qual__button qual__active button--flex " : "qual__button button--flex "}
                         onClick={() => toggleTab(1)}>
                         <i className="uil uil-briefcase-alt qual__icon"></i> Experience
                     </div>
-                    <div className={toggle === 0 ? "qual__button qual__active button--flex" : "qual__button button--flex"}
+                    <div className={toggle === 0 ? "qual__button qual__active button--flex " : "qual__button button--flex "}
                         onClick={() => toggleTab(0)}>
                         <i className="uil uil-graduation-cap qual__icon"></i> Education & Certifications
                     </div>

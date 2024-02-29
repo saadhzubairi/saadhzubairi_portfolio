@@ -1,0 +1,71 @@
+.projectPage_back_button {
+    position: fixed;
+    top: 6rem;
+    left: 15rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #444;
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 20rem;
+    font-weight: 600;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transition: all;
+    transition: 300ms;
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    min-height: 28px;
+    cursor: pointer;
+}
+
+.go_back_text {
+    font-size: 0.8rem;
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .projectPage_back_button {
+        top: 2rem;
+        left: 2rem;
+    }
+}
+
+.go_back_text.scrolled {
+    font-size: 0rem;
+    opacity: 0;
+}
+
+.projectPage_back_button.scrolled {
+    gap: 0rem;
+    padding: 0.3rem 0.5rem;
+    width: fit-content;
+}
+
+.projectPage_back_button.scrolled:hover .go_back_text.scrolled {
+    font-size: 0.8rem !important;
+    opacity: 1;
+
+}
+
+.projectPage_back_button.scrolled:hover {
+    gap: 0.5rem;
+    padding: 0.3rem 1rem;
+}
+
+.backButtonContainer {
+    
+    border: #444 solid 1px;
+    display: flex;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.backButtonWrapper{
+    border: #444 solid 1px;
+    width: 100%;
+    max-width: 70vw;
+}
