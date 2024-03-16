@@ -11,11 +11,9 @@ function About(props) {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('colored');
-                } else {
-                    entry.target.classList.remove('colored');
                 }
             });
-        }, { threshold: 0.7 }); 
+        }, { threshold: 0.7 });
 
         const hiddenElements = document.querySelectorAll('.grey');
         hiddenElements.forEach((el) => observer.observe(el));
@@ -24,17 +22,15 @@ function About(props) {
             hiddenElements.forEach((el) => observer.unobserve(el));
         };
     }, []);
-    
+
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('brOn');
-                } else {
-                    entry.target.classList.remove('brOn');
                 }
             });
-        }, { threshold:  0.2}); 
+        }, { threshold: 0.2 });
 
         const hiddenElements = document.querySelectorAll('.blurRight');
         hiddenElements.forEach((el) => observer.observe(el));

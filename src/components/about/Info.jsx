@@ -6,8 +6,6 @@ function Info(props) {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('show__box');
-                } else {
-                    entry.target.classList.remove('show__box');
                 }
             });
         }, { threshold: 0.8 }); // Adjust threshold as needed

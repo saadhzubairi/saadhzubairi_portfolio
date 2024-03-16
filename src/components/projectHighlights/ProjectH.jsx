@@ -13,7 +13,7 @@ import { useEffect } from 'react'
 
 export const ProjectH = () => {
 
-    useEffect(() => {
+    /* useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
@@ -28,33 +28,33 @@ export const ProjectH = () => {
         return () => {
             hiddenElements.forEach((el) => observer.unobserve(el));
         };
-    }, []);
+    }, []); */
 
     return (
         <section className="projecth section">
             <h2 className="section__title">Featured Projects</h2>
             <span className="section__subtitle">Have a look at some of my highlighted projects</span>
             <div className="projectShowcaseFlex ">
-                <div className="blurDown" id='pjc1'>
+                <div className="" id='pjc1'>
                     <ProjectCard data={hoops} />
                 </div>
-                <div className="blurDown" id='pjc2'>
+                <div className="" id='pjc2'>
                     <ProjectCard data={talenthive} />
                 </div>
-                <div className="blurDown" id='pjc3'>
+                <div className="" id='pjc3'>
                     <ProjectCard data={crickex} />
                 </div>
-                <div className="blurDown" id='pjc4'>
+                <div className="" id='pjc4'>
                     <ProjectCard data={latex} />
                 </div>
-                <div className="blurDown" id='pjc5'>
+                <div className="" id='pjc5'>
                     <ProjectCard data={pixelcut} />
                 </div>
-                <div className="blurDown" id='pjc6'>
+                <div className="" id='pjc6'>
                     <ProjectCard data={tetromania} />
                 </div>
             </div>
-            <div className="portfolio_button_cont blurDown">
+            <div className="portfolio_button_cont ">
                 <Link to="/Portfolio">
                     <div className="button button--flex">
                         View Full Portfolio <i class='bx bxs-chevron-right-circle'></i>
