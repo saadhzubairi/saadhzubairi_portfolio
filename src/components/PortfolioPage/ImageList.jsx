@@ -82,6 +82,7 @@ export default function MasonryImageList() {
 
     const handleClose = () => {
         setOpen(false)
+        setImageLoadingFull(true)
     }
 
     const containerRef = React.useRef(null);
@@ -157,6 +158,10 @@ export default function MasonryImageList() {
         }
     };
 
+    const handleImgLoadingFull = () => {
+        setImageLoadingFull(!imgLoadingFull)
+    }
+
     const checkUpdateTimeout = () => {
         const currentTime = Date.now();
         if (currentTime - lastUpdateTimestamp > 1500) {
@@ -195,19 +200,18 @@ export default function MasonryImageList() {
                 <Box sx={{ width: "100%", height: "100%", overflowY: 'scroll' }}>
                     <ImageList variant="masonry" cols={cols} gap={8}>
                         {itemData.map((item) => (
-                            <ImageListItem key={item}>
+                            <ImageListItem key={item.id}>
                                 <img
-                                    srcSet={`${item}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                                    src={`${item}?w=248&fit=crop&auto=format`}
+                                    srcSet={`${item.src}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                                    src={`${item.src}?w=248&fit=crop&auto=format`}
                                     alt='~'
-                                    onClick={() => { setModImg(item); setOpen(true) }}
+                                    onClick={() => { setModImg(item.src); setOpen(true) }}
                                     className='photography_portfolio_image'
                                     onLoad={updateLoadeds}
                                 />
                             </ImageListItem>
                         ))}
                     </ImageList>
-
 
                     <Modal open={open} onClose={handleClose}>
                         <Fade in={open}>
@@ -216,7 +220,7 @@ export default function MasonryImageList() {
                                 <Fade in={!imgLoadingFull}>
                                     <img src={modImg} alt=""
                                         className="photography_portfolio_modal_image"
-                                        onLoad={handleImgLoad}
+                                        onLoad={handleImgLoadingFull}
                                         style={{ display: imgLoadingFull ? 'none' : 'block' }} />
                                 </Fade>
                                 <div className="modal_close_button">
@@ -244,77 +248,77 @@ export default function MasonryImageList() {
 }
 
 const itemData = [
-    '/pics/2023-11-30_18-42-16.jpg',
-    "/pics/1626543738.jpg",
-    "/pics/1626544343.jpg",
-    "/pics/1626544470.jpg",
-    "/pics/1626544526.jpg",
-    "/pics/1626575243.jpg",
-    "/pics/1630613661.jpg",
-    "/pics/1632910125.jpg",
-    "/pics/1632910159.jpg",
-    "/pics/1632910189.jpg",
-    "/pics/1632910264.jpg",
-    "/pics/1632910322.jpg",
-    "/pics/1632910356.jpg",
-    "/pics/1649518078.jpg",
-    "/pics/20190728224648__MG_9659.JPG",
-    "/pics/20190812013053_IMG_0098.JPG",
-    "/pics/20200324_221655.jpg",
-    "/pics/20201217_214424-01.jpeg",
-    "/pics/2023-11-30_18-42-16.jpg",
-    "/pics/IMG_20190924_155228.jpg",
-    "/pics/IMG_20191010_180114_386.jpg",
-    "/pics/IMG_20191031_154741.jpg",
-    "/pics/IMG_20200107_173121.jpg",
-    "/pics/IMG_20200109_175223.jpg",
-    "/pics/IMG_20200116_125636.jpg",
-    "/pics/IMG_20200217_081649_1.jpg",
-    "/pics/IMG_20200227_094923 (1).jpg",
-    "/pics/IMG_20200630_182524.jpg",
-    "/pics/IMG_20200921_082337.jpg",
-    "/pics/IMG_20200921_143126.jpg",
-    "/pics/IMG_20210209_081518.jpg",
-    "/pics/IMG_20210209_082031.jpg",
-    "/pics/IMG_20210927_131951-01.jpeg",
-    "/pics/IMG_20210927_132429-01.jpeg",
-    "/pics/IMG_20210929_142042-01.jpeg",
-    "/pics/IMG_20210929_142125-01.jpeg",
-    "/pics/IMG_20210929_142230-01.jpeg",
-    "/pics/IMG_20220418_104245.jpg",
-    "/pics/PXL_20220813_224758319.NIGHT.jpg",
-    "/pics/PXL_20220814_100807432.jpg",
-    "/pics/PXL_20220912_092838749.jpg",
-    "/pics/PXL_20220929_131258263~2.jpg",
-    "/pics/PXL_20221008_133207593-01.jpeg",
-    "/pics/PXL_20221107_120006963-01.jpeg",
-    "/pics/PXL_20221128_030445683-01.jpeg",
-    "/pics/PXL_20230109_122609967~3.jpg",
-    "/pics/PXL_20230118_131607240~2.jpg",
-    "/pics/PXL_20230124_135503554.NIGHT.jpg",
-    "/pics/PXL_20230206_150644319.NIGHT.jpg",
-    "/pics/PXL_20230210_142157674-01.jpeg",
-    "/pics/PXL_20230223_140816650~2-01.jpeg",
-    "/pics/PXL_20230310_131742176~2.jpg",
-    "/pics/PXL_20230316_083101642-01.jpeg",
-    "/pics/PXL_20230320_133429846-01.jpeg",
-    "/pics/PXL_20230404_100914816~2.jpg",
-    "/pics/PXL_20230509_132905548.jpg",
-    "/pics/PXL_20230523_095353720~2.jpg",
-    "/pics/PXL_20230529_142952704-01.jpeg",
-    "/pics/PXL_20230615_143445743~2.jpg",
-    "/pics/PXL_20230706_143421217-01.jpeg",
-    "/pics/PXL_20230714_033252896-01.jpeg",
-    "/pics/PXL_20230724_070535823.jpg",
-    "/pics/PXL_20230916_134755380.jpg",
-    "/pics/PXL_20230920_115554635~2.jpg",
-    "/pics/PXL_20230920_115629894.jpg",
-    "/pics/PXL_20231004_035057336~2.jpg",
-    "/pics/PXL_20231009_121754871~2.jpg",
-    "/pics/PXL_20231014_052930609 (1).jpg",
-    "/pics/PXL_20231023_121219453~2.jpg",
-    "/pics/PXL_20231031_123101664.jpg",
-    "/pics/PXL_20231108_094249141.jpg",
-    "/pics/PXL_20231113_122534075.jpg",
-    "/pics/PXL_20231115_012759252.jpg",
+    { id: "1", src: '/pics/2023-11-30_18-42-16.jpg' },
+    { id: "2", src: "/pics/1626543738.jpg" },
+    { id: "3", src: "/pics/1626544343.jpg" },
+    { id: "4", src: "/pics/1626544470.jpg" },
+    { id: "5", src: "/pics/1626544526.jpg" },
+    { id: "6", src: "/pics/1626575243.jpg" },
+    { id: "7", src: "/pics/1630613661.jpg" },
+    { id: "8", src: "/pics/1632910125.jpg" },
+    { id: "9", src: "/pics/1632910159.jpg" },
+    { id: "10", src: "/pics/1632910189.jpg" },
+    { id: "11", src: "/pics/1632910264.jpg" },
+    { id: "12", src: "/pics/1632910322.jpg" },
+    { id: "13", src: "/pics/1632910356.jpg" },
+    { id: "14", src: "/pics/1649518078.jpg" },
+    { id: "15", src: "/pics/20190728224648__MG_9659.JPG" },
+    { id: "16", src: "/pics/20190812013053_IMG_0098.JPG" },
+    { id: "17", src: "/pics/20200324_221655.jpg" },
+    { id: "18", src: "/pics/20201217_214424-01.jpeg" },
+    { id: "19", src: "/pics/2023-11-30_18-42-16.jpg" },
+    { id: "20", src: "/pics/IMG_20190924_155228.jpg" },
+    { id: "21", src: "/pics/IMG_20191010_180114_386.jpg" },
+    { id: "22", src: "/pics/IMG_20191031_154741.jpg" },
+    { id: "23", src: "/pics/IMG_20200107_173121.jpg" },
+    { id: "24", src: "/pics/IMG_20200109_175223.jpg" },
+    { id: "25", src: "/pics/IMG_20200116_125636.jpg" },
+    { id: "26", src: "/pics/IMG_20200217_081649_1.jpg" },
+    { id: "27", src: "/pics/IMG_20200227_094923 (1).jpg" },
+    { id: "28", src: "/pics/IMG_20200630_182524.jpg" },
+    { id: "29", src: "/pics/IMG_20200921_082337.jpg" },
+    { id: "30", src: "/pics/IMG_20200921_143126.jpg" },
+    { id: "31", src: "/pics/IMG_20210209_081518.jpg" },
+    { id: "32", src: "/pics/IMG_20210209_082031.jpg" },
+    { id: "33", src: "/pics/IMG_20210927_131951-01.jpeg" },
+    { id: "34", src: "/pics/IMG_20210927_132429-01.jpeg" },
+    { id: "35", src: "/pics/IMG_20210929_142042-01.jpeg" },
+    { id: "36", src: "/pics/IMG_20210929_142125-01.jpeg" },
+    { id: "37", src: "/pics/IMG_20210929_142230-01.jpeg" },
+    { id: "38", src: "/pics/IMG_20220418_104245.jpg" },
+    { id: "39", src: "/pics/PXL_20220813_224758319.NIGHT.jpg" },
+    { id: "40", src: "/pics/PXL_20220814_100807432.jpg" },
+    { id: "41", src: "/pics/PXL_20220912_092838749.jpg" },
+    { id: "42", src: "/pics/PXL_20220929_131258263~2.jpg" },
+    { id: "43", src: "/pics/PXL_20221008_133207593-01.jpeg" },
+    { id: "44", src: "/pics/PXL_20221107_120006963-01.jpeg" },
+    { id: "45", src: "/pics/PXL_20221128_030445683-01.jpeg" },
+    { id: "46", src: "/pics/PXL_20230109_122609967~3.jpg" },
+    { id: "47", src: "/pics/PXL_20230118_131607240~2.jpg" },
+    { id: "48", src: "/pics/PXL_20230124_135503554.NIGHT.jpg" },
+    { id: "49", src: "/pics/PXL_20230206_150644319.NIGHT.jpg" },
+    { id: "50", src: "/pics/PXL_20230210_142157674-01.jpeg" },
+    { id: "51", src: "/pics/PXL_20230223_140816650~2-01.jpeg" },
+    { id: "52", src: "/pics/PXL_20230310_131742176~2.jpg" },
+    { id: "53", src: "/pics/PXL_20230316_083101642-01.jpeg" },
+    { id: "54", src: "/pics/PXL_20230320_133429846-01.jpeg" },
+    { id: "55", src: "/pics/PXL_20230404_100914816~2.jpg" },
+    { id: "56", src: "/pics/PXL_20230509_132905548.jpg" },
+    { id: "57", src: "/pics/PXL_20230523_095353720~2.jpg" },
+    { id: "58", src: "/pics/PXL_20230529_142952704-01.jpeg" },
+    { id: "59", src: "/pics/PXL_20230615_143445743~2.jpg" },
+    { id: "60", src: "/pics/PXL_20230706_143421217-01.jpeg" },
+    { id: "61", src: "/pics/PXL_20230714_033252896-01.jpeg" },
+    { id: "62", src: "/pics/PXL_20230724_070535823.jpg" },
+    { id: "63", src: "/pics/PXL_20230916_134755380.jpg" },
+    { id: "64", src: "/pics/PXL_20230920_115554635~2.jpg" },
+    { id: "65", src: "/pics/PXL_20230920_115629894.jpg" },
+    { id: "66", src: "/pics/PXL_20231004_035057336~2.jpg" },
+    { id: "67", src: "/pics/PXL_20231009_121754871~2.jpg" },
+    { id: "68", src: "/pics/PXL_20231014_052930609 (1).jpg" },
+    { id: "69", src: "/pics/PXL_20231023_121219453~2.jpg" },
+    { id: "70", src: "/pics/PXL_20231031_123101664.jpg" },
+    { id: "71", src: "/pics/PXL_20231108_094249141.jpg" },
+    { id: "72", src: "/pics/PXL_20231113_122534075.jpg" },
+    { id: "73", src: "/pics/PXL_20231115_012759252.jpg" },
 ];

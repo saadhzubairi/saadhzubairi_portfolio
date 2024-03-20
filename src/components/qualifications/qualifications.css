@@ -70,10 +70,10 @@
 .qual__content-active {
     display: flex;
     flex-direction: row;
-    gap: 1.2rem;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    max-width: 806.4px;
 }
 
 .qual__data {
@@ -81,12 +81,22 @@
     flex-direction: column;
     justify-content: space-between;
     width: 16rem;
-    height: 10rem;
+    height: 11rem;
     border: dashed rgb(155, 155, 155) 1px;
     border-radius: 1rem;
     padding: 0.75rem 0.75rem 0.75rem 1.25rem;
     transition: 300ms;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin: 0.3rem;
+}
+
+.qual__data_hidden {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    padding: 0;
+    display: block;
+    border: none;
 }
 
 .qual__data:hover {
@@ -100,7 +110,7 @@
 }
 
 .qual__title {
-    font-size: var(--h3-font-size);
+    font-size: 1rem;
     font-weight: 600;
     line-height: 1.25rem;
     margin-bottom: 0.5rem;
@@ -112,6 +122,15 @@
     justify-content: flex-start;
     gap: 0.5em;
     margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: gray;
+}
+
+.qual__category__sub {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .qual__subtitle_img {
@@ -162,7 +181,7 @@
 
 .qual__data_openIcon {
     position: absolute;
-    margin-top: 7.3rem;
+    margin-top: 8.2rem;
     margin-left: 9rem;
     font-size: 0.8rem;
     display: flex;
@@ -174,7 +193,7 @@
 
 .qual__data_openIcon_xp {
     position: absolute;
-    margin-top: 7.5rem;
+    margin-top: 8.4rem;
     margin-left: 12.5rem;
     font-size: 0.8rem;
     display: flex;
@@ -203,10 +222,6 @@
     background-color: rgb(217, 219, 233);
 }
 
-.cert__data {
-    height: 12rem;
-}
-
 .blurDownq {
     filter: grayscale(100%);
     opacity: 0;
@@ -214,6 +229,35 @@
     transform: translate(0px, 58px);
     -webkit-transform: translate(0px, 58px);
     -moz-transform: translate(0px, 58px);
+}
+
+.qual__category__heading {
+    padding: 1.5rem 0.5rem;
+    font-size: 1.1rem;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    justify-content: space-between;
+}
+
+.qual_showmore_button {
+    border: #aaa solid 1px;
+    border-radius: 1rem;
+    padding: 0.2rem 0.7rem;
+    padding-left: 1rem !important;
+    font-size: 0.8rem;
+    font-weight: 600;
+    user-select: none;
+    cursor: pointer;
+    
+}
+
+.qual_showmore_button:hover {
+    background-color: #333;
+    color: white;
 }
 
 @media screen and (max-width: 750px) {
