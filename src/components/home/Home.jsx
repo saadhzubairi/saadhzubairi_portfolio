@@ -8,8 +8,6 @@ import "./home.css"
 /* import CircularProgress from '@mui/material/CircularProgress'; */
 
 function Home(props) {
-    
-
     return (
         <section className="home section" id="Home">
             <div className="home__container container grid">

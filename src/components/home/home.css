@@ -9,7 +9,7 @@
     align-items: center;
 }
 
-.home__scroll-button{
+.home__scroll-button {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -132,7 +132,7 @@
     color: #444;
 }
 
-.MuiPopper-root{
+.MuiPopper-root {
     position: inherit;
 }
 
@@ -140,7 +140,7 @@
     .home__content {
         grid-template-columns: 100px repeat(2, 1fr);
         column-gap: 1.25rem;
-        
+
     }
 
     .home__subtitle {
@@ -168,7 +168,8 @@
         flex-direction: column;
         padding-top: 0rem !important;
     }
-    .home__social{
+
+    .home__social {
         display: flex;
         flex-direction: row;
         gap: 1.5rem;
@@ -225,6 +226,11 @@
         height: 180px;
         width: 180px;
     }
+
+    .home_buttons_list {
+        margin-bottom: 5rem;
+    }
+
 }
 
 @media screen and (max-width: 350px) {}
