@@ -70,11 +70,18 @@
 .qual__content-active {
     display: flex;
     flex-direction: row;
-    align-items: start;
+    align-items: center;
     justify-content: center;
-    align-content: start;
     flex-wrap: wrap;
     max-width: 796.8px;
+}
+
+.qual__content__subPart{
+    display: flex;
+    flex: row;
+    align-items: start;
+    justify-content: start;
+    flex-wrap: wrap;
 }
 
 .qual__data {
@@ -288,7 +295,7 @@
 
 @media screen and (max-width: 750px) {
     .qual__data {
-        width: 45%;
+        width: 47.4%;
         height: 14rem;
     }
 
@@ -302,6 +309,10 @@
 
     .qual__data_openIcon_cert{
         font-size: 0.6rem;
+    }
+
+    .qual__subtitle{
+        font-size: 0.6rem !important;
     }
 }
 
