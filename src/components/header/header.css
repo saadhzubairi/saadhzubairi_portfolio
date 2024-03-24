@@ -187,7 +187,6 @@ header {
         height: 25rem;
         bottom: -6%;
         transition: 0.5s all !important;
-        filter: blur(0px);
     }
 
     .menu_panel_for_phone.closed {
@@ -200,7 +199,6 @@ header {
         transform: scale(0.6);
         -webkit-transform: scale(0.6);
         -moz-transform: scale(0.6);
-        filter: blur(20px);
         transition: 0.5s all !important;
 
     }
@@ -219,7 +217,6 @@ header {
         transform: translate(-50%, -50%);
         height: 150vh;
         width: 100vw;
-        background-color: rgba(0, 0, 0, 0.123);
         transition: all 300ms;
         z-index: 99;
 
