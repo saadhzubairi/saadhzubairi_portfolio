@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import CircularProgress from '@mui/material/CircularProgress';
 
-const ProjectCard = ({ data }) => {
+const ProjectCard = ({ data, onH }) => {
     const navigate = useNavigate();
     const [imgLoadingFull, setImageLoadingFull] = useState(true);
 
@@ -24,11 +24,11 @@ const ProjectCard = ({ data }) => {
     return (
         <div className="pcard_wrapper" onClick={onClickFun}>
             <div className="pcard_pane">
-                <div className="pcard_pane_right">
+                <div className={onH ? "pcard_pane_rightH" : "pcard_pane_right"}>
                     <div className="pcard_desc">{data.desc}</div>
                     <div className="pcard_checkout_button">check it out!</div>
                 </div>
-                <div className="pcard_pane_left">
+                <div className={onH ? "pcard_pane_leftH" : "pcard_pane_left"}>
                     <div className="pcard_img_cont">
                         {imgLoadingFull ? <CircularProgress sx={{ color: "#666" }} /> : null}
                         <img
