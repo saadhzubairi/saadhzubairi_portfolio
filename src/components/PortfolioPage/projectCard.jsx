@@ -22,7 +22,7 @@ const ProjectCard = ({ data, onH }) => {
     }
 
     return (
-        <div className="pcard_wrapper" onClick={onClickFun}>
+        <div className={onH ? "pcard_wrapperH" : "pcard_wrapper"} onClick={onClickFun}>
             <div className="pcard_pane">
                 <div className={onH ? "pcard_pane_rightH" : "pcard_pane_right"}>
                     <div className="pcard_desc">{data.desc}</div>

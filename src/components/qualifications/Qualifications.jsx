@@ -114,7 +114,7 @@ function Qualifications(props) {
     return (
         <section className="qualifications section" id="Qual">
             <h2 className="section__title">Qualifications</h2>
-            <span className="section__subtitle">My academic and professional journey</span>
+            <span className="section__subtitle qual_sub">My academic and professional journey</span>
 
             <div className="qual__container container">
 

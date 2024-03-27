@@ -42,13 +42,16 @@
     border-radius: 1rem !important;
 }
 
-.pcard_wrapper {
+.pcard_wrapper,.pcard_wrapperH {
     height: 100%;
     width: fit-content;
 }
 
 .pcard_wrapper:hover {
     cursor: pointer;
+}
+.pcard_wrapperH:hover {
+    cursor: grab;
 }
 
 .pcard_pane {
@@ -88,7 +91,12 @@
     flex: 1;
 }
 
-.pcard_pane:hover .pcard_pane_leftH {}
+.pcard_pane:hover .pcard_pane_leftH {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    /*  rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, */
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+}
 
 .pcard_title {
     font-size: 1.3rem;
@@ -131,11 +139,8 @@
 }
 
 .pcard_pane:hover .pcard_pane_rightH {
-    visibility: visible;
-    opacity: 1;
-    bottom: 10rem;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    border-radius: 2rem;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .pcard_checkout_button {

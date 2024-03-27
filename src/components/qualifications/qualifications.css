@@ -17,6 +17,10 @@
     height: min-content;
 }
 
+.qual_sub{
+    margin-bottom: 0rem !important;
+}
+
 .qual__button {
     display: flex;
     align-items: center;
@@ -254,7 +258,7 @@
 }
 
 .qual__category__heading {
-    padding: 1.5rem 0.5rem;
+    padding: 1.75rem 0.5rem 0.5rem;
     font-size: 1.1rem;
     text-align: left;
     width: 100%;

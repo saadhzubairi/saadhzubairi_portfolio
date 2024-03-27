@@ -23,13 +23,13 @@ export const ProjectH = () => {
     return (
         <section className="projecth section">
             <h2 className="section__title">Featured Projects</h2>
-            <span className="section__subtitle">Have a look at some of my highlighted projects</span>
+            <span className="section__subtitle projh_sub">Have a look at some of my highlighted projects</span>
             <div className="projectShowcaseFlex ">
                 <Swiper
                     effect='coverflow'
                     grabCursor={true}
                     centeredSlides={true}
-                    loop={true}
+                    loop={false}
                     slidesPerView={'auto'}
                     coverflowEffect={
                         {
