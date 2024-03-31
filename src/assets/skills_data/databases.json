@@ -1,0 +1,22 @@
+[
+    {
+        "image": "https://th.bing.com/th/id/R.e19b135a56c6e29704eceeb4ed25ca44?rik=yEntp8oEg8aXuQ&pid=ImgRaw&r=0&sres=1&sresct=1",
+        "name": "Oracle SQL and PL/SQL",
+        "diff": "Proficient"
+    },
+    {
+        "image": "https://www.freepnglogos.com/uploads/logo-mysql-png/logo-mysql-mysql-logo-png-images-are-download-crazypng-21.png",
+        "name": "MySQL",
+        "diff": "Advanced"
+    },
+    {
+        "image": "https://emanueleciriachi.net/wp-content/uploads/2019/01/logo-mongodb-png-mongodb-logo-png-400.png",
+        "name": "MongoDB (NoSQL)",
+        "diff": "Advanced"
+    },
+    {
+        "image": "https://cdn-icons-png.flaticon.com/256/5968/5968342.png",
+        "name": "PostgreSQL",
+        "diff": "Intermediate"
+    }
+]

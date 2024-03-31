@@ -2,8 +2,8 @@
 
 /* @tailwind base;
 @tailwind components;
-@tailwind utilities; */
-
+@tailwind utilities;
+ */
 * {
   font-family: 'Montserrat', sans-serif !important;
   transition: all !important;
@@ -19,12 +19,10 @@
   /*========== Colors ==========*/
 
   /*Color mode HSL(hue, saturation, lightness)*/
-  --hue: 0;
-  --sat: 0%;
-  --title-color: hsl(var(--hue), var(--sat), 20%);
-  --title-color-dark: hsl(var(--hue), var(--sat), 0%);
-  --text-color: hsl(var(--hue), var(--sat), 35%);
-  --body-color: hsl(var(--hue), var(--sat), 98%);
+  --title-color: #222;
+  --title-color-dark: black;
+  --text-color: #333;
+  --body-color: hsl(0, 0, 98%);
   --container-color: #fff;
 
   /*========== Font and typography ==========*/
@@ -166,7 +164,7 @@ img {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
-  padding: 6rem 0 6rem;
+  padding: 2rem 0rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

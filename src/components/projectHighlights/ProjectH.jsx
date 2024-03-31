@@ -21,7 +21,7 @@ import { EffectCoverflow, Pagination, Navigation } from 'swiper';
 export const ProjectH = () => {
 
     return (
-        <section className="projecth section">
+        <section className="projecth section" id='Featured'>
             <h2 className="section__title">Featured Projects</h2>
             <span className="section__subtitle projh_sub">Have a look at some of my highlighted projects</span>
             <div className="projectShowcaseFlex ">

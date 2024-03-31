@@ -1,0 +1,54 @@
+[
+    {
+        "name": "React",
+        "image": "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-1024.png"
+    },
+    {
+        "name": "Material UI",
+        "image": "https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/kw4or81ozri5lvgljr9z"
+    },
+    {
+        "name": "ShadCN",
+        "image": "https://avatars.githubusercontent.com/u/139895814?s=280&v=4"
+    },
+    {
+        "name": "Tailwind",
+        "image": "https://camo.githubusercontent.com/47fd253e16bb491dcab5dc8fb16f97ea4fc5d253b5736f409d18e282c6c31724/68747470733a2f2f726f6e746865746563682e6769746875622e696f2f696d6167652d7265706f2f69636f6e732f5461696c77696e644353532d4461726b2e737667"
+    },
+    {
+        "name": "Redux",
+        "image": "https://cdn.iconscout.com/icon/free/png-256/free-redux-283024.png"
+    },
+    {
+        "name": "Node.js",
+        "image": "https://cdn.iconscout.com/icon/free/png-256/free-nodejs-1-226034.png"
+    },
+    {
+        "name": "JavaFX",
+        "image": "https://i2.wp.com/gluonhq.com/wp-content/uploads/2015/02/SceneBuilderLogo.png?fit=781%2C781&ssl=1"
+    },
+    {
+        "name": "FastAPI",
+        "image": "https://raw.githubusercontent.com/2lay/2lay/main/img/fastapi.png"
+    },
+    {
+        "name": "Spacy",
+        "image": "https://raw.githubusercontent.com/PrefectHQ/prefect/master/docs/.vuepress/public/logos/spacy.png"
+    },
+    {
+        "name": "Pytorch",
+        "image": "https://garage.readthedocs.io/en/v2000.0.0/_images/pytorch.png"
+    },
+    {
+        "name": "Numpy",
+        "image": "https://avatars.githubusercontent.com/u/288276?v=4"
+    },
+    {
+        "name": "Pandas",
+        "image": "https://res.cloudinary.com/spantree-technology-group/image/upload/v1675714280/tools_pandas_26166a90a1.png"
+    },
+    {
+        "name": "SDL 2.0",
+        "image": "https://api.nuget.org/v3-flatcontainer/sdl2-cs.netcore/2.0.8/icon"
+    }
+]

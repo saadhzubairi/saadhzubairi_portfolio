@@ -28,19 +28,6 @@ const style = {
     p: 4,
 };
 
-/* const style_small = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 'auto',
-    bgcolor: 'background.paper',
-    border: '2px dashed #fff',
-    borderRadius: 8,
-    boxShadow: 24,
-    p: 4,
-};
- */
 function Qualifications(props) {
 
     const [openModalIndex, setOpenModalIndex] = useState(null);
@@ -50,50 +37,6 @@ function Qualifications(props) {
     const [openModalIndex_, setOpenModalIndex_] = useState(null);
     const handleOpen_ = (index) => { setOpenModalIndex_(index); };
     const handleClose_ = () => { setOpenModalIndex_(null); };
-
-    const [toggle, setToggle] = useState(1);
-
-    const toggleTab = (n) => {
-        setToggle(n);
-    }
-
-    const handleScroll = () => {
-        /* const element = document.getElementById('Qual');
-        const rect = element.getBoundingClientRect();
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const offset = rect.top + scrollTop;
-        const height = element.offsetHeight;
-
-        // Check if we've scrolled past 10% of the element
-        if (scrollTop > offset + height * 0.1) {
-            toggleTab(1);
-        } else {
-            toggleTab(0);
-        } */
-    }
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                console.log(entry);
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('bdOn');
-                }
-            });
-        }, { threshold: 0.7 });
-
-        const hiddenElements = document.querySelectorAll('.blurDownq');
-        hiddenElements.forEach((el) => observer.observe(el));
-
-        return () => {
-            hiddenElements.forEach((el) => observer.unobserve(el));
-        };
-    }, []);
 
 
     const [showAlled, setShowAlled] = useState(false)

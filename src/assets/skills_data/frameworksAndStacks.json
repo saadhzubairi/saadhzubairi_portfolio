@@ -1,0 +1,22 @@
+[
+    {
+        "image": "https://www.strivemindz.com/images/offerings/icons/mern-stack.png",
+        "name": "MERN",
+        "diff": "Proficient"
+    },
+    {
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcVQFIN_8kNlLBB-v7gzI7fTCG53GBbXtfO3B_TpUUDg&s",
+        "name": "Flutter",
+        "diff": "Advanced"
+    },
+    {
+        "image": "https://static-00.iconduck.com/assets.00/nextjs-icon-256x256-ao9n7qsm.png",
+        "name": "Next.js",
+        "diff": "Intermediate"
+    },
+    {
+        "image": "https://res.cloudinary.com/spantree-technology-group/image/upload/v1675714280/tools_spring_boot_dc0827231c.png",
+        "name": "Spring",
+        "diff": "Beginner"
+    }
+]

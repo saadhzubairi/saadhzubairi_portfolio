@@ -44,7 +44,9 @@ function Header(props) {
         <>
             <header className="header">
                 <nav className="nav container">
-                    <a href="/" className="nav__logo">Saad</a>
+                    <a href="/" className="nav__logo">
+                        <i class='bx bxs-home'></i>
+                    </a>
 
                     <div className={toggle ? "nav__menu show-menu" : "nav__menu"}>
 
@@ -59,6 +61,12 @@ function Header(props) {
                             <li className="nav__item">
                                 <Link to="/#About" className="nav__link" onClick={() => setHash('About')} >
                                     <i className="uil uil-user nav__icon"></i> About
+                                </Link>
+                            </li>
+
+                            <li className="nav__item">
+                                <Link to="/#Featured" className="nav__link" onClick={() => setHash('Featured')} >
+                                    <i className="uil uil-user nav__icon"></i> Featured
                                 </Link>
                             </li>
 
@@ -107,6 +115,9 @@ function Header(props) {
                 </Link>
                 <Link to="/#About" className="menu_panel_phone_nav_link" onClick={() => { setMenuOpen(prevState => !prevState); setHash('About') }}>
                     <i class='bx bxs-user'></i> About
+                </Link>
+                <Link to="/#Featured" className="menu_panel_phone_nav_link" onClick={() => { setMenuOpen(prevState => !prevState); setHash('Featured') }}>
+                    <i class='bx bxs-blanket'></i> Featured
                 </Link>
                 <Link to="/#Qual" className="menu_panel_phone_nav_link" onClick={() => { setMenuOpen(prevState => !prevState); setHash('Qual') }}>
                     <i class='bx bxs-briefcase' ></i> Qualifications

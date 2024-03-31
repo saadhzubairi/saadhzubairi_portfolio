@@ -5,18 +5,8 @@
         "diff": "Proficient"
     },
     {
-        "image": "https://cdn.sanity.io/images/599r6htc/localized/46a76c802176eb17b04e12108de7e7e0f3736dc6-1024x1024.png?w=804&h=804&q=75&fit=max&auto=format",
-        "name": "Figma",
-        "diff": "Proficient"
-    },
-    {
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png",
+        "image": "https://code.visualstudio.com/assets/apple-touch-icon.png",
         "name": "VSCode",
-        "diff": "Advanced"
-    },
-    {
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/2101px-Adobe_Photoshop_CC_icon.svg.png",
-        "name": "Photoshop",
         "diff": "Advanced"
     },
     {
@@ -27,6 +17,16 @@
     {
         "image": "https://th.bing.com/th/id/R.98865e06d77faca32b3e118df119049e?rik=AU0%2bE0ROLAbnog&riu=http%3a%2f%2flogonoid.com%2fimages%2fintellij-idea-logo.png&ehk=CapqYnZAeX0cbsUWxFNWr913YwdQDC7OFt%2ftIAEb%2fBU%3d&risl=&pid=ImgRaw&r=0",
         "name": "IntelliJ",
+        "diff": "Proficient"
+    },
+    {
+        "name": "Unity",
+        "image": "https://th.bing.com/th/id/R.0e4ed77d950cdaaacc2df0842317e4e1?rik=hWZZFkk730NCFA&pid=ImgRaw&r=0",
+        "diff": "Profficient"
+    },
+    {
+        "image": "https://cdn.sanity.io/images/599r6htc/localized/46a76c802176eb17b04e12108de7e7e0f3736dc6-1024x1024.png?w=804&h=804&q=75&fit=max&auto=format",
+        "name": "Figma",
         "diff": "Proficient"
     }
 ]

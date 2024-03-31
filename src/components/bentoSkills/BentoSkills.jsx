@@ -1,5 +1,5 @@
 import React from 'react'
-import "./quillian.css"
+import "./bentoSkills.css"
 import generalist_data from "../../assets/skills_data/services.json"
 import core_data from "../../assets/skills_data/programming.json"
 import db_data from "../../assets/skills_data/databases.json"
@@ -102,7 +102,7 @@ const triad = () => {
 const libsAndEnvs = () => {
     return (
         <div className="core_bento">
-            <div className="skill_bento_heading">Libraries & Frameworks</div>
+            <div className="skill_bento_heading">Libraries & Environments</div>
             <div className="skill_bento_subheading">Experience with:</div>
             <div className="bentoFlex">
                 {libs_data.map((e) =>
@@ -124,12 +124,17 @@ function BentoSkills() {
 
 
     return (
-        <section className='section'>
+        <section className="skills section" id="Skills">
+            <h2 className="section__title">Skills</h2>
+            <span className="section__subtitle">Following are my technical expertise</span>
+
             <div className="grid-wrapper">
                 <div className="gridbal" id="bal1">{highlight()}
                     <img src="/pics/portfolio.png" alt="" className="highlightImg" />
                 </div>
-                <div className="gridbal" id="bal2">{core()}</div>
+                <div className="gridbal" id="bal2">{core()}
+                    <img src="/pics/core.png" alt="" className="coreImg" />
+                </div>
                 <div className="gridbal" id="bal3">{frameworksAndStacks()}</div>
                 <div className="gridbal" id="bal4">{triad()}</div>
                 <div className="gridbal" id="bal5">{libsAndEnvs()}</div>
