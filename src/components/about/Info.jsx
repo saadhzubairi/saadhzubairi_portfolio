@@ -22,11 +22,11 @@ function Info(props) {
         <div className="about__info grid">
             <div className={`about__box`} id="box1">
                 <i class='bx bx-award about__icon'></i>
-                <span className="about__subtitle">IBA Karachi Alumnus, UBL Engineer</span>
+                <span className="about__subtitle">NYU Tandon Graduate Student</span>
             </div>
             <div className={`about__box`} id="box2">
                 <i class='bx bxs-component about__icon'></i>
-                <span className="about__subtitle">Proficient in Java, JavaScript, Python & C++</span>
+                <span className="about__subtitle">Proficient in various technologies</span>
             </div>
             <div className={`about__box`} id="box3">
                 <i class='bx bx-brush about__icon' ></i>

@@ -42,6 +42,7 @@
 .about__subtitle {
     font-size: var(--tiny-font-size);
     font-weight: var(--font-medium);
+    user-select: none;
 }
 
 .about__description {
@@ -87,7 +88,7 @@
     transition-delay: 600ms !important;
 }
 
-#cv_button{
+#cv_button {
     transition-delay: 800ms !important;
 }
 

@@ -1,8 +1,37 @@
 [
     {
+        "desg": "Fullstack Developer",
+        "company": "Sadiq.ai",
+        "years": "April 2024 - August 2024",
+        "logo": "/XP_logos/sadiq.jpeg",
+        "website": "https://sadiq.ai/",
+        "linkedIn": "https://www.linkedin.com/company/sadiq-ai",
+        "about": "Sadiq.ai is an innovative tech startup specializing in AI-driven solutions for the healthcare industry. The company is dedicated to building cutting-edge products that enhance medical processes and improve patient outcomes.",
+        "desc": "Worked as a Fullstack Developer in a fast-paced startup environment, contributing to AI-driven healthcare solutions.",
+        "resps": [
+            "Led a team of software engineers on the SupportSphere project (a unified healthcare management system).",
+            "Developed the application using Next.js and Nest.js with TypeScript.",
+            "Ensured compliance with accessibility standards, including WCAG and ARIA guidelines.",
+            "Implemented AI-based solutions to assist healthcare professionals.",
+            "Managed six servers and their CI/CD pipelines."
+        ],
+        "skills": [
+            "Team Leadership",
+            
+            "Next.js",
+            "Nest.js",
+            "TypeScript",
+            "Server Management",
+            "CI/CD Pipelines",
+            "AI Implementation",
+            "Healthcare Technology",
+            "Web Accessibility (WCAG, ARIA standards)"
+        ]
+    },
+    {
         "desg": "Technology Analyst",
         "company": "United Bank Limited",
-        "years": "July 2023 - Present",
+        "years": "July 2023 - April 2024",
         "logo": "/XP_logos/united_bank_limited_logo.jpeg",
         "website": "https://www.ubldigital.com/",
         "linkedIn": "https://www.linkedin.com/company/united-bank-limited",
@@ -116,26 +145,6 @@
             "Lecturing",
             "Grading & Assessment",
             "Academic Bookkeeping"
-        ]
-    },
-    {
-        "desg": "Graphic Designer",
-        "company": "IBA Career Development Centre",
-        "years": "Jan 2021 - Jan 2022",
-        "logo": "/XP_logos/logo-cdc2.png",
-        "website": "https://cdc.iba.edu.pk/",
-        "linkedIn": "https://www.linkedin.com/in/ibacdckarachi/",
-        "about": "Career Development Center (CDC) is dedicated to provide necessary tools and resources to students for managing their career goals. We are committed to connect employers with qualified candidates who meet their recruiting needs. The Centre’s Corporate Relations Office is dedicated to strengthen the connections between students and employers for maximizing their opportunities to understand each other. We endeavor to provide Employers with excellent service that is professional, tailored to their specific needs. We partner with employers to define the most appropriate and effective means for them to get to know and recruit our graduates for internships and jobs.",
-        "desc": "Interned for the post-covid virtual career fair organizing team as part of an on-campus internship",
-        "resps": [
-            "Digitally designed posters/banners for marketing campaigns for the first ever Virtual Career Fair.",
-            "Promoted the campaigns through social media marketing, causing an inpour of 4,000+ organic followers.",
-            "Spearheaded video tutorials designing for the Virtual Career Fair system, that proved vital for future projects."
-        ],
-        "skills": [
-            "Graphic Design",
-            "Adobe Photoshop",
-            "Adobe Illustrator"
         ]
     }
 ]

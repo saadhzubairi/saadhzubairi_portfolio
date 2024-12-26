@@ -1,0 +1,96 @@
+{
+        "degree": "Intermediate, Pre-Engineering",
+        "institute": "Govt. Degree College, Gulshan-e-Iqbal",
+        "years": "2016-2018",
+        "logo": "EDXP_logos/GDSC.jpeg",
+        "about": "The Government Degree Science and Commerce College is located in Gulshan-e-Iqbal Block # 7, Karachi, Pakistan. It is situated near the popular Safari Park. This college is known for its focus on science and commerce education. It has a significant presence on social media, with thousands of followers and a high level of engagement. The college is well-regarded in the community, and it continues to contribute to the academic growth of its students.",
+        "website": "https://web.facebook.com/GovtDegreeCollegeGulshanEIqbalBlock7",
+        "linkedIn": "https://web.facebook.com/GovtDegreeCollegeGulshanEIqbalBlock7",
+        "cgpa": "A",
+        "session": "August 2016 - May 2018",
+        "moreInfo": [
+            {
+                "Heading": "Courses",
+                "List": [
+                    "Physics",
+                    "Mathematics",
+                    "Chemistry",
+                    "English",
+                    "Pakistan History",
+                    "Islamiat",
+                    "Urdu"
+                ]
+            },
+            {
+                "Heading": "Extra & Co-curriculars",
+                "List": [
+                    "Lead bowler of the college cricket team",
+                    "Participated in community fund rasing",
+                    "Organizing Committee Member of GMUN"
+                ]
+            }
+        ]
+    },
+    {
+        "degree": "Matriculation, Computer Science",
+        "institute": "Falconhouse Grammar School",
+        "years": "2008-2016",
+        "logo": "/EDXP_logos/FHGS.png",
+        "about": "Established in 1984, Falconhouse Grammar School (FGS) has evolved into a prominent chain of educational institutions with 12 campuses in Karachi, as well as locations in Hyderabad and Multan. Affiliated with the University of Cambridge, London, and the Board of Secondary Education, FGS celebrates its 34th year of Academic Excellence. The school, known for its rigorous educational programs. FGS is recognized as one of the largest private English medium school systems in Pakistan, accommodating over 6000 students.",
+        "website": "http://www.falconhouse.edu.pk/",
+        "linkedIn": "https://www.linkedin.com/company/falconhouse-grammar-school",
+        "cgpa": "A+",
+        "session": "May 2008 - May 2016",
+        "moreInfo": [
+            {
+                "Heading": "Courses",
+                "List": [
+                    "Hard Sciences",
+                    "Social Sciences",
+                    "Basic Languages",
+                    "Logic & Religious Studies",
+                    "Grammar and Composition",
+                    "Literature"
+                ]
+            },
+            {
+                "Heading": "Extra & Co-curriculars",
+                "List": [
+                    "Spelling Bee Rep 2011 & 2016",
+                    "National Math Olympiad Rep (2012)",
+                    "Hosted annual result day ceremonies",
+                    "Cricket team member",
+                    "Community welfare initiative member"
+                ]
+            }
+        ]
+    }
+
+
+
+
+
+
+
+
+    ,
+    {
+        "desg": "Graphic Designer",
+        "company": "IBA Career Development Centre",
+        "years": "Jan 2021 - Jan 2022",
+        "logo": "/XP_logos/logo-cdc2.png",
+        "website": "https://cdc.iba.edu.pk/",
+        "linkedIn": "https://www.linkedin.com/in/ibacdckarachi/",
+        "about": "Career Development Center (CDC) is dedicated to provide necessary tools and resources to students for managing their career goals. We are committed to connect employers with qualified candidates who meet their recruiting needs. The Centre’s Corporate Relations Office is dedicated to strengthen the connections between students and employers for maximizing their opportunities to understand each other. We endeavor to provide Employers with excellent service that is professional, tailored to their specific needs. We partner with employers to define the most appropriate and effective means for them to get to know and recruit our graduates for internships and jobs.",
+        "desc": "Interned for the post-covid virtual career fair organizing team as part of an on-campus internship",
+        "resps": [
+            "Digitally designed posters/banners for marketing campaigns for the first ever Virtual Career Fair.",
+            "Promoted the campaigns through social media marketing, causing an inpour of 4,000+ organic followers.",
+            "Spearheaded video tutorials designing for the Virtual Career Fair system, that proved vital for future projects."
+        ],
+        "skills": [
+            "Graphic Design",
+            "Adobe Photoshop",
+            "Adobe Illustrator"
+        ]
+    }

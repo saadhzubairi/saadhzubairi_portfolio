@@ -50,7 +50,7 @@ function Qualifications(props) {
         setShowAllxp(!showAllxp)
     }
 
-    const hideXp = [1, 4, 5]
+    const hideXp = [2, 4, 5]
     const hideCert = [2]
     const hideEd = [1, 2]
 

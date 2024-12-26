@@ -48,7 +48,7 @@ function About(props) {
                 <img src={pic} alt="" className="about__img grey" />
                 <div className="about__data">
                     <Info />
-                    <p className="about__description blurRight">I am highly self-motivated, always willing to improve and push the boundaries in any way possible. I keep myself up to date with recent technologies and diversify my professional work so I can grow an extensive skillset in different areas.</p>
+                    <p className="about__description blurRight">I am a fast learner who masters skills by diving into documentation rather than relying on tutorials. I use AI effectively for implementation but focus on understanding tools deeply. Self-motivated and adaptable, I stay updated with new technologies to build a versatile skill set.</p>
                     <a href={cv} target="_blank" className="button button--flex blurRight" id="cv_button">Download CV</a>
                 </div>
             </div>

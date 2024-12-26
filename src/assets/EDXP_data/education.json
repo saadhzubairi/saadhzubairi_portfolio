@@ -1,5 +1,34 @@
 [
     {
+        "degree": "Master's in Computer Engineering",
+        "institute": "New York University",
+        "years": "2024 - 2026",
+        "logo": "/EDXP_logos/NYU.png",
+        "about": "New York University (NYU) is a prestigious global institution renowned for its academic excellence and vibrant urban campus in the heart of New York City. NYU Tandon School of Engineering, located in Brooklyn, is a hub for innovation, offering cutting-edge programs in engineering, technology, and applied sciences, fostering a dynamic community of future-focused thinkers and creators.",
+        "website": "https://www.nyu.edu/",
+        "linkedIn": "https://www.linkedin.com/school/new-york-university/",
+        "cgpa": "CGPA -/4.00",
+        "session": "August 2024 - May 2026",
+        "moreInfo": [
+            {
+                "Heading": "Courses",
+                "List": [
+                    "Machine Learning",
+                    "Deep Learning",
+                    "Software Engineering",
+                    "Real Time Embedded Systems",
+                    "Web App Development"
+                ]
+            },
+            {
+                "Heading": "Extra & Co-curriculars",
+                "List": [
+                    "Squash Team"
+                ]
+            }
+        ]
+    },
+    {
         "degree": "Bachelor's in Computer Science",
         "institute": "Institute of Business Administration, Karachi",
         "years": "2019 - 2023",
@@ -33,72 +62,7 @@
                 ]
             }
         ]
-    },
-    {
-        "degree": "Intermediate, Pre-Engineering",
-        "institute": "Govt. Degree College, Gulshan-e-Iqbal",
-        "years": "2016-2018",
-        "logo": "EDXP_logos/GDSC.jpeg",
-        "about": "The Government Degree Science and Commerce College is located in Gulshan-e-Iqbal Block # 7, Karachi, Pakistan. It is situated near the popular Safari Park. This college is known for its focus on science and commerce education. It has a significant presence on social media, with thousands of followers and a high level of engagement. The college is well-regarded in the community, and it continues to contribute to the academic growth of its students.",
-        "website": "https://web.facebook.com/GovtDegreeCollegeGulshanEIqbalBlock7",
-        "linkedIn": "https://web.facebook.com/GovtDegreeCollegeGulshanEIqbalBlock7",
-        "cgpa": "A",
-        "session": "August 2016 - May 2018",
-        "moreInfo": [
-            {
-                "Heading": "Courses",
-                "List": [
-                    "Physics",
-                    "Mathematics",
-                    "Chemistry",
-                    "English",
-                    "Pakistan History",
-                    "Islamiat",
-                    "Urdu"
-                ]
-            },
-            {
-                "Heading": "Extra & Co-curriculars",
-                "List": [
-                    "Lead bowler of the college cricket team",
-                    "Participated in community fund rasing",
-                    "Organizing Committee Member of GMUN"
-                ]
-            }
-        ]
-    },
-    {
-        "degree": "Matriculation, Computer Science",
-        "institute": "Falconhouse Grammar School",
-        "years": "2008-2016",
-        "logo": "/EDXP_logos/FHGS.png",
-        "about": "Established in 1984, Falconhouse Grammar School (FGS) has evolved into a prominent chain of educational institutions with 12 campuses in Karachi, as well as locations in Hyderabad and Multan. Affiliated with the University of Cambridge, London, and the Board of Secondary Education, FGS celebrates its 34th year of Academic Excellence. The school, known for its rigorous educational programs. FGS is recognized as one of the largest private English medium school systems in Pakistan, accommodating over 6000 students.",
-        "website": "http://www.falconhouse.edu.pk/",
-        "linkedIn": "https://www.linkedin.com/company/falconhouse-grammar-school",
-        "cgpa": "A+",
-        "session": "May 2008 - May 2016",
-        "moreInfo": [
-            {
-                "Heading": "Courses",
-                "List": [
-                    "Hard Sciences",
-                    "Social Sciences",
-                    "Basic Languages",
-                    "Logic & Religious Studies",
-                    "Grammar and Composition",
-                    "Literature"
-                ]
-            },
-            {
-                "Heading": "Extra & Co-curriculars",
-                "List": [
-                    "Spelling Bee Rep 2011 & 2016",
-                    "National Math Olympiad Rep (2012)",
-                    "Hosted annual result day ceremonies",
-                    "Cricket team member",
-                    "Community welfare initiative member"
-                ]
-            }
-        ]
     }
+    
 ]
+
