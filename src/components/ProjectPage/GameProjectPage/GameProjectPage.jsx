@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
-import CircularProgress from '@mui/material/CircularProgress';
 import './gameProjectPage.css'
 
 export const GameProjectPage = () => {
@@ -38,7 +37,7 @@ export const GameProjectPage = () => {
     loading ? <div className="portfolio_circular_progress">
       <div className="portfolio_wrapper">
         <div className="portfolio_container">
-          <CircularProgress style={{ height: "5rem", width: "5rem", color: "#333" }} />
+          <div className="loading-spinner" />
         </div>
       </div>
     </div>

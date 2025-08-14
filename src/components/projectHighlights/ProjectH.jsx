@@ -16,7 +16,9 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import { EffectCoverflow, Pagination, Navigation } from 'swiper';
+import { EffectCoverflow } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 
 export const ProjectH = () => {
 

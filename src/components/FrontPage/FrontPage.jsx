@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Home from '../home/Home'
+import { Home } from '../home/Home'
 import About from '../about/About'
 import Skills from '../skills/Skills'
 import Qualifications from '../qualifications/Qualifications'
