@@ -1,144 +1,153 @@
 {
     "id": "talenthive",
-    "image": "/Projects/talenthive/talenthive.png",
-    "name": "Talent Hive",
-    "titleImg": "/Projects/talenthive/talenthive.png",
-    "subtitle": "Shortlist 100s or resumes using a powerful AI.",
-    "techs": [
-        "MongoDB",
-        "Express",
-        "React",
-        "Node.js",
-        "Material UI",
-        "Spacy",
-        "Fast API",
-        "AWS",
-        "Firebase"
+    "title": "Talent Hive",
+    "subtitle": "Shortlist hundreds of resumes using a powerful AI.",
+    "links": {
+      "liveDemo": "https://example.com/talenthive-demo", 
+      "github": "https://github.com/your-username/talenthive"
+    },
+    "heroImage": {
+      "src": "/Projects/talenthive/talenthive.png",
+      "alt": "Talent Hive dashboard"
+    },
+    "techStack": {
+      "frameworks": ["React", "Node.js", "Express", "Material UI", "FastAPI"],
+      "database": ["MongoDB", "Firebase"],
+      "tools": ["SpaCy", "AWS S3", "NER", "Cosine Similarity"]
+    },
+    "myResponsibilities": [
+      "Built and deployed the full-stack NLP engine using SpaCy and FastAPI",
+      "Integrated resume parsing and scoring pipeline with job descriptions",
+      "Developed HR dashboard for job creation, preview, and applicant shortlisting",
+      "Created modular candidate application system with auto-parsed resume data",
+      "Implemented company-level admin controls and role-based access"
     ],
-    "desc": "Talent Hive simplifies talent supply chain for HR managers and candidates by using a powerful AI to shortlist candidates with an intuitive and simple UI.",
-    "sections": [
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "Parsing information and scoring profiles made easy!",
-            "sectionData": [
-                {
-                    "alignment": "l",
-                    "image": "/Projects/talenthive/nlp.png",
-                    "text": "We have used SpaCy as our primary deep learning model and have trained it over 100s of resumes to filter out the perfect candidates according to the job description."
-                },
-                {
-                    "alignment": "r",
-                    "image": "/Projects/talenthive/npl_.png",
-                    "text": "The algorithm works by parsing information from the PDF, categorizing the information and extracting primary hard and soft skills, and scoring the profile against a job description to present the perfect candidate.<br/><br/> <b>The parsing happens with the built-in NER model trained over our resume pool and the scoring is done using cosine similarity and correlation between the job description and the profile.</b>"
-                }
-            ]
-        },
-        {
-            "sectionheading": "The perfect tool for HR Managers",
-            "sectionText": "Parsing information and scoring profiles made easy!",
-            "sectionData": [
-                {
-                    "alignment": "r",
-                    "image": "/Projects/talenthive/hr_home.png",
-                    "text": "The dashboard is laid out in a simple manner with all posted jobs on one panel and jobs posted by other HRMS in the panel below. <br/><br/> HRMs can also view scheduled interviews from the right bar and the persistent left navigation bar provides access to all app routes from all screens."
-                },
-                {
-                    "alignment": "l",
-                    "image": "/Projects/talenthive/hr_createJob.png",
-                    "text": "The HRM can easily create a new job simply by clicking the create job button from the left panel."
-                },
-                {
-                    "alignment": "r",
-                    "image": "/Projects/talenthive/hr_previewJob.png",
-                    "text": "Before creating the job, the HRM can preview the job before publishing.<br/><br/>Upon publishing, the job can be viewed on the user dashboard screen."
-                },
-                {
-                    "alignment": "l",
-                    "image": "/Projects/talenthive/hr_job.png",
-                    "text": "HRMS can then view the job easily in their dashboard under the created jobs window.<br/><br/>Once they access it, they can view the posted job with various options and also the applications of the candidates who applied.<br/><br/><b>This is where the NLP shortlists candidates by scoring each application and presenting the top candidates under the shortlisted tab.</b><br/><br/>"
-                },
-                {
-                    "alignment": "r",
-                    "image": "/Projects/talenthive/hr_viewCand.png",
-                    "text": "Candidates can then view the application response to their job post of the specific candidate by clicking on their applicaiton.<br/><br/><b>The NLP engine parses all the information from the resume and presents it in this beautiful format along with the resume score which is simple and clutter free.</b>"
-                },
-                {
-                    "alignment": "l",
-                    "image": "/Projects/talenthive/hr_intCand.png",
-                    "text": "HRMs can then simple accept, reject, or schedule an interview with the candidates without any hassle.<br/><br/>The candidates will be sent a notification if the interview is scheduled."
-                },
-                {
-                    "alignment": "r",
-                    "image": "/Projects/talenthive/hr_company.png",
-                    "text": "The HRMs can further administer and manage compnay details as well as other HRMs within the company in the company screen."
-                },
-                {
-                    "alignment": "l",
-                    "image": "/Projects/talenthive/hr_company2.png",
-                    "text": "<b>HRM Admins can add company logos and edit company details.</b>"
-                },
-                {
-                    "alignment": "r",
-                    "image": "/Projects/talenthive/hr_company3.png",
-                    "text": "The HRM admin can also make other people admins or remove them from adminship."
-                },
-                {
-                    "alignment": "l",
-                    "image": "/Projects/talenthive/hr_addHRM.png",
-                    "text": "HRM admin can also add or delete new HRMs to the company by creating their accounts."
-                }
-            ]
-        },
-        {
-            "sectionheading": "Applying to jobs made easy",
-            "sectionText": "No need to manually enter information anymore!",
-            "sectionData": [
-                {
-                    "alignment": "r",
-                    "image": "/Projects/talenthive/cand_home.png",
-                    "text": "Job seekers can browse through our job-board without needing an account.<br/><br/>The job board is laid out in a very simple but at the same time informative fashion that makes it accessible for people to access the job-board."
-                },
-                {
-                    "alignment": "l",
-                    "image": "/Projects/talenthive/cand_job.png",
-                    "text": "Jobs can also be viewed without needing an account before applying to them.<br/><br/>The screen is informative and contains information about the HRM who posted the job along with their Email and LinkedIn details <b>(if they choose to show it)</b>."
-                },
-                {
-                    "alignment": "r",
-                    "image": "/Projects/talenthive/cand_apply.png",
-                    "text": "The job application screen is where the magic happens.<br/><br/><b>Upon uploading of the CV, our server uploads it to an AWS bucket, then it goes through our NLP engine, and it fields below are filled with the parsed output.</b>"
-                },
-                {
-                    "alignment": "l",
-                    "image": "/Projects/talenthive/cand_apply2.png",
-                    "text": "We've carefully made the fields modular to cater to multiple professional experiences and educational records."
-                },
-                {
-                    "alignment": "r",
-                    "image": "/Projects/talenthive/cand_apply3.png",
-                    "text": "All these fields are changeable and users can add as many fields as they like.<br/><br/>The website initially adds the same number of experiences listed on the resume, but users have the freedom to delete or add as many entries as they please."
-                },
-                {
-                    "alignment": "l",
-                    "image": "/Projects/talenthive/cand_appliedJobs.png",
-                    "text": "The applicant can view the job applied in the applied screen."
-                },
-                {
-                    "alignment": "r",
-                    "image": "/Projects/talenthive/cand_applied.png",
-                    "text": "The status of the application changes when the engine shortlists the application or the job poster chooses to accept or reject the application.<br/><br/>Applicants get the notification of the application status on the right bar, along with the interview timing."
-                },
-                {
-                    "alignment": "l",
-                    "image": "/Projects/talenthive/cand_info.png",
-                    "text": "Applicants can always edit their info and add new pictures from the edit screen."
-                },
-                {
-                    "alignment": "r",
-                    "image": "/Projects/talenthive/cand_jobPage.png",
-                    "text": "Applying to jobs after creating your account becomes a breeze. Our job board personalizes to the applicants core competencies and candidates can directly apply to jobs after answering optional questions posed by the job posters."
-                }
-            ]
-        }
-    ]
-}
+    "methodology": "Developed using **Agile** methodology with sprint-based delivery, emphasizing early functional prototypes and continuous user feedback from HR professionals.",
+    "about": [
+      "Talent Hive streamlines the recruitment process by offering a powerful AI-based resume shortlisting engine. It's built for HR managers to easily post jobs, view applicants, and select the most compatible candidates based on extracted and scored resume data.",
+      "The platform also offers a frictionless job application experience for candidates. Users can upload their resume and have fields auto-populated by the NLP engine. The parsed output is editable, modular, and personalized for each resume.",
+      "Admins can manage HRMs, oversee company data, and ensure role-specific access — making Talent Hive ideal for startups and enterprise HR teams alike."
+    ],
+    "gallery": [
+      {
+        "src": "/Projects/talenthive/nlp.png",
+        "alt": "NLP Engine model architecture"
+      },
+      {
+        "src": "/Projects/talenthive/npl_.png",
+        "alt": "Resume parsing and profile scoring"
+      },
+      {
+        "src": "/Projects/talenthive/hr_home.png",
+        "alt": "HR manager dashboard"
+      },
+      {
+        "src": "/Projects/talenthive/hr_createJob.png",
+        "alt": "Create new job"
+      },
+      {
+        "src": "/Projects/talenthive/hr_previewJob.png",
+        "alt": "Preview job posting"
+      },
+      {
+        "src": "/Projects/talenthive/hr_job.png",
+        "alt": "Posted job view with candidate shortlist"
+      },
+      {
+        "src": "/Projects/talenthive/hr_viewCand.png",
+        "alt": "Candidate resume analysis view"
+      },
+      {
+        "src": "/Projects/talenthive/hr_intCand.png",
+        "alt": "Accept, reject, or schedule interview"
+      },
+      {
+        "src": "/Projects/talenthive/hr_company.png",
+        "alt": "Company profile management"
+      },
+      {
+        "src": "/Projects/talenthive/hr_company2.png",
+        "alt": "Company logo and details edit"
+      },
+      {
+        "src": "/Projects/talenthive/hr_company3.png",
+        "alt": "HRM admin privilege management"
+      },
+      {
+        "src": "/Projects/talenthive/hr_addHRM.png",
+        "alt": "Add or remove HRMs"
+      },
+      {
+        "src": "/Projects/talenthive/cand_home.png",
+        "alt": "Job board view for candidates"
+      },
+      {
+        "src": "/Projects/talenthive/cand_job.png",
+        "alt": "Job detail view with HR info"
+      },
+      {
+        "src": "/Projects/talenthive/cand_apply.png",
+        "alt": "Auto-filled job application"
+      },
+      {
+        "src": "/Projects/talenthive/cand_apply2.png",
+        "alt": "Modular experience/education fields"
+      },
+      {
+        "src": "/Projects/talenthive/cand_apply3.png",
+        "alt": "Edit parsed resume fields"
+      },
+      {
+        "src": "/Projects/talenthive/cand_appliedJobs.png",
+        "alt": "Applied jobs list"
+      },
+      {
+        "src": "/Projects/talenthive/cand_applied.png",
+        "alt": "Application status and interview notification"
+      },
+      {
+        "src": "/Projects/talenthive/cand_info.png",
+        "alt": "Edit candidate profile"
+      },
+      {
+        "src": "/Projects/talenthive/cand_jobPage.png",
+        "alt": "Job application after login"
+      }
+    ],
+    "challengesAndLessons": [
+      {
+        "challenge": "Designing a resume parsing engine accurate across diverse formats",
+        "solution": "Used SpaCy with a custom-trained NER model. Introduced preprocessing steps to clean PDF artifacts and built custom scoring logic using cosine similarity."
+      },
+      {
+        "challenge": "Balancing automation with candidate control",
+        "solution": "Made all parsed fields editable and modular. Let users add/delete sections freely, maintaining trust while leveraging automation. Learned the importance of UX in AI-heavy flows."
+      }
+    ],
+    "skillsDeveloped": {
+      "hardSkills": [
+        "NLP with SpaCy",
+        "FastAPI microservices",
+        "Role-based access control (RBAC)",
+        "Modular form design",
+        "AWS S3 integrations"
+      ],
+      "softSkills": [
+        "UX for automation",
+        "Enterprise product thinking",
+        "End-to-end feature ownership",
+        "Admin workflows and user roles",
+        "Client-facing iteration cycles"
+      ]
+    },
+    "navigation": {
+      "previous": {
+        "name": "Hoops",
+        "slug": "hoops"
+      },
+      "next": {
+        "name": "Project Nebula",
+        "slug": "project-nebula"
+      }
+    }
+  }  

@@ -1,91 +1,124 @@
 {
     "id": "latex",
-    "image": "/Projects/latex/latex.png",
-    "name": "Latex Lite",
-    "subtitle": "Make Latex documents with ease.",
-    "titleImg": "/Projects/latex/latex.png",
-    "techs": [
-        "Java",
-        "JavaFX",
-        "CSS3"
+    "title": "LaTeX Lite",
+    "subtitle": "Make LaTeX documents with ease.",
+    "links": {
+      "liveDemo": "https://example.com/latex-lite-demo", 
+      "github": "https://github.com/your-username/latex-lite"
+    },
+    "heroImage": {
+      "src": "/Projects/latex/latex.png",
+      "alt": "LaTeX Lite application splash screen"
+    },
+    "techStack": {
+      "frameworks": ["JavaFX"],
+      "database": [],
+      "tools": ["Java", "CSS3"]
+    },
+    "myResponsibilities": [
+      "Designed and implemented JavaFX-based desktop interface for LaTeX generation",
+      "Built modular components for forms, preview, list generation, and code insertion",
+      "Developed live preview engine reflecting structured content creation",
+      "Engineered undo functionality and state-controlled UI flows for lists and sections",
+      "Handled dynamic formatting for code, file paths, and documents"
     ],
-    "desc": "LaTeX Lite is a simple desktop app that enables people new to LaTeX to generate LaTeX code without much prior knowledge.",
-    "sections": [
-        {
-            "sectionheading": "A simple user interface",
-            "sectionText": "A smooth and intuitive interface that starts with a simple form",
-            "sectionData": [
-                {
-                    "alignment": "l",
-                    "image": "/Projects/latex/1.png",
-                    "text": "The first screen is very simple with a neat form for different attributes to be added to the document.<br/><br/>Users can select multiple document types and other preset attributes set within latex.<br/><br/>This acts as an introduction to the users of multiple kinds of formats offered by latex for document type, paper size, and font style."
-                },
-                {
-                    "alignment": "r",
-                    "image": "/Projects/latex/2.png",
-                    "text": "All the options can be accessed through these custom CSS3 designed combo-boxes.<br/><br/>Users will only be able to select certain values for these from the combo-box."
-                },
-                {
-                    "alignment": "l",
-                    "image": "/Projects/latex/3.png",
-                    "text": "The homescreen is very simple with a proper layout. <br/><br/>The left pane holds all the control and the right pane holds the persistent preview pane that users can zoom in and out and also <b>undo</b> any operation if they want to."
-                },
-                {
-                    "alignment": "r",
-                    "image": "/Projects/latex/4.png",
-                    "text": "The project also uses simple UI modules such as this beautiful calendar model which make it simple to select a date range for a specific trip."
-                },
-                {
-                    "alignment": "l",
-                    "image": "/Projects/latex/5.png",
-                    "text": "The ‘Paragraphs & Sections’ tab is a versatile feature that enhances text organization and formatting. It allows users to create structured content by adding headings accompanied by body text, forming distinct sections or sub-sections.<br/><br/> Users can also add standalone paragraphs without headings.<br/><br/> The feature also includes the option to insert line breaks, facilitating improved readability and flow of text."
-                },
-                {
-                    "alignment": "r",
-                    "image": "/Projects/latex/6.png",
-                    "text": "The ‘Items’ feature allows users to create structured content by adding ordered and unordered lists. As items are added, changes are dynamically reflected in the preview pane, providing real-time feedback. To ensure proper formatting, <b>other features are temporarily disabled until the list is concluded using the ‘End List’ button.</b>"
-                },
-                {
-                    "alignment": "l",
-                    "image": "/Projects/latex/7.png",
-                    "text": "Users have the option to utilize an alternative user interface for adding lists. This interface provides the added benefit of <b>allowing users to restructure the list prior to integrating</b> it into the main document code."
-                },
-                {
-                    "alignment": "r",
-                    "image": "/Projects/latex/8.png",
-                    "text": "Items in the list can be added using the neat dialogue box as shown here."
-                },
-                {
-                    "alignment": "l",
-                    "image": "/Projects/latex/9.png",
-                    "text": "Users have the ability to incorporate <b>code</b> into their documents. The inserted code is <b>automatically formatted and highlighted</b> using a LaTeX library, ensuring clear readability. Additionally, the code is displayed in a <b>monospace font</b>, further enhancing its presentation"
-                },
-                {
-                    "alignment": "r",
-                    "image": "/Projects/latex/10.png",
-                    "text": "As you can see, the code will be presented in the preview to peruse."
-                },
-                {
-                    "alignment": "l",
-                    "image": "/Projects/latex/11.png",
-                    "text": "Users have the capability to insert file paths and directories into their documents.<br/><br/>These elements are neatly formatted within a box for clear distinction and are displayed in a monospace font, ensuring uniformity and enhancing readability."
-                },
-                {
-                    "alignment": "r",
-                    "image": "/Projects/latex/12.png",
-                    "text": "Users are provided with the flexibility to modify the initial information, preferences, and parameters of the documents at any point before the final code generation. This allows for greater control and customization, ensuring the output aligns with the user’s requirements."
-                },
-                {
-                    "alignment": "l",
-                    "image": "/Projects/latex/13.png",
-                    "text": "To generate the final document, users simply need to click the ‘Generate’ button. The resulting text can then be copied and pasted into a LaTeX compiler, such as MiKTeX. The output will be a valid LaTeX document that compiles exactly as previewed, ensuring a seamless transition from the editor to the final document."
-                },
-                {
-                    "alignment": "r",
-                    "image": "/Projects/latex/14.png",
-                    "text": "As you can observe, the documents are <b>consistent with the intended design and layout</b>. This is an impressive feature, isn’t it?"
-                }
-            ]
-        }
-    ]
-}
+    "methodology": "Built using **modular desktop UI design** principles with a focus on structured content input, live feedback, and export consistency. Prioritized intuitive UX for users unfamiliar with LaTeX syntax.",
+    "about": [
+      "LaTeX Lite is a beginner-friendly desktop app designed to help users generate LaTeX documents without prior exposure to LaTeX syntax. It enables structured document building through intuitive inputs and real-time previewing.",
+      "The app offers configurable document types, paragraph/section creation, list builders, code formatters, and path inserters — all wrapped in a JavaFX UI with live preview. It significantly reduces the learning curve for new LaTeX users.",
+      "Upon finalizing the content, users can export the generated LaTeX code, paste it into any LaTeX compiler (like MiKTeX), and get perfectly formatted documents consistent with the preview."
+    ],
+    "gallery": [
+      {
+        "src": "/Projects/latex/1.png",
+        "alt": "Initial document configuration form"
+      },
+      {
+        "src": "/Projects/latex/2.png",
+        "alt": "Combo-box selection of attributes"
+      },
+      {
+        "src": "/Projects/latex/3.png",
+        "alt": "Main interface with controls and preview pane"
+      },
+      {
+        "src": "/Projects/latex/4.png",
+        "alt": "Simple calendar UI module"
+      },
+      {
+        "src": "/Projects/latex/5.png",
+        "alt": "Paragraph and section input interface"
+      },
+      {
+        "src": "/Projects/latex/6.png",
+        "alt": "List generation with real-time preview"
+      },
+      {
+        "src": "/Projects/latex/7.png",
+        "alt": "Alternate interface for list reordering"
+      },
+      {
+        "src": "/Projects/latex/8.png",
+        "alt": "Dialog box for adding list items"
+      },
+      {
+        "src": "/Projects/latex/9.png",
+        "alt": "Code block input and formatting"
+      },
+      {
+        "src": "/Projects/latex/10.png",
+        "alt": "Code preview output"
+      },
+      {
+        "src": "/Projects/latex/11.png",
+        "alt": "File path and directory input"
+      },
+      {
+        "src": "/Projects/latex/12.png",
+        "alt": "Modify document setup options"
+      },
+      {
+        "src": "/Projects/latex/13.png",
+        "alt": "Generate final LaTeX output"
+      },
+      {
+        "src": "/Projects/latex/14.png",
+        "alt": "Compiled LaTeX output screen"
+      }
+    ],
+    "challengesAndLessons": [
+      {
+        "challenge": "Designing a user-friendly interface that maps to complex LaTeX structures",
+        "solution": "Built structured UI components with clear semantics (e.g., for sections, lists, and code) and provided live preview feedback. Learned how to simplify abstract syntax through visual tools."
+      },
+      {
+        "challenge": "Maintaining real-time preview fidelity with final LaTeX output",
+        "solution": "Used strict formatting templates and sync logic between UI inputs and preview rendering. This emphasized the importance of WYSIWYG consistency in tooling UX."
+      }
+    ],
+    "skillsDeveloped": {
+      "hardSkills": [
+        "Desktop UI Design with JavaFX",
+        "State Management in Java",
+        "Live Preview and Data Binding",
+        "Dynamic Content Rendering",
+        "Custom Form Component Development"
+      ],
+      "softSkills": [
+        "UX Design for Technical Tools",
+        "Reducing User Onboarding Complexity",
+        "Feature Modularity",
+        "Designing for Accessibility and Clarity"
+      ]
+    },
+    "navigation": {
+      "previous": {
+        "name": "Halpert's Booking",
+        "slug": "halpert"
+      },
+      "next": {
+        "name": "Project Nebula",
+        "slug": "project-nebula"
+      }
+    }
+  }  

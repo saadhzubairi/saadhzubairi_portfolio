@@ -1,78 +1,50 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import ProjectCard from "./ProjectCard";
-import MasonryImageList from "./ImageList";
-import "./portfoliopage.css";
+import { motion } from 'framer-motion';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import ProjectCard from './ProjectCard';
+import './portfoliopage.css';
 
 // Import project data
-import hoops from "@/assets/portfolio/hoops.json";
-import talenthive from "@/assets/portfolio/talenthive.json";
-import halpert from "@/assets/portfolio/halpert.json";
-import credx from "@/assets/portfolio/credx.json";
-import latex from "@/assets/portfolio/latex.json";
-import crickex from "@/assets/portfolio/crickex.json";
-import tutor from "@/assets/portfolio/tutor.json";
-import topdown from "@/assets/portfolio/topdown.json";
-import tetromania from "@/assets/portfolio/tetromania.json";
-import hidenseek from "@/assets/portfolio/hidenseek.json";
-import pixelcut from "@/assets/portfolio/pixelcut.json";
+import hoops from '@/assets/portfolio/hoops.json';
+import talenthive from '@/assets/portfolio/talenthive.json';
+import halpert from '@/assets/portfolio/halpert.json';
+import credx from '@/assets/portfolio/credx.json';
+import latex from '@/assets/portfolio/latex.json';
+import crickex from '@/assets/portfolio/crickex.json';
+import tutor from '@/assets/portfolio/tutor.json';
+import topdown from '@/assets/portfolio/topdown.json';
+import tetromania from '@/assets/portfolio/tetromania.json';
+import hidenseek from '@/assets/portfolio/hidenseek.json';
+import pixelcut from '@/assets/portfolio/pixelcut.json';
+import CustomDiv from '../CustomDiv';
 
 interface TabData {
   id: string;
   label: string;
-  content: React.ReactNode;
+  projects: any[];
 }
 
 const tabs: TabData[] = [
   {
-    id: "web",
-    label: "Web",
-    content: (
-      <>
-        <ProjectCard data={hoops} />
-        <ProjectCard data={talenthive} />
-        <ProjectCard data={halpert} />
-      </>
-    ),
+    id: 'mostRecent',
+    label: 'Most Recent',
+    projects: [hoops, talenthive],
   },
   {
-    id: "mobile",
-    label: "Mobile",
-    content: "Coming Soon",
+    id: 'gamedesign',
+    label: 'Hobbyist Game Dev',
+    projects: [pixelcut, tetromania, topdown, hidenseek],
   },
   {
-    id: "desktop",
-    label: "Desktop",
-    content: (
-      <>
-        <ProjectCard data={latex} />
-        <ProjectCard data={crickex} />
-        <ProjectCard data={tutor} />
-      </>
-    ),
+    id: 'earlyCoursework',
+    label: 'Early Coursework',
+    projects: [latex, crickex, tutor, halpert, credx],
   },
   {
-    id: "uiux",
-    label: "UI/UX",
-    content: <ProjectCard data={credx} />,
-  },
-  {
-    id: "gamedesign",
-    label: "Game Design",
-    content: (
-      <>
-        <ProjectCard data={pixelcut} />
-        <ProjectCard data={tetromania} />
-        <ProjectCard data={topdown} />
-        <ProjectCard data={hidenseek} />
-      </>
-    ),
-  },
-  {
-    id: "photography",
-    label: "Photography",
-    content: "coming soon",
+    id: 'photography',
+    label: 'Photography',
+    projects: [],
   },
 ];
 
@@ -91,7 +63,7 @@ const PortfolioPage: React.FC = () => {
   }, [ind]);
 
   useEffect(() => {
-    const delay = 300;
+    const delay = 100;
     const timeoutId = setTimeout(() => {
       setLoading(false);
     }, delay);
@@ -100,50 +72,71 @@ const PortfolioPage: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="portfolio_circular_progress">
-        <div className="portfolio_wrapper">
-          <div className="portfolio_container">
-            <div className="loading-spinner" />
-          </div>
-        </div>
+      <div className="flex h-screen w-full items-center justify-center">
+        <div className="h-12 w-12 animate-spin rounded-full border-4 border-primary border-t-transparent" />
       </div>
     );
   }
 
   return (
-    <div className="portfolio_wrapper">
-      <div className="portfolio_container">
-        <div className="portfolio_heading">Portfolio</div>
-        <div className="portfolio_subText">HAVE A LOOK AT MY WORK</div>
-        <div className="portfolio_body">
-          <Tabs
-            defaultValue={activeTab}
-            className="w-[90%] flex flex-col items-center"
-            onValueChange={setActiveTab}
-          >
-            <TabsList className="grid grid-cols-3 lg:grid-cols-6 gap-2">
-              {tabs.map((tab) => (
-                <TabsTrigger
-                  key={tab.id}
-                  value={tab.id}
-                  className="data-[state=active]:bg-gray-800 data-[state=active]:text-white"
-                >
-                  {tab.label}
-                </TabsTrigger>
-              ))}
-            </TabsList>
+    <div className="w-full py-12">
+      <CustomDiv>
+        <div className="h-10"></div>
+      </CustomDiv>
+      <CustomDiv>
+        <div className="h-10"></div>
+      </CustomDiv>
+      <CustomDiv>
+        <div className="text-center">
+          <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">My Work</h1>
+        </div>
+      </CustomDiv>
+      <CustomDiv>
+        <div className="text-center">
+          <p className="text-lg text-muted-foreground">Some interesting projects that kept me occupied</p>
+        </div>
+      </CustomDiv>
+
+      <CustomDiv>
+        <Tabs defaultValue={activeTab} className="mt-10" onValueChange={setActiveTab}>
+          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-6">
             {tabs.map((tab) => (
-              <TabsContent
+              <TabsTrigger
                 key={tab.id}
                 value={tab.id}
-                className="mt-6 flex flex-col items-center gap-12"
+                className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
               >
-                {tab.content}
-              </TabsContent>
+                {tab.label}
+              </TabsTrigger>
             ))}
-          </Tabs>
-        </div>
-      </div>
+          </TabsList>
+          {tabs.map((tab) => (
+            <TabsContent key={tab.id} value={tab.id}>
+              {tab.projects.length > 0 ? (
+                <motion.div
+                  className="grid grid-cols-1 gap-8 pt-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {tab.projects.map((project, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.2, delay: index * 0.1 }}
+                    >
+                      <ProjectCard data={project} />
+                    </motion.div>
+                  ))}
+                </motion.div>
+              ) : (
+                <div className="pt-10 text-center text-muted-foreground">Coming Soon</div>
+              )}
+            </TabsContent>
+          ))}
+        </Tabs>
+      </CustomDiv>
     </div>
   );
 };

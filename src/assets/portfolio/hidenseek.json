@@ -4,18 +4,25 @@
     "name": "Chupan Chupai",
     "subtitle": "A 3D maze based hide-n-seek game made with Unity.",
     "titleImg": "/Projects/hidenseek/hidenseek.png",
+    "heroImage": {
+        "src": "/Projects/hidenseek/hidenseek.png",
+        "alt": "Chupan Chupai"
+    },
     "type": "game",
-    "techs": [
-        "C#",
-        "Unity 3D"
-    ],
+    "techStack": {
+        "frameworks": [
+            "C#",
+            "Unity 3D"
+        ],
+        "database": [],
+        "tools": []
+    },
     "desc": "A hypercasual 3D game based on mazes and character chasing made in Unity.",
     "introText": "To learn 3d game development in Unity, I took on the challenge of developing a game called Chupan-Chupai which roughly translates to Hide 'n Seek in English. The game is a simple hyper-casual 3d maze based game where the player needs to navigate through a maze-like level and collect all the coins before the timer expires or before any of the seeker catches the player. The game has simple touch controls and has straightforward mechanics, easily digestible by anyone who plays it.",
     "techImg": "/Projects/hidenseek/techImg.png",
     "techHead": "Unity 3D",
     "techText": "The game was developed using C# within Unity. The development stack comprised Unity's native text rendering for dynamic text display, while sound effects and music were managed through Unity's basic audio components. Graphic assets were efficiently handled using Unity's built-in asset management system.",
     "structureText": "<p>Unity's simple and conventional file hierarchy was used for the structure, ensuring an intuitive organization. The central player controls coded in the CharController.cs script, which has the logic of the player's navigation through the 3D maze. Following are the key-elements:</p><p> </p><p> </p><p>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Player and enemy controls Script:</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CharController.cs: This script governs the player's movement within the maze, implementing touch controls for an easy and responsive gaming experience.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SeekerMovement.cs and PlayerDetection.cs:&nbsp;These scripts implement a simple AI behavior for our seeker which is a basic “patrol and chase” behavior.</p><p>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Game Assets:</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Levels:</strong></p><p><strong> </strong>This contains all the level layouts created with Blender.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Materials:</strong></p><p> Here we have the materials that define the visual properties of some in-game elements, such as for the coins.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Scenes:</strong></p><p> These of course comprise of all the primary gameplay scenes or levels and the menu screen as well.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Toon Poly Asset and Animations:</strong></p><p> For the player and the enemy, I used a simple graphical asset from the unity store called the “Toon Poly Asset” which was quite customizable. The animations were also pre-built and acquired from Mixamo.</p><p><br></p><h2><strong>Seeker AI:</strong></h2><p><br></p><p>The Seeker AI as stated above is implemented within the SeekerMovement.cs and PlayerDetection.cs. These scripts implement a basic “patrol and chase” behavior: the seeker patrols between random points until the player comes within its vision range, at which point it “detects” the player.</p><p><br></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>SeekerMovement.cs:</strong> The game starts by assigning the NavMeshAgent component to the seeker. In each game frame, the script checks if the seeker has a destination. If not, it randomly picks one from predefined points and sets it as the destination. If a destination is set, the seeker moves towards it. Once the seeker reaches the destination (within 1 unit distance), it indicates the need for a new destination in the next frame.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>PlayerDetection.cs:</strong> At game start, the script identifies and stores the “Player” object’s position. It then continuously calculates the distance between the seeker and the player during gameplay. If the player comes within the seeker’s vision range, the player is caught and the game is over.</p>",
-    
     "assetText": "The game uses minimal assets. As stated above, the characters were from the Toon Poly Assets directly from Unity Asset Store with minimal adjustments. The coin and the level designs were made using blender 3d. The game sound effects and music were downloaded from the unity asset store and also some free audio assets from YouTube.",
     "assets": [
         "/Projects/hidenseek/asset_1.png",

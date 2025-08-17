@@ -3,7 +3,7 @@ export default {
   darkMode: ["class"],
   content: [
     "./index.html",
-    "./src/**/*.{js,jsx,ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   theme: {
   	container: {
@@ -14,6 +14,9 @@ export default {
   		}
   	},
   	extend: {
+	  		fontFamily: {
+	  			sans: ["InterVariable", "system-ui", "sans-serif"]
+	  		},
   		colors: {
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',

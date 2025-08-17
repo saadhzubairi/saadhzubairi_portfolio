@@ -1,69 +1,95 @@
 {
     "id": "tutor",
-    "image": "/Projects/tutor/tutor.png",
-    "name": "Tutor Finder",
+    "title": "Tutor Finder",
     "subtitle": "A smart tutor and student pairing application.",
-    "titleImg": "/Projects/tutor/title.png",
-    "techs": [
-        "Java",
-        "JavaFX",
-        "CSS3",
-        "SQL"
+    "links": {
+      "liveDemo": "https://example.com/tutor-finder", 
+      "github": "https://github.com/your-username/tutor-finder"
+    },
+    "heroImage": {
+      "src": "/Projects/tutor/tutor.png",
+      "alt": "Tutor Finder application preview"
+    },
+    "techStack": {
+      "frameworks": ["JavaFX"],
+      "database": ["SQL"],
+      "tools": ["Java", "CSS3"]
+    },
+    "myResponsibilities": [
+      "Developed pairing algorithms using data structures like graphs and priority queues",
+      "Designed the complete JavaFX UI for student/tutor registration and search",
+      "Implemented filtering and ranking logic based on subject, timing, and location",
+      "Created clean navigation and dashboard views using custom CSS3",
+      "Managed persistent data storage with SQL for tutor-student records"
     ],
-    "desc": "Tutor finder is an app designed for the demonstration of data structure concepts. It uses multiple algorithms and data structures to pair students and tutors based on their requirements.",
-    "sections": [
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "l",
-                    "image": "/Projects/tutor/1.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                },
-                {
-                    "alignment": "r",
-                    "image": "/Projects/tutor/2.png",
-                    "text": "A beautiful array of destinations and hotel types is laid out neatly to give you a holistic understanding of where to go."
-                },
-                {
-                    "alignment": "l",
-                    "image": "/Projects/tutor/3.png",
-                    "text": "The search screen is made to be very minimal with a persistent colorful search helper pane sticked to the left side and all the search results neatly displayed on the right."
-                }
-            ]
-        },
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "l",
-                    "image": "/Projects/tutor/4.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                },
-                {
-                    "alignment": "r",
-                    "image": "/Projects/tutor/5.png",
-                    "text": "A beautiful array of destinations and hotel types is laid out neatly to give you a holistic understanding of where to go."
-                }
-            ]
-        },
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "l",
-                    "image": "/Projects/tutor/6.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                },
-                {
-                    "alignment": "r",
-                    "image": "/Projects/tutor/7.png",
-                    "text": "A beautiful array of destinations and hotel types is laid out neatly to give you a holistic understanding of where to go."
-                }
-            ]
-        }
-    ]
-}
+    "methodology": "Built as a **data structures and algorithms demonstrator**, this project uses clean modular Java code and algorithmic logic to match students with appropriate tutors efficiently, wrapped in a fully interactive UI.",
+    "about": [
+      "Tutor Finder is an academic JavaFX desktop application showcasing the application of data structures in solving real-world problems. It facilitates intelligent pairing of students with suitable tutors based on multiple parameters such as subject, availability, and ratings.",
+      "It includes intuitive navigation, search filtering, and student-tutor match logic using priority-based matching and sorting algorithms. The application stores persistent tutor and student data using SQL backend."
+    ],
+    "gallery": [
+      {
+        "src": "/Projects/tutor/1.png",
+        "alt": "Landing page with navigation pane"
+      },
+      {
+        "src": "/Projects/tutor/2.png",
+        "alt": "Tutor and subject selection screen"
+      },
+      {
+        "src": "/Projects/tutor/3.png",
+        "alt": "Search and filtering interface"
+      },
+      {
+        "src": "/Projects/tutor/4.png",
+        "alt": "Student registration screen"
+      },
+      {
+        "src": "/Projects/tutor/5.png",
+        "alt": "Tutor profiles list"
+      },
+      {
+        "src": "/Projects/tutor/6.png",
+        "alt": "Detailed match suggestion view"
+      },
+      {
+        "src": "/Projects/tutor/7.png",
+        "alt": "Tutor availability calendar"
+      }
+    ],
+    "challengesAndLessons": [
+      {
+        "challenge": "Efficiently pairing tutors and students based on multiple preferences",
+        "solution": "Implemented a custom priority scoring system using heaps and hash maps to rank tutors for each student. Learned how to balance runtime with multi-criteria matching logic."
+      },
+      {
+        "challenge": "Designing a modular UI that cleanly separates student and tutor flows",
+        "solution": "Used JavaFX components and scenes to create dedicated flows while keeping shared state centralized. Reinforced skills in separation of concerns and controller-based UI design."
+      }
+    ],
+    "skillsDeveloped": {
+      "hardSkills": [
+        "Graph-based Matching Algorithms",
+        "Priority Queues and Heaps",
+        "JavaFX Layouts and Navigation",
+        "Relational Data Modeling",
+        "Desktop UI with CSS3 Styling"
+      ],
+      "softSkills": [
+        "System Design Thinking",
+        "User Flow Mapping",
+        "Modular Code Structure",
+        "Debugging Multi-path Navigation"
+      ]
+    },
+    "navigation": {
+      "previous": {
+        "name": "Crick-Ex One",
+        "slug": "crickex"
+      },
+      "next": {
+        "name": "Project Nebula",
+        "slug": "project-nebula"
+      }
+    }
+  }  

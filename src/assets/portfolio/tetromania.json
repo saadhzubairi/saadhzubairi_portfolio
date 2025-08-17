@@ -4,11 +4,19 @@
     "name": "Tetromania",
     "subtitle": "A minimal Tetris game made with Unity.",
     "titleImg": "/Projects/tetromania/tetromania.png",
+    "heroImage": {
+        "src": "/Projects/tetromania/tetromania.png",
+        "alt": "Tetromania"
+    },  
     "type": "game",
-    "techs": [
-        "C#",
-        "Unity 2D"
-    ],
+    "techStack": {
+        "frameworks": [
+            "C#",
+            "Unity 2D"
+        ],
+        "database": [],
+        "tools": []
+    },
     "desc": "A minimal and straightforward Tetris game with callibrated swipe controls and fun sound effects.",
     "introText": " Dissatisfied with the existing Tetris games on the Play Store, I wanted to make my own with controls and swipe gestures that fit nicely with the game. I followed a YouTube tutorial to learn the basics of how a Tetris game is developed and incorporated my own touch controls and gestures, along with sound effects, personalized to my own liking. The project was quite a learning journey for me and was quite satisfying to see the end result.",
     "techImg": "/Projects/tetromania/techImg.png",

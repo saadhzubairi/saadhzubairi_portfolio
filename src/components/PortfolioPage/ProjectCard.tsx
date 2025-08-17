@@ -1,17 +1,15 @@
 import React, { useState } from 'react';
-import { useNavigate } from "react-router-dom";
-import { ArrowUpRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-// Using a minimal data shape to keep JSON types flexible during migration
+import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { ArrowUpRight } from 'lucide-react';
 
 interface ProjectCardProps {
-  // Allow any shape for now; we only require a few fields below
-  // to avoid strict typing issues with various JSON structures
   data: any;
-  onH?: boolean;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ data, onH = false }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
   const navigate = useNavigate();
   const [imgLoading, setImgLoading] = useState(true);
 
@@ -20,88 +18,56 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data, onH = false }) => {
   };
 
   const handleClick = () => {
-    const route = data.type === "game" 
-      ? `/Portfolio/Project/Game/${data.id}`
-      : `/Portfolio/Project/${data.id}`;
+    const route = data.type === 'game' ? `/portfolio/project/game/${data.id}` : `/portfolio/project/${data.id}`;
     navigate(route);
   };
 
   return (
-    <div 
+    <motion.div
       onClick={handleClick}
-      className={`
-        group cursor-pointer overflow-hidden transition-all duration-300
-        hover:shadow-xl dark:hover:shadow-gray-800 rounded-lg border
-        ${onH ? 'flex-row max-w-5xl' : 'flex-col max-w-md'}
-        bg-background/50 backdrop-blur supports-[backdrop-filter]:bg-background/50
-      `}
+      className="group cursor-pointer h-full"
+      transition={{ duration: 0.2 }}
     >
-      <div className={`
-        flex ${onH ? 'flex-row gap-6 p-6' : 'flex-col'}
-        w-full transition-all duration-300
-      `}>
-        {/* Right Section with Description */}
-        <div className={`
-          flex flex-col justify-between gap-4
-          ${onH ? 'w-1/2 order-2' : 'order-2 p-6'}
-        `}>
-          <p className="text-muted-foreground">
-            {data.desc}
-          </p>
-          <Button 
-            variant="ghost" 
-            className="group-hover:bg-primary group-hover:text-primary-foreground w-fit"
-          >
-            check it out!
-          </Button>
-        </div>
-
-        {/* Left Section with Image and Title */}
-        <div className={`
-          flex flex-col
-          ${onH ? 'w-1/2 order-1' : 'order-1'}
-        `}>
-          <div className="relative aspect-video overflow-hidden rounded-t-lg">
-            {imgLoading && (
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="loading-spinner w-8 h-8 border-2" />
-              </div>
-            )}
-            <img
-              src={data.image}
-              alt={data.name}
-              className={`
-                w-full h-full object-cover transition-all duration-500
-                group-hover:scale-105
-                ${imgLoading ? 'opacity-0' : 'opacity-100'}
-              `}
-              onLoad={handleImgLoad}
-            />
-          </div>
-
-          <div className={`
-            flex flex-col gap-1
-            ${onH ? 'mt-4' : 'p-6 pt-4'}
-          `}>
-            <div className="flex items-center justify-between">
-              <h3 className="font-semibold text-lg text-foreground">
-                {data.name}
-              </h3>
-              <Button 
-                variant="ghost" 
-                size="icon" 
-                className="h-8 w-8 group-hover:text-primary"
-              >
-                <ArrowUpRight className="h-4 w-4" />
-              </Button>
+      <Card className="overflow-hidden rounded-sm border shadow-sm transition-shadow duration-300 hover:shadow-md dark:border-gray-800 dark:hover:shadow-gray-700/50 h-full flex flex-col">
+        <div className="relative aspect-[4/3] overflow-hidden">
+          {imgLoading && (
+            <div className="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800">
+              <div className="h-8 w-8 animate-spin rounded-full border-2 border-primary border-t-transparent" />
             </div>
-            <p className="text-sm text-muted-foreground">
-              {data.subtitle}
-            </p>
-          </div>
+          )}
+          <img
+            src={data.heroImage.src}
+            alt={data.heroImage.alt}
+            className={`h-full w-full object-cover transition-opacity duration-500 ${imgLoading ? 'opacity-0' : 'opacity-100'}`}
+            onLoad={handleImgLoad}
+          />
+          <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
         </div>
-      </div>
-    </div>
+        <CardHeader className="p-4">
+          <div className="flex items-start justify-between">
+            <div>
+              <CardTitle className="text-lg font-semibold text-foreground">{data.title}</CardTitle>
+              <p className="text-sm text-muted-foreground">{data.subtitle}</p>
+            </div>
+            <Button variant="ghost" size="icon" className="h-8 w-8 shrink-0 opacity-0 transition-opacity group-hover:opacity-100">
+              <ArrowUpRight className="h-4 w-4" />
+            </Button>
+          </div>
+        </CardHeader>
+        <CardContent className="px-4 pb-2 flex-grow">
+          <p className="text-sm text-muted-foreground line-clamp-2">{data.desc}</p>
+        </CardContent>
+        <CardFooter className="p-4 pt-0">
+          <div className="flex flex-wrap gap-2">
+            {data.techStack?.frameworks?.slice(0, 3).map((tech: string, index: number) => (
+              <div key={index} className="rounded-full bg-gray-100 px-2 py-1 text-xs font-medium text-gray-800 dark:bg-gray-700 dark:text-gray-200">
+                {tech}
+              </div>
+            ))}
+          </div>
+        </CardFooter>
+      </Card>
+    </motion.div>
   );
 };
 

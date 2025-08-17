@@ -1,104 +1,120 @@
 {
     "id": "crickex",
-    "image": "/Projects/crickex/crickex.png",
-    "name": "Crick-Ex One",
+    "title": "Crick-Ex One",
     "subtitle": "A Beautiful Digital Cricket Scorebook.",
-    "titleImg": "/Projects/crickex/title.png",
-    "techs": [
-        "Java",
-        "JavaFX",
-        "Oracle-19c",
-        "SQL"
+    "links": {
+      "liveDemo": "https://example.com/crickex-demo", 
+      "github": "https://github.com/your-username/crickex"
+    },
+    "heroImage": {
+      "src": "/Projects/crickex/crickex.png",
+      "alt": "Crick-Ex One splash screen"
+    },
+    "techStack": {
+      "frameworks": ["JavaFX"],
+      "database": ["Oracle 19c", "SQL"],
+      "tools": ["Java"]
+    },
+    "myResponsibilities": [
+      "Built full tournament management system with player and team registration modules",
+      "Designed and implemented real-time scoreboard and match tracking interfaces",
+      "Engineered a persistent backend using Oracle 19c and SQL schema design",
+      "Focused on UI usability for projection-ready scoreboard during matches",
+      "Created calendar modules and navigation flows for multi-page app"
     ],
-    "desc": "Crick-Ex One is a Digital Cricket Scorebook I made for my OOP course. It's a full fledged Scorebook and tournament maintanence app with many rich features and customizations.",
-    "sections": [
-        {
-            "sectionheading": "Adding Teams and players",
-            "sectionText": "A smooth and beautifully designed team addition and player creation interface.",
-            "sectionData": [
-                {
-                    "alignment": "l",
-                    "image": "/Projects/crickex/1.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                },
-                {
-                    "alignment": "r",
-                    "image": "/Projects/crickex/2.png",
-                    "text": "A beautiful array of destinations and hotel types is laid out neatly to give you a holistic understanding of where to go."
-                },
-                {
-                    "alignment": "l",
-                    "image": "/Projects/crickex/3.png",
-                    "text": "The search screen is made to be very minimal with a persistent colorful search helper pane sticked to the left side and all the search results neatly displayed on the right."
-                },
-                {
-                    "alignment": "r",
-                    "image": "/Projects/crickex/4.png",
-                    "text": "The project also uses simple UI modules such as this beautiful calendar model which make it simple to select a date range for a specific trip."
-                },
-                {
-                    "alignment": "l",
-                    "image": "/Projects/crickex/4.png",
-                    "text": "The search screen is made to be very minimal with a persistent colorful search helper pane sticked to the left side and all the search results neatly displayed on the right."
-                },
-                {
-                    "alignment": "r",
-                    "image": "/Projects/crickex/5.png",
-                    "text": "The project also uses simple UI modules such as this beautiful calendar model which make it simple to select a date range for a specific trip."
-                },
-                {
-                    "alignment": "l",
-                    "image": "/Projects/crickex/6.png",
-                    "text": "The search screen is made to be very minimal with a persistent colorful search helper pane sticked to the left side and all the search results neatly displayed on the right."
-                }
-            ]
-        },
-        {
-            "sectionheading": "Start a new match",
-            "sectionText": "A simple and error free process to select the teams and match configurations to begin play.",
-            "sectionData": [
-                {
-                    "alignment": "l",
-                    "image": "/Projects/crickex/7.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                },
-                {
-                    "alignment": "r",
-                    "image": "/Projects/crickex/8.png",
-                    "text": "A beautiful array of destinations and hotel types is laid out neatly to give you a holistic understanding of where to go."
-                }
-            ]
-        },
-        {
-            "sectionheading": "Let the game begin",
-            "sectionText": "An intuitive scoreboard UI to record and view scoreboard which is also designed to be projected.",
-            "sectionData": [
-                {
-                    "alignment": "r",
-                    "image": "/Projects/crickex/10.png",
-                    "text": "The project also uses simple UI modules such as this beautiful calendar model which make it simple to select a date range for a specific trip."
-                },
-                {
-                    "alignment": "l",
-                    "image": "/Projects/crickex/11.png",
-                    "text": "The search screen is made to be very minimal with a persistent colorful search helper pane sticked to the left side and all the search results neatly displayed on the right."
-                },
-                {
-                    "alignment": "r",
-                    "image": "/Projects/crickex/12.png",
-                    "text": "The project also uses simple UI modules such as this beautiful calendar model which make it simple to select a date range for a specific trip."
-                },
-                {
-                    "alignment": "l",
-                    "image": "/Projects/crickex/13.png",
-                    "text": "The project also uses simple UI modules such as this beautiful calendar model which make it simple to select a date range for a specific trip."
-                },
-                {
-                    "alignment": "r",
-                    "image": "/Projects/crickex/14.png",
-                    "text": "The project also uses simple UI modules such as this beautiful calendar model which make it simple to select a date range for a specific trip."
-                }
-            ]
-        }
-    ]
-}
+    "methodology": "Developed using an **Object-Oriented Design** approach with modular Java classes and JavaFX GUI components. Emphasis on separation of concerns, UI clarity, and data persistence.",
+    "about": [
+      "Crick-Ex One is a feature-rich digital cricket scorebook app designed as part of an OOP coursework project. Built in Java with JavaFX, it allows teams to register, matches to be created and played, and scores to be tracked in real-time.",
+      "The application supports multiple matches and team combinations, displays a clean and intuitive UI, and stores all relevant game and player data in a robust Oracle SQL database.",
+      "It’s designed to also support projection during real matches for visual score updates."
+    ],
+    "gallery": [
+      {
+        "src": "/Projects/crickex/1.png",
+        "alt": "Team and player creation screen"
+      },
+      {
+        "src": "/Projects/crickex/2.png",
+        "alt": "Team overview UI"
+      },
+      {
+        "src": "/Projects/crickex/3.png",
+        "alt": "Player list and configuration panel"
+      },
+      {
+        "src": "/Projects/crickex/4.png",
+        "alt": "Match configuration calendar component"
+      },
+      {
+        "src": "/Projects/crickex/5.png",
+        "alt": "Date selection and schedule interface"
+      },
+      {
+        "src": "/Projects/crickex/6.png",
+        "alt": "Searchable player and team filter"
+      },
+      {
+        "src": "/Projects/crickex/7.png",
+        "alt": "Start match selection screen"
+      },
+      {
+        "src": "/Projects/crickex/8.png",
+        "alt": "Match preview configuration"
+      },
+      {
+        "src": "/Projects/crickex/10.png",
+        "alt": "Projected match scoreboard UI"
+      },
+      {
+        "src": "/Projects/crickex/11.png",
+        "alt": "Live match tracking panel"
+      },
+      {
+        "src": "/Projects/crickex/12.png",
+        "alt": "Player performance display"
+      },
+      {
+        "src": "/Projects/crickex/13.png",
+        "alt": "Overs and innings visualization"
+      },
+      {
+        "src": "/Projects/crickex/14.png",
+        "alt": "Live match status breakdown"
+      }
+    ],
+    "challengesAndLessons": [
+      {
+        "challenge": "Synchronizing user-driven match updates with persistent SQL state",
+        "solution": "Used transactional SQL operations and abstracted data-access layers to ensure consistency. Learned how to manage real-time updates with strong data guarantees."
+      },
+      {
+        "challenge": "Designing a UI that works both for interactive use and live match projection",
+        "solution": "Created a modular layout system with toggles for full-screen match view vs admin control panel. Understood the nuances of multi-context UI usage."
+      }
+    ],
+    "skillsDeveloped": {
+      "hardSkills": [
+        "JavaFX UI Design",
+        "OOP in Java",
+        "Oracle SQL Schema Design",
+        "Event-Driven Programming",
+        "Live Scoreboard Logic"
+      ],
+      "softSkills": [
+        "User Interface Flow Design",
+        "Real-Time Data Sync",
+        "Error Handling and Validation",
+        "Data Modeling for Sports Systems"
+      ]
+    },
+    "navigation": {
+      "previous": {
+        "name": "LaTeX Lite",
+        "slug": "latex"
+      },
+      "next": {
+        "name": "Project Nebula",
+        "slug": "project-nebula"
+      }
+    }
+  }  

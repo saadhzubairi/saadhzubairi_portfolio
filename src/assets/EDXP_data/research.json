@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Residual Network Architecture with Dynamic Data Augmentation, Squeeze-and-Excitation, and Stochastic Weight Averaging for Robust CIFAR-10 Image Classification",
+    "source": "New York University",
+    "link": "https://github.com/saadhzubairi/deep-learning-mini-projects/blob/main/report/main.pdf"
+  },
+  {
+    "title": "Parameter-Efficient Fine-Tuning of RoBERTa using LoRA for Robust AGNews Classification",
+    "source": "New York University",
+    "link": "https://github.com/saadhzubairi/deep-learning-mini-projects/blob/Project-2/report/main.pdf"
+  },
+  {
+    "title": "Jailbreaking Deep Models: Adversarial Attacks on ResNet34 and DenseNet121",
+    "source": "New York University",
+    "link": "https://github.com/saadhzubairi/deep-learning-mini-projects/blob/Project-3/report/main.pdf"
+  }
+]

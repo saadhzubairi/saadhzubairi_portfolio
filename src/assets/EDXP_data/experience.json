@@ -1,54 +1,100 @@
 [
     {
-        "desg": "Fullstack Developer",
+        "desg": "Software Engineer Intern",
+        "company": "Cloaked Inc.",
+        "years": "June 2025 – August 2025",
+        "logo": "/XP_logos/cloaked.png",
+        "website": "https://www.cloaked.com/",
+        "linkedIn": "https://www.linkedin.com/company/cloaked/",
+        "about": "Cloaked Inc. is a privacy-first technology company enabling individuals and businesses to manage, mask, and control their personal data through advanced privacy infrastructure, AI-driven solutions, and secure communication tools.",
+        "desc": "Worked as a Software Engineer Intern delivering high-impact automation tools, geospatial dashboards, and LLM-powered customer support solutions.",
+        "resps": [
+            "Extracted and geocoded 2,000+ mailbox locations from Anytime Mailbox via Puppeteer (with exponential-backoff, <2% failures) and visualized them in a Next.js/OpenLayers dashboard for one-click CSV/PDF exports.",
+            "Shipped a RAG-powered Zendesk auto-tagging Chrome extension that processed 1,200 weekly support tickets with 92% tagging accuracy (P=0.92, R=0.88; n=1,238), cutting average triage time from 6 hours to 2 hours.",
+            "Developed an LLM-based MVP cybersecurity training tool using Nuxt.js, delivering multiple interactive learning modules via a modular generative component-based interface."
+        ],
+        "skills": [
+            "Next.js",
+            "OpenLayers",
+            "Nuxt.js",
+            "Puppeteer",
+            "RAG",
+            "LLM Applications",
+            "Chrome Extensions",
+            "Geospatial Visualization",
+            "TypeScript"
+        ]
+    },
+    {
+        "desg": "Student Software Engineer",
+        "company": "New York University",
+        "years": "April 2025 – Present",
+        "logo": "/EDXP_logos/NYU.png",
+        "website": "https://www.nyu.edu/",
+        "linkedIn": "https://www.linkedin.com/school/new-york-university/",
+        "about": "New York University (NYU) is a global research university with campuses in New York City, Abu Dhabi, and Shanghai, renowned for academic excellence and innovation.",
+        "desc": "Part of the university's software engineering team, modernizing critical academic portals and implementing advanced access control and scheduling systems.",
+        "resps": [
+            "Led migration of a legacy PHP-based placement exam site into a modern T3-stack portal, unifying scheduling, grading, and placement/exemption requests, supporting 2,500+ exam submissions per term.",
+            "Implemented custom DAL and BAL in T3-stack portal with 4-tier RBAC via Prisma ORM.",
+            "Added conflict detection to existing portals, reducing double-booking incidents by 99% among 5,000 users."
+        ],
+        "skills": [
+            "T3-stack",
+            "Prisma ORM",
+            "TypeScript",
+            "Role-Based Access Control (RBAC)",
+            "Full-Stack Development",
+            "Legacy System Migration"
+        ]
+    },
+    {
+        "desg": "Software Engineer",
         "company": "Sadiq.ai",
-        "years": "April 2024 - August 2024",
+        "years": "May 2024 – August 2024",
         "logo": "/XP_logos/sadiq.jpeg",
         "website": "https://sadiq.ai/",
         "linkedIn": "https://www.linkedin.com/company/sadiq-ai",
         "about": "Sadiq.ai is an innovative tech startup specializing in AI-driven solutions for the healthcare industry. The company is dedicated to building cutting-edge products that enhance medical processes and improve patient outcomes.",
-        "desc": "Worked as a Fullstack Developer in a fast-paced startup environment, contributing to AI-driven healthcare solutions.",
+        "desc": "Led the engineering and deployment of the SupportSphere MVP in a high-paced healthcare startup environment.",
         "resps": [
-            "Led a team of software engineers on the SupportSphere project (a unified healthcare management system).",
-            "Developed the application using Next.js and Nest.js with TypeScript.",
-            "Ensured compliance with accessibility standards, including WCAG and ARIA guidelines.",
-            "Implemented AI-based solutions to assist healthcare professionals.",
-            "Managed six servers and their CI/CD pipelines."
+            "Led a 5-engineer scrum, shipped SupportSphere MVP in 8 weeks, and ran tri-weekly clinician feedback demos.",
+            "Streamlined development workflow by lazy-loading major Next.js routes and implementing all core Nest.js endpoints.",
+            "Optimized front-end components in Next.js and developed 90% of back-end services using Nest.js.",
+            "Provisioned via Terraform (6 low-tier EC2/RDS instances) and set up GitHub Actions for automated MVP deployments."
         ],
         "skills": [
             "Team Leadership",
-            
             "Next.js",
             "Nest.js",
             "TypeScript",
-            "Server Management",
-            "CI/CD Pipelines",
-            "AI Implementation",
-            "Healthcare Technology",
-            "Web Accessibility (WCAG, ARIA standards)"
+            "Terraform",
+            "AWS EC2",
+            "AWS RDS",
+            "GitHub Actions",
+            "Healthcare Technology"
         ]
     },
     {
-        "desg": "Technology Analyst",
+        "desg": "Software Engineer",
         "company": "United Bank Limited",
-        "years": "July 2023 - April 2024",
+        "years": "July 2023 – April 2024",
         "logo": "/XP_logos/united_bank_limited_logo.jpeg",
         "website": "https://www.ubldigital.com/",
         "linkedIn": "https://www.linkedin.com/company/united-bank-limited",
         "about": "United Bank Limited (UBL) is a prominent financial institution headquartered in Karachi, Pakistan. Established in 1959, UBL has grown into a leading bank, providing a wide range of financial services globally. With a focus on innovation and customer satisfaction, UBL plays a vital role in the economic development of Pakistan.",
-        "desc": "Part of the Tech Talent Hunt '23 batch. Among the 15 candidates selected out of 4000+ applicants.",
+        "desc": "Worked in UBL's core banking and payment systems division, modernizing and optimizing Temenos-based services.",
         "resps": [
-            "Actively coding and enhancing both front-end and back-end components for the upcoming mobile app built on top of Temenos Infinity.",
-            "Working within a diverse team of designers, product managers, and engineers to implement app features and optimize performance.",
-            "Troubleshooting and resolving technical issues, ensuring smooth user experience across app functionalities."
+            "Authored and migrated 12 account-management and 18 payment reconciliation endpoints in Java/Temenos, reducing integration lead time by 60% and lowering API error rate to <0.5%.",
+            "Designed and maintained all multi-threaded Java services within Unix-based Temenos systems."
         ],
         "skills": [
-            "Back-End Development",
             "Java",
             "Temenos Infinity",
-            "Java",
-            "JavaScript",
-            "Visualizer & Fabric"
+            "Temenos Core Banking",
+            "Unix Systems",
+            "Payment Reconciliation",
+            "API Development"
         ]
     },
     {
@@ -135,7 +181,6 @@
             "Assisted the professors in improving the assignments to make sure they fit the students understanding.",
             "Maintained student progress records and efficiently managed any issues faced during online mode classes whenever it was applicable.",
             "Graded 200+ assignments throughout the term, lab tasks, and quizzes."
-
         ],
         "skills": [
             "Java",

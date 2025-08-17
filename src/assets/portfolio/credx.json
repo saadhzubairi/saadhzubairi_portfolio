@@ -1,209 +1,85 @@
 {
     "id": "credx",
-    "image": "/Projects/credx/title.png",
-    "name": "CREDX",
+    "title": "CREDX",
     "subtitle": "A socialized online retail platform.",
-    "titleImg": "/Projects/credx/title.png",
-    "techs": [],
-    "desc": "CREDX is socialized online retail platform that makes it easy for customers to find credible sellers by a unique social algorithm and credibility analysing techniques.",
-    "sections": [
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "l",
-                    "image": "/Projects/credx/buyProduct.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                }
-            ]
-        },
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "r",
-                    "image": "/Projects/credx/Chat.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                }
-            ]
-        },
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "l",
-                    "image": "/Projects/credx/credibilityAndNotifications.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                }
-            ]
-        },
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "r",
-                    "image": "/Projects/credx/CustomerSupport.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                }
-            ]
-        },
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "l",
-                    "image": "/Projects/credx/CustomerSupport0.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                }
-            ]
-        },
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "r",
-                    "image": "/Projects/credx/favs.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                }
-            ]
-        },
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "l",
-                    "image": "/Projects/credx/homeAndBuy.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                }
-            ]
-        },
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "r",
-                    "image": "/Projects/credx/Inbox.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                }
-            ]
-        },
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "l",
-                    "image": "/Projects/credx/Inbox2.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                }
-            ]
-        },
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "r",
-                    "image": "/Projects/credx/myProducts.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                }
-            ]
-        },
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "l",
-                    "image": "/Projects/credx/notifModal.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                }
-            ]
-        },
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "r",
-                    "image": "/Projects/credx/Profile.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                }
-            ]
-        },
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "l",
-                    "image": "/Projects/credx/Profile2.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                }
-            ]
-        },
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "r",
-                    "image": "/Projects/credx/Profile3.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                }
-            ]
-        },
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "l",
-                    "image": "/Projects/credx/ReportItem.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                }
-            ]
-        },
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "r",
-                    "image": "/Projects/credx/ReportUser.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                }
-            ]
-        },
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "l",
-                    "image": "/Projects/credx/search.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                }
-            ]
-        },
-        {
-            "sectionheading": "A powerful NLP Engine",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "r",
-                    "image": "/Projects/credx/search2.png",
-                    "text": "The homepage is very simple with a large navigation pane for different pages with a beautiful gradient background and smooth hover effects."
-                }
-            ]
-        }
-    ]
-}
+    "links": {
+      "liveDemo": "https://example.com/credx", 
+      "github": "https://github.com/your-username/credx"
+    },
+    "heroImage": {
+      "src": "/Projects/credx/title.png",
+      "alt": "CREDX retail platform preview"
+    },
+    "techStack": {
+      "frameworks": [],
+      "database": [],
+      "tools": []
+    },
+    "myResponsibilities": [
+      "Designed multi-page e-commerce layout with chat, profiles, and credibility tracking",
+      "Integrated custom credibility algorithm for seller ranking and trust building",
+      "Built user flows for shopping, messaging, reporting, and notification systems",
+      "Developed search functionality and customer support modules",
+      "Created UX for reporting, favoriting, and real-time inbox communication"
+    ],
+    "methodology": "Built using a **modular UI architecture** with focus on retail trust systems, social interactions, and credibility scoring. Emphasized user reputation signals and seller-buyer transparency.",
+    "about": [
+      "CREDX is a socialized online retail platform that helps users identify credible sellers using a built-in credibility engine. The application combines traditional e-commerce components with social features like chat, profile scoring, notifications, and support.",
+      "The platform enables users to buy products, chat with sellers, favorite items, report suspicious activity, and manage transactions with social transparency at its core."
+    ],
+    "gallery": [
+      { "src": "/Projects/credx/buyProduct.png", "alt": "Product purchase screen" },
+      { "src": "/Projects/credx/Chat.png", "alt": "In-app buyer-seller chat" },
+      { "src": "/Projects/credx/credibilityAndNotifications.png", "alt": "Credibility score and notifications" },
+      { "src": "/Projects/credx/CustomerSupport.png", "alt": "Customer support module" },
+      { "src": "/Projects/credx/CustomerSupport0.png", "alt": "Support case interaction screen" },
+      { "src": "/Projects/credx/favs.png", "alt": "Favorites list UI" },
+      { "src": "/Projects/credx/homeAndBuy.png", "alt": "Home screen with product explorer" },
+      { "src": "/Projects/credx/Inbox.png", "alt": "Messaging inbox interface" },
+      { "src": "/Projects/credx/Inbox2.png", "alt": "Expanded inbox message view" },
+      { "src": "/Projects/credx/myProducts.png", "alt": "User's listed products" },
+      { "src": "/Projects/credx/notifModal.png", "alt": "Notification modal popup" },
+      { "src": "/Projects/credx/Profile.png", "alt": "User profile and reputation" },
+      { "src": "/Projects/credx/Profile2.png", "alt": "Profile settings and detail edit" },
+      { "src": "/Projects/credx/Profile3.png", "alt": "Profile metrics and social data" },
+      { "src": "/Projects/credx/ReportItem.png", "alt": "Report product flow" },
+      { "src": "/Projects/credx/ReportUser.png", "alt": "Report seller flow" },
+      { "src": "/Projects/credx/search.png", "alt": "Search results layout" },
+      { "src": "/Projects/credx/search2.png", "alt": "Filtered search view" }
+    ],
+    "challengesAndLessons": [
+      {
+        "challenge": "Designing a reputation-based credibility engine for sellers",
+        "solution": "Created a weighted algorithm factoring reviews, disputes, response time, and product history. Learned how trust systems impact UX and business logic."
+      },
+      {
+        "challenge": "Handling multi-modal interactions (shopping, chat, reporting) cleanly",
+        "solution": "Separated user flows into independent but interoperable modules. Prioritized UX simplicity despite complex feature set."
+      }
+    ],
+    "skillsDeveloped": {
+      "hardSkills": [
+        "E-commerce UI/UX Design",
+        "User Reputation Modeling",
+        "Real-Time Messaging Flows",
+        "Multi-role Dashboard Architecture",
+        "Notification & Modal Systems"
+      ],
+      "softSkills": [
+        "Designing for Trust and Safety",
+        "Scalable Component Reuse",
+        "Interaction Pattern Optimization",
+        "Feature Prioritization"
+      ]
+    },
+    "navigation": {
+      "previous": {
+        "name": "Tutor Finder",
+        "slug": "tutor"
+      },
+      "next": {
+        "name": "Project Nebula",
+        "slug": "project-nebula"
+      }
+    }
+  }  

@@ -11,13 +11,20 @@
         "session": "August 2024 - May 2026",
         "moreInfo": [
             {
+                "Heading": "Thesis",
+                "List": [
+                    "Combining Sparse Signal Processing with Deep Learning for EEG/ECG Analysis: A Model-Based Deep Learning Approach (In Progress)"
+                ]
+            },
+            {
                 "Heading": "Courses",
                 "List": [
-                    "Machine Learning",
+                    "Machine Learning Operations",
                     "Deep Learning",
                     "Software Engineering",
-                    "Real Time Embedded Systems",
-                    "Web App Development"
+                    "Advanced Signal Processing",
+                    "Physiological Signal Processing",
+                    "Real Time Embedded Systems"
                 ]
             },
             {
@@ -54,15 +61,11 @@
             {
                 "Heading": "Extra & Co-curriculars",
                 "List": [
-                    "Master of Ceremony (Lead Host) for Convocation 2022, Orientation 2022, and other official events at IBA",
+                    "Tennis Team (Captain)",
                     "IBA Mathematics & Astronomy Club - Chief Finance Officer",
-                    "IBA Entrepreneurship Society - Executive Director Creatives for HULT at IBA",
-                    "IBA Leadership Club - Core Team Member (Operations, Creatives & Corporate Affairs)",
-                    "IBA Community Welfare Society"
+                    "Master of Ceremony for Convocation 2022, Orientation 2022, and other official events at IBA"
                 ]
             }
         ]
     }
-    
 ]
-

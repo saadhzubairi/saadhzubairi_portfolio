@@ -1,8 +1,14 @@
 import { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
-import { Drawer, DrawerContent, DrawerHeader, DrawerTitle, DrawerTrigger } from '@/components/ui/drawer'
-import { Menu, Home } from 'lucide-react'
+import {
+  Drawer,
+  DrawerContent,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from '@/components/ui/drawer'
+import { Menu, Home, ArrowLeft } from 'lucide-react'
 import { ModeToggle } from './DarkModeToggle'
 
 const Navigation = () => {
@@ -11,6 +17,8 @@ const Navigation = () => {
   const [mounted, setMounted] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const location = useLocation()
+  const navigate = useNavigate()
+  const isProjectPage = location.pathname.startsWith('/portfolio/')
 
   // Prevent hydration mismatch
   useEffect(() => {
@@ -31,8 +39,6 @@ const Navigation = () => {
   const navigationItems = [
     { name: 'About', href: '/#About', hash: 'About' },
     { name: 'Featured', href: '/#Featured', hash: 'Featured' },
-    { name: 'Qualifications', href: '/#Qual', hash: 'Qual' },
-    { name: 'Skills', href: '/#Skills', hash: 'Skills' },
     { name: 'Connect', href: '/#Contact', hash: 'Contact' },
   ]
 
@@ -48,6 +54,8 @@ const Navigation = () => {
           element.scrollIntoView({ behavior: 'smooth' })
         }
       }, 100)
+    } else {
+      navigate(`/#${hash}`)
     }
   }
 
@@ -76,15 +84,15 @@ const Navigation = () => {
     <>
       {/* Desktop Navigation */}
       <header className="fixed top-4 left-0 right-0 z-50 flex justify-center">
-        <nav className={`flex h-16 items-center justify-between rounded-full px-8 w-full mx-4 transition-all duration-300 ease-in-out ${isScrolled
+        <nav className={`flex h-16 items-center justify-between rounded-sm px-8 w-full mx-4 transition-all duration-300 ease-in-out ${isScrolled
           ? 'backdrop-blur-lg bg-white/50 dark:bg-gray-900/50 shadow-lg max-w-4xl'
           : 'bg-transparent max-w-5xl'
           }`}>
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 font-bold text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 transition-colors cursor-pointer">
+          <div onClick={() => handleNavClick('Home')} className="flex items-center space-x-2 font-bold text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 transition-colors cursor-pointer">
             <Home className="h-5 w-5" />
             <span className="hidden sm:inline">Saad</span>
-          </Link>
+          </div>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-1">
@@ -105,7 +113,8 @@ const Navigation = () => {
 
             {/* Portfolio Button */}
             <Link to="/portfolio">
-              <Button className="ml-2 bg-gray-800 dark:bg-gray-700 hover:bg-gray-700 dark:hover:bg-gray-600 text-white px-4 py-2 rounded-lg cursor-pointer">
+              <Button className="ml-2 bg-gray-800 dark:bg-gray-700 hover:bg-gray-700 dark:hover:bg-gray-600 text-white px-4 py-2 rounded-sm cursor-pointer flex items-center gap-2">
+                {isProjectPage && <ArrowLeft className="h-4 w-4" />}
                 <span className="text-sm font-medium">Portfolio</span>
               </Button>
             </Link>
@@ -147,6 +156,7 @@ const Navigation = () => {
                           className="w-full justify-start bg-gray-800 dark:bg-gray-700 hover:bg-gray-700 dark:hover:bg-gray-600 text-white cursor-pointer"
                           onClick={() => setIsOpen(false)}
                         >
+                          {isProjectPage && <ArrowLeft className="mr-2 h-4 w-4" />}
                           <span>Portfolio</span>
                         </Button>
                       </Link>

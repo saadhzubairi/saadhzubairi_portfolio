@@ -1,0 +1,47 @@
+[
+    {
+        "category": "Core",
+        "skills": [
+            { "name": "Java", "logo": "https://cdn.icon-icons.com/icons2/2415/PNG/512/java_original_wordmark_logo_icon_146459.png", "level": 5 },
+            { "name": "Python", "logo": "https://cdn.iconscout.com/icon/free/png-256/free-python-3521655-2945099.png", "level": 4 },
+            { "name": "JavaScript", "logo": "https://cdn.iconscout.com/icon/free/png-256/free-javascript-3628858-3029998.png", "level": 5 },
+            { "name": "TypeScript", "logo": "https://cdn.iconscout.com/icon/free/png-256/free-typescript-3521774-2945272.png", "level": 4 },
+            { "name": "Golang", "logo": "https://go.dev/blog/go-brand/Go-Logo/PNG/Go-Logo_Blue.png", "level": 2 },
+            { "name": "C/C++", "logo": "https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg", "level": 3 }
+        ]
+    },
+    {
+        "category": "Frameworks & Libraries",
+        "skills": [
+            { "name": "React/Next.js", "logo": "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-1024.png", "level": 5 },
+            { "name": "Node.js/Express.js", "logo": "https://cdn.iconscout.com/icon/free/png-256/free-nodejs-1-226034.png", "level": 5 },
+            { "name": "Nest.js", "logo": "https://nestjs.com/img/logo-small.svg", "level": 4 },
+            { "name": "Nuxt.js/Vue.js", "logo": "https://cdn.iconscout.com/icon/free/png-256/free-vue-282497.png", "level": 3 },
+            { "name": "Pytorch", "logo": "https://blog.christianperone.com/wp-content/uploads/2018/10/pytorch-logo.png", "level": 4 },
+            { "name": "Spring", "logo": "https://dz2cdn1.dzone.com/storage/temp/12434118-spring-boot-logo.png", "level": 3 }
+        ]
+    },
+    {
+        "category": "Database Management",
+        "skills": [
+            { "name": "MySQL", "logo": "https://cdn.icon-icons.com/icons2/2415/PNG/512/mysql_original_wordmark_logo_icon_146417.png", "level": 5 },
+            { "name": "PL/SQL", "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMMMws7rPtchjHY5odL-gMT_qlY3ASpQPQWw&s", "level": 4 },
+            { "name": "MongoDB", "logo": "https://cdn.icon-icons.com/icons2/2415/PNG/512/mongodb_original_wordmark_logo_icon_146425.png", "level": 3 },
+            { "name": "PostgreSQL", "logo": "https://cdn.icon-icons.com/icons2/2415/PNG/512/postgresql_original_wordmark_logo_icon_146392.png", "level": 3 },
+            { "name": "Prisma", "logo": "https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_prisma_icon_130234.png", "level": 4 }
+        ]
+    },
+    {
+        "category": "DevOps & Tools",
+        "skills": [
+            { "name": "Git", "logo": "https://cdn.icon-icons.com/icons2/2415/PNG/512/git_original_wordmark_logo_icon_146510.png", "level": 5 },
+            { "name": "GitHub Actions", "logo": "https://cdn-icons-png.flaticon.com/512/25/25231.png", "level": 4 },
+            { "name": "AWS", "logo": "https://images.icon-icons.com/2407/PNG/512/aws_icon_146074.png", "level": 3 },
+            { "name": "Jest", "logo": "https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Jest.svg", "level": 3 },
+            { "name": "MLFlow", "logo": "https://images.chainguard.dev/logos/mlflow.svg", "level": 3 },
+            { "name": "Docker", "logo": "https://images.seeklogo.com/logo-png/35/1/docker-logo-png_seeklogo-352738.png", "level": 4 },
+            { "name": "tRPC", "logo": "https://trpc.io/img/logo.svg", "level": 4 },
+            { "name": "REST/WebSockets", "logo": null, "level": 5 }
+        ]
+    }
+]

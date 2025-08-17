@@ -2,7 +2,6 @@ import { Mail, Linkedin, Github, MessageCircle, PawPrint, File } from 'lucide-re
 import CustomDiv from '../CustomDiv';
 import { Button } from '@/components/ui/button.tsx';
 import { Link } from 'react-router-dom';
-import Qualifications from '@/components/qualifications/Qualifications';
 
 const Home = () => {
   return (
@@ -11,7 +10,7 @@ const Home = () => {
       <div className="flex flex-col w-full mx-auto">
         <CustomDiv>
           <div className="h-20 items-end flex justify-start">
-            <p className="text-xs h-full w-[50%] flex items-end justify-start text-gray-400 dark:text-gray-500 font-mono text-left select-none">
+            <p className="text-xs h-full w-[100%] flex items-end justify-start text-gray-400 dark:text-gray-500 font-mono text-left select-none">
               text-8xl text-white tracking-tighter text-balance
             </p>
           </div>
@@ -41,7 +40,7 @@ const Home = () => {
           <div className="h-16"></div>
         </CustomDiv>
         <CustomDiv>
-          <div className=" flex items-center justify-start ">
+          <div className=" flex items-center justify-center md:justify-start ">
             <div className="flex flex-row gap-4">
               <a
                 href="mailto:saadhzubairi@outlook.com"
@@ -82,15 +81,15 @@ const Home = () => {
           <div className="h-16"></div>
         </CustomDiv>
         <CustomDiv>
-          <div className="flex items-center justify-start gap-2 w-full">
+          <div className="flex items-center justify-center md:justify-start gap-2 w-full">
             <Link to="/portfolio">
-              <Button className="w-36 h-12 ml-2 bg-gray-800 dark:bg-gray-700 hover:bg-gray-700 dark:hover:bg-gray-600 text-white cursor-pointer">
+              <Button className="w-36 h-12 bg-gray-800 dark:bg-gray-700 hover:bg-gray-700 dark:hover:bg-gray-600 text-white cursor-pointer">
                 <span className="flex items-center gap-2">
                   <PawPrint />  Portfolio
                 </span>
               </Button>
             </Link>
-            <Button variant={"secondary"} className="w-36 h-12 ml-2 dark:bg-gray-800 border cursor-pointer">
+            <Button variant={"secondary"} className="w-36 h-12 dark:bg-gray-800 border cursor-pointer">
               <span className="flex items-center gap-2">
                 <File />  Resume
               </span>

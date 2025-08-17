@@ -1,85 +1,120 @@
 {
     "id": "hoops",
-    "image": "/Projects/hoops/hoops.png",
-    "name": "Hoops",
-    "titleImg": "/Projects/hoops/title.png",
-    "subtitle": "A different kind of Social Media.",
-    "techs": [
-        "MongoDB",
-        "Express",
-        "React",
-        "Node.js",
-        "Material UI"
+    "title": "Hoops",
+    "subtitle": "A different kind of Social Media — connect through anonymous letter-based chatting.",
+    "links": {
+        "liveDemo": "https://example.com/hoops-demo",
+        "github": "https://github.com/your-username/hoops"
+    },
+    "heroImage": {
+        "src": "/Projects/hoops/hoops.png",
+        "alt": "Hoops social media dashboard"
+    },
+    "techStack": {
+        "frameworks": [
+            "React",
+            "Node.js",
+            "Express",
+            "Material UI"
+        ],
+        "database": [
+            "MongoDB"
+        ],
+        "tools": [
+            "JWT",
+            "Axios",
+            "Mongoose"
+        ]
+    },
+    "myResponsibilities": [
+        "Implemented user onboarding with real-time username validation",
+        "Built interest-based and personality-based matching system",
+        "Designed and developed letter-based anonymous chat system",
+        "Created a clean UI using MUI and React hooks",
+        "Handled schedule integration and profile customization features"
     ],
-    "desc": "Hoops is a unique social media application where users can connect and chat with each other using letters while being completely anonymous.",
-    "sections": [
+    "methodology": "Built with an iterative **Agile** process, incorporating feedback-driven design sprints and component-based modular development for rapid UI updates and scalability.",
+    "about": [
+        "Hoops is an anonymous social media platform focused on meaningful connections through letter-writing. Unlike traditional apps, users interact without profile pictures, eliminating biases and encouraging depth.",
+        "Users can discover friends based on shared interests and Myers-Briggs personality compatibility. Each letter must be at least 600 characters, nudging users toward thoughtful communication. Avatars are randomized and customizable.",
+        "It supports adding class schedules and selecting interests to better match users and encourage real-world coordination — all while maintaining anonymity."
+    ],
+    "gallery": [
         {
-            "sectionheading": "Onboarding",
-            "sectionText": "A smooth and beautifully designed onboarding and login.",
-            "sectionData": [
-                {
-                    "alignment": "l",
-                    "image": "/Projects/hoops/login.png",
-                    "text": "Login and Sign up screens with proper validators on available usernames and passwords constraints checking. Each keystroke triggers and API call that checks for available usernames from a staging database. Username is later verfied from actual database when clicking next."
-                },
-                {
-                    "alignment": "r",
-                    "image": "/Projects/hoops/interests.png",
-                    "text": "Users are able to add their interests from a wide range of options so they can connect with people who have similar interest as theres."
-                },
-                {
-                    "alignment": "l",
-                    "image": "/Projects/hoops/sched.png",
-                    "text": "Users can also add their class schedules to better coordinate potential future meetups."
-                },
-                {
-                    "alignment": "r",
-                    "image": "/Projects/hoops/avatar.png",
-                    "text": "We strongly discourage the use of profile pictures to negate any kind of bias. Users can add fun avatars randomly generated from their names and change them whenever they want."
-                }
-            ]
+            "src": "/Projects/hoops/login.png",
+            "alt": "Login and signup with live validation"
         },
         {
-            "sectionheading": "Write away and make friends!",
-            "sectionText": "A user journey that keeps you writing!",
-            "sectionData": [
-                {
-                    "alignment": "l",
-                    "image": "/Projects/hoops/home.png",
-                    "text": "The home screen is kept simple with an ample amount of white space and a sidebar that gives you a quick access to all your friends and shows you which of your friends are online. In addition, there's also a text box to post any updates along with pictures."
-                },
-                {
-                    "alignment": "r",
-                    "image": "/Projects/hoops/sugg.png",
-                    "text": "Friend suggestions are right on your finger tips, with the feed showing you the people with the most number of common interests and a compatible personality using the Myers-Briggs rubrick."
-                },
-                {
-                    "alignment": "l",
-                    "image": "/Projects/hoops/write.png",
-                    "text": "The platform encourages the users to make meaningful conversations using our constraint of at least 600 characters per letter."
-                },
-                {
-                    "alignment": "r",
-                    "image": "/Projects/hoops/friend.png",
-                    "text": "All letters from a specific friend shown in the friend's screen, easily accessible by clicking on a friend in the sidebar."
-                },
-                {
-                    "alignment": "l",
-                    "image": "/Projects/hoops/read.png",
-                    "text": "Users can view any recieved or sent letters from and to a friend from the friend screen in a nice canvas."
-                }
-            ]
+            "src": "/Projects/hoops/interests.png",
+            "alt": "Select interests during onboarding"
         },
         {
-            "sectionheading": "Settings",
-            "sectionText": "A user journey that keeps you writing!",
-            "sectionData": [
-                {
-                    "alignment": "l",
-                    "image": "/Projects/hoops/setting.png",
-                    "text": "The home screen is kept simple with an ample amount of white space and a sidebar that gives you a quick access to all your friends and shows you which of your friends are online. In addition, there's also a text box to post any updates along with pictures."
-                }
-            ]
+            "src": "/Projects/hoops/sched.png",
+            "alt": "Add class schedules"
+        },
+        {
+            "src": "/Projects/hoops/avatar.png",
+            "alt": "Avatar selection screen"
+        },
+        {
+            "src": "/Projects/hoops/home.png",
+            "alt": "Minimalist home dashboard"
+        },
+        {
+            "src": "/Projects/hoops/sugg.png",
+            "alt": "Friend suggestions based on interests and personality"
+        },
+        {
+            "src": "/Projects/hoops/write.png",
+            "alt": "Letter writing screen"
+        },
+        {
+            "src": "/Projects/hoops/friend.png",
+            "alt": "Friend profile with all letters"
+        },
+        {
+            "src": "/Projects/hoops/read.png",
+            "alt": "Read letters on canvas"
+        },
+        {
+            "src": "/Projects/hoops/setting.png",
+            "alt": "Settings screen"
         }
-    ]
+    ],
+    "challengesAndLessons": [
+        {
+            "challenge": "Ensuring performant real-time username validation with each keystroke",
+            "solution": "Implemented a debounce strategy to limit API calls, initially hitting a staging DB before final validation from production DB on submit. Learned how to balance UX fluidity with backend load."
+        },
+        {
+            "challenge": "Matching users on interests and personality without invasive profiling",
+            "solution": "Used simple Myers-Briggs personality inputs and structured interest tagging, maintaining user privacy. Gained experience in designing inclusive and bias-aware matching algorithms."
+        }
+    ],
+    "skillsDeveloped": {
+        "hardSkills": [
+            "Responsive UI with Material UI",
+            "RESTful API Design",
+            "Form validation and debouncing",
+            "User privacy & anonymous auth flows",
+            "MongoDB query optimization"
+        ],
+        "softSkills": [
+            "User-centered design thinking",
+            "Iterative feature delivery",
+            "Feedback incorporation",
+            "Inclusive tech practices",
+            "Collaboration across feature modules"
+        ]
+    },
+    "navigation": {
+        "previous": {
+            "name": "QuantumLeap CRM",
+            "slug": "quantumleap-crm"
+        },
+        "next": {
+            "name": "Project Nebula",
+            "slug": "project-nebula"
+        }
+    }
 }

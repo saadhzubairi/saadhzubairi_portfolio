@@ -1,0 +1,90 @@
+[
+  {
+    "id": "hoops",
+    "name": "Hoops",
+    "subtitle": "A different kind of Social Media.",
+    "image": "/Projects/hoops/hoops.png",
+    "desc": "Hoops is a unique social media application where users can connect and chat with friends in a streamlined and engaging environment.",
+    "techs": ["MongoDB", "Express", "React", "Node.js"]
+  },
+  {
+    "id": "talenthive",
+    "name": "Talent Hive",
+    "subtitle": "Shortlist 100s or resumes using a powerful AI.",
+    "image": "/Projects/talenthive/talenthive.png",
+    "desc": "Talent Hive simplifies talent supply chain for HR managers and candidates by using a powerful AI to shortlist candidates with an intuitive and simple UI.",
+    "techs": ["MongoDB", "Express", "React", "Node.js"]
+  },
+  {
+    "id": "halpert",
+    "name": "Halpert's Booking",
+    "subtitle": "Hotel booking website made with HTML & CSS.",
+    "image": "/Projects/halpert/halpert.png",
+    "desc": "Halper's booking is a simple HTML5 and CSS3 demonstration of a beautifully designed hotel booking website.",
+    "techs": ["HTML", "CSS", "Node.js"]
+  },
+  {
+    "id": "credx",
+    "name": "Cred-Ex",
+    "subtitle": "A beautiful Digital Business Card Maker.",
+    "image": "/Projects/credx/credx.png",
+    "desc": "Cred-Ex is a digital business card maker that allows users to create and share their own digital business cards.",
+    "techs": ["Figma", "UI/UX"]
+  },
+  {
+    "id": "latex",
+    "name": "LaTeX Editor",
+    "subtitle": "A simple LaTeX editor for students.",
+    "image": "/Projects/latex/latex.png",
+    "desc": "A simple LaTeX editor for students to write their assignments and papers in LaTeX without having to install any software.",
+    "techs": ["Java", "Swing"]
+  },
+  {
+    "id": "crickex",
+    "name": "Crick-Ex",
+    "subtitle": "A cricket fantasy league app.",
+    "image": "/Projects/crickex/crickex.png",
+    "desc": "Crick-Ex is a cricket fantasy league app that allows users to create their own fantasy cricket teams and compete with other users.",
+    "techs": ["Java", "Swing"]
+  },
+  {
+    "id": "tutor",
+    "name": "Tutor Management System",
+    "subtitle": "A simple tutor management system.",
+    "image": "/Projects/tutor/tutor.png",
+    "desc": "A simple tutor management system that allows tutors to manage their students, schedules, and payments.",
+    "techs": ["Java", "Swing"]
+  },
+  {
+    "id": "topdown",
+    "name": "Top Down Shooter",
+    "subtitle": "A simple top down shooter game.",
+    "image": "/Projects/topdown/topdown.png",
+    "desc": "A simple top down shooter game made in Unity.",
+    "techs": ["Unity", "C#"]
+  },
+  {
+    "id": "tetromania",
+    "name": "Tetromania",
+    "subtitle": "A simple Tetris clone.",
+    "image": "/Projects/tetromania/tetromania.png",
+    "desc": "A simple Tetris clone made in Unity.",
+    "techs": ["Unity", "C#"]
+  },
+  {
+    "id": "hidenseek",
+    "name": "Hide n Seek",
+    "subtitle": "A simple hide and seek game.",
+    "image": "/Projects/hidenseek/hidenseek.png",
+    "desc": "A simple hide and seek game made in Unity.",
+    "techs": ["Unity", "C#"]
+  },
+  {
+    "id": "pixelcut",
+    "name": "Pixel Cut",
+    "subtitle": "A simple pixel art editor.",
+    "image": "/Projects/pixelcut/pixelcut.png",
+    "desc": "A simple pixel art editor made in Unity.",
+    "techs": ["Unity", "C#"]
+  }
+]

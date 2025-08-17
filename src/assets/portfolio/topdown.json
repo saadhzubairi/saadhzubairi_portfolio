@@ -4,11 +4,19 @@
     "name": "Top Down Shooter",
     "subtitle": "A top down shooter made using SDL 2.0.",
     "titleImg": "/Projects/topdown/topdown.png",
+    "heroImage": {
+        "src": "/Projects/topdown/topdown.png",
+        "alt": "Top Down Shooter"
+    },
     "type": "game",
-    "techs": [
+    "techStack": {
+        "frameworks": [
         "C++",
         "SDL 2.0"
-    ],
+        ],
+        "database": [],
+        "tools": []
+    },
     "desc": "2D Top down shooter game with everything made from scratch, utilizing a custom game engine using C++ and SDL 2.0 as well as Photoshop and LMMS for graphical and audio assets.",
     "introText": " For my undergraduate game development project, I designed and implemented Space Shooter, a top-down game that explores dynamic gameplay elements. In this game, players navigate a lone starfighter, engaging with two distinct enemy types: nimble adversaries with direct firepower and Rangers that shoot while actively evading player projectiles. The starfighter is equipped with standard bullets and homing rockets, adding a strategic layer to the gameplay.<br/><br/>Surviving continuous waves of respawning enemies for 30 seconds triggers the Boss Level. Here, players confront a formidable modular enemy armed with four turrets. The challenge lies in strategically dismantling each turret to secure victory. The project was my first core practical application of game design principles and programming skills, showcasing an engaging and challenging space-shooting experience for players.",
     "techImg": "/Projects/topdown/techImg.png",

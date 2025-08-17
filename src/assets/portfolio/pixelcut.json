@@ -4,11 +4,19 @@
     "name": "Pixel Cut",
     "subtitle": "A 2D platformer game made using Unity.",
     "titleImg": "/Projects/pixelcut/pixelcut.png",
+    "heroImage": {
+        "src": "/Projects/pixelcut/pixelcut.png",
+        "alt": "Pixel Cut"
+    },
     "type": "game",
-    "techs": [
-        "C#",
-        "Unity 2D"
-    ],
+    "techStack": {
+        "frameworks": [
+            "C#",
+            "Unity 2D"
+        ],
+        "database": [],
+        "tools": []
+    },
     "desc": "A Simple 2D platformer game for a rather satisfying and frustrating experience. With simple controls and easy to navigate levels (but not enough to stop the steam rolling on the temples).",
     "introText": "In my quest to delve into 2D platformer games, I undertook the challenge of creating Pixel Cut, a visually appealing and enjoyable game with vibrant graphics and amusing sound effects. I utilized Pixel Adventure Assets from the Unity store, along with sound effects from the same source. My journey began with a YouTube tutorial that guided me through the creation of a very simple first level. Inspired, I expanded the game by designing additional levels, each featuring intricate traps and obstacles. Pixel Cut is the most comprehensive game I’ve made to date.",
     "techImg": "/Projects/pixelcut/techImg.png",
