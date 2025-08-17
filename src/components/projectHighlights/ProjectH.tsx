@@ -22,34 +22,6 @@ import { ArrowUpRight, ChevronLeft, ChevronRight, PawPrint } from 'lucide-react'
 import CustomDiv from '../CustomDiv';
 import { Button } from '../ui/button';
 
-// Define the structure of your project data
-interface ProjectData {
-    id: string;
-    image: string;
-    name: string;
-    titleImg: string;
-    subtitle: string;
-    techs: string[];
-    desc: string;
-    sections?: {
-        sectionheading: string;
-        sectionText: string;
-        sectionData: {
-            alignment: string;
-            image: string;
-            text: string;
-        }[];
-    }[];
-    type?: string;
-    introText?: string;
-    techImg?: string;
-    techHead?: string;
-    techText?: string;
-    structureText?: string;
-    links?: string[];
-    [key: string]: any; // Allow other properties
-}
-
 // Extend Window interface to include ionicons
 declare global {
     namespace JSX {
@@ -76,61 +48,63 @@ export const ProjectH: React.FC = () => {
             <CustomDiv>
                 <div className="h-10"></div>
             </CustomDiv>
-            <CustomDiv>
-                <div className="relative bg-gray-100 dark:bg-gray-800 group">
-                    <div className="swiper-button-prev-custom absolute left-4 top-1/2 -translate-y-1/2 z-10 cursor-pointer rounded-full border bg-background p-2 text-foreground hover:bg-accent hidden md:block opacity-0 group-hover:opacity-100 transition-opacity">
-                        <ChevronLeft className="h-6 w-6" />
-                    </div>
+
+            <div className="relative group">
+                <div className="swiper-button-prev-custom absolute left-4 top-1/2 -translate-y-1/2 z-10 cursor-pointer rounded-full border bg-background p-2 text-foreground hover:bg-accent hidden md:block opacity-0 group-hover:opacity-100 transition-opacity">
+                    <ChevronLeft className="h-6 w-6" />
+                </div>
+                <CustomDiv>
                     <Swiper
                         effect={'coverflow'}
                         grabCursor={true}
                         centeredSlides={true}
-                        loop={false}
+                        loop={true}
                         slidesPerView={'auto'}
                         coverflowEffect={{
                             rotate: 0,
                             stretch: 0,
                             depth: 100,
-                            modifier: 2.5,
+                            modifier: 0,
                         }}
-                        pagination={{ el: '.swiper-pagination', clickable: true }}
+                        pagination={{ el: '', clickable: false }}
                         navigation={{
                             nextEl: '.swiper-button-next-custom',
                             prevEl: '.swiper-button-prev-custom',
                         }}
-                        className="swiper_container"
+                        className=""
                         modules={[EffectCoverflow, Pagination, Navigation]}
                     >
                         <SwiperSlide>
-                            <ProjectCard data={hoops as ProjectData} onH={true} />
+                            <ProjectCard data={hoops} onH={true} />
                         </SwiperSlide>
                         <SwiperSlide>
-                            <ProjectCard data={talenthive as ProjectData} onH={true} />
+                            <ProjectCard data={talenthive} onH={true} />
                         </SwiperSlide>
                         <SwiperSlide>
-                            <ProjectCard data={crickex as ProjectData} onH={true} />
+                            <ProjectCard data={crickex} onH={true} />
                         </SwiperSlide>
                         <SwiperSlide>
-                            <ProjectCard data={latex as ProjectData} onH={true} />
+                            <ProjectCard data={latex} onH={true} />
                         </SwiperSlide>
                         <SwiperSlide>
-                            <ProjectCard data={pixelcut as ProjectData} onH={true} />
+                            <ProjectCard data={pixelcut} onH={true} />
                         </SwiperSlide>
                         <SwiperSlide>
-                            <ProjectCard data={tetromania as ProjectData} onH={true} />
+                            <ProjectCard data={tetromania} onH={true} />
                         </SwiperSlide>
                         <SwiperSlide>
-                            <ProjectCard data={topdown as ProjectData} onH={true} />
+                            <ProjectCard data={topdown} onH={true} />
                         </SwiperSlide>
                     </Swiper>
-                    <div className="swiper-button-next-custom absolute right-4 top-1/2 -translate-y-1/2 z-10 cursor-pointer rounded-full border bg-background p-2 text-foreground hover:bg-accent hidden md:block opacity-0 group-hover:opacity-100 transition-opacity">
-                        <ChevronRight className="h-6 w-6" />
-                    </div>
-                    <div className="slider-controler mt-4 flex items-center justify-center gap-4">
-                        <div className="swiper-pagination"></div>
-                    </div>
+                </CustomDiv>
+                <div className="swiper-button-next-custom absolute right-4 top-1/2 -translate-y-1/2 z-10 cursor-pointer rounded-full border bg-background p-2 text-foreground hover:bg-accent hidden md:block opacity-0 group-hover:opacity-100 transition-opacity">
+                    <ChevronRight className="h-6 w-6" />
                 </div>
-            </CustomDiv>
+                <div className="slider-controler mt-4 flex items-center justify-center gap-4">
+                    <div className="swiper-pagination"></div>
+                </div>
+            </div>
+
             <CustomDiv>
                 <div className="h-10"></div>
             </CustomDiv>

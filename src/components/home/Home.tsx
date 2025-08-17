@@ -23,6 +23,13 @@ const Home = () => {
           </div>
         </CustomDiv>
         <CustomDiv>
+          <div className="flex items-center justify-start ">
+            <h3 className="text-6xl md:text-2xl font-normal text-gray-900 dark:text-white tracking-tighter text-balance text-left">
+              Software Engineer
+            </h3>
+          </div>
+        </CustomDiv>
+        <CustomDiv>
           <div className="h-20 items-end flex justify-start">
             <p className="text-xs text-gray-400 dark:text-gray-500 font-mono text-left select-none">
               text-lg text-white font-medium
@@ -97,7 +104,7 @@ const Home = () => {
           </div>
         </CustomDiv>
       </div>
-      
+
     </section>
   );
 };

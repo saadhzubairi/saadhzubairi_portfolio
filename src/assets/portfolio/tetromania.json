@@ -2,7 +2,8 @@
     "id": "tetromania",
     "image": "/Projects/tetromania/tetromania.png",
     "name": "Tetromania",
-    "subtitle": "A minimal Tetris game made with Unity.",
+    "title": "Tetromania",
+    "subtitle": "A Tetris-like game made using Unity.",
     "titleImg": "/Projects/tetromania/tetromania.png",
     "heroImage": {
         "src": "/Projects/tetromania/tetromania.png",

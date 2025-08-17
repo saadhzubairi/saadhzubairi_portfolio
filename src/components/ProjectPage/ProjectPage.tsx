@@ -8,6 +8,7 @@ import TexturedDiv from '../TexturedDiv';
 import CustomDiv from '../CustomDiv';
 import TexturedSpacer from '../TexturedSpacer';
 import LightGallery from 'lightgallery/react';
+import { motion } from 'framer-motion';
 
 // import styles
 import 'lightgallery/css/lightgallery.css';
@@ -58,7 +59,11 @@ const ProjectPage: React.FC = () => {
   const nextProject = currentIndex < projectData.length - 1 ? projectData[currentIndex + 1] : null;
 
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <TexturedDiv>
         <div className="pt-24 pb-12 sm:pb-16">
           <CustomDiv className=''>
@@ -218,7 +223,7 @@ const ProjectPage: React.FC = () => {
 
         </div>
       </TexturedDiv>
-    </div>
+    </motion.div>
   );
 };
 

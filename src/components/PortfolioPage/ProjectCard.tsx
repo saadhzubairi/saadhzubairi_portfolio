@@ -4,12 +4,14 @@ import { motion } from 'framer-motion';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowUpRight } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 interface ProjectCardProps {
   data: any;
+  onH?: boolean;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ data, onH = false }) => {
   const navigate = useNavigate();
   const [imgLoading, setImgLoading] = useState(true);
 
@@ -25,10 +27,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
   return (
     <motion.div
       onClick={handleClick}
-      className="group cursor-pointer h-full"
+      className={cn("group cursor-pointer h-full", onH ? "w-80" : "")}
       transition={{ duration: 0.2 }}
     >
-      <Card className="overflow-hidden rounded-sm border shadow-sm transition-shadow duration-300 hover:shadow-md dark:border-gray-800 dark:hover:shadow-gray-700/50 h-full flex flex-col">
+      <Card className={cn(
+        "overflow-hidden rounded-sm border shadow-sm transition-shadow duration-300 hover:shadow-md dark:border-gray-800 dark:hover:shadow-gray-700/50 h-full flex flex-col",
+        onH && "mx-4"
+      )}>
         <div className="relative aspect-[4/3] overflow-hidden">
           {imgLoading && (
             <div className="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800">
@@ -47,16 +52,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
           <div className="flex items-start justify-between">
             <div>
               <CardTitle className="text-lg font-semibold text-foreground">{data.title}</CardTitle>
-              <p className="text-sm text-muted-foreground">{data.subtitle}</p>
+              <p className="text-sm h-16 text-muted-foreground">{data.subtitle}</p>
             </div>
             <Button variant="ghost" size="icon" className="h-8 w-8 shrink-0 opacity-0 transition-opacity group-hover:opacity-100">
               <ArrowUpRight className="h-4 w-4" />
             </Button>
           </div>
         </CardHeader>
-        <CardContent className="px-4 pb-2 flex-grow">
+        {/* <CardContent className="px-4 pb-2 flex-grow">
           <p className="text-sm text-muted-foreground line-clamp-2">{data.desc}</p>
-        </CardContent>
+        </CardContent> */}
         <CardFooter className="p-4 pt-0">
           <div className="flex flex-wrap gap-2">
             {data.techStack?.frameworks?.slice(0, 3).map((tech: string, index: number) => (

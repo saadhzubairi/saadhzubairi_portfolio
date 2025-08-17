@@ -2,6 +2,7 @@
     "id": "pixelcut",
     "image": "/Projects/pixelcut/pixelcut.png",
     "name": "Pixel Cut",
+    "title": "Pixel Cut",
     "subtitle": "A 2D platformer game made using Unity.",
     "titleImg": "/Projects/pixelcut/pixelcut.png",
     "heroImage": {

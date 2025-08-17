@@ -18,6 +18,7 @@ import BentoSkills from './components/utils/Quillian';
 import BentoGrid from './components/about/BentoGrid';
 import { ProjectH } from './components/projectHighlights/ProjectH';
 import Connect from './components/connect/Connect';
+import AnimatedPage from './components/AnimatedPage';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const [isVisible, setIsVisible] = useState(false)
@@ -35,7 +36,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <div aria-hidden className="hidden xl:block pointer-events-none bg-textured-rails absolute inset-y-0 w-10 border-l border-r border-gray-200 dark:border-gray-700 left-[calc(50%+36rem)]"></div>
 
         {/* Content fades in after pillars */}
-        <main className="w-full mx-auto">
+        <main className={`w-full mx-auto transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
           {children}
         </main>
       </div>
@@ -70,17 +71,17 @@ function App() {
             <Route
               path="/"
               element={
-                <div className="">
+                <AnimatedPage>
                   <Home />
                   <BentoGrid />
                   <ProjectH />
                   <Connect />
-                </div>
+                </AnimatedPage>
               }
             />
-            <Route path="/portfolio/" element={<PortfolioPage />} />
-            <Route path="/portfolio/project/:projectId" element={<ProjectPage />} />
-            <Route path="/portfolio/project/game/:projectId" element={<GameProjectPage />} />
+            <Route path="/portfolio/" element={<AnimatedPage><PortfolioPage /></AnimatedPage>} />
+            <Route path="/portfolio/project/:projectId" element={<AnimatedPage><ProjectPage /></AnimatedPage>} />
+            <Route path="/portfolio/project/game/:projectId" element={<AnimatedPage><GameProjectPage /></AnimatedPage>} />
             <Route path="/quillian" element={<BentoSkills />} />
             {/* 
 					<Route path="/Portfolio/:ind" element={<Layout><PortfolioPage /></Layout>} />

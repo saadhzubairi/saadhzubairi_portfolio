@@ -2,7 +2,8 @@
     "id": "topdown",
     "image": "/Projects/topdown/topdown.png",
     "name": "Top Down Shooter",
-    "subtitle": "A top down shooter made using SDL 2.0.",
+    "title": "Top Down Shooter",
+    "subtitle": "A top-down shooter game made using Unity.",
     "titleImg": "/Projects/topdown/topdown.png",
     "heroImage": {
         "src": "/Projects/topdown/topdown.png",
