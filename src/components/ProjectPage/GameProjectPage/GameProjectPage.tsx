@@ -8,7 +8,6 @@ import { Badge } from "@/components/ui/badge";
 import TexturedDiv from '../../TexturedDiv';
 import CustomDiv from '../../CustomDiv';
 import TexturedSpacer from '../../TexturedSpacer';
-import projectData from '@/assets/portfolio/projects.json';
 import LightGallery from 'lightgallery/react';
 
 // import styles
@@ -25,6 +24,7 @@ const GameProjectPage: React.FC = () => {
     const navigate = useNavigate();
     const { projectId } = useParams<{ projectId: string }>();
     const [project, setProject] = useState<any>(null);
+    const [projects, setProjects] = useState<any[]>([]);
 
     useEffect(() => {
         const fetchProjectData = async () => {
@@ -32,10 +32,12 @@ const GameProjectPage: React.FC = () => {
                 try {
                     const projectModules = import.meta.glob('/src/assets/portfolio/*.json');
                     const projectPath = `/src/assets/portfolio/${projectId}.json`;
+                    const projectsModule = await import(`@/assets/portfolio/projects.json`);
 
                     if (projectModules[projectPath]) {
                         const projectModule = await projectModules[projectPath]() as { default: any };
                         setProject(projectModule.default);
+                        setProjects(projectsModule.default);
                     } else {
                         throw new Error('Project not found');
                     }
@@ -49,13 +51,13 @@ const GameProjectPage: React.FC = () => {
         fetchProjectData();
     }, [projectId, navigate]);
 
-    if (!project) {
+    if (!project || projects.length === 0) {
         return <div>Loading...</div>;
     }
 
-    const currentIndex = projectData.findIndex(p => p.id === projectId);
-    const previousProject = currentIndex > 0 ? projectData[currentIndex - 1] : null;
-    const nextProject = currentIndex < projectData.length - 1 ? projectData[currentIndex + 1] : null;
+    const currentIndex = projects.findIndex(p => p.id === projectId);
+    const previousProject = currentIndex > 0 ? projects[currentIndex - 1] : null;
+    const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null;
 
     return (
         <motion.div

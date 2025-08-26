@@ -64,14 +64,14 @@ const Connect = () => {
                 >
                     <Calendar className="w-8 h-8" />
                 </a>
-                <a
+                {/* <a
                     href="https://nyu.zoom.us/my/saadhzubairi"
                     className="p-3 text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors cursor-pointer rounded-lg border hover:bg-gray-100 dark:hover:bg-gray-800"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
                     <Video className="w-8 h-8" />
-                </a>
+                </a> */}
             </div>
         </CustomDiv>
 

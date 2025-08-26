@@ -1,0 +1,140 @@
+{
+  "id": "flp",
+  "title": "NYU FLP Portal",
+  "subtitle": "A platform for NYU students to take language exams and get placed in the appropriate course.",
+  "links": {
+    "liveDemo": "https://example.com/flp-demo",
+    "github": "https://github.com/your-username/flp"
+  },
+  "heroImage": {
+    "src": "/Projects/flp/flp.png",
+    "alt": "NYU Foreign Language Placement and Exam Portal"
+  },
+  "techStack": {
+    "frameworks": [
+      "Next.js",
+      "Nest.js",
+      "AWS",
+      "CometChat",
+      "PostgreSQL",
+      "Terraform",
+      "GitHub Actions",
+      "Docker",
+      "Socket.IO",
+      "Puppeteer",
+      "Multer",
+      "JWT",
+      "Axios"
+    ],
+    "database": [
+      "PostgreSQL"
+    ],
+    "cloudAndInfra": [
+      "AWS EC2",
+      "AWS RDS",
+      "AWS S3",
+      "AWS Lambda",
+      "Terraform"
+    ],
+    "tools": [
+      "GitHub Actions (CI/CD)",
+      "Docker",
+      "Socket.IO",
+      "Puppeteer",
+      "Multer",
+      "JWT",
+      "Axios"
+    ],
+    "securityCompliance": [
+      "HIPAA Compliance",
+      "Audit Trails",
+      "Access Control",
+      "Encrypted Data Flows"
+    ]
+  },
+  "myResponsibilities": [
+    "Led a 5-engineer Scrum team and shipped the SupportSphere MVP in 8 weeks.",
+    "Architected the system from scratch, including database schema, modular microservices, and REST APIs with full documentation.",
+    "Engineered 20+ clinician-facing user journeys, from onboarding to data visualization.",
+    "Developed 90% of the backend using Nest.js, including authentication, role-based access control, and secure data pipelines.",
+    "Optimized Next.js front-end components for performance and accessibility in clinician dashboards.",
+    "Designed HIPAA-compliant data flows with audit logging and encryption.",
+    "Deployed AI-driven microservices on AWS (EC2, Lambda, RDS, S3) with modular scaling.",
+    "Implemented GitHub Actions CI/CD pipelines and Terraform-managed infrastructure (6 AWS servers) for automated deployments."
+  ],
+  "methodology": "Delivered via an iterative **Agile** approach with tri-weekly clinician feedback demos. Emphasized CI/CD automation, DevSecOps practices, and infrastructure-as-code to rapidly deploy secure, scalable MVP features while maintaining healthcare compliance.",
+  "about": [
+    "SupportSphere is a healthcare BI portal designed for clinicians and administrators to analyze patient data, track workflows, and collaborate securely.",
+    "It integrates multiple data pipelines into a unified PostgreSQL-backed system, exposing insights via interactive dashboards and secure APIs.",
+    "Unlike traditional healthcare software, SupportSphere emphasizes modular AI-driven microservices and strict HIPAA compliance from the ground up.",
+    "Clinicians can interact with dashboards, securely share insights, and coordinate schedules — all within a platform engineered for scalability and privacy."
+  ],
+  "gallery": [
+    {
+      "src": "/Projects/supportsphere/login.png",
+      "alt": "Secure login with multi-factor authentication"
+    },
+    {
+      "src": "/Projects/supportsphere/dashboard.png",
+      "alt": "Clinician BI dashboard with patient analytics"
+    },
+    {
+      "src": "/Projects/supportsphere/pipeline.png",
+      "alt": "Data pipeline visualization"
+    },
+    {
+      "src": "/Projects/supportsphere/services.png",
+      "alt": "Microservices monitoring panel"
+    },
+    {
+      "src": "/Projects/supportsphere/cicd.png",
+      "alt": "GitHub Actions CI/CD pipeline"
+    },
+    {
+      "src": "/Projects/supportsphere/aws.png",
+      "alt": "Terraform-managed AWS infrastructure"
+    }
+  ],
+  "challengesAndLessons": [
+    {
+      "challenge": "Balancing rapid MVP delivery with HIPAA compliance requirements.",
+      "solution": "Implemented modular compliance checks, encrypted data pipelines, and access control layers early in development. Learned to integrate compliance into the CI/CD workflow instead of as an afterthought."
+    },
+    {
+      "challenge": "Scaling AI-driven microservices for healthcare data workloads.",
+      "solution": "Adopted a hybrid deployment strategy: core services on EC2/RDS and compute-intensive tasks on Lambda. Gained expertise in architecting cloud-native microservices that scale without sacrificing security."
+    },
+    {
+      "challenge": "Coordinating a distributed team of 5 engineers within tight deadlines.",
+      "solution": "Established Scrum cadences, tri-weekly clinician demos, and modular development milestones. Learned how to manage engineering velocity while incorporating domain expert feedback."
+    }
+  ],
+  "skillsDeveloped": {
+    "hardSkills": [
+      "Full-stack architecture (Next.js + Nest.js + PostgreSQL)",
+      "Infrastructure as Code with Terraform",
+      "CI/CD with GitHub Actions",
+      "HIPAA-compliant system design",
+      "Cloud-native microservices (AWS EC2/Lambda/RDS/S3)",
+      "Secure authentication & audit trails",
+      "Performance optimization in Next.js"
+    ],
+    "softSkills": [
+      "Agile Scrum leadership",
+      "Stakeholder engagement with clinicians",
+      "Rapid prototyping and MVP delivery",
+      "Cross-team collaboration",
+      "Compliance-first engineering practices"
+    ]
+  },
+  "navigation": {
+    "previous": {
+      "name": "Hoops",
+      "slug": "hoops"
+    },
+    "next": {
+      "name": "QuantumLeap CRM",
+      "slug": "quantumleap-crm"
+    }
+  }
+}

@@ -1,12 +1,6 @@
 import './projectH.css';
-import hoops from '../../assets/portfolio/hoops.json';
-import talenthive from '../../assets/portfolio/talenthive.json';
-import latex from '../../assets/portfolio/latex.json';
-import crickex from '../../assets/portfolio/crickex.json';
-import tetromania from '../../assets/portfolio/tetromania.json';
-import pixelcut from '../../assets/portfolio/pixelcut.json';
+import React, { useEffect, useState } from 'react';
 import ProjectCard from '../PortfolioPage/ProjectCard';
-import topdown from '../../assets/portfolio/topdown.json';
 import { Link } from 'react-router-dom';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -17,10 +11,11 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
-import React from 'react';
 import { ArrowUpRight, ChevronLeft, ChevronRight, PawPrint } from 'lucide-react';
 import CustomDiv from '../CustomDiv';
 import { Button } from '../ui/button';
+
+const projectIds = ['flp', 'supportsphere', 'hoops', 'talenthive', 'crickex', 'latex', 'pixelcut', 'tetromania', 'topdown'];
 
 // Extend Window interface to include ionicons
 declare global {
@@ -34,10 +29,26 @@ declare global {
 }
 
 export const ProjectH: React.FC = () => {
+    const [projects, setProjects] = useState<any[]>([]);
+
+    useEffect(() => {
+        const fetchProjects = async () => {
+            const projectPromises = projectIds.map(id => import(`../../assets/portfolio/${id}.json`));
+            const loadedProjects = await Promise.all(projectPromises);
+            setProjects(loadedProjects.map(p => p.default));
+        };
+
+        fetchProjects();
+    }, []);
+
+    if (projects.length === 0) {
+        return <div>Loading...</div>; // Or a spinner component
+    }
+
     return (
-        <section className="projecth section" id="Featured">
+        <section className="min-h-screen flex flex-col" id="Featured">
             <CustomDiv>
-                <div className=""></div>
+                <div className="h-24"></div>
             </CustomDiv>
             <CustomDiv>
                 <h2 className="text-4xl font-bold">Featured Projects</h2>
@@ -50,7 +61,7 @@ export const ProjectH: React.FC = () => {
             </CustomDiv>
 
             <div className="relative group">
-                <div className="swiper-button-prev-custom absolute left-4 top-1/2 -translate-y-1/2 z-10 cursor-pointer rounded-full border bg-background p-2 text-foreground hover:bg-accent hidden md:block opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="mx-20 absolute left-4 top-1/2 -translate-y-1/2 z-10 cursor-pointer rounded-full border bg-background p-2 text-foreground hover:bg-accent hidden md:block opacity-0 group-hover:opacity-100 transition-opacity">
                     <ChevronLeft className="h-6 w-6" />
                 </div>
                 <CustomDiv>
@@ -74,30 +85,14 @@ export const ProjectH: React.FC = () => {
                         className=""
                         modules={[EffectCoverflow, Pagination, Navigation]}
                     >
-                        <SwiperSlide>
-                            <ProjectCard data={hoops} onH={true} />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <ProjectCard data={talenthive} onH={true} />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <ProjectCard data={crickex} onH={true} />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <ProjectCard data={latex} onH={true} />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <ProjectCard data={pixelcut} onH={true} />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <ProjectCard data={tetromania} onH={true} />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <ProjectCard data={topdown} onH={true} />
-                        </SwiperSlide>
+                        {projects.map((project, index) => (
+                            <SwiperSlide key={index}>
+                                <ProjectCard data={project} onH={true} />
+                            </SwiperSlide>
+                        ))}
                     </Swiper>
                 </CustomDiv>
-                <div className="swiper-button-next-custom absolute right-4 top-1/2 -translate-y-1/2 z-10 cursor-pointer rounded-full border bg-background p-2 text-foreground hover:bg-accent hidden md:block opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="swiper-button-next-custom mx-20 absolute right-4 top-1/2 -translate-y-1/2 z-10 cursor-pointer rounded-full border bg-background p-2 text-foreground hover:bg-accent hidden md:block opacity-0 group-hover:opacity-100 transition-opacity">
                     <ChevronRight className="h-6 w-6" />
                 </div>
                 <div className="slider-controler mt-4 flex items-center justify-center gap-4">

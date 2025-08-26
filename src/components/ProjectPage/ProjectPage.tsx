@@ -18,11 +18,10 @@ import 'lightgallery/css/lg-thumbnail.css';
 // import plugins if you need
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
-import projectData from '@/assets/portfolio/projects.json';
 
 const ProjectSection: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
-  <section className="mb-16">
-    <h2 className="text-3xl  bg-neutral-100 dark:bg-gray-900 font-bold tracking-tight border-b border-gray-200 dark:border-gray-700">{title}</h2>
+  <section className="">
+    <h2 className="text-3xl  bg-white dark:bg-[#020617] font-bold tracking-tight border-b border-gray-200 dark:border-gray-700">{title}</h2>
     <TexturedSpacer height={32} />
     {children}
   </section>
@@ -32,13 +31,18 @@ const ProjectPage: React.FC = () => {
   const navigate = useNavigate();
   const { projectId } = useParams<{ projectId: string }>();
   const [project, setProject] = useState<any>(null);
+  const [projects, setProjects] = useState<any[]>([]);
 
   useEffect(() => {
     const fetchProjectData = async () => {
       if (projectId) {
         try {
-          const projectModule = await import(`../../assets/portfolio/${projectId}.json`);
+          const [projectModule, projectsModule] = await Promise.all([
+            import(`../../assets/portfolio/${projectId}.json`),
+            import(`@/assets/portfolio/projects.json`)
+          ]);
           setProject(projectModule.default);
+          setProjects(projectsModule.default);
         } catch (error) {
           console.error("Failed to load project data:", error);
           // Handle error, e.g., navigate to a 404 page
@@ -50,13 +54,13 @@ const ProjectPage: React.FC = () => {
     fetchProjectData();
   }, [projectId, navigate]);
 
-  if (!project) {
+  if (!project || projects.length === 0) {
     return <div>Loading...</div>;
   }
 
-  const currentIndex = projectData.findIndex(p => p.id === projectId);
-  const previousProject = currentIndex > 0 ? projectData[currentIndex - 1] : null;
-  const nextProject = currentIndex < projectData.length - 1 ? projectData[currentIndex + 1] : null;
+  const currentIndex = projects.findIndex(p => p.id === projectId);
+  const previousProject = currentIndex > 0 ? projects[currentIndex - 1] : null;
+  const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null;
 
   return (
     <motion.div
@@ -90,7 +94,7 @@ const ProjectPage: React.FC = () => {
           <CustomDiv>
             <div className="text-center">
               <div className="flex justify-center gap-4">
-                <Button variant="secondary" asChild >
+                <Button variant="default" asChild >
                   <a href={project.links.github} target="_blank" className='' rel="noopener noreferrer">
                     <Github className="mr-2 h-4 w-4 " /> GitHub
                   </a>
@@ -101,32 +105,32 @@ const ProjectPage: React.FC = () => {
           <TexturedSpacer height={32} />
           <CustomDiv className=''>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-12 gap-y-8 ">
-              <main className="lg:col-span-2 border-r border-gray-200 dark:border-gray-700">
+              <main className="lg:col-span-2 border-l border-r border-b md:border-r border-gray-200 dark:border-gray-700">
                 <ProjectSection title="About This Project">
-                  <div className="space-y-4 px-2 prose prose-lg dark:prose-invert max-w-none text-muted-foreground">
+                  <div className="space-y-4 px-2 prose prose-lg dark:prose-invert max-w-none text-muted-foreground bg-white dark:bg-[#020617] h-full">
                     {project.about.map((p: string, i: number) => <p key={i}>{p}</p>)}
                   </div>
                 </ProjectSection>
               </main>
 
               <div className="lg:col-span-1 space-y-8 sticky top-24 border-l border-gray-200 dark:border-gray-700 self-start">
-                <section className='border-b border-gray-200 dark:border-gray-700'>
+                <section className='border-b  border-l border-r border-gray-200 dark:border-gray-700'>
                   <h3 className="text-xl font-semibold border-b border-t border-gray-200 dark:border-gray-700 px-2 py-1 bg-neutral-100 dark:bg-gray-900">Tech Stack</h3>
-                  <div className="flex flex-wrap gap-2 p-2 justify-center">
+                  <div className="flex flex-wrap gap-2 p-2 justify-center bg-white dark:bg-[#020617]">
                     {[...project.techStack.frameworks, ...project.techStack.database, ...project.techStack.tools].map(tech => (
                       <Badge key={tech} variant="secondary">{tech}</Badge>
                     ))}
                   </div>
                 </section>
-                <section className='border-b border-gray-200 dark:border-gray-700'>
+                <section className='border-b border-l border-r border-gray-200 dark:border-gray-700'>
                   <h3 className="text-xl font-semibold border-b border-t border-gray-200 dark:border-gray-700 px-2 py-1 bg-neutral-100 dark:bg-gray-900">My Responsibilities</h3>
-                  <ul className="list-disc list-inside space-y-2 text-muted-foreground p-2">
+                  <ul className="list-disc list-inside space-y-2 text-muted-foreground p-2 bg-white dark:bg-[#020617]">
                     {project.myResponsibilities.map((resp: string) => <li key={resp}>{resp}</li>)}
                   </ul>
                 </section>
                 <section className='border-b border-gray-200 dark:border-gray-700'>
                   <h3 className="text-xl font-semibold border-b border-t border-gray-200 dark:border-gray-700 px-2 py-1 bg-neutral-100 dark:bg-gray-900">Methodology</h3>
-                  <p className="p-2 text-muted-foreground">
+                  <p className="p-2 text-muted-foreground bg-white dark:bg-[#020617]">
                     {project.methodology.split('**').map((part: string, i: number) =>
                       i % 2 === 1 ? <strong key={i} className="font-semibold text-foreground">{part}</strong> : part
                     )}
@@ -166,6 +170,10 @@ const ProjectPage: React.FC = () => {
             </ProjectSection>
           </CustomDiv>
 
+
+          <CustomDiv>
+            <div className="h-24"></div>
+          </CustomDiv>
           <CustomDiv>
             <ProjectSection title="Challenges & Lessons Learned">
               <div className="space-y-8">
@@ -182,7 +190,9 @@ const ProjectPage: React.FC = () => {
               </div>
             </ProjectSection>
           </CustomDiv>
-
+          <CustomDiv>
+            <div className="h-10"></div>
+          </CustomDiv>
           <CustomDiv>
             <ProjectSection title="Skills Developed">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

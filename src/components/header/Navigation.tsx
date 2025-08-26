@@ -101,10 +101,7 @@ const Navigation = () => {
                 key={item.name}
                 variant="ghost"
                 size="sm"
-                className={`px-4 py-2 rounded-lg transition-colors cursor-pointer ${activeSection === item.hash
-                  ? 'bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white'
-                  : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800'
-                  }`}
+                className={`px-4 py-2 rounded-lg transition-colors cursor-pointer text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800`}
                 onClick={() => handleNavClick(item.hash)}
               >
                 <span className="text-sm font-medium">{item.name}</span>

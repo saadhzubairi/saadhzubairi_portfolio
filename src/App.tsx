@@ -13,8 +13,7 @@ import PortfolioPage from './components/PortfolioPage/PortfolioPage';
 
 import ProjectPage from './components/ProjectPage/ProjectPage';
 import GameProjectPage from './components/ProjectPage/GameProjectPage';
-// @ts-expect-error: No type declarations for Quillian
-import BentoSkills from './components/utils/Quillian';
+
 import BentoGrid from './components/about/BentoGrid';
 import { ProjectH } from './components/projectHighlights/ProjectH';
 import Connect from './components/connect/Connect';
@@ -82,7 +81,6 @@ function App() {
             <Route path="/portfolio/" element={<AnimatedPage><PortfolioPage /></AnimatedPage>} />
             <Route path="/portfolio/project/:projectId" element={<AnimatedPage><ProjectPage /></AnimatedPage>} />
             <Route path="/portfolio/project/game/:projectId" element={<AnimatedPage><GameProjectPage /></AnimatedPage>} />
-            <Route path="/quillian" element={<BentoSkills />} />
             {/* 
 					<Route path="/Portfolio/:ind" element={<Layout><PortfolioPage /></Layout>} />
 					<Route path="/Portfolio/Project/Game/:projectId" element={<Layout><GameProjectPage /></Layout>} />
