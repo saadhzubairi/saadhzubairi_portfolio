@@ -18,7 +18,6 @@ import 'lightgallery/css/lg-thumbnail.css';
 // import plugins if you need
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
-import projectData from '@/assets/portfolio/projects.json';
 
 const ProjectSection: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
   <section className="mb-16">
@@ -32,13 +31,18 @@ const ProjectPage: React.FC = () => {
   const navigate = useNavigate();
   const { projectId } = useParams<{ projectId: string }>();
   const [project, setProject] = useState<any>(null);
+  const [projects, setProjects] = useState<any[]>([]);
 
   useEffect(() => {
     const fetchProjectData = async () => {
       if (projectId) {
         try {
-          const projectModule = await import(`../../assets/portfolio/${projectId}.json`);
+          const [projectModule, projectsModule] = await Promise.all([
+            import(`../../assets/portfolio/${projectId}.json`),
+            import(`@/assets/portfolio/projects.json`)
+          ]);
           setProject(projectModule.default);
+          setProjects(projectsModule.default);
         } catch (error) {
           console.error("Failed to load project data:", error);
           // Handle error, e.g., navigate to a 404 page
@@ -50,13 +54,13 @@ const ProjectPage: React.FC = () => {
     fetchProjectData();
   }, [projectId, navigate]);
 
-  if (!project) {
+  if (!project || projects.length === 0) {
     return <div>Loading...</div>;
   }
 
-  const currentIndex = projectData.findIndex(p => p.id === projectId);
-  const previousProject = currentIndex > 0 ? projectData[currentIndex - 1] : null;
-  const nextProject = currentIndex < projectData.length - 1 ? projectData[currentIndex + 1] : null;
+  const currentIndex = projects.findIndex(p => p.id === projectId);
+  const previousProject = currentIndex > 0 ? projects[currentIndex - 1] : null;
+  const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null;
 
   return (
     <motion.div

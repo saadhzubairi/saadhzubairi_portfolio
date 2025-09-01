@@ -1,54 +1,66 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import ProjectCard from './ProjectCard';
 import './portfoliopage.css';
 
 // Import project data
-import hoops from '@/assets/portfolio/hoops.json';
-import talenthive from '@/assets/portfolio/talenthive.json';
-import halpert from '@/assets/portfolio/halpert.json';
-import latex from '@/assets/portfolio/latex.json';
-import crickex from '@/assets/portfolio/crickex.json';
-import tutor from '@/assets/portfolio/tutor.json';
-import topdown from '@/assets/portfolio/topdown.json';
-import tetromania from '@/assets/portfolio/tetromania.json';
-import hidenseek from '@/assets/portfolio/hidenseek.json';
-import pixelcut from '@/assets/portfolio/pixelcut.json';
 import CustomDiv from '../CustomDiv';
 import TexturedSpacer from '../TexturedSpacer';
 
 interface TabData {
   id: string;
   label: string;
-  projects: any[];
+  projectIds: string[];
+  projects?: any[];
 }
 
 const tabs: TabData[] = [
   {
     id: 'mostRecent',
     label: 'Most Recent',
-    projects: [hoops, talenthive],
+    projectIds: ['hoops', 'talenthive'],
   },
   {
     id: 'gamedesign',
     label: 'Hobbyist Game Dev',
-    projects: [pixelcut, tetromania, topdown, hidenseek],
+    projectIds: ['pixelcut', 'tetromania', 'topdown', 'hidenseek'],
   },
   {
     id: 'earlyCoursework',
     label: 'Early Coursework',
-    projects: [latex, crickex, tutor, halpert],
+    projectIds: ['latex', 'crickex', 'tutor', 'halpert'],
   },
   {
     id: 'photography',
     label: 'Photography',
-    projects: [],
+    projectIds: [],
   },
 ];
 
 const PortfolioPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState(tabs[0].id);
+  const [projectData, setProjectData] = useState<TabData[]>([]);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      const updatedTabs = await Promise.all(
+        tabs.map(async (tab) => {
+          const projects = await Promise.all(
+            tab.projectIds.map(async (id) => {
+              const module = await import(`@/assets/portfolio/${id}.json`);
+              return module.default;
+            })
+          );
+          return { ...tab, projects };
+        })
+      );
+      setProjectData(updatedTabs);
+    };
+
+    fetchProjects();
+  }, []);
+
   /* const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -75,6 +87,9 @@ const PortfolioPage: React.FC = () => {
       </div>
     );
   } */
+  if (projectData.length === 0) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <motion.div
@@ -118,7 +133,7 @@ const PortfolioPage: React.FC = () => {
             tabIndex={0}
             aria-label="Project categories"
           >
-            {tabs.map((tab) => (
+            {projectData.map((tab) => (
               <TabsTrigger
                 key={tab.id}
                 value={tab.id}
@@ -128,9 +143,9 @@ const PortfolioPage: React.FC = () => {
               </TabsTrigger>
             ))}
           </TabsList>
-          {tabs.map((tab) => (
+          {projectData.map((tab) => (
             <TabsContent key={tab.id} value={tab.id}>
-              {tab.projects.length > 0 ? (
+              {tab.projects && tab.projects.length > 0 ? (
                 <motion.div
                   className="grid grid-cols-1 gap-8 pt-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
                   initial={{ opacity: 0, y: 100 }}
