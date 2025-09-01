@@ -45,6 +45,6 @@
     "youtubeLink": "https://www.youtube.com/embed/NXNNtbcrJk8?si=lMKpsaXNivazc4d4",
     "lessonsLearned": "Throughout the development, several challenges were encountered, leading to valuable learning experiences.<br/><br/>One significant hurdle involved implementing SDL 2.0 with C++, presenting initial difficulties that, over time, resulted in a heightened proficiency in leveraging this game development library.<br/><br/>Learning to create visually appealing sprites and art, particularly diving into the realm of pixel art, proved to be a distinct experience, emphasizing the importance of aesthetics in game design.<br/><br/>The process of programming the game's physics required a revisitation of various mathematical concepts. This challenge served as a practical application of theoretical knowledge, enhancing understanding and application skills. <br/><br/>Additionally, delving into the intricacies of music creation for the game added a unique and enjoyable learning dimension. <br/><br/>Overcoming these challenges not only contributed to the successful development of but also reinforced problem-solving skills, adaptability, and an expanded skill set in game development.",
     "links": [
-        "https://github.com/saadhzubairi/Top_Down_Shooter_SDL_2.0.git"
+        "https://github.com/saadhzubairi/Top_Down_Shooter_SDL_2.0"
     ]
 }
