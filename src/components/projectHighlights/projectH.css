@@ -10,7 +10,6 @@
 .projectShowcaseFlex {
     display: flex;
     flex-wrap: wrap;
-    max-width: 992px;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -55,8 +54,10 @@
     height: fit-content;
     padding-top: 0.5rem !important;
     padding-bottom: 2rem !important;
-    max-width: 100%;
+    width: 100% !important;
     overflow-x: hidden;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .swiper-slide {
@@ -85,7 +86,7 @@
 }
 
 @media (max-width: 1100px) {
-    .projectShowcaseFlex {
+    /* .projectShowcaseFlex {
         max-width: 100%;
-    }
+    } */
 }

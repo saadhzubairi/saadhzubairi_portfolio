@@ -19,7 +19,7 @@ const tabs: TabData[] = [
   {
     id: 'mostRecent',
     label: 'Most Recent',
-    projectIds: ['hoops', 'talenthive'],
+    projectIds: ['flp', 'supportsphere', 'hoops', 'talenthive'],
   },
   {
     id: 'gamedesign',

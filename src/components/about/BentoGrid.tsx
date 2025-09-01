@@ -57,7 +57,7 @@ function BentoGrid(): JSX.Element {
     return (
         <section className="section" id="About">
             <CustomDiv>
-                <div className=""></div>
+                <div className="h-14"></div>
             </CustomDiv>
             <CustomDiv>
                 <h2 className="text-4xl font-bold">At a glance</h2>
@@ -108,7 +108,7 @@ function BentoGrid(): JSX.Element {
                                         {selectedBox.details}
                                         <div
                                             onClick={() => handleBoxClick(selectedBox.id)}
-                                            className="sticky bottom-4 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-800 cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors duration-200 flex items-center justify-center z-50"
+                                            className="sticky bottom-4 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-red-200 dark:bg-red-600 cursor-pointer hover:bg-red-300 dark:hover:bg-red-700 transition-colors duration-200 flex items-center justify-center z-50"
                                         >
                                             <X size={20} />
                                         </div>
@@ -118,7 +118,7 @@ function BentoGrid(): JSX.Element {
                                         <div className="flex-grow p-4 overflow-y-auto">
                                             {selectedBox.details}
                                         </div>
-                                        <div onClick={() => handleBoxClick(selectedBox.id)} className="rounded-lg text-center flex items-center justify-center p-2 bg-gray-200 dark:bg-gray-800 cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors duration-200">
+                                        <div onClick={() => handleBoxClick(selectedBox.id)} className="rounded-lg text-center flex items-center justify-center p-2 bg-red-200 dark:bg-red-800 cursor-pointer hover:bg-red-300 dark:hover:bg-red-700 transition-colors duration-200">
                                             <X size={10} />
                                         </div>
                                     </>
@@ -189,7 +189,7 @@ const ExperienceSummary = () => (
                     </div>
                     <h4 className="text-md font-medium text-indigo-600 dark:text-indigo-400">Software Engineering Intern</h4>
                     <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
-                        AI Powered Internal Tooling, Data Scraping, Geotagging, LLM Powered Educational Portal.
+                        As a Software Engineer Intern, I built automation and LLM-powered tools, including a geospatial dashboard mapping 2,000+ mailboxes, a Chrome extension that tagged 1,200+ weekly Zendesk tickets, and an LLM-based cybersecurity training MVP.
                     </p>
                 </div>
             </article>
@@ -208,7 +208,7 @@ const ExperienceSummary = () => (
                     </div>
                     <h4 className="text-md font-medium text-indigo-600 dark:text-indigo-400">Full Stack Engineer</h4>
                     <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
-                        T3 Stack Web Portals Development, Migrations, Development Support.
+                        Software Engineer on the university's team, modernizing academic portals by migrating a legacy PHP exam site to a T3-stack system with unified scheduling, grading, and placement workflows (2,500+ submissions/term), implementing a custom DAL/BAL with 4-tier RBAC.
                     </p>
                 </div>
             </article>
@@ -224,8 +224,8 @@ const ResearchSummary = () => (
             {researchData.map((item, index) => (
                 <HoverCard key={index}>
                     <HoverCardTrigger asChild>
-                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-3 bg-gray-100 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
-                            <Link size={16} className="text-gray-600 dark:text-gray-400" />
+                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center justify-center p-3 bg-gray-100 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                            <Link size={16} className="text-gray-600 dark:text-gray-400" />{item.title.substring(0, 60)}...
                         </a>
                     </HoverCardTrigger>
                     <HoverCardContent className="w-80">

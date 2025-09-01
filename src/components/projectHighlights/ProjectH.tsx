@@ -15,7 +15,7 @@ import { ArrowUpRight, ChevronLeft, ChevronRight, PawPrint } from 'lucide-react'
 import CustomDiv from '../CustomDiv';
 import { Button } from '../ui/button';
 
-const projectIds = ['hoops', 'talenthive', 'crickex', 'latex', 'pixelcut', 'tetromania', 'topdown'];
+const projectIds = ['flp', 'supportsphere', 'hoops', 'talenthive', 'crickex', 'latex', 'pixelcut', 'tetromania', 'topdown'];
 
 // Extend Window interface to include ionicons
 declare global {
@@ -46,9 +46,9 @@ export const ProjectH: React.FC = () => {
     }
 
     return (
-        <section className="projecth section" id="Featured">
+        <section className="min-h-screen flex flex-col" id="Featured">
             <CustomDiv>
-                <div className=""></div>
+                <div className="h-24"></div>
             </CustomDiv>
             <CustomDiv>
                 <h2 className="text-4xl font-bold">Featured Projects</h2>
@@ -61,7 +61,7 @@ export const ProjectH: React.FC = () => {
             </CustomDiv>
 
             <div className="relative group">
-                <div className="swiper-button-prev-custom absolute left-4 top-1/2 -translate-y-1/2 z-10 cursor-pointer rounded-full border bg-background p-2 text-foreground hover:bg-accent hidden md:block opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="mx-20 absolute left-4 top-1/2 -translate-y-1/2 z-10 cursor-pointer rounded-full border bg-background p-2 text-foreground hover:bg-accent hidden md:block opacity-0 group-hover:opacity-100 transition-opacity">
                     <ChevronLeft className="h-6 w-6" />
                 </div>
                 <CustomDiv>
@@ -92,7 +92,7 @@ export const ProjectH: React.FC = () => {
                         ))}
                     </Swiper>
                 </CustomDiv>
-                <div className="swiper-button-next-custom absolute right-4 top-1/2 -translate-y-1/2 z-10 cursor-pointer rounded-full border bg-background p-2 text-foreground hover:bg-accent hidden md:block opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="swiper-button-next-custom mx-20 absolute right-4 top-1/2 -translate-y-1/2 z-10 cursor-pointer rounded-full border bg-background p-2 text-foreground hover:bg-accent hidden md:block opacity-0 group-hover:opacity-100 transition-opacity">
                     <ChevronRight className="h-6 w-6" />
                 </div>
                 <div className="slider-controler mt-4 flex items-center justify-center gap-4">

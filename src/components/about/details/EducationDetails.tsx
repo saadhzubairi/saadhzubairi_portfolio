@@ -16,17 +16,19 @@ const EducationDetails = () => {
                     <div className="w-full">
                         <h3 className="text-lg font-bold tracking-tight text-gray-900 dark:text-gray-100">{school.institute}</h3>
                         <p className="text-md font-medium text-gray-700 dark:text-gray-300">{school.degree}</p>
-                        <div className="flex flex-col md:flex-row items-center justify-start gap-x-2 mt-1">
+                        <div className="flex flex-col md:flex-row items-start md:items-center justify-start gap-x-2 gap-y-1 mt-1">
                             <p className="text-md md:text-lg font-semibold text-gray-700 dark:text-gray-300">{school.session}</p>
                             {school.institute.includes("New York University") && (
-                                <span className="bg-indigo-100 text-indigo-800 text-xs font-bold px-2.5 py-0.5 rounded-md md:rounded-full dark:bg-indigo-900 dark:text-indigo-300 self-start">
-                                    Expected
-                                </span>
+                                <div className="h-full flex items-center justify-center">
+                                    <span className="bg-indigo-100 text-indigo-800 text-xs font-bold px-2.5 py-0.5 rounded-md md:rounded-full dark:bg-indigo-900 dark:text-indigo-300 self-start">
+                                        Expected
+                                    </span>
+                                </div>
                             )}
                         </div>
                     </div>
                 </div>
-                
+
                 <div className="flex items-center mb-6 space-x-4">
                     <a href={school.website} target="_blank" rel="noopener noreferrer" className="flex items-center text-sm font-medium text-gray-500 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
                         <ExternalLink size={14} className="mr-1.5" />

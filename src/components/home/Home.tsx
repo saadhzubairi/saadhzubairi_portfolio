@@ -1,6 +1,6 @@
 import { Mail, Linkedin, Github, MessageCircle, PawPrint, File } from 'lucide-react';
 import CustomDiv from '../CustomDiv';
-import { Button } from '@/components/ui/button.tsx';
+import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
