@@ -97,9 +97,11 @@ const Home = () => {
               </Button>
             </Link>
             <Button variant={"secondary"} className="w-36 h-12 dark:bg-gray-800 border cursor-pointer">
-              <span className="flex items-center gap-2">
-                <File />  Resume
-              </span>
+              <a href="/src/assets/Saad_Z.pdf" download>
+                <span className="flex items-center gap-2">
+                  <File /> Resume
+                </span>
+              </a>
             </Button>
           </div>
         </CustomDiv>
