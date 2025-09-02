@@ -2,6 +2,7 @@ import { Mail, Linkedin, Github, MessageCircle, PawPrint, File } from 'lucide-re
 import CustomDiv from '../CustomDiv';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import resumePdf from '../../assets/Saad_Z.pdf';
 
 const Home = () => {
   return (
@@ -97,7 +98,7 @@ const Home = () => {
               </Button>
             </Link>
             <Button variant={"secondary"} className="w-36 h-12 dark:bg-gray-800 border cursor-pointer">
-              <a href="/src/assets/Saad_Z.pdf" download>
+              <a href={resumePdf} download="Saad_Zubairi_Resume.pdf">
                 <span className="flex items-center gap-2">
                   <File /> Resume
                 </span>
