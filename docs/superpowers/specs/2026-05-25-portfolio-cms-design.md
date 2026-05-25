@@ -14,6 +14,10 @@ No auth required — it only runs locally on your machine.
 - Category management for portfolio tabs
 - One-click publish with automatic ISR revalidation
 
+### Prerequisites
+
+- The portfolio must be migrated to Next.js (Spec 1) before the CMS publish/revalidation flow works. The CMS can be built and used for content editing in parallel, but the `Publish` → ISR revalidation step depends on the portfolio having `/api/cms/revalidate` deployed.
+
 ### Non-Goals
 
 - Image upload (images stay in the portfolio repo's `/public/Projects/` folder; CMS manages path strings)
@@ -482,33 +486,26 @@ const ProjectSchema = z.object({
     tools: z.array(z.string()),
   }),
   sections: z.array(SectionSchema),
+  // createdAt and updatedAt are managed by Mongoose `timestamps: true` option
+  // and do not need to be included in the input validation schema
 });
 ```
 
 ### Section Validation
 
 ```typescript
-const SectionSchema = z.object({
-  id: z.string(),
-  type: z.enum([
-    "text", "bullet-list", "gallery", "challenge-solution",
-    "skills", "featured-highlight", "image-text", "rich-text", "embed"
-  ]),
-  title: z.string().min(1),
-  enabled: z.boolean(),
-  order: z.number().int().min(0),
-  data: z.union([
-    TextBlockSchema,
-    BulletListBlockSchema,
-    GalleryBlockSchema,
-    ChallengeSolutionBlockSchema,
-    SkillsBlockSchema,
-    FeaturedHighlightBlockSchema,
-    ImageTextBlockSchema,
-    RichTextBlockSchema,
-    EmbedBlockSchema,
-  ]),
-});
+// Uses discriminated union on `type` for better validation errors and performance
+const SectionSchema = z.discriminatedUnion("type", [
+  z.object({ type: z.literal("text"), id: z.string(), title: z.string().min(1), enabled: z.boolean(), order: z.number().int().min(0), data: TextBlockSchema }),
+  z.object({ type: z.literal("bullet-list"), id: z.string(), title: z.string().min(1), enabled: z.boolean(), order: z.number().int().min(0), data: BulletListBlockSchema }),
+  z.object({ type: z.literal("gallery"), id: z.string(), title: z.string().min(1), enabled: z.boolean(), order: z.number().int().min(0), data: GalleryBlockSchema }),
+  z.object({ type: z.literal("challenge-solution"), id: z.string(), title: z.string().min(1), enabled: z.boolean(), order: z.number().int().min(0), data: ChallengeSolutionBlockSchema }),
+  z.object({ type: z.literal("skills"), id: z.string(), title: z.string().min(1), enabled: z.boolean(), order: z.number().int().min(0), data: SkillsBlockSchema }),
+  z.object({ type: z.literal("featured-highlight"), id: z.string(), title: z.string().min(1), enabled: z.boolean(), order: z.number().int().min(0), data: FeaturedHighlightBlockSchema }),
+  z.object({ type: z.literal("image-text"), id: z.string(), title: z.string().min(1), enabled: z.boolean(), order: z.number().int().min(0), data: ImageTextBlockSchema }),
+  z.object({ type: z.literal("rich-text"), id: z.string(), title: z.string().min(1), enabled: z.boolean(), order: z.number().int().min(0), data: RichTextBlockSchema }),
+  z.object({ type: z.literal("embed"), id: z.string(), title: z.string().min(1), enabled: z.boolean(), order: z.number().int().min(0), data: EmbedBlockSchema }),
+]);
 ```
 
 ### Per-Block Validation

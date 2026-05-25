@@ -316,7 +316,7 @@ saadhzubairi-portfolio/
 
 ```tsx
 import { getProject } from "@/lib/queries/getProject";
-import { getCategories } from "@/lib/queries/getCategories";
+import { getProjects } from "@/lib/queries/getProjects";
 import { HeroSection } from "@/components/project/HeroSection";
 import { BlockRenderer } from "@/components/project/blocks/BlockRenderer";
 import { ProjectNavigation } from "@/components/project/ProjectNavigation";
@@ -435,9 +435,12 @@ A one-time script (`scripts/seed-db.ts`) that:
    - `gallery` → `gallery` block
    - `challengesAndLessons` → `challenge-solution` block
    - `skillsDeveloped` → `skills` block
-3. Inserts into MongoDB
-4. Creates the four category documents (seed data above)
-5. Logs results
+   - `methodology` → `rich-text` block (if present)
+3. Fields intentionally dropped (replaced by runtime computation):
+   - `navigation.previous` / `navigation.next` — `ProjectNavigation` computes neighbors dynamically by querying projects in the same category sorted by `sortOrder`
+4. Inserts into MongoDB
+5. Creates the four category documents (seed data above)
+6. Logs results
 
 This ensures zero content loss during migration.
 
