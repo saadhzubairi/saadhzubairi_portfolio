@@ -1,1 +1,11 @@
+# --- Shortcut subdomains ---------------------------------------------------
+# Host-based redirects. These MUST come before the SPA catch-all below
+# (Netlify processes top-to-bottom, first match wins). Each rule fires only
+# for its specific host, so the main site's routing is unaffected.
+# To add a new shortcut: register the subdomain as a domain alias on this
+# Netlify site, then add a line here. Use 302 so browsers don't cache it.
+
+https://meet.saadzubairi.com/*   https://nyu.zoom.us/my/saadhzubairi   302!
+
+# --- Main site SPA routing -------------------------------------------------
 /*    /index.html   200
