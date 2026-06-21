@@ -1,120 +1,143 @@
 {
-    "id": "crickex",
-    "title": "Crick-Ex One",
-    "subtitle": "A Beautiful Digital Cricket Scorebook.",
-    "links": {
-      "liveDemo": "https://example.com/crickex-demo", 
-      "github": "https://github.com/your-username/crickex"
+  "id": "crickex",
+  "title": "Crick-Ex One",
+  "tagline": "A digital cricket scorebook that runs the match, projects the scoreboard, and keeps the data — built in JavaFX with Oracle behind it.",
+  "year": "2022",
+  "caseNumber": "09 / 12",
+  "status": "v1.0 · coursework",
+  "updated": "10.22",
+  "role": "Designer & engineer",
+  "team": "Solo build",
+  "duration": "6 weeks",
+  "links": {
+    "github": "https://github.com/saad/crickex"
+  },
+  "stack": [
+    "Java",
+    "JavaFX",
+    "Oracle 19c",
+    "SQL",
+    "JDBC",
+    "OOP"
+  ],
+  "banner": {
+    "gradient": "linear-gradient(135deg, #1B5E20 0%, #43A047 50%, #A5D6A7 100%)",
+    "screenshot": {
+      "src": "/Projects/crickex/10.png",
+      "alt": "Crick-Ex projected scoreboard"
     },
-    "heroImage": {
-      "src": "/Projects/crickex/crickex.png",
-      "alt": "Crick-Ex One splash screen"
-    },
-    "techStack": {
-      "frameworks": ["JavaFX"],
-      "database": ["Oracle 19c", "SQL"],
-      "tools": ["Java"]
-    },
-    "myResponsibilities": [
-      "Built full tournament management system with player and team registration modules",
-      "Designed and implemented real-time scoreboard and match tracking interfaces",
-      "Engineered a persistent backend using Oracle 19c and SQL schema design",
-      "Focused on UI usability for projection-ready scoreboard during matches",
-      "Created calendar modules and navigation flows for multi-page app"
-    ],
-    "methodology": "Developed using an **Object-Oriented Design** approach with modular Java classes and JavaFX GUI components. Emphasis on separation of concerns, UI clarity, and data persistence.",
-    "about": [
-      "Crick-Ex One is a feature-rich digital cricket scorebook app designed as part of an OOP coursework project. Built in Java with JavaFX, it allows teams to register, matches to be created and played, and scores to be tracked in real-time.",
-      "The application supports multiple matches and team combinations, displays a clean and intuitive UI, and stores all relevant game and player data in a robust Oracle SQL database.",
-      "It’s designed to also support projection during real matches for visual score updates."
-    ],
-    "gallery": [
-      {
-        "src": "/Projects/crickex/1.png",
-        "alt": "Team and player creation screen"
-      },
-      {
-        "src": "/Projects/crickex/2.png",
-        "alt": "Team overview UI"
-      },
-      {
-        "src": "/Projects/crickex/3.png",
-        "alt": "Player list and configuration panel"
-      },
-      {
-        "src": "/Projects/crickex/4.png",
-        "alt": "Match configuration calendar component"
-      },
-      {
-        "src": "/Projects/crickex/5.png",
-        "alt": "Date selection and schedule interface"
-      },
-      {
-        "src": "/Projects/crickex/6.png",
-        "alt": "Searchable player and team filter"
-      },
-      {
-        "src": "/Projects/crickex/7.png",
-        "alt": "Start match selection screen"
-      },
-      {
-        "src": "/Projects/crickex/8.png",
-        "alt": "Match preview configuration"
-      },
-      {
-        "src": "/Projects/crickex/10.png",
-        "alt": "Projected match scoreboard UI"
-      },
-      {
-        "src": "/Projects/crickex/11.png",
-        "alt": "Live match tracking panel"
-      },
-      {
-        "src": "/Projects/crickex/12.png",
-        "alt": "Player performance display"
-      },
-      {
-        "src": "/Projects/crickex/13.png",
-        "alt": "Overs and innings visualization"
-      },
-      {
-        "src": "/Projects/crickex/14.png",
-        "alt": "Live match status breakdown"
-      }
-    ],
-    "challengesAndLessons": [
-      {
-        "challenge": "Synchronizing user-driven match updates with persistent SQL state",
-        "solution": "Used transactional SQL operations and abstracted data-access layers to ensure consistency. Learned how to manage real-time updates with strong data guarantees."
-      },
-      {
-        "challenge": "Designing a UI that works both for interactive use and live match projection",
-        "solution": "Created a modular layout system with toggles for full-screen match view vs admin control panel. Understood the nuances of multi-context UI usage."
-      }
-    ],
-    "skillsDeveloped": {
-      "hardSkills": [
-        "JavaFX UI Design",
-        "OOP in Java",
-        "Oracle SQL Schema Design",
-        "Event-Driven Programming",
-        "Live Scoreboard Logic"
-      ],
-      "softSkills": [
-        "User Interface Flow Design",
-        "Real-Time Data Sync",
-        "Error Handling and Validation",
-        "Data Modeling for Sports Systems"
+    "wordmark": "CRICK-EX",
+    "caption": {
+      "fig": "FIG · 00 — HERO",
+      "center": "Projected scoreboard · coursework build · v1.0",
+      "right": "1920 × 1080 PX"
+    }
+  },
+  "aboutHeadline": "A tournament-grade scorebook that doubles as a projector.",
+  "blurb": "Crick-Ex One is an OOP coursework project taken further than the assignment asked for. It's a full digital cricket scorebook with team and player registration, multi-match management, live ball-by-ball scoring, and a separate full-screen projection mode designed to be thrown on a screen at the side of a real match. State is persisted in Oracle 19c through JDBC, with transaction boundaries drawn so a misclick never corrupts the scoreboard.",
+  "pullQuotes": [
+    "Two UIs, one source of truth — the admin panel and the projection screen stay locked in step.",
+    "OOP coursework that ended up running an actual match.",
+    "A scorebook that survives the wrong button getting pressed at the wrong time."
+  ],
+  "highlightsHeadline": "Four screens behind a live match.",
+  "highlights": [
+    {
+      "kw": "Setup",
+      "title": "Teams, players & tournaments",
+      "lede": "Where every match starts.",
+      "body": "Teams and players are registered through a JavaFX flow backed by Oracle tables, with validation on every field and a searchable filter that scales to a tournament's worth of names. Tournaments group matches; matches group innings; the whole structure is modeled as nested OOP entities with clear ownership.",
+      "shots": [
+        { "src": "/Projects/crickex/1.png", "alt": "Team setup", "caption": "Team and player creation." },
+        { "src": "/Projects/crickex/2.png", "alt": "Team overview", "caption": "Team overview with player list." },
+        { "src": "/Projects/crickex/3.png", "alt": "Players", "caption": "Player list and configuration." }
       ]
     },
-    "navigation": {
-      "previous": {
-        "name": "LaTeX Lite",
-        "slug": "latex"
-      },
-      "next": {
-        "name": "Project Nebula",
-        "slug": "project-nebula"
-      }
+    {
+      "kw": "Schedule",
+      "title": "Matches & calendar",
+      "lede": "Multi-match management without spreadsheets.",
+      "body": "A calendar-driven scheduling layer lets the user place matches across dates, search through historical fixtures, and reopen any past match for replay or correction. The schedule is the single front-door to a tournament's whole history.",
+      "shots": [
+        { "src": "/Projects/crickex/4.png", "alt": "Calendar", "caption": "Match configuration calendar." },
+        { "src": "/Projects/crickex/5.png", "alt": "Date select", "caption": "Date selection and scheduling." },
+        { "src": "/Projects/crickex/6.png", "alt": "Filter", "caption": "Search across teams and matches." }
+      ]
+    },
+    {
+      "kw": "Live",
+      "title": "Ball-by-ball scoring",
+      "lede": "The admin panel where the match actually runs.",
+      "body": "An admin-side panel for scoring every ball: runs, wickets, extras, partnerships, bowling figures. Each click writes a transaction to Oracle and pushes an update to the projection screen — so the side-of-the-match display is never more than a ball behind the scorer.",
+      "shots": [
+        { "src": "/Projects/crickex/7.png", "alt": "Start match", "caption": "Start match selection." },
+        { "src": "/Projects/crickex/8.png", "alt": "Preview", "caption": "Match preview configuration." },
+        { "src": "/Projects/crickex/11.png", "alt": "Live panel", "caption": "Ball-by-ball admin panel." }
+      ]
+    },
+    {
+      "kw": "Projection",
+      "title": "Live scoreboard projection",
+      "lede": "The screen people actually watch.",
+      "body": "A second, full-screen JavaFX scene designed to be projected on a screen beside an actual cricket pitch — large type, high contrast, running scoreboard, partnership and bowling figures rotating in. Driven by the same data the admin panel writes; there's no second source.",
+      "shots": [
+        { "src": "/Projects/crickex/10.png", "alt": "Projection", "caption": "Full-screen projection scoreboard." },
+        { "src": "/Projects/crickex/12.png", "alt": "Players", "caption": "Player performance display." },
+        { "src": "/Projects/crickex/13.png", "alt": "Overs", "caption": "Overs and innings visualization." }
+      ]
     }
-  }  
+  ],
+  "galleryHeadline": "Every screen, plated.",
+  "gallery": [
+    { "src": "/Projects/crickex/1.png", "alt": "Setup", "label": "Setup · team" },
+    { "src": "/Projects/crickex/2.png", "alt": "Overview", "label": "Overview · team" },
+    { "src": "/Projects/crickex/3.png", "alt": "Players", "label": "Players · list" },
+    { "src": "/Projects/crickex/4.png", "alt": "Calendar", "label": "Calendar · match" },
+    { "src": "/Projects/crickex/5.png", "alt": "Date", "label": "Date · schedule" },
+    { "src": "/Projects/crickex/6.png", "alt": "Filter", "label": "Filter · search" },
+    { "src": "/Projects/crickex/7.png", "alt": "Start", "label": "Start · match" },
+    { "src": "/Projects/crickex/8.png", "alt": "Preview", "label": "Preview · match" },
+    { "src": "/Projects/crickex/10.png", "alt": "Projection", "label": "Projection · live" },
+    { "src": "/Projects/crickex/11.png", "alt": "Live panel", "label": "Live · admin" },
+    { "src": "/Projects/crickex/12.png", "alt": "Performance", "label": "Perf · player" },
+    { "src": "/Projects/crickex/13.png", "alt": "Overs", "label": "Overs · viz" },
+    { "src": "/Projects/crickex/14.png", "alt": "Status", "label": "Status · match" }
+  ],
+  "challengesHeadline": "What the rulebook left out.",
+  "challenges": [
+    {
+      "title": "Keeping the projection and the admin panel in sync",
+      "body": "Two JavaFX scenes, one data layer. The fix was to push state through an observable model that both scenes subscribed to — so writes from the admin panel propagated to the projection without an explicit refresh call. The admin and the projected screen never disagreed on the score."
+    },
+    {
+      "title": "Surviving misclicks during a live match",
+      "body": "A live match doesn't pause for an 'are you sure?' dialog. Every scoring action got a one-tap undo (with the previous state cached) and a transactional write to Oracle that could be rolled back. Mistakes stayed cheap; recovery stayed fast."
+    },
+    {
+      "title": "Modeling cricket's edge cases in OOP",
+      "body": "Cricket has a lot of edge cases — retired hurt, no-balls that became free hits, mankad dismissals, super-over tiebreakers. The OOP model leaned on explicit state machines per innings rather than booleans on a Match object, which made adding a rule a matter of adding a state, not patching seven methods."
+    }
+  ],
+  "skills": {
+    "tech": [
+      "JavaFX dual-window UI",
+      "Object-oriented domain modeling",
+      "Oracle 19c schema design",
+      "JDBC with transactional writes",
+      "Observable state propagation",
+      "Live-update scoreboard logic"
+    ],
+    "soft": [
+      "Domain research (cricket rule edge cases)",
+      "Designing for high-stakes real-time use",
+      "Multi-context UX (admin vs projection)",
+      "Solo project scoping",
+      "Coursework time-boxing",
+      "Documenting your own data model"
+    ]
+  },
+  "navigation": {
+    "previous": { "name": "LaTeX Lite", "slug": "latex" },
+    "next": { "name": "Tutor Finder", "slug": "tutor" }
+  }
+}

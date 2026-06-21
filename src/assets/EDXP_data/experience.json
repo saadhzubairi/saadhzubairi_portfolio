@@ -1,5 +1,39 @@
 [
     {
+        "desg": "Founding Engineer",
+        "company": "Prognosis",
+        "years": "March 2026 – Present",
+        "logo": "/XP_logos/prognosis.jpeg",
+        "website": "https://prognosis.com/",
+        "linkedIn": "https://www.linkedin.com/company/prognosis/",
+        "about": "Prognosis is a clinical trial supply chain forecasting and analytics platform for pharmaceutical sponsors and CROs. It helps teams predict patient enrollment, optimize drug supply, and mitigate inventory risks across global clinical trials.",
+        "desc": "Founding engineer shipping new product features end-to-end across a multi-package monorepo and rewriting core forecasting algorithms in Rust for performance.",
+        "resps": [
+            "Shipped new features across the Next.js 15 platform — a Turborepo monorepo with 20+ packages spanning forecasting algorithms, UI, billing, and observability.",
+            "Rewrote core forecasting algorithms in Rust — patient demand and supply-demand modeling with Monte Carlo simulation for risk quantification (P5/P50/P95 percentiles) across multi-country clinical trials.",
+            "Built an 8-step trial configuration wizard supporting multi-tier distribution networks, treatment arms, cohort management, and production planning with shelf-life constraints.",
+            "Implemented a drag-and-drop Drug Substance/Drug Product canvas using React Flow for upstream supply network modeling with allocation optimization.",
+            "Integrated AI-powered trial analysis using Claude with Pinecone RAG for contextual retrieval and automated insights."
+        ],
+        "skills": [
+            "Next.js 15",
+            "React 19",
+            "TypeScript",
+            "Rust",
+            "Supabase",
+            "Turborepo",
+            "Monte Carlo Simulation",
+            "React Flow",
+            "Tailwind CSS",
+            "Anthropic Claude SDK",
+            "Pinecone",
+            "Inngest",
+            "Stripe",
+            "Sentry",
+            "Playwright"
+        ]
+    },
+    {
         "desg": "Software Engineer Intern",
         "company": "Cloaked Inc.",
         "years": "June 2025 – August 2025",
@@ -23,12 +57,13 @@
             "Chrome Extensions",
             "Geospatial Visualization",
             "TypeScript"
-        ]
+        ],
+        "duration": "3 mos"
     },
     {
-        "desg": "Student Software Engineer",
+        "desg": "Full Stack Engineer",
         "company": "New York University",
-        "years": "April 2025 – Present",
+        "years": "April 2025 – May 2026",
         "logo": "/EDXP_logos/NYU.png",
         "website": "https://www.nyu.edu/",
         "linkedIn": "https://www.linkedin.com/school/new-york-university/",
@@ -46,7 +81,8 @@
             "Role-Based Access Control (RBAC)",
             "Full-Stack Development",
             "Legacy System Migration"
-        ]
+        ],
+        "duration": "1 yr+"
     },
     {
         "desg": "Software Engineer",
@@ -73,7 +109,8 @@
             "AWS RDS",
             "GitHub Actions",
             "Healthcare Technology"
-        ]
+        ],
+        "duration": "4 mos"
     },
     {
         "desg": "Software Engineer",
@@ -95,7 +132,8 @@
             "Unix Systems",
             "Payment Reconciliation",
             "API Development"
-        ]
+        ],
+        "duration": "10 mos"
     },
     {
         "desg": "Junior Software Developer",
@@ -115,7 +153,8 @@
             "Python",
             "ASP.NET Core",
             "Back-End Development"
-        ]
+        ],
+        "duration": "3 mos"
     },
     {
         "desg": "Unity and UI/UX Intern",
@@ -140,7 +179,8 @@
             "Figma",
             "C#",
             "Unity"
-        ]
+        ],
+        "duration": "2 mos"
     },
     {
         "desg": "Game Programming Intern",
@@ -164,7 +204,8 @@
             "C++",
             "AI",
             "Algorithms"
-        ]
+        ],
+        "duration": "3 mos"
     },
     {
         "desg": "Teaching Assistant",
@@ -190,6 +231,7 @@
             "Lecturing",
             "Grading & Assessment",
             "Academic Bookkeeping"
-        ]
+        ],
+        "duration": "2 yrs 5 mos"
     }
 ]

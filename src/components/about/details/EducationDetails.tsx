@@ -10,7 +10,7 @@ const EducationDetails = () => {
         if (!school) return null;
 
         return (
-            <div className="bg-white dark:bg-[#020c16] rounded-lg flex flex-col p-6">
+            <div className="bg-white dark:bg-[#121212] rounded-lg flex flex-col p-6">
                 <div className="flex items-start mb-4">
                     <img src={school.logo} alt={`${school.institute} Logo`} className="w-12 h-12 md:w-16 md:h-16 mr-4 rounded-md flex-shrink-0" />
                     <div className="w-full">
@@ -55,7 +55,7 @@ const EducationDetails = () => {
     };
 
     return (
-        <div className="p-4 md:p-8 w-full bg-gray-50 dark:bg-[#0a101e]">
+        <div className="p-4 md:p-8 w-full bg-gray-50 dark:bg-[#161616]">
             <header className="mb-8">
                 <h2 className="text-3xl font-extrabold text-gray-900 dark:text-gray-100 tracking-tighter">Education Workbench</h2>
                 <p className="text-gray-500 dark:text-gray-400 mt-1">A detailed look at my academic background.</p>

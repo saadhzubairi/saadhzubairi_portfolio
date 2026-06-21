@@ -15,7 +15,7 @@ import ProjectPage from './components/ProjectPage/ProjectPage';
 import GameProjectPage from './components/ProjectPage/GameProjectPage';
 // @ts-expect-error: No type declarations for Quillian
 import BentoSkills from './components/utils/Quillian';
-import BentoGrid from './components/about/BentoGrid';
+import HeroAtAGlance from './components/about/HeroAtAGlance';
 import { ProjectH } from './components/projectHighlights/ProjectH';
 import Connect from './components/connect/Connect';
 import AnimatedPage from './components/AnimatedPage';
@@ -32,9 +32,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <NavbarAnimation isVisible={isVisible} />
       <div className="relative flex-grow w-full">
         {/* Pillars animate in first */}
-        <div aria-hidden className="hidden xl:block pointer-events-none bg-textured-rails absolute inset-y-0 w-10 border-l border-r border-gray-200 dark:border-gray-700 left-[calc(50%-36rem-2.5rem)]"></div>
-        <div aria-hidden className="hidden xl:block pointer-events-none bg-textured-rails absolute inset-y-0 w-10 border-l border-r border-gray-200 dark:border-gray-700 left-[calc(50%+36rem)]"></div>
-
+        {/*  <div aria-hidden className="hidden xl:block pointer-events-none bg-textured-rails absolute inset-y-0 w-10 border-l border-r border-gray-100 dark:border-gray-900 left-[calc(50%-36rem-2.5rem)]"></div>
+        <div aria-hidden className="hidden xl:block pointer-events-none bg-textured-rails absolute inset-y-0 w-10 border-l border-r border-gray-100 dark:border-gray-900 left-[calc(50%+36rem)]"></div>
+       */}
         {/* Content fades in after pillars */}
         <main className={`w-full mx-auto transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
           {children}
@@ -73,7 +73,7 @@ function App() {
               element={
                 <AnimatedPage>
                   <Home />
-                  <BentoGrid />
+                  <HeroAtAGlance />
                   <ProjectH />
                   <Connect />
                 </AnimatedPage>

@@ -42,7 +42,7 @@ const Qualifications: React.FC = () => {
                 <div className=""></div>
             </CustomDiv>
             <CustomDiv>
-                <h2 className="text-4xl font-bold">Qualifications</h2>
+                <h2 className="text-6xl font-thin text-black dark:text-gray-100">Qualifications</h2>
             </CustomDiv>
             <CustomDiv>
                 <span className="text-lg text-gray-500">My academic and professional journey</span>

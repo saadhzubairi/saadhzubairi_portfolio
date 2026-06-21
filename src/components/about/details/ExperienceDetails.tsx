@@ -7,7 +7,7 @@ const ExperienceDetails = () => {
     const compactExperiences = experienceData.slice(4);
 
     const FullDetailCard = ({ exp }: { exp: any }) => (
-        <div className="bg-white dark:bg-[#020c16] rounded-lg p-6 flex flex-col">
+        <div className="bg-white dark:bg-[#121212] rounded-lg p-6 flex flex-col">
             <div className="flex items-start mb-4">
                 <img src={exp.logo} alt={`${exp.company} Logo`} className="w-16 h-16 mr-4 rounded-md flex-shrink-0" />
                 <div className="w-full">
@@ -44,7 +44,7 @@ const ExperienceDetails = () => {
     );
 
     const CompactCard = ({ exp }: { exp: any }) => (
-        <div className="bg-white dark:bg-[#020c16] rounded-lg p-4 flex flex-col">
+        <div className="bg-white dark:bg-[#121212] rounded-lg p-4 flex flex-col">
             <div className="flex items-center mb-3">
                 <img src={exp.logo} alt={`${exp.company} Logo`} className="w-10 h-10 mr-3 rounded-md flex-shrink-0" />
                 <div>
@@ -62,7 +62,7 @@ const ExperienceDetails = () => {
     );
 
     return (
-        <div className="p-4 md:p-8 w-full bg-gray-50 dark:bg-[#0a101e]">
+        <div className="p-4 md:p-8 w-full bg-gray-50 dark:bg-[#161616]">
             <header className="mb-8">
                 <h2 className="text-3xl font-extrabold text-gray-900 dark:text-gray-100 tracking-tighter">Experience Workbench</h2>
                 <p className="text-gray-500 dark:text-gray-400 mt-1">A detailed look at my professional background.</p>

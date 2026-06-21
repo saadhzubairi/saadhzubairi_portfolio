@@ -60,10 +60,10 @@ function BentoGrid(): JSX.Element {
                 <div className=""></div>
             </CustomDiv>
             <CustomDiv>
-                <h2 className="text-4xl font-bold">At a glance</h2>
+                <h2 className="text-6xl font-thin text-black dark:text-gray-100">More Info</h2>
             </CustomDiv>
             <CustomDiv>
-                <span className="text-lg text-gray-500">A summary of my skills and experiences</span>
+                <span className="text-lg text-gray-500">Dive deeper into each area</span>
             </CustomDiv>
             <CustomDiv>
                 <div className="h-10"></div>
@@ -75,8 +75,9 @@ function BentoGrid(): JSX.Element {
                         {boxes.map(box => (
                             <motion.div
                                 key={box.id}
+                                id={`info-${box.id}`}
                                 layoutId={box.id}
-                                className={`${box.colSpan} ${box.rowSpan} rounded-lg flex flex-col border bg-white dark:bg-[#020c16]`}
+                                className={`${box.colSpan} ${box.rowSpan} rounded-lg flex flex-col border bg-white dark:bg-[#121212] scroll-mt-24`}
                                 transition={{ type: "tween", duration: 0.4, ease: [0.23, 0.84, 0.07, 0.98] }}
                             >
                                 <div className="flex-grow p-4 overflow-hidden">
@@ -95,8 +96,8 @@ function BentoGrid(): JSX.Element {
                                 ref={expandedBoxRef}
                                 layoutId={selectedBox.id}
                                 className={isMobile
-                                    ? "fixed inset-0 bg-white dark:bg-[#020c16] z-50 overflow-y-auto"
-                                    : "absolute inset-2 bg-white dark:bg-[#020c16] z-10 rounded-lg flex flex-col"
+                                    ? "fixed inset-0 bg-white dark:bg-[#121212] z-50 overflow-y-auto"
+                                    : "absolute inset-2 bg-white dark:bg-[#121212] z-10 rounded-lg flex flex-col"
                                 }
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
@@ -137,7 +138,7 @@ function BentoGrid(): JSX.Element {
 }
 
 const EducationSummary = () => (
-    <section className="bg-white dark:bg-[#020c16] rounded-xl w-full h-full flex flex-col">
+    <section className="bg-white dark:bg-[#121212] rounded-xl w-full h-full flex flex-col">
         <header className="flex items-center justify-between border-b pb-4 border-gray-200 dark:border-gray-700 mb-4">
             <h2 className="text-xl md:text-2xl font-bold text-gray-800 dark:text-gray-100">Education</h2>
             <div className="bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300 text-center text-sm font-medium py-2 px-4 rounded-lg">
@@ -169,7 +170,7 @@ const EducationSummary = () => (
 );
 
 const ExperienceSummary = () => (
-    <section className="bg-white dark:bg-[#020c16] rounded-xl w-full h-full flex flex-col">
+    <section className="bg-white dark:bg-[#121212] rounded-xl w-full h-full flex flex-col">
         <header className="flex items-center justify-between pb-4 border-b border-gray-200 dark:border-gray-700 mb-6">
             <h2 className="text-xl md:text-2xl font-bold text-gray-800 dark:text-gray-100">Professional Experiences</h2>
             <span className="text-sm font-medium text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full">1+ year(s)</span>

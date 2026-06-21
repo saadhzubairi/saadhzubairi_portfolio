@@ -1,110 +1,123 @@
-import { Mail, Linkedin, Github, MessageCircle, PawPrint, File } from 'lucide-react';
-import CustomDiv from '../CustomDiv';
-import { Button } from '@/components/ui/button.tsx';
-import { Link } from 'react-router-dom';
+import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import CustomDiv from "../CustomDiv";
+import { Link } from "react-router-dom";
+import ContactExpandable from "../contact/ContactExpandable";
+
+const ROLES = [
+  "Full-Stack",
+  "Web Development",
+  "ML & AI",
+  "Signal Processing",
+  "Distributed Systems",
+  "Simulation & Modeling",
+];
+
+// Dynamic-island-style pill: constant height, width morphs to hug each role,
+// text crossfades like a slot machine.
+const RoleIsland = () => {
+  const [index, setIndex] = useState(0);
+  const reduceMotion = useReducedMotion();
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setIndex((i) => (i + 1) % ROLES.length);
+    }, 2400);
+    return () => clearInterval(id);
+  }, []);
+
+  return (
+    <motion.div
+      layout
+      transition={{ type: "spring", stiffness: 400, damping: 30 }}
+      className="inline-flex h-11 items-center gap-2.5 rounded-full bg-gray-900 px-5 text-white shadow-sm dark:bg-white dark:text-gray-900"
+    >
+      <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400 dark:bg-emerald-500" />
+      <div className="relative flex h-full items-center overflow-hidden">
+        <AnimatePresence mode="popLayout" initial={false}>
+          <motion.span
+            key={index}
+            initial={
+              reduceMotion
+                ? { opacity: 0 }
+                : { opacity: 0, y: 12, filter: "blur(4px)" }
+            }
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            exit={
+              reduceMotion
+                ? { opacity: 0 }
+                : { opacity: 0, y: -12, filter: "blur(4px)" }
+            }
+            transition={{ duration: 0.35, ease: [0.23, 1, 0.32, 1] }}
+            className="whitespace-nowrap text-sm font-medium tracking-tight"
+          >
+            {ROLES[index]}
+          </motion.span>
+        </AnimatePresence>
+      </div>
+    </motion.div>
+  );
+};
 
 const Home = () => {
   return (
-    <section id="Home" className="h-screen w-full flex overflow-hidden items-center justify-center">
-      {/* Content areas */}
-      <div className="flex flex-col w-full mx-auto">
+    <section
+      id="Home"
+      className="relative h-screen w-full flex overflow-hidden items-center justify-center"
+    >
+      {/* zine-style oversized ghost watermark — bottom-bleed on mobile, right-bleed on desktop */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 z-0 flex items-end justify-end overflow-hidden select-none sm:items-center"
+      >
+        <span className="translate-y-[12%] -mr-[14vw] whitespace-nowrap text-[44vw] font-thin leading-none tracking-tighter text-gray-900/[0.035] dark:text-white/[0.045] sm:translate-y-0 sm:-mr-[6vw] sm:text-[26vw]">
+          Zubairi
+        </span>
+      </div>
+
+      <div className="relative z-10 flex flex-col w-full mx-auto">
         <CustomDiv>
-          <div className="h-20 items-end flex justify-start">
-            <p className="text-xs h-full w-[100%] flex items-end justify-start text-gray-400 dark:text-gray-500 font-mono text-left select-none">
-              text-8xl text-white tracking-tighter text-balance
-            </p>
+          <h1 className="text-7xl md:text-9xl font-thin tracking-tight text-gray-900 dark:text-white text-left leading-[0.9]">
+            Saad
+          </h1>
+        </CustomDiv>
+        <CustomDiv>
+          <h1 className="text-7xl md:text-9xl font-thin tracking-tight text-gray-900 dark:text-white text-left leading-[0.9]">
+            Zubairi
+          </h1>
+        </CustomDiv>
+
+        <CustomDiv>
+          <div className="pt-8 pb-6">
+            <RoleIsland />
           </div>
         </CustomDiv>
+
         <CustomDiv>
-          <div className="flex items-center justify-start ">
-            <h1 className="text-6xl md:text-8xl font-bold text-gray-900 dark:text-white tracking-tighter text-balance text-left">
-              Saad H. Zubairi
-            </h1>
-          </div>
-        </CustomDiv>
-        <CustomDiv>
-          <div className="flex items-center justify-start ">
-            <h3 className="text-6xl md:text-2xl font-normal text-gray-900 dark:text-white tracking-tighter text-balance text-left">
-              Software Engineer
-            </h3>
-          </div>
-        </CustomDiv>
-        <CustomDiv>
-          <div className="h-20 items-end flex justify-start">
-            <p className="text-xs text-gray-400 dark:text-gray-500 font-mono text-left select-none">
-              text-lg text-white font-medium
-            </p>
-          </div>
-        </CustomDiv>
-        <CustomDiv>
-          <div className=" flex items-start justify-start ">
-            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 font-medium text-left">
-              Full-stack engineer with proven track record in architecting and optimizing scalable, high-performance web applications delivering impactful features from concept to deployment across distributed teams.
-            </p>
-          </div>
-        </CustomDiv>
-        <CustomDiv>
-          <div className="h-16"></div>
-        </CustomDiv>
-        <CustomDiv>
-          <div className=" flex items-center justify-center md:justify-start ">
-            <div className="flex flex-row gap-4">
-              <a
-                href="mailto:saadhzubairi@outlook.com"
-                className="p-3 text-gray-600 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-400 transition-colors cursor-pointer rounded-sm border hover:bg-gray-100 dark:hover:bg-gray-800"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Mail className="w-6 h-6" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/saadhzubairi/"
-                className="p-3 text-gray-600 dark:text-gray-300 hover:text-blue-600 transition-colors cursor-pointer rounded-sm border hover:bg-gray-100 dark:hover:bg-gray-800"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Linkedin className="w-6 h-6" />
-              </a>
-              <a
-                href="https://github.com/saadhzubairi/"
-                className="p-3 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors cursor-pointer rounded-sm border hover:bg-gray-100 dark:hover:bg-gray-800"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Github className="w-6 h-6" />
-              </a>
-              <a
-                href="https://discord.com/users/saadhzubairi#1469"
-                className="p-3 text-gray-600 dark:text-gray-300 hover:text-purple-600 transition-colors cursor-pointer rounded-sm border hover:bg-gray-100 dark:hover:bg-gray-800"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <MessageCircle className="w-6 h-6" />
-              </a>
-            </div>
-          </div>
-        </CustomDiv>
-        <CustomDiv>
-          <div className="h-16"></div>
-        </CustomDiv>
-        <CustomDiv>
-          <div className="flex items-center justify-center md:justify-start gap-2 w-full">
-            <Link to="/portfolio">
-              <Button className="w-36 h-12 bg-gray-800 dark:bg-gray-700 hover:bg-gray-700 dark:hover:bg-gray-600 text-white cursor-pointer">
-                <span className="flex items-center gap-2">
-                  <PawPrint />  Portfolio
-                </span>
-              </Button>
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4 py-2">
+            <Link
+              to="/portfolio"
+              className="group inline-flex h-11 items-center gap-2 rounded-full border border-gray-900 px-6 text-sm font-medium text-gray-900 transition-all duration-300 hover:bg-gray-900 hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-gray-900"
+            >
+              View my work
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
-            <Button variant={"secondary"} className="w-36 h-12 dark:bg-gray-800 border cursor-pointer">
-              <span className="flex items-center gap-2">
-                <File />  Resume
-              </span>
-            </Button>
+
+            <a
+              href="/SaadZ.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex h-11 items-center gap-2 rounded-full border border-gray-200 px-6 text-sm font-medium text-gray-600 transition-all duration-300 hover:border-gray-400 hover:text-gray-900 dark:border-gray-700/70 dark:text-gray-300 dark:hover:border-gray-500 dark:hover:text-white"
+            >
+              My resume
+              <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            </a>
+
+            <ContactExpandable />
           </div>
         </CustomDiv>
       </div>
-
     </section>
   );
 };

@@ -1,120 +1,142 @@
 {
-    "id": "hoops",
-    "title": "Hoops",
-    "subtitle": "A different kind of Social Media — connect through anonymous letter-based chatting.",
-    "links": {
-        "liveDemo": "https://example.com/hoops-demo",
-        "github": "https://github.com/your-username/hoops"
+  "id": "hoops",
+  "title": "Hoops",
+  "tagline": "A different kind of Social Media — connect through anonymous letter-based chatting.",
+  "year": "2024",
+  "caseNumber": "04 / 12",
+  "status": "v1.3.4 · shipped",
+  "updated": "02.03",
+  "role": "Full-stack engineer",
+  "team": "Solo build",
+  "duration": "11 weeks",
+  "links": {
+    "github": "https://github.com/saad/hoops"
+  },
+  "stack": [
+    "React",
+    "Node.js",
+    "Express",
+    "Material UI",
+    "MongoDB",
+    "JWT",
+    "Axios",
+    "Mongoose"
+  ],
+  "banner": {
+    "gradient": "linear-gradient(135deg, #FF7A3C 0%, #FF1F8F 38%, #C53BFF 100%)",
+    "screenshot": {
+      "src": "/Projects/hoops/home.png",
+      "alt": "The home surface, stripped of everything optional."
     },
-    "heroImage": {
-        "src": "/Projects/hoops/hoops.png",
-        "alt": "Hoops social media dashboard"
-    },
-    "techStack": {
-        "frameworks": [
-            "React",
-            "Node.js",
-            "Express",
-            "Material UI"
-        ],
-        "database": [
-            "MongoDB"
-        ],
-        "tools": [
-            "JWT",
-            "Axios",
-            "Mongoose"
-        ]
-    },
-    "myResponsibilities": [
-        "Implemented user onboarding with real-time username validation",
-        "Built interest-based and personality-based matching system",
-        "Designed and developed letter-based anonymous chat system",
-        "Created a clean UI using MUI and React hooks",
-        "Handled schedule integration and profile customization features"
-    ],
-    "methodology": "Built with an iterative **Agile** process, incorporating feedback-driven design sprints and component-based modular development for rapid UI updates and scalability.",
-    "about": [
-        "Hoops is an anonymous social media platform focused on meaningful connections through letter-writing. Unlike traditional apps, users interact without profile pictures, eliminating biases and encouraging depth.",
-        "Users can discover friends based on shared interests and Myers-Briggs personality compatibility. Each letter must be at least 600 characters, nudging users toward thoughtful communication. Avatars are randomized and customizable.",
-        "It supports adding class schedules and selecting interests to better match users and encourage real-world coordination — all while maintaining anonymity."
-    ],
-    "gallery": [
-        {
-            "src": "/Projects/hoops/login.png",
-            "alt": "Login and signup with live validation"
-        },
-        {
-            "src": "/Projects/hoops/interests.png",
-            "alt": "Select interests during onboarding"
-        },
-        {
-            "src": "/Projects/hoops/sched.png",
-            "alt": "Add class schedules"
-        },
-        {
-            "src": "/Projects/hoops/avatar.png",
-            "alt": "Avatar selection screen"
-        },
-        {
-            "src": "/Projects/hoops/home.png",
-            "alt": "Minimalist home dashboard"
-        },
-        {
-            "src": "/Projects/hoops/sugg.png",
-            "alt": "Friend suggestions based on interests and personality"
-        },
-        {
-            "src": "/Projects/hoops/write.png",
-            "alt": "Letter writing screen"
-        },
-        {
-            "src": "/Projects/hoops/friend.png",
-            "alt": "Friend profile with all letters"
-        },
-        {
-            "src": "/Projects/hoops/read.png",
-            "alt": "Read letters on canvas"
-        },
-        {
-            "src": "/Projects/hoops/setting.png",
-            "alt": "Settings screen"
-        }
-    ],
-    "challengesAndLessons": [
-        {
-            "challenge": "Ensuring performant real-time username validation with each keystroke",
-            "solution": "Implemented a debounce strategy to limit API calls, initially hitting a staging DB before final validation from production DB on submit. Learned how to balance UX fluidity with backend load."
-        },
-        {
-            "challenge": "Matching users on interests and personality without invasive profiling",
-            "solution": "Used simple Myers-Briggs personality inputs and structured interest tagging, maintaining user privacy. Gained experience in designing inclusive and bias-aware matching algorithms."
-        }
-    ],
-    "skillsDeveloped": {
-        "hardSkills": [
-            "Responsive UI with Material UI",
-            "RESTful API Design",
-            "Form validation and debouncing",
-            "User privacy & anonymous auth flows",
-            "MongoDB query optimization"
-        ],
-        "softSkills": [
-            "User-centered design thinking",
-            "Iterative feature delivery",
-            "Feedback incorporation",
-            "Inclusive tech practices",
-            "Collaboration across feature modules"
-        ]
-    },
-    "navigation": {
-        "previous": {
-            "name": "QuantumLeap CRM",
-            "slug": "quantumleap-crm"
-        },
-        "next": {
-            "name": "Project Nebula",
-            "slug": "project-nebula"
-        }
+    "wordmark": "HOOPS",
+    "caption": {
+      "fig": "FIG · 00 — HERO",
+      "center": "Hoops home feed · production · v1.3.4",
+      "right": "1920 × 1080 PX"
     }
+  },
+  "aboutHeadline": "A social product designed around what it refuses to do.",
+  "blurb": "Hoops is an anonymous social network built around long-form letters instead of photos, profiles, or performative posts. No profile pictures, no follower counts, no public timelines — just 600-character minimum letters routed by shared interests and Myers-Briggs compatibility. The constraints are the product: removing the usual social levers forces the conversation to carry its own weight.",
+  "pullQuotes": [
+    "Remove the profile picture and the follower count, and what's left is the part that was supposed to matter all along.",
+    "Anonymity isn't the feature. Slowness is.",
+    "Designed around what it refuses to do."
+  ],
+  "highlightsHeadline": "The four pieces that make Hoops, Hoops.",
+  "highlights": [
+    {
+      "kw": "Letters",
+      "title": "Anonymous letter sending",
+      "lede": "The atomic unit of Hoops is a letter, not a post.",
+      "body": "A 600-character floor forces users to slow down and actually say something. A live counter tracks length without nagging, and the composer strips away every social signal that would normally crowd a message — no avatars, no read receipts, no typing indicators.",
+      "shots": [
+        { "src": "/Projects/hoops/write.png", "alt": "Composer", "caption": "A live counter quietly tracks length." },
+        { "src": "/Projects/hoops/read.png", "alt": "Read", "caption": "Letters render on a canvas, not a feed." },
+        { "src": "/Projects/hoops/friend.png", "alt": "Inbox", "caption": "Threads collapse into a single conversation per pen-pal." }
+      ]
+    },
+    {
+      "kw": "Matching",
+      "title": "Interest & personality routing",
+      "lede": "Pen-pals are matched, not searched for.",
+      "body": "A lightweight Myers-Briggs intake plus tagged interests power a routing layer that suggests pen-pals without ever exposing a profile. The match surface stays small on purpose — three suggestions at a time, refreshed weekly.",
+      "shots": [
+        { "src": "/Projects/hoops/interests.png", "alt": "Interests", "caption": "Tagged interests, no free-text bios." },
+        { "src": "/Projects/hoops/sugg.png", "alt": "Suggestions", "caption": "Three pen-pals at a time. Weekly cadence." },
+        { "src": "/Projects/hoops/friend_.png", "alt": "Friend", "caption": "Profiles surface compatibility, not identity." }
+      ]
+    },
+    {
+      "kw": "Onboarding",
+      "title": "Live-validated signup",
+      "lede": "Usernames are claimed, not suggested.",
+      "body": "Real-time username validation runs on every keystroke against a debounced staging endpoint, with a final production check on submit. The flow is two screens long — name, then interests — and avatar selection is randomized to keep self-presentation out of the loop.",
+      "shots": [
+        { "src": "/Projects/hoops/login.png", "alt": "Login", "caption": "Debounced live validation per keystroke." },
+        { "src": "/Projects/hoops/avatar.png", "alt": "Avatar", "caption": "Randomized avatars. No uploads." },
+        { "src": "/Projects/hoops/sched.png", "alt": "Schedule", "caption": "Optional class schedule for real-world overlap." }
+      ]
+    },
+    {
+      "kw": "Restraint",
+      "title": "Designing for absence",
+      "lede": "Every screen earns its right to exist.",
+      "body": "The home surface shows what's new — and nothing else. No badges, no streaks, no algorithmic feed. Settings live behind a single drawer. The product's identity is built on what was deliberately left out, and the UI reflects that with whitespace, not ornament.",
+      "shots": [
+        { "src": "/Projects/hoops/home.png", "alt": "Home", "caption": "The home surface, stripped of everything optional." },
+        { "src": "/Projects/hoops/setting.png", "alt": "Settings", "caption": "Settings: one drawer, no nesting." },
+        { "src": "/Projects/hoops/title.png", "alt": "Title", "caption": "The brand mark — present, then absent." }
+      ]
+    }
+  ],
+  "galleryHeadline": "Every screen, plated.",
+  "gallery": [
+    { "src": "/Projects/hoops/login.png", "alt": "Login and signup with live validation", "label": "Login · auth", "tone": "#FFD9D9" },
+    { "src": "/Projects/hoops/interests.png", "alt": "Select interests during onboarding", "label": "Interests · onboarding", "tone": "#FFE9C7" },
+    { "src": "/Projects/hoops/sched.png", "alt": "Add class schedules", "label": "Schedule · onboarding", "tone": "#FFF3B0" },
+    { "src": "/Projects/hoops/avatar.png", "alt": "Avatar selection screen", "label": "Avatar · onboarding", "tone": "#D9F0D1" },
+    { "src": "/Projects/hoops/home.png", "alt": "Minimalist home dashboard", "label": "Home · feed", "tone": "#CFE8FF" },
+    { "src": "/Projects/hoops/sugg.png", "alt": "Friend suggestions based on interests and personality", "label": "Suggestions · matching", "tone": "#E2D6FF" },
+    { "src": "/Projects/hoops/write.png", "alt": "Letter writing screen", "label": "Compose · letter", "tone": "#FFD0EC" },
+    { "src": "/Projects/hoops/friend.png", "alt": "Friend profile with all letters", "label": "Friend · profile", "tone": "#FFD9D9" },
+    { "src": "/Projects/hoops/read.png", "alt": "Read letters on canvas", "label": "Read · letter", "tone": "#FFE9C7" },
+    { "src": "/Projects/hoops/setting.png", "alt": "Settings screen", "label": "Settings · drawer", "tone": "#D9F0D1" }
+  ],
+  "challengesHeadline": "Lessons, learned out loud.",
+  "challenges": [
+    {
+      "title": "Validating usernames in real time without burning the DB",
+      "body": "Every keystroke on the signup field wanted to hit Mongo. A debounce + a staging collection for in-flight checks let the UI feel instant while production stayed quiet — and only the final submit touched the real users table. The lesson was that perceived responsiveness and backend load are two different problems, and they need two different solutions."
+    },
+    {
+      "title": "Matching on personality without performing surveillance",
+      "body": "Myers-Briggs is a blunt tool, but it's a tool people opt into. Pairing it with tagged interests gave the matching layer enough signal to make sensible suggestions without ever asking for a bio, a photo, or a friend graph. The product worked better with less data, not more."
+    },
+    {
+      "title": "Designing for the absence of identity",
+      "body": "Most social UI patterns assume an avatar and a name to anchor every interaction. Stripping those out broke a lot of defaults — empty states, threading, even the visual rhythm of a list. The fix was to lean further into restraint, not to backfill ornament. The product's identity is built on what isn't there."
+    }
+  ],
+  "skills": {
+    "tech": [
+      "Responsive UI with Material UI",
+      "RESTful API design",
+      "Debounced form validation",
+      "Anonymous auth flows",
+      "MongoDB query optimization",
+      "JWT session management"
+    ],
+    "soft": [
+      "User-centered design thinking",
+      "Iterative feature delivery",
+      "Feedback incorporation",
+      "Inclusive tech practices",
+      "Cross-module collaboration",
+      "Restraint as a design principle"
+    ]
+  },
+  "navigation": {
+    "previous": null,
+    "next": { "name": "Talent Hive", "slug": "talenthive" }
+  }
 }

@@ -1,85 +1,149 @@
 {
-    "id": "credx",
-    "title": "CREDX",
-    "subtitle": "A socialized online retail platform.",
-    "links": {
-      "liveDemo": "https://example.com/credx", 
-      "github": "https://github.com/your-username/credx"
-    },
-    "heroImage": {
+  "id": "credx",
+  "title": "CREDX",
+  "tagline": "A socialized online retail platform where seller credibility is a first-class citizen — built around the idea that trust is more useful than reviews.",
+  "year": "2023",
+  "caseNumber": "07 / 12",
+  "status": "v1.0 · design study",
+  "updated": "06.23",
+  "role": "Product designer & front-end",
+  "team": "Solo build",
+  "duration": "8 weeks",
+  "links": {
+    "github": "https://github.com/saad/credx"
+  },
+  "stack": [
+    "React",
+    "Figma",
+    "UI/UX",
+    "Trust modeling",
+    "Real-time chat",
+    "Notification systems"
+  ],
+  "banner": {
+    "gradient": "linear-gradient(135deg, #1E40AF 0%, #3B82F6 50%, #93C5FD 100%)",
+    "screenshot": {
       "src": "/Projects/credx/title.png",
-      "alt": "CREDX retail platform preview"
+      "alt": "CREDX retail platform"
     },
-    "techStack": {
-      "frameworks": [],
-      "database": [],
-      "tools": []
-    },
-    "myResponsibilities": [
-      "Designed multi-page e-commerce layout with chat, profiles, and credibility tracking",
-      "Integrated custom credibility algorithm for seller ranking and trust building",
-      "Built user flows for shopping, messaging, reporting, and notification systems",
-      "Developed search functionality and customer support modules",
-      "Created UX for reporting, favoriting, and real-time inbox communication"
-    ],
-    "methodology": "Built using a **modular UI architecture** with focus on retail trust systems, social interactions, and credibility scoring. Emphasized user reputation signals and seller-buyer transparency.",
-    "about": [
-      "CREDX is a socialized online retail platform that helps users identify credible sellers using a built-in credibility engine. The application combines traditional e-commerce components with social features like chat, profile scoring, notifications, and support.",
-      "The platform enables users to buy products, chat with sellers, favorite items, report suspicious activity, and manage transactions with social transparency at its core."
-    ],
-    "gallery": [
-      { "src": "/Projects/credx/buyProduct.png", "alt": "Product purchase screen" },
-      { "src": "/Projects/credx/Chat.png", "alt": "In-app buyer-seller chat" },
-      { "src": "/Projects/credx/credibilityAndNotifications.png", "alt": "Credibility score and notifications" },
-      { "src": "/Projects/credx/CustomerSupport.png", "alt": "Customer support module" },
-      { "src": "/Projects/credx/CustomerSupport0.png", "alt": "Support case interaction screen" },
-      { "src": "/Projects/credx/favs.png", "alt": "Favorites list UI" },
-      { "src": "/Projects/credx/homeAndBuy.png", "alt": "Home screen with product explorer" },
-      { "src": "/Projects/credx/Inbox.png", "alt": "Messaging inbox interface" },
-      { "src": "/Projects/credx/Inbox2.png", "alt": "Expanded inbox message view" },
-      { "src": "/Projects/credx/myProducts.png", "alt": "User's listed products" },
-      { "src": "/Projects/credx/notifModal.png", "alt": "Notification modal popup" },
-      { "src": "/Projects/credx/Profile.png", "alt": "User profile and reputation" },
-      { "src": "/Projects/credx/Profile2.png", "alt": "Profile settings and detail edit" },
-      { "src": "/Projects/credx/Profile3.png", "alt": "Profile metrics and social data" },
-      { "src": "/Projects/credx/ReportItem.png", "alt": "Report product flow" },
-      { "src": "/Projects/credx/ReportUser.png", "alt": "Report seller flow" },
-      { "src": "/Projects/credx/search.png", "alt": "Search results layout" },
-      { "src": "/Projects/credx/search2.png", "alt": "Filtered search view" }
-    ],
-    "challengesAndLessons": [
-      {
-        "challenge": "Designing a reputation-based credibility engine for sellers",
-        "solution": "Created a weighted algorithm factoring reviews, disputes, response time, and product history. Learned how trust systems impact UX and business logic."
-      },
-      {
-        "challenge": "Handling multi-modal interactions (shopping, chat, reporting) cleanly",
-        "solution": "Separated user flows into independent but interoperable modules. Prioritized UX simplicity despite complex feature set."
-      }
-    ],
-    "skillsDeveloped": {
-      "hardSkills": [
-        "E-commerce UI/UX Design",
-        "User Reputation Modeling",
-        "Real-Time Messaging Flows",
-        "Multi-role Dashboard Architecture",
-        "Notification & Modal Systems"
-      ],
-      "softSkills": [
-        "Designing for Trust and Safety",
-        "Scalable Component Reuse",
-        "Interaction Pattern Optimization",
-        "Feature Prioritization"
+    "wordmark": "CREDX",
+    "caption": {
+      "fig": "FIG · 00 — HERO",
+      "center": "CREDX home · design study · v1.0",
+      "right": "1920 × 1080 PX"
+    }
+  },
+  "aboutHeadline": "An e-commerce platform built around the seller, not the product.",
+  "blurb": "CREDX replaces the star rating with a weighted credibility score — a single number derived from response time, dispute history, fulfillment rate, and review depth, surfaced everywhere a seller's name appears. The platform pairs the traditional buy-flow with a social layer (chat, reporting, favorites, real-time notifications) so buyers can build a relationship with a seller before they ever click 'buy', and so reputation has somewhere to live other than a five-star average.",
+  "pullQuotes": [
+    "Five stars and a smile don't survive a single bad transaction. A credibility score does.",
+    "Reputation belongs to the seller, not to the last person who left a review.",
+    "Social features aren't a bolt-on — they're how trust gets built before money changes hands."
+  ],
+  "highlightsHeadline": "Four pillars of a trust-first marketplace.",
+  "highlights": [
+    {
+      "kw": "Credibility",
+      "title": "Weighted credibility scoring",
+      "lede": "A single number that means something.",
+      "body": "Sellers earn a credibility score derived from response time, dispute history, fulfillment rate, and review depth — recalculated on every transaction and visible everywhere their name appears. The model is opinionated: a 4.8 with two disputes outranks a 5.0 with zero history.",
+      "shots": [
+        { "src": "/Projects/credx/credibilityAndNotifications.png", "alt": "Credibility", "caption": "Score + notifications, surfaced together." },
+        { "src": "/Projects/credx/Profile.png", "alt": "Profile", "caption": "Seller profile leads with credibility." },
+        { "src": "/Projects/credx/Profile2.png", "alt": "Settings", "caption": "Detail edit and reputation history." }
       ]
     },
-    "navigation": {
-      "previous": {
-        "name": "Tutor Finder",
-        "slug": "tutor"
-      },
-      "next": {
-        "name": "Project Nebula",
-        "slug": "project-nebula"
-      }
+    {
+      "kw": "Shop",
+      "title": "Buy, browse, favorite",
+      "lede": "The retail surface, with credibility threaded through.",
+      "body": "The shop flow keeps the familiar e-commerce primitives — home, search, product, favorites — but every product card surfaces the seller's credibility first. Search ranks by credibility-adjusted relevance; favorites track sellers, not just items.",
+      "shots": [
+        { "src": "/Projects/credx/homeAndBuy.png", "alt": "Home", "caption": "Home + product browse." },
+        { "src": "/Projects/credx/buyProduct.png", "alt": "Buy", "caption": "Buy flow with seller credibility surfaced." },
+        { "src": "/Projects/credx/favs.png", "alt": "Favorites", "caption": "Favorite sellers, not just items." }
+      ]
+    },
+    {
+      "kw": "Social",
+      "title": "Chat, inbox & notifications",
+      "lede": "Talk to the seller before you pay them.",
+      "body": "Real-time chat between buyers and sellers, an inbox that threads every transaction into a single conversation, and a notification system that surfaces what matters (new messages, dispute updates, credibility changes) without becoming a slot machine.",
+      "shots": [
+        { "src": "/Projects/credx/Chat.png", "alt": "Chat", "caption": "Real-time buyer-seller chat." },
+        { "src": "/Projects/credx/Inbox.png", "alt": "Inbox", "caption": "Per-transaction inbox threading." },
+        { "src": "/Projects/credx/notifModal.png", "alt": "Notifications", "caption": "Notifications that earn the interruption." }
+      ]
+    },
+    {
+      "kw": "Safety",
+      "title": "Reporting & customer support",
+      "lede": "When trust breaks, there's somewhere to go.",
+      "body": "Buyers can report a product or a seller in a single flow that feeds straight into the credibility model — disputes lower the score, resolutions raise it. A dedicated customer-support surface routes case updates back to both parties in real time.",
+      "shots": [
+        { "src": "/Projects/credx/reportItem.png", "alt": "Report item", "caption": "Report product flow." },
+        { "src": "/Projects/credx/ReportUser.png", "alt": "Report user", "caption": "Report seller flow." },
+        { "src": "/Projects/credx/customerSupport.png", "alt": "Support", "caption": "Customer support routes to both sides." }
+      ]
     }
-  }  
+  ],
+  "galleryHeadline": "Every surface, both sides.",
+  "gallery": [
+    { "src": "/Projects/credx/title.png", "alt": "Title", "label": "Title · brand" },
+    { "src": "/Projects/credx/homeAndBuy.png", "alt": "Home", "label": "Home · shop" },
+    { "src": "/Projects/credx/buyProduct.png", "alt": "Buy", "label": "Buy · product" },
+    { "src": "/Projects/credx/myProducts.png", "alt": "Products", "label": "Listed · products" },
+    { "src": "/Projects/credx/favs.png", "alt": "Favorites", "label": "Favs · sellers" },
+    { "src": "/Projects/credx/search.png", "alt": "Search", "label": "Search · results" },
+    { "src": "/Projects/credx/search2.png", "alt": "Filtered", "label": "Filter · results" },
+    { "src": "/Projects/credx/Chat.png", "alt": "Chat", "label": "Chat · live" },
+    { "src": "/Projects/credx/Inbox.png", "alt": "Inbox", "label": "Inbox · threads" },
+    { "src": "/Projects/credx/Inbox2.png", "alt": "Inbox detail", "label": "Inbox · detail" },
+    { "src": "/Projects/credx/credibilityAndNotifications.png", "alt": "Credibility", "label": "Credibility · score" },
+    { "src": "/Projects/credx/notifModal.png", "alt": "Notif", "label": "Notif · modal" },
+    { "src": "/Projects/credx/Profile.png", "alt": "Profile", "label": "Profile · seller" },
+    { "src": "/Projects/credx/Profile2.png", "alt": "Profile detail", "label": "Profile · detail" },
+    { "src": "/Projects/credx/Profile3.png", "alt": "Profile metrics", "label": "Profile · metrics" },
+    { "src": "/Projects/credx/reportItem.png", "alt": "Report item", "label": "Report · item" },
+    { "src": "/Projects/credx/ReportUser.png", "alt": "Report user", "label": "Report · user" },
+    { "src": "/Projects/credx/customerSupport.png", "alt": "Support", "label": "Support · main" },
+    { "src": "/Projects/credx/CustomerSupport0.png", "alt": "Support case", "label": "Support · case" }
+  ],
+  "challengesHeadline": "Designing for trust is harder than designing for taste.",
+  "challenges": [
+    {
+      "title": "Building a credibility score people would actually trust",
+      "body": "A score is only useful if people understand how it moves. The model was deliberately opinionated — fewer inputs, transparent weights, visible recent activity — and the UI surfaced both the score and the most recent events that affected it. Trust came from explainability, not from sophistication."
+    },
+    {
+      "title": "Balancing shopping, chat, and reporting in one shell",
+      "body": "Three feature surfaces (shop, social, safety) competing for the same screen real estate. The design moved each into its own primary surface with shared primitives — the same card, the same avatar, the same credibility badge — so users never had to learn a new visual language to move between them."
+    },
+    {
+      "title": "Making the social layer feel safe, not exhausting",
+      "body": "Chat, notifications, and reports could easily become a perpetual-anxiety machine. The notification system was rebuilt to bundle, not broadcast — one digest per session, not one toast per event — and inbox messages threaded per-transaction so a conversation didn't follow you forever after the deal was done."
+    }
+  ],
+  "skills": {
+    "tech": [
+      "Credibility-score modeling",
+      "Real-time messaging UX",
+      "Notification design",
+      "Multi-role marketplace flows",
+      "Component reuse across surfaces",
+      "Figma → React handoff discipline"
+    ],
+    "soft": [
+      "Designing for trust and safety",
+      "Trade-off framing for opinionated systems",
+      "Interaction pattern consistency",
+      "Feature prioritization under solo constraints",
+      "Brand and UX cohesion",
+      "Writing UX that explains itself"
+    ]
+  },
+  "navigation": {
+    "previous": { "name": "Halpert's Booking", "slug": "halpert" },
+    "next": { "name": "LaTeX Lite", "slug": "latex" }
+  }
+}

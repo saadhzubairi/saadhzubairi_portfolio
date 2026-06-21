@@ -15,7 +15,8 @@ export default {
   	},
   	extend: {
 	  		fontFamily: {
-	  			sans: ["InterVariable", "system-ui", "sans-serif"]
+	  			sans: ["SF Pro", "system-ui", "sans-serif"],
+	  			serif: ["Prata", "Georgia", "serif"]
 	  		},
   		colors: {
   			border: 'hsl(var(--border))',

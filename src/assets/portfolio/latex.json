@@ -1,124 +1,139 @@
 {
-    "id": "latex",
-    "title": "LaTeX Lite",
-    "subtitle": "Make LaTeX documents with ease.",
-    "links": {
-      "liveDemo": "https://example.com/latex-lite-demo", 
-      "github": "https://github.com/your-username/latex-lite"
+  "id": "latex",
+  "title": "LaTeX Lite",
+  "tagline": "A JavaFX desktop app that lets you build LaTeX documents without learning LaTeX — structured input, live preview, copy-paste output.",
+  "year": "2022",
+  "caseNumber": "08 / 12",
+  "status": "v1.0 · coursework",
+  "updated": "11.22",
+  "role": "Designer & engineer",
+  "team": "Solo build",
+  "duration": "5 weeks",
+  "links": {
+    "github": "https://github.com/saad/latex-lite"
+  },
+  "stack": [
+    "Java",
+    "JavaFX",
+    "CSS3",
+    "MVC",
+    "MiKTeX (target compiler)"
+  ],
+  "banner": {
+    "gradient": "linear-gradient(135deg, #1F4068 0%, #2A6F97 50%, #61A5C2 100%)",
+    "screenshot": {
+      "src": "/Projects/latex/3.png",
+      "alt": "LaTeX Lite main interface with live preview"
     },
-    "heroImage": {
-      "src": "/Projects/latex/latex.png",
-      "alt": "LaTeX Lite application splash screen"
-    },
-    "techStack": {
-      "frameworks": ["JavaFX"],
-      "database": [],
-      "tools": ["Java", "CSS3"]
-    },
-    "myResponsibilities": [
-      "Designed and implemented JavaFX-based desktop interface for LaTeX generation",
-      "Built modular components for forms, preview, list generation, and code insertion",
-      "Developed live preview engine reflecting structured content creation",
-      "Engineered undo functionality and state-controlled UI flows for lists and sections",
-      "Handled dynamic formatting for code, file paths, and documents"
-    ],
-    "methodology": "Built using **modular desktop UI design** principles with a focus on structured content input, live feedback, and export consistency. Prioritized intuitive UX for users unfamiliar with LaTeX syntax.",
-    "about": [
-      "LaTeX Lite is a beginner-friendly desktop app designed to help users generate LaTeX documents without prior exposure to LaTeX syntax. It enables structured document building through intuitive inputs and real-time previewing.",
-      "The app offers configurable document types, paragraph/section creation, list builders, code formatters, and path inserters — all wrapped in a JavaFX UI with live preview. It significantly reduces the learning curve for new LaTeX users.",
-      "Upon finalizing the content, users can export the generated LaTeX code, paste it into any LaTeX compiler (like MiKTeX), and get perfectly formatted documents consistent with the preview."
-    ],
-    "gallery": [
-      {
-        "src": "/Projects/latex/1.png",
-        "alt": "Initial document configuration form"
-      },
-      {
-        "src": "/Projects/latex/2.png",
-        "alt": "Combo-box selection of attributes"
-      },
-      {
-        "src": "/Projects/latex/3.png",
-        "alt": "Main interface with controls and preview pane"
-      },
-      {
-        "src": "/Projects/latex/4.png",
-        "alt": "Simple calendar UI module"
-      },
-      {
-        "src": "/Projects/latex/5.png",
-        "alt": "Paragraph and section input interface"
-      },
-      {
-        "src": "/Projects/latex/6.png",
-        "alt": "List generation with real-time preview"
-      },
-      {
-        "src": "/Projects/latex/7.png",
-        "alt": "Alternate interface for list reordering"
-      },
-      {
-        "src": "/Projects/latex/8.png",
-        "alt": "Dialog box for adding list items"
-      },
-      {
-        "src": "/Projects/latex/9.png",
-        "alt": "Code block input and formatting"
-      },
-      {
-        "src": "/Projects/latex/10.png",
-        "alt": "Code preview output"
-      },
-      {
-        "src": "/Projects/latex/11.png",
-        "alt": "File path and directory input"
-      },
-      {
-        "src": "/Projects/latex/12.png",
-        "alt": "Modify document setup options"
-      },
-      {
-        "src": "/Projects/latex/13.png",
-        "alt": "Generate final LaTeX output"
-      },
-      {
-        "src": "/Projects/latex/14.png",
-        "alt": "Compiled LaTeX output screen"
-      }
-    ],
-    "challengesAndLessons": [
-      {
-        "challenge": "Designing a user-friendly interface that maps to complex LaTeX structures",
-        "solution": "Built structured UI components with clear semantics (e.g., for sections, lists, and code) and provided live preview feedback. Learned how to simplify abstract syntax through visual tools."
-      },
-      {
-        "challenge": "Maintaining real-time preview fidelity with final LaTeX output",
-        "solution": "Used strict formatting templates and sync logic between UI inputs and preview rendering. This emphasized the importance of WYSIWYG consistency in tooling UX."
-      }
-    ],
-    "skillsDeveloped": {
-      "hardSkills": [
-        "Desktop UI Design with JavaFX",
-        "State Management in Java",
-        "Live Preview and Data Binding",
-        "Dynamic Content Rendering",
-        "Custom Form Component Development"
-      ],
-      "softSkills": [
-        "UX Design for Technical Tools",
-        "Reducing User Onboarding Complexity",
-        "Feature Modularity",
-        "Designing for Accessibility and Clarity"
+    "wordmark": "LATEX LITE",
+    "caption": {
+      "fig": "FIG · 00 — HERO",
+      "center": "Main interface · coursework build · v1.0",
+      "right": "1920 × 1080 PX"
+    }
+  },
+  "aboutHeadline": "LaTeX without the LaTeX.",
+  "blurb": "LaTeX Lite is a JavaFX desktop application that lets users write structured documents — paragraphs, sections, lists, code blocks, file paths — through a visual interface, with a live preview that mirrors what the compiled LaTeX will produce. When the document is ready, the user copies the generated LaTeX into any compiler (MiKTeX, Overleaf) and gets the formatted document back. The point is the on-ramp: the visual layer absorbs every syntactic gotcha a first-time LaTeX user would otherwise have to learn.",
+  "pullQuotes": [
+    "The hardest part of LaTeX isn't LaTeX. It's getting started.",
+    "Tools that teach by hiding complexity, not by hiding consequences.",
+    "Live preview is the difference between learning a tool and fighting it."
+  ],
+  "highlightsHeadline": "Four input modes, one document.",
+  "highlights": [
+    {
+      "kw": "Setup",
+      "title": "Document configuration",
+      "lede": "Pick the document type before you start typing.",
+      "body": "The flow opens with a structured form for document type, attributes, and metadata — class, margins, font size, author — backed by JavaFX combo-boxes and validated input. Configuration is editable later from the main interface, so first-time users aren't punished for guessing wrong.",
+      "shots": [
+        { "src": "/Projects/latex/1.png", "alt": "Setup", "caption": "Initial document configuration form." },
+        { "src": "/Projects/latex/2.png", "alt": "Attributes", "caption": "Combo-box selection of document attributes." },
+        { "src": "/Projects/latex/12.png", "alt": "Modify", "caption": "Modify setup later, without restarting." }
       ]
     },
-    "navigation": {
-      "previous": {
-        "name": "Halpert's Booking",
-        "slug": "halpert"
-      },
-      "next": {
-        "name": "Project Nebula",
-        "slug": "project-nebula"
-      }
+    {
+      "kw": "Content",
+      "title": "Sections, paragraphs, lists",
+      "lede": "Write structure, not syntax.",
+      "body": "Sections and paragraphs are added through a sidebar that mirrors LaTeX's document tree. Lists are built through a dedicated dialog with add/reorder/delete controls — and the preview updates after every keystroke. The structure stays valid by construction; the user never sees an `\\itemize` block in the wrong place.",
+      "shots": [
+        { "src": "/Projects/latex/5.png", "alt": "Sections", "caption": "Paragraph and section input." },
+        { "src": "/Projects/latex/6.png", "alt": "Lists", "caption": "List generation with live preview." },
+        { "src": "/Projects/latex/8.png", "alt": "List dialog", "caption": "Dialog for adding list items." }
+      ]
+    },
+    {
+      "kw": "Code",
+      "title": "Code blocks & file paths",
+      "lede": "The bits LaTeX makes hardest.",
+      "body": "Code blocks and file-path snippets — the two things first-time LaTeX users always escape wrong — get their own dedicated input modes. Special characters are escaped automatically, syntax-aware formatting is applied, and the preview shows exactly what will render.",
+      "shots": [
+        { "src": "/Projects/latex/9.png", "alt": "Code input", "caption": "Code block input and formatting." },
+        { "src": "/Projects/latex/10.png", "alt": "Code preview", "caption": "Preview matches the compiled output." },
+        { "src": "/Projects/latex/11.png", "alt": "Paths", "caption": "File path input with auto-escaping." }
+      ]
+    },
+    {
+      "kw": "Output",
+      "title": "Generate & export",
+      "lede": "Copy, paste, compile.",
+      "body": "A single button compiles the visual document into LaTeX source. The output is copy-paste-ready for any LaTeX compiler — no project files, no compilation step, no dependency tree. The preview the user saw in the app matches the document they get back from MiKTeX.",
+      "shots": [
+        { "src": "/Projects/latex/13.png", "alt": "Generate", "caption": "Generate final LaTeX output." },
+        { "src": "/Projects/latex/14.png", "alt": "Compiled", "caption": "Compiled document matches the preview." },
+        { "src": "/Projects/latex/7.png", "alt": "Reorder", "caption": "Reorder before export." }
+      ]
     }
-  }  
+  ],
+  "galleryHeadline": "Every screen, plated.",
+  "gallery": [
+    { "src": "/Projects/latex/1.png", "alt": "Setup form", "label": "Setup · config" },
+    { "src": "/Projects/latex/2.png", "alt": "Attributes", "label": "Attrs · combo" },
+    { "src": "/Projects/latex/3.png", "alt": "Main interface", "label": "Main · interface" },
+    { "src": "/Projects/latex/4.png", "alt": "Calendar", "label": "Calendar · helper" },
+    { "src": "/Projects/latex/5.png", "alt": "Paragraphs", "label": "Para · input" },
+    { "src": "/Projects/latex/6.png", "alt": "Lists", "label": "List · live" },
+    { "src": "/Projects/latex/7.png", "alt": "Reorder", "label": "Reorder · list" },
+    { "src": "/Projects/latex/8.png", "alt": "Dialog", "label": "Dialog · items" },
+    { "src": "/Projects/latex/9.png", "alt": "Code", "label": "Code · input" },
+    { "src": "/Projects/latex/10.png", "alt": "Preview", "label": "Code · preview" },
+    { "src": "/Projects/latex/11.png", "alt": "Path", "label": "Path · input" },
+    { "src": "/Projects/latex/12.png", "alt": "Modify", "label": "Modify · setup" },
+    { "src": "/Projects/latex/13.png", "alt": "Generate", "label": "Generate · output" },
+    { "src": "/Projects/latex/14.png", "alt": "Compiled", "label": "Compiled · LaTeX" }
+  ],
+  "challengesHeadline": "Designing for someone who's never written LaTeX.",
+  "challenges": [
+    {
+      "title": "Mapping LaTeX's tree to a UI that doesn't feel like a tree",
+      "body": "LaTeX documents are deeply nested by nature. A literal tree-view would have scared off the audience the tool was built for. The fix was an outline-style sidebar that flattened the structure visually but preserved it in the underlying model — so 'add a sub-section' was a button, not a drag-and-drop into the right node."
+    },
+    {
+      "title": "Keeping the preview honest",
+      "body": "A preview that doesn't match the compiled output is worse than no preview at all. The preview engine and the export engine share a single template layer — what gets rendered in the UI is the same string that gets written to the .tex file, formatting-for-formatting. There's no second source of truth."
+    }
+  ],
+  "skills": {
+    "tech": [
+      "JavaFX desktop UI",
+      "MVC architecture in Java",
+      "Live preview rendering",
+      "Custom form components",
+      "State-managed dialogs",
+      "CSS3 styling for JavaFX"
+    ],
+    "soft": [
+      "UX design for technical tools",
+      "Reducing on-ramp friction",
+      "Translating syntax into structure",
+      "Feature modularity",
+      "Designing for accessibility",
+      "Coursework time-boxing"
+    ]
+  },
+  "navigation": {
+    "previous": { "name": "CREDX", "slug": "credx" },
+    "next": { "name": "Crick-Ex One", "slug": "crickex" }
+  }
+}

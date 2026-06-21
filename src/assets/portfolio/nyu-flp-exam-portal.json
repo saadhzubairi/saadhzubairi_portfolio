@@ -1,0 +1,152 @@
+{
+  "id": "nyu-flp-exam-portal",
+  "title": "NYU FLP Exam Portal",
+  "tagline": "An end-to-end exam platform for NYU's Foreign Language Proficiency program — scheduling, proctoring, audio-based assessment, and certification, all in one place.",
+  "year": "2025",
+  "caseNumber": "01 / 12",
+  "status": "v2.0 · in production",
+  "updated": "05.26",
+  "role": "Lead full-stack engineer",
+  "team": "CAS Web Dev · NYU",
+  "duration": "Ongoing · 9+ months",
+  "links": {
+    "github": "https://github.com/saad/nyu-flp-exam-portal"
+  },
+  "stack": [
+    "Next.js",
+    "TypeScript",
+    "tRPC",
+    "Prisma",
+    "PostgreSQL",
+    "NextAuth.js",
+    "Tailwind",
+    "React Query",
+    "Radix UI",
+    "FFmpeg",
+    "jsPDF",
+    "React Email"
+  ],
+  "banner": {
+    "gradient": "linear-gradient(135deg, #57068C 0%, #8A2BE2 45%, #B388FF 100%)",
+    "screenshot": {
+      "src": "/Projects/nyu-flp-exam-portal/localhost_7777_devwb_admin_dashboard.png",
+      "alt": "FLP admin dashboard"
+    },
+    "wordmark": "FLP",
+    "caption": {
+      "fig": "FIG · 00 — HERO",
+      "center": "FLP admin dashboard · production · v2.0",
+      "right": "1920 × 1080 PX"
+    }
+  },
+  "aboutHeadline": "A purpose-built exam platform for one of NYU's most-administered language assessments.",
+  "blurb": "The Foreign Language Proficiency exam is taken by thousands of NYU students every semester to satisfy degree requirements. The legacy process was a tangle of spreadsheets, Qualtrics forms, and manual grading. This portal replaces all of it: a single Next.js application that schedules sittings, runs proctored audio exams in the browser, captures and processes student recordings, routes them to graders, and generates certificates — with role-based access for admins, proctors, graders, and students baked in.",
+  "pullQuotes": [
+    "Replacing a decade of spreadsheets, Qualtrics forms, and email threads with a single source of truth.",
+    "Browser-recorded audio, normalized server-side, routed straight to a grader's queue.",
+    "Built for the people who actually run the exam — not just the people who take it."
+  ],
+  "highlightsHeadline": "Four systems doing the heavy lifting.",
+  "highlights": [
+    {
+      "kw": "Admin",
+      "title": "Admin dashboard & cohort management",
+      "lede": "Where every exam cycle is planned, monitored, and closed out.",
+      "body": "The admin surface is the control room: sittings are scheduled on a calendar, students are bulk-imported and assigned, proctor and grader rosters are managed, and live status of every in-flight exam is visible at a glance. Role-based access keeps proctors out of grading queues and graders out of student data.",
+      "shots": [
+        { "src": "/Projects/nyu-flp-exam-portal/localhost_7777_devwb_admin_dashboard.png", "alt": "Dashboard overview", "caption": "The control room — every active sitting at a glance." },
+        { "src": "/Projects/nyu-flp-exam-portal/localhost_7777_devwb_admin_dashboard__1_.png", "alt": "Cohort view", "caption": "Cohorts, sittings, and roster status in one table." },
+        { "src": "/Projects/nyu-flp-exam-portal/localhost_7777_devwb_admin_dashboard__2_.png", "alt": "Scheduling", "caption": "React-big-calendar drives the scheduling layer." }
+      ]
+    },
+    {
+      "kw": "Exam",
+      "title": "Browser-based proctored exams",
+      "lede": "The student-facing surface — quiet, linear, and deliberate.",
+      "body": "Students take the exam directly in the browser, one question at a time, with a timer, attempt locking, and tab-focus tracking baked in. The UI is intentionally stripped of distraction — no progress bars, no hints, no second chances. Proctors monitor sessions in real time and can flag, pause, or terminate an attempt.",
+      "shots": [
+        { "src": "/Projects/nyu-flp-exam-portal/localhost_7777_devwb_admin_dashboard__3_.png", "alt": "Exam start", "caption": "Pre-exam confirmation and consent screen." },
+        { "src": "/Projects/nyu-flp-exam-portal/localhost_7777_devwb_admin_dashboard__4_.png", "alt": "Question view", "caption": "One question at a time. Timer top-right." },
+        { "src": "/Projects/nyu-flp-exam-portal/localhost_7777_devwb_admin_dashboard__5_.png", "alt": "Proctor view", "caption": "Proctors see every in-flight attempt live." }
+      ]
+    },
+    {
+      "kw": "Audio",
+      "title": "Audio capture & server-side normalization",
+      "lede": "The hardest part of a language exam: the speaking section.",
+      "body": "Students record responses directly in the browser via the MediaRecorder API. Recordings are uploaded in chunks, stitched together server-side, normalized through FFmpeg into a consistent format, and dropped into a grader-facing queue with playback controls and time-stamped scoring. The whole pipeline survives flaky wifi and mid-attempt disconnects.",
+      "shots": [
+        { "src": "/Projects/nyu-flp-exam-portal/localhost_7777_devwb_admin_dashboard__6_.png", "alt": "Recording UI", "caption": "Browser-native MediaRecorder, chunked upload." },
+        { "src": "/Projects/nyu-flp-exam-portal/localhost_7777_devwb_admin_dashboard__7_.png", "alt": "Grader queue", "caption": "Recordings land in a grader's queue, FFmpeg-normalized." },
+        { "src": "/Projects/nyu-flp-exam-portal/localhost_7777_devwb_admin_dashboard__8_.png", "alt": "Scoring", "caption": "Per-section scoring with time-stamped notes." }
+      ]
+    },
+    {
+      "kw": "Results",
+      "title": "Grading, certification & reminders",
+      "lede": "Closing the loop, automatically.",
+      "body": "Once all sections are graded, results are aggregated and certificates are generated on-demand via jsPDF, signed, and emailed to students through a React Email pipeline. A cron-driven reminder service nudges students before sittings and graders before deadlines — replacing what used to be a manual mail-merge job done every two weeks.",
+      "shots": [
+        { "src": "/Projects/nyu-flp-exam-portal/localhost_7777_devwb_admin_dashboard__9_.png", "alt": "Results view", "caption": "Aggregated section scores per student." },
+        { "src": "/Projects/nyu-flp-exam-portal/localhost_7777_devwb_admin_dashboard__10_.png", "alt": "Certificate", "caption": "Certificates generated on-demand via jsPDF." },
+        { "src": "/Projects/nyu-flp-exam-portal/localhost_7777_devwb_admin_dashboard__11_.png", "alt": "Email", "caption": "React Email templates, sent via cron." }
+      ]
+    }
+  ],
+  "galleryHeadline": "The full surface area, screen by screen.",
+  "gallery": [
+    { "src": "/Projects/nyu-flp-exam-portal/localhost_7777_devwb_admin_dashboard.png", "alt": "Admin dashboard", "label": "Dashboard · admin" },
+    { "src": "/Projects/nyu-flp-exam-portal/localhost_7777_devwb_admin_dashboard__1_.png", "alt": "Cohorts", "label": "Cohorts · admin" },
+    { "src": "/Projects/nyu-flp-exam-portal/localhost_7777_devwb_admin_dashboard__2_.png", "alt": "Scheduling", "label": "Schedule · admin" },
+    { "src": "/Projects/nyu-flp-exam-portal/localhost_7777_devwb_admin_dashboard__3_.png", "alt": "Pre-exam", "label": "Consent · exam" },
+    { "src": "/Projects/nyu-flp-exam-portal/localhost_7777_devwb_admin_dashboard__4_.png", "alt": "Question", "label": "Question · exam" },
+    { "src": "/Projects/nyu-flp-exam-portal/localhost_7777_devwb_admin_dashboard__5_.png", "alt": "Proctor", "label": "Proctor · monitor" },
+    { "src": "/Projects/nyu-flp-exam-portal/localhost_7777_devwb_admin_dashboard__6_.png", "alt": "Recording", "label": "Record · audio" },
+    { "src": "/Projects/nyu-flp-exam-portal/localhost_7777_devwb_admin_dashboard__7_.png", "alt": "Grader queue", "label": "Queue · grading" },
+    { "src": "/Projects/nyu-flp-exam-portal/localhost_7777_devwb_admin_dashboard__8_.png", "alt": "Scoring", "label": "Score · grading" },
+    { "src": "/Projects/nyu-flp-exam-portal/localhost_7777_devwb_admin_dashboard__9_.png", "alt": "Results", "label": "Results · student" },
+    { "src": "/Projects/nyu-flp-exam-portal/localhost_7777_devwb_admin_dashboard__10_.png", "alt": "Certificate", "label": "Cert · output" },
+    { "src": "/Projects/nyu-flp-exam-portal/localhost_7777_devwb_admin_dashboard__11_.png", "alt": "Email", "label": "Email · reminder" },
+    { "src": "/Projects/nyu-flp-exam-portal/localhost_7777_devwb_admin_dashboard__12_.png", "alt": "Roster", "label": "Roster · admin" },
+    { "src": "/Projects/nyu-flp-exam-portal/localhost_7777_devwb_admin_dashboard__13_.png", "alt": "Settings", "label": "Settings · admin" },
+    { "src": "/Projects/nyu-flp-exam-portal/localhost_7777_devwb_admin_dashboard__14_.png", "alt": "Reports", "label": "Reports · admin" },
+    { "src": "/Projects/nyu-flp-exam-portal/localhost_7777_devwb_admin_dashboard__15_.png", "alt": "Audit log", "label": "Audit · admin" }
+  ],
+  "challengesHeadline": "What the spreadsheet never had to deal with.",
+  "challenges": [
+    {
+      "title": "Recording audio in the browser, reliably, on student laptops",
+      "body": "MediaRecorder behavior varies wildly across browsers, OS permissions break in subtle ways, and a single Zoom-eating-mic moment can lose a student's entire response. The fix was chunked uploads with optimistic local buffering, server-side stitching, and an explicit mic-test gate before the speaking section starts. The pipeline now survives disconnects mid-question without losing a syllable."
+    },
+    {
+      "title": "Designing role-aware UX without role-aware confusion",
+      "body": "Admins, proctors, graders, and students all share the same shell, but each sees a different application. Rather than building four apps, the codebase uses a single set of route segments with permission-gated panels — driven by tRPC procedures that enforce the same checks the UI uses. The lesson was that consistency at the data layer matters more than a clever component tree."
+    },
+    {
+      "title": "Replacing a decade-old workflow without breaking the people who run it",
+      "body": "The hardest part wasn't technical — it was meeting administrators where they were. Migration involved running the new portal alongside the old process for a full cycle, exporting parallel reports for cross-checking, and writing every screen so it would make sense to someone who had been doing this job since long before the portal existed. Trust got earned one sitting at a time."
+    }
+  ],
+  "skills": {
+    "tech": [
+      "Next.js App Router & server components",
+      "tRPC with permission-scoped procedures",
+      "Prisma schema modeling for multi-role data",
+      "MediaRecorder + chunked upload pipelines",
+      "FFmpeg-based audio normalization",
+      "jsPDF certificate generation"
+    ],
+    "soft": [
+      "Stakeholder discovery across non-technical staff",
+      "Phased migration off a legacy workflow",
+      "Cross-role UX design",
+      "Production incident triage",
+      "Documentation for non-engineering audiences",
+      "Pragmatic feature sequencing under a fixed academic calendar"
+    ]
+  },
+  "navigation": {
+    "previous": null,
+    "next": { "name": "Hoops", "slug": "hoops" }
+  }
+}

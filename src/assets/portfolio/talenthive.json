@@ -1,153 +1,155 @@
 {
-    "id": "talenthive",
-    "title": "Talent Hive",
-    "subtitle": "Shortlist hundreds of resumes using a powerful AI.",
-    "links": {
-      "liveDemo": "https://example.com/talenthive-demo", 
-      "github": "https://github.com/your-username/talenthive"
+  "id": "talenthive",
+  "title": "Talent Hive",
+  "tagline": "Shortlist hundreds of resumes with a custom-trained NLP engine — built for HR teams who'd rather read three good candidates than skim three hundred bad ones.",
+  "year": "2024",
+  "caseNumber": "05 / 12",
+  "status": "v1.0 · capstone",
+  "updated": "08.24",
+  "role": "Full-stack engineer · NLP lead",
+  "team": "4-person capstone team",
+  "duration": "14 weeks",
+  "links": {
+    "github": "https://github.com/saad/talenthive"
+  },
+  "stack": [
+    "React",
+    "Node.js",
+    "Express",
+    "FastAPI",
+    "MongoDB",
+    "Firebase",
+    "SpaCy",
+    "AWS S3",
+    "Material UI",
+    "NER",
+    "Cosine Similarity"
+  ],
+  "banner": {
+    "gradient": "linear-gradient(135deg, #00B8A9 0%, #1ABC9C 45%, #3DDC97 100%)",
+    "screenshot": {
+      "src": "/Projects/talenthive/hr_home.png",
+      "alt": "HR manager dashboard"
     },
-    "heroImage": {
-      "src": "/Projects/talenthive/talenthive.png",
-      "alt": "Talent Hive dashboard"
-    },
-    "techStack": {
-      "frameworks": ["React", "Node.js", "Express", "Material UI", "FastAPI"],
-      "database": ["MongoDB", "Firebase"],
-      "tools": ["SpaCy", "AWS S3", "NER", "Cosine Similarity"]
-    },
-    "myResponsibilities": [
-      "Built and deployed the full-stack NLP engine using SpaCy and FastAPI",
-      "Integrated resume parsing and scoring pipeline with job descriptions",
-      "Developed HR dashboard for job creation, preview, and applicant shortlisting",
-      "Created modular candidate application system with auto-parsed resume data",
-      "Implemented company-level admin controls and role-based access"
-    ],
-    "methodology": "Developed using **Agile** methodology with sprint-based delivery, emphasizing early functional prototypes and continuous user feedback from HR professionals.",
-    "about": [
-      "Talent Hive streamlines the recruitment process by offering a powerful AI-based resume shortlisting engine. It's built for HR managers to easily post jobs, view applicants, and select the most compatible candidates based on extracted and scored resume data.",
-      "The platform also offers a frictionless job application experience for candidates. Users can upload their resume and have fields auto-populated by the NLP engine. The parsed output is editable, modular, and personalized for each resume.",
-      "Admins can manage HRMs, oversee company data, and ensure role-specific access — making Talent Hive ideal for startups and enterprise HR teams alike."
-    ],
-    "gallery": [
-      {
-        "src": "/Projects/talenthive/nlp.png",
-        "alt": "NLP Engine model architecture"
-      },
-      {
-        "src": "/Projects/talenthive/npl_.png",
-        "alt": "Resume parsing and profile scoring"
-      },
-      {
-        "src": "/Projects/talenthive/hr_home.png",
-        "alt": "HR manager dashboard"
-      },
-      {
-        "src": "/Projects/talenthive/hr_createJob.png",
-        "alt": "Create new job"
-      },
-      {
-        "src": "/Projects/talenthive/hr_previewJob.png",
-        "alt": "Preview job posting"
-      },
-      {
-        "src": "/Projects/talenthive/hr_job.png",
-        "alt": "Posted job view with candidate shortlist"
-      },
-      {
-        "src": "/Projects/talenthive/hr_viewCand.png",
-        "alt": "Candidate resume analysis view"
-      },
-      {
-        "src": "/Projects/talenthive/hr_intCand.png",
-        "alt": "Accept, reject, or schedule interview"
-      },
-      {
-        "src": "/Projects/talenthive/hr_company.png",
-        "alt": "Company profile management"
-      },
-      {
-        "src": "/Projects/talenthive/hr_company2.png",
-        "alt": "Company logo and details edit"
-      },
-      {
-        "src": "/Projects/talenthive/hr_company3.png",
-        "alt": "HRM admin privilege management"
-      },
-      {
-        "src": "/Projects/talenthive/hr_addHRM.png",
-        "alt": "Add or remove HRMs"
-      },
-      {
-        "src": "/Projects/talenthive/cand_home.png",
-        "alt": "Job board view for candidates"
-      },
-      {
-        "src": "/Projects/talenthive/cand_job.png",
-        "alt": "Job detail view with HR info"
-      },
-      {
-        "src": "/Projects/talenthive/cand_apply.png",
-        "alt": "Auto-filled job application"
-      },
-      {
-        "src": "/Projects/talenthive/cand_apply2.png",
-        "alt": "Modular experience/education fields"
-      },
-      {
-        "src": "/Projects/talenthive/cand_apply3.png",
-        "alt": "Edit parsed resume fields"
-      },
-      {
-        "src": "/Projects/talenthive/cand_appliedJobs.png",
-        "alt": "Applied jobs list"
-      },
-      {
-        "src": "/Projects/talenthive/cand_applied.png",
-        "alt": "Application status and interview notification"
-      },
-      {
-        "src": "/Projects/talenthive/cand_info.png",
-        "alt": "Edit candidate profile"
-      },
-      {
-        "src": "/Projects/talenthive/cand_jobPage.png",
-        "alt": "Job application after login"
-      }
-    ],
-    "challengesAndLessons": [
-      {
-        "challenge": "Designing a resume parsing engine accurate across diverse formats",
-        "solution": "Used SpaCy with a custom-trained NER model. Introduced preprocessing steps to clean PDF artifacts and built custom scoring logic using cosine similarity."
-      },
-      {
-        "challenge": "Balancing automation with candidate control",
-        "solution": "Made all parsed fields editable and modular. Let users add/delete sections freely, maintaining trust while leveraging automation. Learned the importance of UX in AI-heavy flows."
-      }
-    ],
-    "skillsDeveloped": {
-      "hardSkills": [
-        "NLP with SpaCy",
-        "FastAPI microservices",
-        "Role-based access control (RBAC)",
-        "Modular form design",
-        "AWS S3 integrations"
-      ],
-      "softSkills": [
-        "UX for automation",
-        "Enterprise product thinking",
-        "End-to-end feature ownership",
-        "Admin workflows and user roles",
-        "Client-facing iteration cycles"
+    "wordmark": "TALENTHIVE",
+    "caption": {
+      "fig": "FIG · 00 — HERO",
+      "center": "HR dashboard · capstone build · v1.0",
+      "right": "1920 × 1080 PX"
+    }
+  },
+  "aboutHeadline": "A resume-shortlisting engine wrapped in the UI HR teams actually want to use.",
+  "blurb": "Talent Hive is a two-sided hiring platform: HR managers post jobs and surface top candidates through a custom-trained NLP scoring engine, while candidates apply with a single resume upload that auto-fills every form field they'd otherwise have to type by hand. The scoring engine is a SpaCy-based NER model with cosine-similarity matching against job descriptions, served over FastAPI as a sidecar to the main Node app. Trust is built into the UI: every auto-extracted field is editable, every score is explainable, and HRMs can see which keywords drove the ranking.",
+  "pullQuotes": [
+    "The model proposes. The HR manager — and the candidate — get the final word.",
+    "An NLP engine is only as good as the moment the HR manager decides to trust it.",
+    "Built for the people who actually do the hiring, not the people who write about it."
+  ],
+  "highlightsHeadline": "Four systems behind one shortlist.",
+  "highlights": [
+    {
+      "kw": "NLP",
+      "title": "Custom-trained resume parsing & scoring",
+      "lede": "A SpaCy NER pipeline trained on hundreds of resumes.",
+      "body": "Resumes are uploaded to S3, parsed by a custom-trained SpaCy NER model that extracts skills, experience, and education spans, then scored against the job description using cosine similarity over weighted keyword sets. The whole pipeline runs as a FastAPI service so the React app stays thin.",
+      "shots": [
+        { "src": "/Projects/talenthive/nlp.png", "alt": "NLP model architecture", "caption": "SpaCy NER + cosine similarity scoring." },
+        { "src": "/Projects/talenthive/npl_.png", "alt": "Resume parsing", "caption": "Spans extracted, then scored against the JD." },
+        { "src": "/Projects/talenthive/hr_viewCand.png", "alt": "Scored candidate", "caption": "HRMs see which keywords drove the ranking." }
       ]
     },
-    "navigation": {
-      "previous": {
-        "name": "Hoops",
-        "slug": "hoops"
-      },
-      "next": {
-        "name": "Project Nebula",
-        "slug": "project-nebula"
-      }
+    {
+      "kw": "HR",
+      "title": "HR dashboard & shortlist flow",
+      "lede": "Post a job, watch the shortlist build itself.",
+      "body": "HR managers create jobs, preview the candidate-facing posting, and watch applicants flow into a ranked queue as they apply. Accept, reject, or schedule an interview directly from the candidate row — no email back-and-forth required.",
+      "shots": [
+        { "src": "/Projects/talenthive/hr_createJob.png", "alt": "Create job", "caption": "Job creation with role-aware templates." },
+        { "src": "/Projects/talenthive/hr_previewJob.png", "alt": "Preview", "caption": "Preview matches what the candidate sees." },
+        { "src": "/Projects/talenthive/hr_intCand.png", "alt": "Interview", "caption": "Accept, reject, or schedule in one click." }
+      ]
+    },
+    {
+      "kw": "Candidates",
+      "title": "Frictionless candidate apply",
+      "lede": "Upload a resume. Watch the form fill itself.",
+      "body": "Candidates upload a resume once and the same parsing engine auto-fills every field of every job application — experience, education, skills — with each entry editable, addable, and removable. Trust comes from giving the user the last word on what the model extracted.",
+      "shots": [
+        { "src": "/Projects/talenthive/cand_apply.png", "alt": "Auto-fill", "caption": "Resume in → fields auto-filled." },
+        { "src": "/Projects/talenthive/cand_apply2.png", "alt": "Modular fields", "caption": "Every section is add/remove/edit." },
+        { "src": "/Projects/talenthive/cand_apply3.png", "alt": "Edit parsed", "caption": "Candidates get the final word." }
+      ]
+    },
+    {
+      "kw": "Admin",
+      "title": "Company & role management",
+      "lede": "Multi-tenant from day one.",
+      "body": "Companies have multiple HRMs with role-scoped permissions, branding controls, and audit trails. Admins manage who can post, who can shortlist, and who sees candidate data — modeled in Mongo with the same access checks the UI uses.",
+      "shots": [
+        { "src": "/Projects/talenthive/hr_company.png", "alt": "Company", "caption": "Company profile and branding." },
+        { "src": "/Projects/talenthive/hr_company2.png", "alt": "Edit", "caption": "Logo, details, contact info." },
+        { "src": "/Projects/talenthive/hr_addHRM.png", "alt": "Add HRM", "caption": "Multi-HRM with role-scoped access." }
+      ]
     }
-  }  
+  ],
+  "galleryHeadline": "Every surface, both sides.",
+  "gallery": [
+    { "src": "/Projects/talenthive/nlp.png", "alt": "NLP model", "label": "NLP · engine" },
+    { "src": "/Projects/talenthive/npl_.png", "alt": "Parsing", "label": "Parse · resume" },
+    { "src": "/Projects/talenthive/hr_home.png", "alt": "HR home", "label": "Home · HR" },
+    { "src": "/Projects/talenthive/hr_createJob.png", "alt": "Create job", "label": "Create · job" },
+    { "src": "/Projects/talenthive/hr_previewJob.png", "alt": "Preview", "label": "Preview · job" },
+    { "src": "/Projects/talenthive/hr_job.png", "alt": "Posted job", "label": "Posted · job" },
+    { "src": "/Projects/talenthive/hr_viewCand.png", "alt": "Candidate", "label": "Score · candidate" },
+    { "src": "/Projects/talenthive/hr_intCand.png", "alt": "Interview", "label": "Interview · flow" },
+    { "src": "/Projects/talenthive/hr_company.png", "alt": "Company", "label": "Company · HR" },
+    { "src": "/Projects/talenthive/hr_company2.png", "alt": "Edit", "label": "Branding · HR" },
+    { "src": "/Projects/talenthive/hr_company3.png", "alt": "HRM admin", "label": "Admin · HR" },
+    { "src": "/Projects/talenthive/hr_addHRM.png", "alt": "Add HRM", "label": "Add · HRM" },
+    { "src": "/Projects/talenthive/cand_home.png", "alt": "Candidate home", "label": "Home · candidate" },
+    { "src": "/Projects/talenthive/cand_job.png", "alt": "Job detail", "label": "Detail · job" },
+    { "src": "/Projects/talenthive/cand_apply.png", "alt": "Apply", "label": "Apply · candidate" },
+    { "src": "/Projects/talenthive/cand_apply2.png", "alt": "Fields", "label": "Fields · apply" },
+    { "src": "/Projects/talenthive/cand_apply3.png", "alt": "Edit fields", "label": "Edit · apply" },
+    { "src": "/Projects/talenthive/cand_appliedJobs.png", "alt": "Applied", "label": "Applied · candidate" },
+    { "src": "/Projects/talenthive/cand_applied.png", "alt": "Status", "label": "Status · candidate" },
+    { "src": "/Projects/talenthive/cand_info.png", "alt": "Profile", "label": "Profile · candidate" }
+  ],
+  "challengesHeadline": "Where the model met the messy world.",
+  "challenges": [
+    {
+      "title": "Parsing resumes that don't look like resumes",
+      "body": "Real resumes are PDFs full of multi-column layouts, embedded tables, ligatures, and 'creative' typography. The parser had to survive all of it. Aggressive pre-processing (column detection, ligature normalization, OCR fallback for image-based PDFs) and a NER model trained on a deliberately ugly dataset got the accuracy to a place where HRMs trusted what came out the other side."
+    },
+    {
+      "title": "Letting the candidate override the model without breaking the score",
+      "body": "When a candidate edits an auto-extracted field, the cosine-similarity score has to update — but only on the fields the candidate confirmed. The pipeline splits 'extracted' from 'confirmed' state in Mongo, and the scoring engine only weights confirmed spans. The candidate stays in control; the score stays honest."
+    },
+    {
+      "title": "Designing an explainable shortlist, not a black box",
+      "body": "An unexplained ranking is just a vibe. The candidate view surfaces the keywords that drove the match score and the spans they came from, so an HRM can sanity-check the model in seconds rather than trust it on faith. The lesson was that explainability isn't a feature you add — it's the reason the model gets used at all."
+    }
+  ],
+  "skills": {
+    "tech": [
+      "Custom NER training with SpaCy",
+      "FastAPI microservice architecture",
+      "Cosine-similarity matching pipelines",
+      "Multi-tenant role-based access control",
+      "AWS S3 file ingestion",
+      "MongoDB schema for two-sided marketplaces"
+    ],
+    "soft": [
+      "UX for AI-driven flows",
+      "Explainability over accuracy",
+      "Capstone team coordination",
+      "Stakeholder discovery with HR professionals",
+      "Product framing of an ML model",
+      "Iterative feedback cycles"
+    ]
+  },
+  "navigation": {
+    "previous": { "name": "Hoops", "slug": "hoops" },
+    "next": { "name": "Halpert's Booking", "slug": "halpert" }
+  }
+}

@@ -1,82 +1,130 @@
 {
-    "id": "halpert",
-    "title": "Halpert's Booking",
-    "subtitle": "Hotel booking website made with HTML & CSS.",
-    "links": {
-      "liveDemo": "https://example.com/halpert-demo", 
-      "github": "https://github.com/your-username/halpert"
+  "id": "halpert",
+  "title": "Halpert's Booking",
+  "tagline": "A hotel booking interface built with nothing but HTML5 and CSS3 — a proof that good layout doesn't need a framework.",
+  "year": "2022",
+  "caseNumber": "06 / 12",
+  "status": "v1.0 · static demo",
+  "updated": "12.22",
+  "role": "Designer & front-end engineer",
+  "team": "Solo build",
+  "duration": "3 weeks",
+  "links": {
+    "github": "https://github.com/saad/halpert"
+  },
+  "stack": [
+    "HTML5",
+    "CSS3",
+    "Flexbox",
+    "CSS Grid",
+    "BEM",
+    "Responsive Design"
+  ],
+  "banner": {
+    "gradient": "linear-gradient(135deg, #D4A373 0%, #E9C46A 50%, #F4E4BC 100%)",
+    "screenshot": {
+      "src": "/Projects/halpert/home.png",
+      "alt": "Halpert's Booking homepage"
     },
-    "heroImage": {
-      "src": "/Projects/halpert/halpert.png",
-      "alt": "Halpert hotel booking homepage"
-    },
-    "techStack": {
-      "frameworks": ["Node.js"],
-      "database": [],
-      "tools": ["HTML5", "CSS3"]
-    },
-    "myResponsibilities": [
-      "Designed and implemented fully responsive hotel booking UI using HTML and CSS",
-      "Developed homepage, destination views, and search pages with modular layouts",
-      "Implemented date picker and calendar modules with CSS transitions",
-      "Focused on UI/UX principles to ensure intuitive navigation and visual consistency"
-    ],
-    "methodology": "Built using **component-based static HTML & CSS** with semantic structure and performance-first design. Emphasis was placed on clarity, responsiveness, and a fully front-end architecture.",
-    "about": [
-      "Halpert's Booking is a static web app that demonstrates a clean, user-friendly hotel booking interface built entirely with HTML5 and CSS3. The goal was to design a visually engaging, accessible, and modern hotel booking interface without relying on frontend JavaScript frameworks.",
-      "The layout features modular sections including a homepage, destination previews, a minimal search panel, and a date-picker for booking trips. It's ideal as a frontend portfolio demonstration of layout design and UI skill without heavy dependencies."
-    ],
-    "gallery": [
-      {
-        "src": "/Projects/halpert/home.png",
-        "alt": "Homepage with gradient nav and hover effects"
-      },
-      {
-        "src": "/Projects/halpert/view.png",
-        "alt": "Hotel types and destination preview grid"
-      },
-      {
-        "src": "/Projects/halpert/list.png",
-        "alt": "Search results layout with sticky helper pane"
-      },
-      {
-        "src": "/Projects/halpert/calendar.png",
-        "alt": "Date selection using styled calendar UI"
-      }
-    ],
-    "challengesAndLessons": [
-      {
-        "challenge": "Creating responsive layouts using only raw CSS without utility libraries",
-        "solution": "Used Flexbox and media queries extensively, and modularized layout patterns. Learned deep control of native HTML layout behaviors and responsive design principles."
-      },
-      {
-        "challenge": "Maintaining consistency across pages without templating",
-        "solution": "Created reusable layout blocks and CSS components using BEM-style naming. Reinforced the importance of clean code organization and semantic structuring in static builds."
-      }
-    ],
-    "skillsDeveloped": {
-      "hardSkills": [
-        "Responsive Web Design",
-        "Flexbox & Grid",
-        "Semantic HTML",
-        "UI Theming with CSS",
-        "Component-Based Layouts"
-      ],
-      "softSkills": [
-        "Attention to Design Detail",
-        "UX-First Thinking",
-        "Cross-Device Compatibility",
-        "Visual Hierarchy Awareness"
+    "wordmark": "HALPERT",
+    "caption": {
+      "fig": "FIG · 00 — HERO",
+      "center": "Homepage · static · v1.0",
+      "right": "1920 × 1080 PX"
+    }
+  },
+  "aboutHeadline": "A static site that takes layout seriously.",
+  "blurb": "Halpert's Booking is a fully static hotel-booking interface written with zero JavaScript and zero front-end frameworks — just HTML5, CSS3, Flexbox, Grid, and a strict BEM naming discipline. The goal was to see how far a modern hotel-booking experience could be pushed without reaching for React or a utility library: a gradient navbar with hover affordances, a destination grid, a sticky helper rail on search results, and a fully styled calendar — all rendered server-free and pixel-stable.",
+  "pullQuotes": [
+    "Most of what passes for 'we needed a framework' is really 'we didn't trust our HTML'.",
+    "The browser already knows how to do most of this. The trick is staying out of its way.",
+    "Layout is a craft, not a library."
+  ],
+  "highlightsHeadline": "Four screens, no JavaScript.",
+  "highlights": [
+    {
+      "kw": "Home",
+      "title": "Gradient nav & hero",
+      "lede": "The landing page that sets the brand.",
+      "body": "A full-bleed hero with a gradient navbar, a search-prompt strip, and a destination carousel — all rendered with Flexbox and CSS transitions. Hover states are pure :hover; no JS, no flicker.",
+      "shots": [
+        { "src": "/Projects/halpert/home.png", "alt": "Homepage", "caption": "Gradient navbar, full-bleed hero, hover affordances." },
+        { "src": "/Projects/halpert/view.png", "alt": "Destinations", "caption": "Destination grid with hover-revealed CTAs." },
+        { "src": "/Projects/halpert/list.png", "alt": "Search results", "caption": "Sticky helper rail and result cards." }
       ]
     },
-    "navigation": {
-      "previous": {
-        "name": "Talent Hive",
-        "slug": "talenthive"
-      },
-      "next": {
-        "name": "Project Nebula",
-        "slug": "project-nebula"
-      }
+    {
+      "kw": "Discovery",
+      "title": "Destination grid",
+      "lede": "Browse-first, search-second.",
+      "body": "Destinations are surfaced as a responsive Grid of cards, each with its own micro-interaction on hover. The layout reflows cleanly from a 4-column desktop to a 1-column mobile without a single media query for individual cards — just container-driven sizing.",
+      "shots": [
+        { "src": "/Projects/halpert/view.png", "alt": "Grid", "caption": "Responsive Grid, container-sized cards." },
+        { "src": "/Projects/halpert/list.png", "alt": "Results", "caption": "Search results follow the same layout system." },
+        { "src": "/Projects/halpert/home.png", "alt": "Homepage", "caption": "Same primitives across every page." }
+      ]
+    },
+    {
+      "kw": "Search",
+      "title": "Results & sticky helper",
+      "lede": "A results page that respects the eye.",
+      "body": "The search-results layout pairs a scrollable card list with a sticky helper rail that stays anchored as the user scrolls — implemented entirely with `position: sticky` and a vertical Flexbox column. No JS, no scroll listeners, no layout shift.",
+      "shots": [
+        { "src": "/Projects/halpert/list.png", "alt": "Results", "caption": "Sticky rail, scrollable list." },
+        { "src": "/Projects/halpert/view.png", "alt": "Grid", "caption": "Shared card primitive." },
+        { "src": "/Projects/halpert/calendar.png", "alt": "Calendar", "caption": "Calendar slides in for date picking." }
+      ]
+    },
+    {
+      "kw": "Calendar",
+      "title": "Styled CSS date picker",
+      "lede": "A calendar without a calendar library.",
+      "body": "A fully styled date-picker built from a CSS Grid and `<input type='date'>`'s native affordances — restyled aggressively with `accent-color` and `::-webkit-calendar-picker-indicator` to match the rest of the brand. No flatpickr, no Pikaday, no React Date Range.",
+      "shots": [
+        { "src": "/Projects/halpert/calendar.png", "alt": "Calendar", "caption": "Native input, restyled with CSS." },
+        { "src": "/Projects/halpert/list.png", "alt": "Results", "caption": "Date drives the result set." },
+        { "src": "/Projects/halpert/home.png", "alt": "Home", "caption": "Booking starts on the homepage." }
+      ]
     }
-  }  
+  ],
+  "galleryHeadline": "Four screens, plated.",
+  "gallery": [
+    { "src": "/Projects/halpert/home.png", "alt": "Homepage", "label": "Home · landing" },
+    { "src": "/Projects/halpert/view.png", "alt": "Destinations", "label": "View · destinations" },
+    { "src": "/Projects/halpert/list.png", "alt": "Search results", "label": "List · results" },
+    { "src": "/Projects/halpert/calendar.png", "alt": "Calendar", "label": "Calendar · dates" }
+  ],
+  "challengesHeadline": "What you learn when you can't reach for JavaScript.",
+  "challenges": [
+    {
+      "title": "Building a responsive layout without utility classes",
+      "body": "No Tailwind, no Bootstrap, no inline styles. Every breakpoint was hand-tuned through media queries on container widths rather than viewport widths — which forced a much cleaner mental model of which components needed to reflow and which could just shrink. The result was fewer breakpoints than a typical Tailwind build."
+    },
+    {
+      "title": "Maintaining visual consistency without templating",
+      "body": "Four hand-written HTML pages, no Pug, no JSX, no shared header component. The discipline was BEM-naming every reusable block and keeping a single `styles.css` so any visual tweak landed everywhere in one shot. The lesson: consistency is a CSS architecture problem, not a templating problem."
+    }
+  ],
+  "skills": {
+    "tech": [
+      "Semantic HTML5",
+      "Modern CSS3 (Grid, Flexbox, sticky, accent-color)",
+      "BEM class architecture",
+      "Container-driven responsive design",
+      "Restyling native form controls",
+      "Performance-first static builds"
+    ],
+    "soft": [
+      "Discipline without frameworks",
+      "Visual hierarchy",
+      "UX attention to detail",
+      "Cross-device QA",
+      "Writing CSS that ages well",
+      "Working within constraints"
+    ]
+  },
+  "navigation": {
+    "previous": { "name": "Talent Hive", "slug": "talenthive" },
+    "next": { "name": "CREDX", "slug": "credx" }
+  }
+}

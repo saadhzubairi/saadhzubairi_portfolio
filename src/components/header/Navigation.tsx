@@ -37,7 +37,7 @@ const Navigation = () => {
   }, [])
 
   const navigationItems = [
-    { name: 'About', href: '/#About', hash: 'About' },
+    { name: 'About', href: '/#AtAGlance', hash: 'AtAGlance' },
     { name: 'Featured', href: '/#Featured', hash: 'Featured' },
     { name: 'Connect', href: '/#Contact', hash: 'Contact' },
   ]

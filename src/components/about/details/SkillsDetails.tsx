@@ -3,7 +3,7 @@ import skillsData from '../../../assets/skills_data/skills.json';
 
 const SkillsDetails = () => {
     return (
-        <div className="p-4 md:p-8 w-full bg-gray-50 dark:bg-[#0a101e]">
+        <div className="p-4 md:p-8 w-full bg-gray-50 dark:bg-[#161616]">
             <header className="flex items-center justify-between pb-6 border-b border-gray-200 dark:border-gray-700 mb-6">
                 <h2 className="text-xl md:text-2xl font-bold text-gray-800 dark:text-gray-100">Skills Workbench</h2>
                 <p className="text-gray-500 dark:text-gray-400 mt-1">A detailed look at my technical skills.</p>

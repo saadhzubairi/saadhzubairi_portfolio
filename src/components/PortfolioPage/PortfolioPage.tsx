@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import ProjectCard from './ProjectCard';
+import MasonryImageList from './ImageList';
 import './portfoliopage.css';
 
 // Import project data
 import hoops from '@/assets/portfolio/hoops.json';
+import flp from '@/assets/portfolio/nyu-flp-exam-portal.json';
 import talenthive from '@/assets/portfolio/talenthive.json';
 import halpert from '@/assets/portfolio/halpert.json';
 import latex from '@/assets/portfolio/latex.json';
@@ -28,7 +30,7 @@ const tabs: TabData[] = [
   {
     id: 'mostRecent',
     label: 'Most Recent',
-    projects: [hoops, talenthive],
+    projects: [flp,hoops, talenthive],
   },
   {
     id: 'gamedesign',
@@ -94,7 +96,7 @@ const PortfolioPage: React.FC = () => {
       </CustomDiv>
       <CustomDiv>
         <div className="text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">My Work</h1>
+          <h1 className="text-4xl font-black tracking-tight text-foreground sm:text-5xl">My Work</h1>
         </div>
       </CustomDiv>
       <CustomDiv>
@@ -102,14 +104,13 @@ const PortfolioPage: React.FC = () => {
           <p className="text-lg text-muted-foreground">Some interesting projects that kept me occupied</p>
         </div>
       </CustomDiv>
-      <TexturedSpacer height={24} />
       <CustomDiv>
         <div className="h-4"></div>
       </CustomDiv>
       <CustomDiv>
         <Tabs defaultValue={activeTab} className="" onValueChange={setActiveTab}>
           <TabsList
-            className="flex flex-row sm:justify-center justify-start gap-2 h-12 overflow-x-auto mx-4 scrollbar-none"
+            className="flex flex-row sm:justify-center rounded-none ustify-start gap-2 h-12 overflow-x-auto w-full scrollbar-none"
             style={{
               WebkitOverflowScrolling: 'touch',
               scrollbarWidth: 'none', // Firefox
@@ -130,7 +131,9 @@ const PortfolioPage: React.FC = () => {
           </TabsList>
           {tabs.map((tab) => (
             <TabsContent key={tab.id} value={tab.id}>
-              {tab.projects.length > 0 ? (
+              {tab.id === 'photography' ? (
+                <MasonryImageList />
+              ) : tab.projects.length > 0 ? (
                 <motion.div
                   className="grid grid-cols-1 gap-8 pt-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
                   initial={{ opacity: 0, y: 100 }}

@@ -1,95 +1,134 @@
 {
-    "id": "tutor",
-    "title": "Tutor Finder",
-    "subtitle": "A smart tutor and student pairing application.",
-    "links": {
-      "liveDemo": "https://example.com/tutor-finder", 
-      "github": "https://github.com/your-username/tutor-finder"
+  "id": "tutor",
+  "title": "Tutor Finder",
+  "tagline": "An academic demonstrator that pairs students with tutors through a weighted matching algorithm — and proves data structures are a UX feature, not just a coursework requirement.",
+  "year": "2021",
+  "caseNumber": "10 / 12",
+  "status": "v1.0 · coursework",
+  "updated": "12.21",
+  "role": "Designer & engineer",
+  "team": "Solo build",
+  "duration": "5 weeks",
+  "links": {
+    "github": "https://github.com/saad/tutor-finder"
+  },
+  "stack": [
+    "Java",
+    "JavaFX",
+    "SQL",
+    "CSS3",
+    "Priority Queues",
+    "Hash Maps",
+    "Heaps"
+  ],
+  "banner": {
+    "gradient": "linear-gradient(135deg, #C0392B 0%, #E74C3C 50%, #F39C12 100%)",
+    "screenshot": {
+      "src": "/Projects/tutor/3.png",
+      "alt": "Tutor Finder search and filtering interface"
     },
-    "heroImage": {
-      "src": "/Projects/tutor/tutor.png",
-      "alt": "Tutor Finder application preview"
-    },
-    "techStack": {
-      "frameworks": ["JavaFX"],
-      "database": ["SQL"],
-      "tools": ["Java", "CSS3"]
-    },
-    "myResponsibilities": [
-      "Developed pairing algorithms using data structures like graphs and priority queues",
-      "Designed the complete JavaFX UI for student/tutor registration and search",
-      "Implemented filtering and ranking logic based on subject, timing, and location",
-      "Created clean navigation and dashboard views using custom CSS3",
-      "Managed persistent data storage with SQL for tutor-student records"
-    ],
-    "methodology": "Built as a **data structures and algorithms demonstrator**, this project uses clean modular Java code and algorithmic logic to match students with appropriate tutors efficiently, wrapped in a fully interactive UI.",
-    "about": [
-      "Tutor Finder is an academic JavaFX desktop application showcasing the application of data structures in solving real-world problems. It facilitates intelligent pairing of students with suitable tutors based on multiple parameters such as subject, availability, and ratings.",
-      "It includes intuitive navigation, search filtering, and student-tutor match logic using priority-based matching and sorting algorithms. The application stores persistent tutor and student data using SQL backend."
-    ],
-    "gallery": [
-      {
-        "src": "/Projects/tutor/1.png",
-        "alt": "Landing page with navigation pane"
-      },
-      {
-        "src": "/Projects/tutor/2.png",
-        "alt": "Tutor and subject selection screen"
-      },
-      {
-        "src": "/Projects/tutor/3.png",
-        "alt": "Search and filtering interface"
-      },
-      {
-        "src": "/Projects/tutor/4.png",
-        "alt": "Student registration screen"
-      },
-      {
-        "src": "/Projects/tutor/5.png",
-        "alt": "Tutor profiles list"
-      },
-      {
-        "src": "/Projects/tutor/6.png",
-        "alt": "Detailed match suggestion view"
-      },
-      {
-        "src": "/Projects/tutor/7.png",
-        "alt": "Tutor availability calendar"
-      }
-    ],
-    "challengesAndLessons": [
-      {
-        "challenge": "Efficiently pairing tutors and students based on multiple preferences",
-        "solution": "Implemented a custom priority scoring system using heaps and hash maps to rank tutors for each student. Learned how to balance runtime with multi-criteria matching logic."
-      },
-      {
-        "challenge": "Designing a modular UI that cleanly separates student and tutor flows",
-        "solution": "Used JavaFX components and scenes to create dedicated flows while keeping shared state centralized. Reinforced skills in separation of concerns and controller-based UI design."
-      }
-    ],
-    "skillsDeveloped": {
-      "hardSkills": [
-        "Graph-based Matching Algorithms",
-        "Priority Queues and Heaps",
-        "JavaFX Layouts and Navigation",
-        "Relational Data Modeling",
-        "Desktop UI with CSS3 Styling"
-      ],
-      "softSkills": [
-        "System Design Thinking",
-        "User Flow Mapping",
-        "Modular Code Structure",
-        "Debugging Multi-path Navigation"
+    "wordmark": "TUTOR",
+    "caption": {
+      "fig": "FIG · 00 — HERO",
+      "center": "Search & filter · coursework build · v1.0",
+      "right": "1920 × 1080 PX"
+    }
+  },
+  "aboutHeadline": "Data-structures coursework that pretends it's a product.",
+  "blurb": "Tutor Finder is a JavaFX desktop application that pairs students with tutors based on subject, availability, location, and rating. Under the hood it's a data-structures demonstrator — heaps, priority queues, and hash maps doing the work of a matching engine — wrapped in a UI that hides every algorithm behind an experience that feels like a normal search-and-filter flow. The point was to prove that 'data structures' aren't a coursework abstraction; they're how the product knows who to surface first.",
+  "pullQuotes": [
+    "The data structures aren't the project. The match they produce is.",
+    "A priority queue, when you can't see it, just feels like good UX.",
+    "Algorithms earn their place by disappearing."
+  ],
+  "highlightsHeadline": "Four screens, one matching engine.",
+  "highlights": [
+    {
+      "kw": "Discover",
+      "title": "Landing & navigation",
+      "lede": "The on-ramp into the matching flow.",
+      "body": "A landing page with a navigation pane that routes students and tutors into different flows from the start. Shared visual primitives keep both sides feeling like one app even though the surfaces underneath them are very different.",
+      "shots": [
+        { "src": "/Projects/tutor/1.png", "alt": "Landing", "caption": "Landing with navigation pane." },
+        { "src": "/Projects/tutor/2.png", "alt": "Selection", "caption": "Tutor and subject selection." },
+        { "src": "/Projects/tutor/3.png", "alt": "Filter", "caption": "Search and filtering interface." }
       ]
     },
-    "navigation": {
-      "previous": {
-        "name": "Crick-Ex One",
-        "slug": "crickex"
-      },
-      "next": {
-        "name": "Project Nebula",
-        "slug": "project-nebula"
-      }
+    {
+      "kw": "Register",
+      "title": "Student & tutor registration",
+      "lede": "Two flows, one data layer.",
+      "body": "Students and tutors register through dedicated JavaFX flows but write into a shared SQL backend. Tutor records carry subject, availability, location, and rating; student records carry preferences. The matching engine reads from both as a single graph.",
+      "shots": [
+        { "src": "/Projects/tutor/4.png", "alt": "Student registration", "caption": "Student registration screen." },
+        { "src": "/Projects/tutor/5.png", "alt": "Tutor list", "caption": "Tutor profiles list." },
+        { "src": "/Projects/tutor/2.png", "alt": "Subject", "caption": "Subject selection feeds the matcher." }
+      ]
+    },
+    {
+      "kw": "Match",
+      "title": "Weighted pairing algorithm",
+      "lede": "Where the data structures earn their keep.",
+      "body": "A weighted scoring function combines subject overlap, availability, location proximity, and rating, then feeds a max-heap to rank tutors per student. Hash maps cache repeated lookups so the rank surfaces instantly even as the student tunes their filters live.",
+      "shots": [
+        { "src": "/Projects/tutor/6.png", "alt": "Match detail", "caption": "Match suggestion with rationale." },
+        { "src": "/Projects/tutor/3.png", "alt": "Filter", "caption": "Filters re-rank in real time." },
+        { "src": "/Projects/tutor/5.png", "alt": "Tutors", "caption": "Top tutors surface first." }
+      ]
+    },
+    {
+      "kw": "Schedule",
+      "title": "Availability & booking",
+      "lede": "Where the match becomes a session.",
+      "body": "Tutors set availability through a calendar surface; students see only the slots that survive their own constraints. The booking flow writes through to SQL atomically, so two students can never book the same slot — even if they click at the same time.",
+      "shots": [
+        { "src": "/Projects/tutor/7.png", "alt": "Calendar", "caption": "Tutor availability calendar." },
+        { "src": "/Projects/tutor/6.png", "alt": "Match", "caption": "Match flows into booking." },
+        { "src": "/Projects/tutor/4.png", "alt": "Student", "caption": "Student-side confirmation." }
+      ]
     }
-  }  
+  ],
+  "galleryHeadline": "Every screen, plated.",
+  "gallery": [
+    { "src": "/Projects/tutor/1.png", "alt": "Landing", "label": "Landing · nav" },
+    { "src": "/Projects/tutor/2.png", "alt": "Subject", "label": "Subject · select" },
+    { "src": "/Projects/tutor/3.png", "alt": "Filter", "label": "Filter · search" },
+    { "src": "/Projects/tutor/4.png", "alt": "Student", "label": "Student · register" },
+    { "src": "/Projects/tutor/5.png", "alt": "Tutors", "label": "Tutors · list" },
+    { "src": "/Projects/tutor/6.png", "alt": "Match", "label": "Match · detail" },
+    { "src": "/Projects/tutor/7.png", "alt": "Calendar", "label": "Calendar · slots" }
+  ],
+  "challengesHeadline": "What the textbook didn't say.",
+  "challenges": [
+    {
+      "title": "Designing a matching score that survives ties",
+      "body": "Multi-criteria weighting always produces ties at the top of the heap, and ties looked random to the user. The fix was a secondary deterministic sort (rating, then alphabetical) baked into the comparator so the same student always saw the same first tutor — predictability turned out to matter more than statistical purity."
+    },
+    {
+      "title": "Separating student and tutor flows without duplicating the app",
+      "body": "Two parallel UIs would have meant two parallel bugs. The build used a single set of JavaFX scenes with role-aware view models — same components, different data — so a fix to a shared card was a single edit, not two. The lesson generalized: shared primitives, divergent flows."
+    }
+  ],
+  "skills": {
+    "tech": [
+      "Priority queues & heaps in Java",
+      "Hash-map-driven caching",
+      "Weighted multi-criteria scoring",
+      "JavaFX scenes and navigation",
+      "Relational data modeling",
+      "Atomic SQL writes for double-book prevention"
+    ],
+    "soft": [
+      "System design thinking",
+      "User-flow mapping",
+      "Designing predictability into algorithms",
+      "Shared-primitive UX strategy",
+      "Coursework framing as product",
+      "Solo project discipline"
+    ]
+  },
+  "navigation": {
+    "previous": { "name": "Crick-Ex One", "slug": "crickex" },
+    "next": null
+  }
+}

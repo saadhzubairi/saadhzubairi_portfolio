@@ -9,7 +9,7 @@ type CustomDivProps = React.HTMLAttributes<HTMLDivElement> & {
 const CustomDiv: React.FC<CustomDivProps> = ({ children, className = "", ...rest }) => {
     return (
 
-        <div className={`w-full px-4 sm:px-6 lg:px-8 border-b border-gray-200 dark:border-gray-700`}>
+        <div className={`w-full px-4 sm:px-6 lg:px-8 border-b border-none dark:border-none`}>
             <motion.div
                 initial={{ height: 0 }}
                 animate={{ height: "auto" }}

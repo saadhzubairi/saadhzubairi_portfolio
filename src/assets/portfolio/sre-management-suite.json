@@ -1,0 +1,225 @@
+{
+  "id": "sre-management-suite",
+  "title": "Site Reliability Management Suite",
+  "tagline": "An internal ops platform that consolidates cron scheduling, CI/CD, PM2 process monitoring, MySQL administration, Apache config, automated backups, key rotation, and full audit logging — one dashboard, ten production apps, zero SSH terminals.",
+  "year": "2026",
+  "caseNumber": "02 / 12",
+  "status": "v3.0 · in production",
+  "updated": "06.09",
+  "role": "Sole architect & engineer",
+  "team": "CAS Web Dev · NYU",
+  "duration": "Ongoing · 7+ months",
+  "links": {
+    "github": "https://github.com/saad/cas-apps-manager"
+  },
+  "stack": [
+    "Node.js",
+    "Express 4",
+    "React 18",
+    "Vite",
+    "Sequelize",
+    "MySQL",
+    "node-cron",
+    "PM2",
+    "Apache HTTPD",
+    "Microsoft Entra ID",
+    "TOTP 2FA",
+    "Tailwind",
+    "shadcn/ui",
+    "AG Grid",
+    "Tiptap",
+    "SSE",
+    "AWS EC2",
+    "AWS RDS"
+  ],
+  "banner": {
+    "gradient": "linear-gradient(135deg, #0F172A 0%, #1E40AF 40%, #06B6D4 100%)",
+    "screenshot": {
+      "src": "/Projects/sre/00.png",
+      "alt": "CAS Apps Manager — operations dashboard"
+    },
+    "wordmark": "CAS SRE",
+    "caption": {
+      "fig": "FIG · 00 — HERO",
+      "center": "Operations dashboard · production · v3.0",
+      "right": "1920 × 1080 PX"
+    }
+  },
+  "aboutHeadline": "One control plane for every production app the team runs.",
+  "blurb": "Before this platform existed, managing CAS's production fleet meant SSH-ing into an EC2 box, hopping between crontabs, PM2 CLIs, MySQL shells, and Apache config files, and trusting that someone remembered to take a backup last week. The Site Reliability Management Suite collapses all of that into a single VPN-gated, SSO-authenticated web app: cron jobs scheduled and tracked through a UI, deployments orchestrated through multi-step pipelines with real-time log streaming, PM2 processes managed live, a full browser-based MySQL IDE with ERD visualization and an audit-logged mutation history, Apache config browsable and reloadable from the dashboard, automated daily backups with retention policies, and rotating cryptographic access keys delivered by email. Every action is captured in a categorized audit trail tied to the engineer who triggered it.",
+  "pullQuotes": [
+    "Ten production apps, one dashboard, zero SSH terminals — and an audit trail that knows who did what.",
+    "The platform that runs the platform that runs everything else.",
+    "Built so the next on-call engineer can debug an outage at 3 AM without remembering eight CLIs."
+  ],
+  "highlightsHeadline": "Nine systems behind one console.",
+  "highlights": [
+    {
+      "kw": "Cron",
+      "title": "UI-driven cron scheduling",
+      "lede": "Every scheduled job, visible, testable, and hot-reloadable.",
+      "body": "Replaces raw server crontabs with a node-cron-backed scheduler that runs in-process: jobs are created through the UI as either HTTP endpoints (with curl-generated GET/POST/PUT/DELETE, custom headers, and secret-based auth) or shell commands (with 5-minute timeouts). Cron expressions get a human-readable preview, dry-runs preview the actual output before saving, and every fire is captured to the DB with stdout, stderr, duration, and exit code. Toggling a job on hot-reloads the in-memory task map without a restart.",
+      "shots": [
+        { "src": "/Projects/sre/01.png", "alt": "Cron list", "caption": "Project-grouped jobs with run history at a glance." },
+        { "src": "/Projects/sre/02.png", "alt": "Create job", "caption": "HTTP or shell. Cron preview included." },
+        { "src": "/Projects/sre/03.png", "alt": "Execution log", "caption": "Per-fire stdout/stderr, duration, exit code." }
+      ]
+    },
+    {
+      "kw": "Deploy",
+      "title": "Multi-step CI/CD pipelines",
+      "lede": "Manual deploys, orchestrated pipelines, GitHub Actions — same plumbing.",
+      "body": "A pipeline worker runs configurable step sequences (git pull → copy env → npm install → prisma generate/push → build → pm2 restart), with each step's logs streamed back to the browser over SSE. Failures pause the pipeline; engineers can resume, retry, or abort. The same endpoint backs a webhook for GitHub Actions, and a QA-relay mode lets the production server proxy deploy requests to QA on behalf of the CI runner — bypassing the VPN gate cleanly.",
+      "shots": [
+        { "src": "/Projects/sre/04.png", "alt": "Pipeline", "caption": "Configurable step sequence, paused on failure." },
+        { "src": "/Projects/sre/05.png", "alt": "Live deploy", "caption": "SSE-streamed deploy logs, in the browser." },
+        { "src": "/Projects/sre/06.png", "alt": "Git ops", "caption": "Branch switching and arbitrary git from the UI." }
+      ]
+    },
+    {
+      "kw": "PM2",
+      "title": "Live PM2 process monitor",
+      "lede": "The PM2 CLI, in a browser, with controls.",
+      "body": "A live process table — CPU%, memory, uptime, status — auto-refreshed every 3–5 seconds with per-row start / stop / restart / delete, plus a bulk restart-all. Logs render with ANSI-colored output, and a log-flush per process keeps disks honest. Replaces the muscle-memory of `pm2 list && pm2 logs --lines 200` with something an on-call engineer can actually skim.",
+      "shots": [
+        { "src": "/Projects/sre/07.png", "alt": "PM2 list", "caption": "Live CPU, memory, uptime, status." },
+        { "src": "/Projects/sre/08.png", "alt": "PM2 controls", "caption": "Restart, stop, delete — per row." },
+        { "src": "/Projects/sre/09.png", "alt": "PM2 logs", "caption": "ANSI-colored log viewer, in the browser." }
+      ]
+    },
+    {
+      "kw": "Database",
+      "title": "Full browser-based MySQL IDE",
+      "lede": "Query editor, schema diff, ERD, audit log — all in one.",
+      "body": "A serious database admin surface: a SQL editor with formatting and SELECT/mutation auto-detection, AG-Grid-powered table browsing with click-to-edit cells, paginated views, bulk insert/update/delete, index and foreign-key management, trigger and routine controls, schema diff between two databases side-by-side, auto-generated ERD visualization, global search across tables, MySQL processlist with kill capability, CSV/JSON/Prisma-seed export, and a separate database audit log capturing every INSERT/UPDATE/DELETE with old/new data and rollback. Cmd+K opens the command palette.",
+      "shots": [
+        { "src": "/Projects/sre/10.png", "alt": "Query editor", "caption": "SQL editor with formatting and execution timing." },
+        { "src": "/Projects/sre/11.png", "alt": "Table browser", "caption": "AG Grid with inline editing and pagination." },
+        { "src": "/Projects/sre/12.png", "alt": "ERD", "caption": "Auto-generated ERD per database." }
+      ]
+    },
+    {
+      "kw": "Apache",
+      "title": "Apache HTTPD config manager",
+      "lede": "Read, validate, reload — without leaving the tab.",
+      "body": "Browse `httpd.conf` and every `conf.d/*.conf` file from the dashboard with path-traversal protection on file reads, view `systemctl status httpd` inline, validate configuration via `apachectl configtest` before reloading, and graceful-reload (`systemctl reload httpd`) with a single button. Error and access logs are viewable with a configurable tail length.",
+      "shots": [
+        { "src": "/Projects/sre/13.png", "alt": "Apache status", "caption": "systemctl status, inline." },
+        { "src": "/Projects/sre/14.png", "alt": "Config browser", "caption": "httpd.conf and conf.d/*, read-only with traversal guards." },
+        { "src": "/Projects/sre/15.png", "alt": "Apache logs", "caption": "Error and access logs, tailed." }
+      ]
+    },
+    {
+      "kw": "Backups",
+      "title": "Automated database backups",
+      "lede": "Daily seeds, retention-enforced, emailed on result.",
+      "body": "Per-project backup configuration with enable/disable and per-project retention windows. A background job at midnight backs up every enabled project's QA and production databases into TypeScript Prisma seed files, deletes anything past the retention threshold, and emails the team a status table with per-database success/failure, table counts, and row counts. Engineers can also trigger a manual one-click backup and download the resulting file straight from the UI.",
+      "shots": [
+        { "src": "/Projects/sre/16.png", "alt": "Backup config", "caption": "Per-project enable, schedule, retention." },
+        { "src": "/Projects/sre/17.png", "alt": "Backup history", "caption": "Manual triggers, downloads, history." },
+        { "src": "/Projects/sre/18.png", "alt": "Backup email", "caption": "Daily email with per-DB results." }
+      ]
+    },
+    {
+      "kw": "Keys",
+      "title": "Access key rotation & 2FA",
+      "lede": "Cryptographic hygiene, automated.",
+      "body": "A 32-byte hex master access key gets rotated on a configurable cron schedule (or on demand), with every previous key deactivated and every active session invalidated — engineers are forced to re-login on rotation. The new key is delivered by email to opted-in recipients. Optional TOTP 2FA layers on top, with QR code provisioning compatible with Google Authenticator / 1Password.",
+      "shots": [
+        { "src": "/Projects/sre/19.png", "alt": "Key rotation", "caption": "Cron-driven rotation with manual trigger." },
+        { "src": "/Projects/sre/20.png", "alt": "2FA setup", "caption": "TOTP enrolment with QR provisioning." },
+        { "src": "/Projects/sre/21.png", "alt": "Recipients", "caption": "Per-event opt-in: keys, deploys, backups, shifts." }
+      ]
+    },
+    {
+      "kw": "Audit",
+      "title": "Comprehensive audit logging",
+      "lede": "Every action, every category, every engineer.",
+      "body": "A single audit trail tracks twelve categories — auth, cron, project, deployment, pipeline, pm2, apache, email, settings, github, database, system — with action, status (info/success/error/warning/running), performer identity, IP address, associated resource, metadata, and truncated output. A separate database-level audit log captures every SQL mutation and schema change with old and new values for rollback. A weekly automated flush keeps the log table from running away with the disk.",
+      "shots": [
+        { "src": "/Projects/sre/22.png", "alt": "Audit log", "caption": "Twelve categories, filterable, with engineer identity." },
+        { "src": "/Projects/sre/23.png", "alt": "DB audit", "caption": "SQL mutation log with old/new data + rollback." },
+        { "src": "/Projects/sre/24.png", "alt": "Settings", "caption": "Settings, with audit-flush controls." }
+      ]
+    }
+  ],
+  "galleryHeadline": "The whole surface area.",
+  "gallery": [
+    { "src": "/Projects/sre/00.png", "alt": "Dashboard", "label": "Dashboard · home" },
+    { "src": "/Projects/sre/01.png", "alt": "Cron list", "label": "Cron · list" },
+    { "src": "/Projects/sre/02.png", "alt": "Cron create", "label": "Cron · create" },
+    { "src": "/Projects/sre/03.png", "alt": "Cron history", "label": "Cron · history" },
+    { "src": "/Projects/sre/04.png", "alt": "Pipeline", "label": "Pipeline · steps" },
+    { "src": "/Projects/sre/05.png", "alt": "Deploy live", "label": "Deploy · live" },
+    { "src": "/Projects/sre/06.png", "alt": "Git ops", "label": "Git · ops" },
+    { "src": "/Projects/sre/07.png", "alt": "PM2 list", "label": "PM2 · list" },
+    { "src": "/Projects/sre/08.png", "alt": "PM2 controls", "label": "PM2 · controls" },
+    { "src": "/Projects/sre/09.png", "alt": "PM2 logs", "label": "PM2 · logs" },
+    { "src": "/Projects/sre/10.png", "alt": "Query editor", "label": "DB · query" },
+    { "src": "/Projects/sre/11.png", "alt": "Table browser", "label": "DB · tables" },
+    { "src": "/Projects/sre/12.png", "alt": "ERD", "label": "DB · ERD" },
+    { "src": "/Projects/sre/13.png", "alt": "Apache status", "label": "Apache · status" },
+    { "src": "/Projects/sre/14.png", "alt": "Apache config", "label": "Apache · config" },
+    { "src": "/Projects/sre/15.png", "alt": "Apache logs", "label": "Apache · logs" },
+    { "src": "/Projects/sre/16.png", "alt": "Backup config", "label": "Backup · config" },
+    { "src": "/Projects/sre/17.png", "alt": "Backup history", "label": "Backup · history" },
+    { "src": "/Projects/sre/18.png", "alt": "Backup email", "label": "Backup · email" },
+    { "src": "/Projects/sre/19.png", "alt": "Key rotation", "label": "Keys · rotation" },
+    { "src": "/Projects/sre/20.png", "alt": "2FA", "label": "2FA · enrol" },
+    { "src": "/Projects/sre/21.png", "alt": "Recipients", "label": "Email · recipients" },
+    { "src": "/Projects/sre/22.png", "alt": "Audit log", "label": "Audit · log" },
+    { "src": "/Projects/sre/23.png", "alt": "DB audit", "label": "Audit · DB" },
+    { "src": "/Projects/sre/24.png", "alt": "Settings", "label": "Settings · main" }
+  ],
+  "challengesHeadline": "What ten capabilities under one roof actually cost.",
+  "challenges": [
+    {
+      "title": "Gating access without locking the on-call engineer out at 3 AM",
+      "body": "The platform sits inside the NYU VPN, behind Microsoft Entra ID SSO restricted to `@nyu.edu`, behind 24-hour bearer tokens, with optional TOTP 2FA, and with rotating master access keys. Layering all of that without making login a five-minute scavenger hunt meant building a reverse-DNS VPN check with a 5-minute IP cache, allowing explicit bypasses for health checks and GitHub webhooks, and surfacing a 'why am I blocked' page that tells the engineer which layer rejected them — instead of a 401 with no context."
+    },
+    {
+      "title": "Streaming deploy logs to the browser without burning the server",
+      "body": "SSE was the right answer once. The wrong answer was opening a fresh SSE stream per pipeline step, per viewer, with no backpressure. The pipeline worker now writes log chunks to a per-deployment ring buffer, multiplexes a single SSE connection per viewer across whatever step is currently running, and persists the final output to MySQL for after-the-fact viewing. Five engineers can watch the same deploy without the EC2 box noticing."
+    },
+    {
+      "title": "Building a database IDE without becoming a database vulnerability",
+      "body": "Letting authenticated users run arbitrary SQL is a feature; letting them run arbitrary SQL is also exactly how everything breaks. The query layer separates SELECTs from mutations explicitly, uses prepared statements wherever the schema is known, wraps every mutation in the audit-log pipeline with old/new state captured before commit, and exposes a kill-process surface against MySQL's processlist for runaway queries. The IDE is powerful, but every click leaves a trail."
+    },
+    {
+      "title": "Surviving Sequelize auto-sync as the schema grows",
+      "body": "Auto-sync was a deliberate early-stage choice — no migration files, no hand-rolled DDL — but it stops being clever once production data exists. The current build runs auto-sync on QA but ships migration plans through the database IDE on production, with the schema-diff feature surfacing exactly which `ALTER TABLE` statements need to run. Auto-sync was a great velocity bet; knowing when to graduate off it was the harder call."
+    },
+    {
+      "title": "Designing for an audience of one team, with no Slack to outsource questions to",
+      "body": "There's no community Discord for a platform like this. Every UX decision had to be self-explanatory to the next engineer who joined the team in six months. Keyboard-driven navigation (Cmd+K, Cmd+/, Cmd+Shift+F, Cmd+?), in-context help, and an obsessive amount of inline confirmation copy on destructive actions ('this will drop the table immediately and is not recoverable without a backup') were all written for someone who hadn't been in the room when the platform was designed."
+    }
+  ],
+  "skills": {
+    "tech": [
+      "node-cron in-process scheduling at scale",
+      "SSE streaming with ring-buffered multiplexing",
+      "Sequelize auto-sync graduation strategy",
+      "Browser-based MySQL admin with audit-logged mutations",
+      "Apache config management with path-traversal hardening",
+      "Microsoft Entra ID SSO + TOTP 2FA",
+      "Cryptographic access-key rotation pipelines",
+      "Reverse-DNS VPN gating middleware",
+      "AG Grid-powered editable tables",
+      "Prisma seed export from arbitrary MySQL schemas"
+    ],
+    "soft": [
+      "Sole-architect prioritization across 10 features",
+      "Designing for an on-call audience of one",
+      "Trading off audit depth vs. performance",
+      "Documentation as a first-class deliverable",
+      "Operational empathy for the next engineer",
+      "Knowing which clever early-stage bets to retire",
+      "Calling the schema-diff workflow a feature, not a workaround",
+      "Treating security layering as UX, not gatekeeping"
+    ]
+  },
+  "navigation": {
+    "previous": { "name": "NYU FLP Exam Portal", "slug": "nyu-flp-exam-portal" },
+    "next": { "name": "Hoops", "slug": "hoops" }
+  }
+}

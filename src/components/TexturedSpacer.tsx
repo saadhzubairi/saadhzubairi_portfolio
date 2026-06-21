@@ -19,7 +19,7 @@ const TexturedSpacer: React.FC<TexturedSpacerProps> = ({ height, className = '' 
 
             <div
                 aria-hidden
-                className={`pointer-events-none w-full bg-textured-rails  border-b border-gray-200 dark:border-gray-700 ${className}`}
+                className={`pointer-events-none w-full bg-textured-rails  border-b border-gray-100 dark:border-gray-900 ${className}`}
                 style={{ height: `${height}px` }}
             />
         </motion.div>
