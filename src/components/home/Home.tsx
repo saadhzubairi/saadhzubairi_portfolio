@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Link } from "react-router-dom";
 import ContactExpandable from "../contact/ContactExpandable";
+import saadPortrait from "../../assets/portraits/saad-portrait.jpg";
 import "./home.css";
 
 const ROLES = [
@@ -112,10 +113,24 @@ const Home = () => {
           </div>
         </div>
 
-        <aside className="home-hero-note">
-          <span>Based in</span>
-          <strong>New York</strong>
-          <small>Open to ambitious product, platform, and AI systems work.</small>
+        <aside className="home-hero-aside">
+          <figure className="home-hero-portrait">
+            <img
+              src={saadPortrait}
+              alt="Portrait of Saad Zubairi"
+              loading="eager"
+            />
+            <figcaption>
+              <span>Portrait</span>
+              <span>Saad Z.</span>
+            </figcaption>
+          </figure>
+
+          <div className="home-hero-note">
+            <span>Based in</span>
+            <strong>New York</strong>
+            <small>Open to ambitious product, platform, and AI systems work.</small>
+          </div>
         </aside>
       </div>
     </section>

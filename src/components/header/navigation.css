@@ -19,14 +19,17 @@
   background: color-mix(in srgb, var(--nav-paper) 76%, transparent);
   border: 1px solid color-mix(in srgb, var(--nav-rule) 72%, transparent);
   backdrop-filter: blur(16px) saturate(1.06);
-  border-radius: 26px;
+  --nav-control-height: 2.85rem;
+  --nav-radius: 16px;
+  --nav-inner-radius: 12px;
+  border-radius: var(--nav-radius);
   box-shadow: none;
   display: grid;
-  gap: 0.85rem;
+  gap: 0.75rem;
   grid-template-columns: minmax(9rem, 1fr) auto minmax(9rem, 1fr);
-  min-height: 4.15rem;
+  min-height: 3.85rem;
   max-width: min(72rem, calc(100% - 1.5rem));
-  padding: 0.45rem 0.55rem 0.45rem 0.75rem;
+  padding: 0.48rem;
   pointer-events: auto;
   transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
   width: 100%;
@@ -55,7 +58,7 @@
 
 .site-nav-brand {
   align-items: center;
-  border-radius: 18px;
+  border-radius: var(--nav-inner-radius);
   color: var(--nav-ink);
   cursor: pointer;
   display: inline-flex;
@@ -63,8 +66,9 @@
   font-weight: 560;
   gap: 0.55rem;
   justify-self: start;
-  min-height: 3.05rem;
-  padding: 0 0.9rem;
+  height: var(--nav-control-height);
+  min-height: 0;
+  padding: 0 1rem;
   transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
@@ -86,11 +90,11 @@
   align-items: center;
   background: color-mix(in srgb, var(--nav-ink) 5%, transparent);
   border: 1px solid color-mix(in srgb, var(--nav-rule) 58%, transparent);
-  border-radius: 18px;
+  border-radius: var(--nav-radius);
   display: none;
   gap: 0.18rem;
   justify-self: center;
-  padding: 0.25rem;
+  padding: 0.2rem;
 }
 
 .dark .site-nav-menu {
@@ -102,7 +106,7 @@
   align-items: center;
   background: transparent !important;
   border: 0 !important;
-  border-radius: 14px !important;
+  border-radius: var(--nav-inner-radius) !important;
   box-shadow: none !important;
   color: var(--nav-muted) !important;
   cursor: pointer;
@@ -110,11 +114,11 @@
   font-size: 0.92rem;
   font-weight: 520;
   gap: 0.4rem;
-  height: 2.65rem;
+  height: calc(var(--nav-control-height) - 0.4rem);
   justify-content: center;
   line-height: 1;
-  min-width: 5.45rem;
-  padding: 0 1rem !important;
+  min-width: 5.7rem;
+  padding: 0 1.05rem !important;
   transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
@@ -138,7 +142,7 @@
   color: var(--nav-paper) !important;
   margin-left: 0.35rem;
   min-width: 6.7rem;
-  padding: 0 1.15rem !important;
+  padding: 0 1.05rem !important;
   box-shadow: none !important;
 }
 
@@ -161,7 +165,7 @@
 .site-nav-actions {
   align-items: center;
   display: inline-flex;
-  gap: 0.45rem;
+  gap: 0;
   justify-self: end;
 }
 
@@ -169,17 +173,17 @@
   align-items: center;
   background: color-mix(in srgb, var(--nav-paper) 86%, transparent) !important;
   border: 1px solid color-mix(in srgb, var(--nav-rule) 76%, transparent) !important;
-  border-radius: 16px !important;
+  border-radius: var(--nav-inner-radius) !important;
   box-shadow: none !important;
   color: var(--nav-ink) !important;
   cursor: pointer;
   display: inline-flex;
-  height: 3.05rem !important;
+  height: var(--nav-control-height) !important;
   justify-content: center;
-  min-width: 3.05rem;
+  min-width: var(--nav-control-height);
   padding: 0 !important;
   transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
-  width: 3.05rem !important;
+  width: var(--nav-control-height) !important;
 }
 
 .dark .site-nav-icon-button {
@@ -245,27 +249,31 @@
   }
 
   .site-nav {
-    border-radius: 22px;
+    --nav-control-height: 2.75rem;
+    --nav-radius: 14px;
+    --nav-inner-radius: 11px;
+    border-radius: var(--nav-radius);
     gap: 0.5rem;
     grid-template-columns: 1fr auto;
     max-width: calc(100% - 0.8rem);
-    min-height: 3.55rem;
-    padding: 0.32rem;
+    min-height: 3.45rem;
+    padding: 0.34rem;
   }
 
   .site-nav-brand {
-    border-radius: 17px;
+    border-radius: var(--nav-inner-radius);
     font-size: 0.95rem;
     gap: 0.5rem;
-    min-height: 2.9rem;
+    height: var(--nav-control-height);
+    min-height: 0;
     padding: 0 0.85rem;
   }
 
   .site-nav-icon-button {
-    border-radius: 17px !important;
-    height: 2.9rem !important;
-    min-width: 2.9rem;
-    width: 2.9rem !important;
+    border-radius: var(--nav-inner-radius) !important;
+    height: var(--nav-control-height) !important;
+    min-width: var(--nav-control-height);
+    width: var(--nav-control-height) !important;
   }
 
   .site-nav-actions {

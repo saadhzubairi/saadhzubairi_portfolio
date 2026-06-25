@@ -193,7 +193,7 @@
   align-items: end;
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: 6rem minmax(0, 1fr) minmax(14rem, 0.36fr);
+  grid-template-columns: 6rem minmax(0, 1fr) minmax(16rem, 0.45fr);
   padding: 1.5rem 0 1.75rem;
 }
 
@@ -288,7 +288,63 @@
   border-color: color-mix(in srgb, var(--home-ink) 88%, var(--home-paper) 12%) !important;
 }
 
+.home-hero-aside {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: flex-end;
+  min-width: 0;
+}
+
+.home-hero-portrait {
+  aspect-ratio: 4.4 / 5;
+  background: color-mix(in srgb, var(--home-ink) 4%, transparent);
+  border: 0;
+  border-radius: 14px;
+  isolation: isolate;
+  margin: 0;
+  max-height: clamp(20rem, 44vw, 31rem);
+  overflow: hidden;
+  position: relative;
+  transform: rotate(1.5deg);
+  width: 100%;
+}
+
+.home-hero-portrait::before {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.14) 0%,
+    rgba(255, 255, 255, 0) 34%,
+    rgba(0, 0, 0, 0.12) 100%
+  );
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.home-hero-portrait::after {
+  content: none;
+}
+
+.home-hero-portrait img {
+  display: block;
+  filter: grayscale(1) contrast(1.02) brightness(1.08);
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+  transform: scale(1.09) rotate(-1.5deg);
+  width: 100%;
+}
+
+.home-hero-portrait figcaption {
+  display: none;
+}
+
 .home-hero-note {
+  max-width: 15rem;
   padding: 0.15rem 0 0;
 }
 
@@ -448,6 +504,21 @@
     grid-template-columns: minmax(0, 1fr);
   }
 
+  .home-hero-aside {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: minmax(0, 0.72fr) minmax(12rem, 0.28fr);
+  }
+
+  .home-hero-portrait {
+    aspect-ratio: 16 / 10;
+    max-height: none;
+  }
+
+  .home-hero-note {
+    align-self: end;
+  }
+
   .home-section-number,
   .home-hero-index {
     border-right: 0;
@@ -591,6 +662,18 @@
   .home-action {
     width: 100%;
     justify-content: center;
+  }
+
+  .home-hero-aside {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .home-hero-portrait {
+    display: none;
+  }
+
+  .home-hero-note {
+    max-width: none;
   }
 
   .home-contact-section {

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import {
   Drawer,
@@ -53,6 +53,14 @@ const Navigation = () => {
     return () => window.clearTimeout(timeoutId)
   }, [location.pathname, location.hash])
 
+  useEffect(() => {
+    if (location.pathname !== '/portfolio' && location.pathname !== '/portfolio/') return
+
+    window.requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+    })
+  }, [location.pathname])
+
   const navigationItems = [
     { name: 'About', href: '/#AtAGlance', hash: 'AtAGlance' },
     { name: 'Featured', href: '/#Featured', hash: 'Featured' },
@@ -73,6 +81,15 @@ const Navigation = () => {
     } else {
       navigate(`/#${hash}`)
     }
+  }
+
+  const handlePortfolioClick = () => {
+    setIsOpen(false)
+    navigate('/portfolio')
+
+    window.requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+    })
   }
 
   // Don't render until mounted to prevent hydration issues
@@ -118,12 +135,13 @@ const Navigation = () => {
               </Button>
             ))}
 
-            <Link to="/portfolio">
-              <Button className={`site-nav-link site-nav-portfolio ${isPortfolioRoute ? 'site-nav-link-active' : ''}`}>
-                {isProjectPage && <ArrowLeft className="h-4 w-4" />}
-                <span>Portfolio</span>
-              </Button>
-            </Link>
+            <Button
+              className={`site-nav-link site-nav-portfolio ${isPortfolioRoute ? 'site-nav-link-active' : ''}`}
+              onClick={handlePortfolioClick}
+            >
+              {isProjectPage && <ArrowLeft className="h-4 w-4" />}
+              <span>Portfolio</span>
+            </Button>
           </div>
 
           <div className="site-nav-actions">
@@ -153,15 +171,13 @@ const Navigation = () => {
                       ))}
 
                       {/* Portfolio Button in Mobile */}
-                      <Link to="/portfolio" className="w-full">
-                        <Button
-                          className={`site-nav-drawer-link site-nav-drawer-portfolio ${isPortfolioRoute ? 'site-nav-drawer-link-active' : ''}`}
-                          onClick={() => setIsOpen(false)}
-                        >
-                          {isProjectPage && <ArrowLeft className="mr-2 h-4 w-4" />}
-                          <span>Portfolio</span>
-                        </Button>
-                      </Link>
+                      <Button
+                        className={`site-nav-drawer-link site-nav-drawer-portfolio w-full ${isPortfolioRoute ? 'site-nav-drawer-link-active' : ''}`}
+                        onClick={handlePortfolioClick}
+                      >
+                        {isProjectPage && <ArrowLeft className="mr-2 h-4 w-4" />}
+                        <span>Portfolio</span>
+                      </Button>
                     </div>
                   </div>
                 </DrawerContent>
