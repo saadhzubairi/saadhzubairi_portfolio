@@ -160,7 +160,7 @@ const Home = () => {
           <div className="home-hero-note">
             <span>Based in</span>
             <strong>New York</strong>
-            <small>Open to ambitious product, platform, and AI systems work.</small>
+            <small>Involved in ambitious product, platform, and AI systems work.</small>
           </div>
         </aside>
       </div>
