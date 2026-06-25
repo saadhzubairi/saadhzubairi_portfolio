@@ -244,7 +244,7 @@
 
 .project-card:hover .project-card-shot-image,
 .project-card-surface[data-state="hovered"] .project-card-shot-image {
-  transform: scale(1.1);
+  transform: scale(1);
 }
 
 @media (prefers-reduced-motion: reduce) {

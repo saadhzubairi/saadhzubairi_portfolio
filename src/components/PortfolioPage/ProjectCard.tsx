@@ -61,8 +61,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data, onH = false }) => {
 
           {screenshotSrc && (
             <motion.div
-              initial={{ opacity: 0, y: 122 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 122, filter: "blur(5px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 0.5, delay: 0.15, ease: [0.23, 0.74, 0.19, 1] }}
               className="project-card-shot">
               <img

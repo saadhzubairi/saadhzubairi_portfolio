@@ -51,7 +51,7 @@ export const ProjectH: React.FC = () => {
               <motion.div
                 key={project.id ?? project.title ?? index}
                 className="projecth-card-slot"
-                initial={{ opacity: 0, y: 24 }}
+                initial={{ opacity: 0, y: 24, }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-60px' }}
                 transition={{ duration: 0.5, ease: [0.23, 0.74, 0.19, 1], delay: index * 0.06 }}

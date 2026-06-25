@@ -56,7 +56,7 @@
   color: var(--thesis-muted);
   font-size: clamp(0.96rem, 1.08vw, 1.03rem);
   font-weight: var(--home-copy-weight);
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
   line-height: 1.68;
   max-width: 36rem;
 }
@@ -94,7 +94,7 @@
   display: block;
   font-size: clamp(2.15rem, 4vw, 3.95rem);
   font-weight: var(--home-black-weight);
-  letter-spacing: -0.07em;
+  letter-spacing: 0;
   line-height: 0.9;
 }
 
@@ -135,7 +135,7 @@
   color: var(--thesis-ink);
   font-size: 1.2rem;
   font-weight: var(--home-medium-weight);
-  letter-spacing: -0.04em;
+  letter-spacing: 0;
   line-height: 1.08;
   margin: 0.4rem 0 0.5rem;
   text-wrap: balance;
@@ -145,7 +145,7 @@
   color: var(--thesis-muted);
   font-size: 0.92rem;
   font-weight: var(--home-copy-weight);
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
   line-height: 1.58;
 }
 

@@ -15,9 +15,8 @@ import ProjectPage from './components/ProjectPage/ProjectPage';
 import GameProjectPage from './components/ProjectPage/GameProjectPage';
 // @ts-expect-error: No type declarations for Quillian
 import BentoSkills from './components/utils/Quillian';
-import HeroAtAGlance from './components/about/HeroAtAGlance';
+import AboutSection from './components/about/AboutSection';
 import { ProjectH } from './components/projectHighlights/ProjectH';
-import ThesisSpotlight from './components/thesis/ThesisSpotlight';
 import Connect from './components/connect/Connect';
 import AnimatedPage from './components/AnimatedPage';
 
@@ -74,8 +73,7 @@ function App() {
               element={
                 <AnimatedPage>
                   <Home />
-                  <HeroAtAGlance />
-                  <ThesisSpotlight />
+                  <AboutSection />
                   <ProjectH />
                   <Connect />
                 </AnimatedPage>
