@@ -9,10 +9,10 @@ import topdown from '../../assets/portfolio/topdown.json';
 import { Link, useNavigate } from 'react-router-dom';
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, PawPrint } from 'lucide-react';
-import CustomDiv from '../CustomDiv';
+import { ArrowUpRight } from 'lucide-react';
 import { Button } from '../ui/button';
 import { cn } from '@/lib/utils';
+import '../home/home.css';
 import {
   CutoutCard,
   CutoutCardMedia,
@@ -64,7 +64,7 @@ const FeaturedTile: React.FC<FeaturedTileProps> = ({ data, variant = 'default', 
   return (
     <motion.div
       onClick={handleClick}
-      className="cursor-pointer h-full"
+      className="featured-tile cursor-pointer h-full"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
@@ -77,7 +77,7 @@ const FeaturedTile: React.FC<FeaturedTileProps> = ({ data, variant = 'default', 
           {screenshotSrc && (
             <div
               className={cn(
-                'absolute overflow-hidden rounded-t-xl shadow-2xl',
+                'absolute overflow-hidden rounded-t-xl',
                 isHero
                   ? 'inset-x-8 sm:inset-x-12 top-[22%] -bottom-[8%]'
                   : 'inset-x-5 sm:inset-x-6 top-[28%] -bottom-[10%]'
@@ -104,7 +104,7 @@ const FeaturedTile: React.FC<FeaturedTileProps> = ({ data, variant = 'default', 
           )}
 
           {techs.length > 0 && (
-            <CutoutCardPin className="top-0 right-0 rounded-bl-[16px] bg-card px-3 py-2 shadow-sm ring-1 ring-border/30">
+            <CutoutCardPin className="featured-tile-pin top-0 right-0 rounded-bl-[16px] bg-card px-3 py-2 ring-1 ring-border/30">
               <div className="flex items-center gap-1">
                 {techs.map((tech: string, i: number) => (
                   <span
@@ -158,24 +158,21 @@ const FeaturedTile: React.FC<FeaturedTileProps> = ({ data, variant = 'default', 
 
 export const ProjectH: React.FC = () => {
   return (
-    <section className="projecth section" id="Featured">
-      <CustomDiv>
-        <div className=""></div>
-      </CustomDiv>
-      <CustomDiv>
-        <h2 className="text-6xl font-thin text-black dark:text-gray-100">Featured Projects</h2>
-      </CustomDiv>
-      <CustomDiv>
-        <span className="text-lg text-gray-500">A selection of my work</span>
-      </CustomDiv>
-      <CustomDiv>
-        <div className="h-10"></div>
-      </CustomDiv>
+    <section className="home-section home-index-section projecth" id="Featured">
+      <div className="home-section-inner">
+        <header className="home-section-heading">
+          <div className="home-section-number" aria-hidden="true">03</div>
+          <div>
+            <p className="home-section-label">Selected projects / built systems</p>
+            <h2>Featured Projects</h2>
+          </div>
+          <p>A tighter edit of recent applications, experiments, and course-era builds.</p>
+        </header>
 
-      <CustomDiv>
+        <div className="home-section-body">
         <div
           className={cn(
-            'grid gap-4 sm:gap-5',
+            'grid gap-4 sm:gap-5 home-feature-grid',
             // mobile / tablet — straightforward 1- / 2-col stack, fixed heights
             'grid-cols-1 sm:grid-cols-2 auto-rows-[20rem]',
             // desktop — 12 col jagged bento
@@ -217,20 +214,18 @@ export const ProjectH: React.FC = () => {
             <FeaturedTile data={topdown} index={6} />
           </div>
         </div>
-      </CustomDiv>
+        </div>
 
-      <CustomDiv>
-        <div className="h-10"></div>
-      </CustomDiv>
-      <CustomDiv className="flex items-center justify-center">
-        <Link to="/portfolio">
-          <Button className="h-12 px-12 bg-gray-800 dark:bg-gray-700 hover:bg-gray-700 dark:hover:bg-gray-600 text-white cursor-pointer">
-            <span className="flex items-center gap-2">
-              <PawPrint /> View full Portfolio <ArrowUpRight />
-            </span>
-          </Button>
-        </Link>
-      </CustomDiv>
+        <div className="home-section-cta">
+          <Link to="/portfolio">
+            <Button className="home-action home-action-primary h-12 px-8 cursor-pointer">
+              <span className="flex items-center gap-2">
+                View full Portfolio <ArrowUpRight className="h-4 w-4" />
+              </span>
+            </Button>
+          </Link>
+        </div>
+      </div>
     </section>
   );
 };

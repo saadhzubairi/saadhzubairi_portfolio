@@ -1,6 +1,6 @@
 {
   "id": "sre-management-suite",
-  "title": "Site Reliability Management Suite",
+  "title": "Site Reliability Suite",
   "tagline": "An internal ops platform that consolidates cron scheduling, CI/CD, PM2 process monitoring, MySQL administration, Apache config, automated backups, key rotation, and full audit logging — one dashboard, ten production apps, zero SSH terminals.",
   "year": "2026",
   "caseNumber": "02 / 12",

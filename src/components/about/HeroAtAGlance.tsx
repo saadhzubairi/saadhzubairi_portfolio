@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { motion, LayoutGroup } from 'framer-motion';
-import CustomDiv from '../CustomDiv';
 import { Calendar, ExternalLink, GraduationCap, Link as LinkIcon, ChevronDown } from 'lucide-react';
 import {
   Expandable,
@@ -11,6 +10,7 @@ import experienceData from '../../assets/EDXP_data/experience.json';
 import educationData from '../../assets/EDXP_data/education.json';
 import researchData from '../../assets/EDXP_data/research.json';
 import skillsData from '../../assets/skills_data/skills.json';
+import '../home/home.css';
 
 const cardTransition = { duration: 0.35, ease: [0.23, 0.74, 0.19, 1] as [number, number, number, number] };
 
@@ -540,23 +540,20 @@ const HeroAtAGlance = () => {
   };
 
   return (
-    <section className="section select-none" id="AtAGlance">
-      <CustomDiv>
-        <div className=""></div>
-      </CustomDiv>
-      <CustomDiv>
-        <h2 className="text-6xl font-thin text-black dark:text-gray-100">At a Glance</h2>
-      </CustomDiv>
-      <CustomDiv>
-        <span className="text-lg text-gray-500">A summary of my skills and experiences</span>
-      </CustomDiv>
-      <CustomDiv>
-        <div className="h-10"></div>
-      </CustomDiv>
+    <section className="home-section home-index-section select-none" id="AtAGlance">
+      <div className="home-section-inner">
+        <header className="home-section-heading">
+          <div className="home-section-number" aria-hidden="true">02</div>
+          <div>
+            <p className="home-section-label">Snapshot / credentials / stack</p>
+            <h2>At a Glance</h2>
+          </div>
+          <p>A quick read on the experience, research, education, and tools behind the work.</p>
+        </header>
 
-      <CustomDiv>
+        <div className="home-section-body">
         <LayoutGroup>
-          <div className="space-y-4">
+          <div className="space-y-4 home-card-stack">
             {/* Row 1: 3 most recent experiences — rearranges on expand */}
             {(() => {
               const expandedExpIdx = [0, 1, 2].find((i) => expandedCard === `exp-${i}`);
@@ -624,11 +621,8 @@ const HeroAtAGlance = () => {
             </div>
           </div>
         </LayoutGroup>
-      </CustomDiv>
-
-      <CustomDiv>
-        <div className="h-6"></div>
-      </CustomDiv>
+        </div>
+      </div>
     </section>
   );
 };

@@ -18,7 +18,7 @@ export function ModeToggle() {
                 variant="outline"
                 size="icon"
                 aria-label="Toggle dark mode"
-                className="w-9 h-9"
+                className="site-nav-icon-button"
             >
                 <Sun className="h-[1.2rem] w-[1.2rem]" />
                 <span className="sr-only">Toggle theme</span>
@@ -39,7 +39,7 @@ export function ModeToggle() {
                 variant="outline"
                 size="icon"
                 onClick={toggleTheme}
-                className="cursor-pointer transition-all duration-300 ease-in-out relative"
+                className="site-nav-icon-button relative"
                 aria-label="Toggle dark mode"
             >
                 <Sun

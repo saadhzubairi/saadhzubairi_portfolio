@@ -10,6 +10,7 @@ import {
 } from '@/components/ui/drawer'
 import { Menu, Home, ArrowLeft } from 'lucide-react'
 import { ModeToggle } from './DarkModeToggle'
+import './navigation.css'
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -18,6 +19,8 @@ const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const location = useLocation()
   const navigate = useNavigate()
+  const isHomePage = location.pathname === '/'
+  const isPortfolioRoute = location.pathname.startsWith('/portfolio')
   const isProjectPage = location.pathname.startsWith('/portfolio/')
 
   // Prevent hydration mismatch
@@ -36,6 +39,20 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  useEffect(() => {
+    if (location.pathname !== '/' || !location.hash) return
+
+    const hash = location.hash.slice(1)
+    setActiveSection(hash)
+
+    const timeoutId = window.setTimeout(() => {
+      const element = document.getElementById(hash)
+      element?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }, 150)
+
+    return () => window.clearTimeout(timeoutId)
+  }, [location.pathname, location.hash])
+
   const navigationItems = [
     { name: 'About', href: '/#AtAGlance', hash: 'AtAGlance' },
     { name: 'Featured', href: '/#Featured', hash: 'Featured' },
@@ -46,12 +63,11 @@ const Navigation = () => {
     setActiveSection(hash)
     setIsOpen(false)
 
-    // Smooth scroll to section if on home page
     if (location.pathname === '/') {
       setTimeout(() => {
         const element = document.getElementById(hash)
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' })
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' })
         }
       }, 100)
     } else {
@@ -62,11 +78,11 @@ const Navigation = () => {
   // Don't render until mounted to prevent hydration issues
   if (!mounted) {
     return (
-      <header className="fixed top-4 left-0 right-0 z-50 flex justify-center">
-        <nav className="flex h-16 items-center justify-between rounded-full glass-3d px-8 max-w-4xl w-full mx-4">
-          <div className="flex items-center space-x-2 font-bold text-gray-900 dark:text-white">
+      <header className="site-nav-wrap">
+        <nav className="site-nav site-nav-loading">
+          <div className="site-nav-brand">
             <Home className="h-5 w-5" />
-            <span className="hidden sm:inline">Saad</span>
+            <span className="site-nav-brand-name">Saad</span>
           </div>
           <div className="hidden lg:flex items-center space-x-1">
             {/* Placeholder for navigation items */}
@@ -82,55 +98,44 @@ const Navigation = () => {
 
   return (
     <>
-      {/* Desktop Navigation */}
-      <header className="fixed top-4 left-0 right-0 z-50 flex justify-center">
-        <nav className={`flex h-16 items-center justify-between rounded-sm px-8 w-full mx-4 transition-all duration-300 ease-in-out ${isScrolled
-          ? 'backdrop-blur-lg bg-white/50 dark:bg-gray-900/50 shadow-lg max-w-4xl'
-          : 'bg-transparent max-w-5xl'
-          }`}>
-          {/* Logo */}
-          <div onClick={() => handleNavClick('Home')} className="flex items-center space-x-2 font-bold text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 transition-colors cursor-pointer">
+      <header className="site-nav-wrap">
+        <nav className={`site-nav ${isScrolled ? 'site-nav-scrolled' : ''}`}>
+          <div onClick={() => handleNavClick('Home')} className="site-nav-brand">
             <Home className="h-5 w-5" />
-            <span className="hidden sm:inline">Saad</span>
+            <span className="site-nav-brand-name">Saad</span>
           </div>
 
-          {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center space-x-1">
+          <div className="site-nav-menu">
             {navigationItems.map((item) => (
               <Button
                 key={item.name}
                 variant="ghost"
                 size="sm"
-                className={`px-4 py-2 rounded-lg transition-colors cursor-pointer ${activeSection === item.hash
-                  ? 'bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white'
-                  : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800'
-                  }`}
+                className={`site-nav-link ${isHomePage && activeSection === item.hash ? 'site-nav-link-active' : ''}`}
                 onClick={() => handleNavClick(item.hash)}
               >
-                <span className="text-sm font-medium">{item.name}</span>
+                <span>{item.name}</span>
               </Button>
             ))}
 
-            {/* Portfolio Button */}
             <Link to="/portfolio">
-              <Button className="ml-2 bg-gray-800 dark:bg-gray-700 hover:bg-gray-700 dark:hover:bg-gray-600 text-white px-4 py-2 rounded-sm cursor-pointer flex items-center gap-2">
+              <Button className={`site-nav-link site-nav-portfolio ${isPortfolioRoute ? 'site-nav-link-active' : ''}`}>
                 {isProjectPage && <ArrowLeft className="h-4 w-4" />}
-                <span className="text-sm font-medium">Portfolio</span>
+                <span>Portfolio</span>
               </Button>
             </Link>
           </div>
 
-          {/* Mobile Menu and Dark Mode Toggle */}
-          <div className="flex items-center space-x-2">
+          <div className="site-nav-actions">
             <ModeToggle />
-            <div className="lg:hidden">
+            <div className="site-nav-mobile">
               <Drawer open={isOpen} onOpenChange={setIsOpen}>
                 <DrawerTrigger asChild>
-                  <Button variant="ghost" size="sm" className="cursor-pointer">
+                  <Button variant="ghost" size="sm" className="site-nav-icon-button">
                     <Menu className="h-5 w-5" />
                   </Button>
                 </DrawerTrigger>
-                <DrawerContent>
+                <DrawerContent className="site-nav-drawer">
                   <DrawerHeader className="text-left">
                     <DrawerTitle>Navigation</DrawerTitle>
                   </DrawerHeader>
@@ -140,10 +145,7 @@ const Navigation = () => {
                         <Button
                           key={item.name}
                           variant="ghost"
-                          className={`justify-start cursor-pointer ${activeSection === item.hash
-                            ? 'bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white'
-                            : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
-                            }`}
+                          className={`site-nav-drawer-link ${isHomePage && activeSection === item.hash ? 'site-nav-drawer-link-active' : ''}`}
                           onClick={() => handleNavClick(item.hash)}
                         >
                           <span>{item.name}</span>
@@ -153,7 +155,7 @@ const Navigation = () => {
                       {/* Portfolio Button in Mobile */}
                       <Link to="/portfolio" className="w-full">
                         <Button
-                          className="w-full justify-start bg-gray-800 dark:bg-gray-700 hover:bg-gray-700 dark:hover:bg-gray-600 text-white cursor-pointer"
+                          className={`site-nav-drawer-link site-nav-drawer-portfolio ${isPortfolioRoute ? 'site-nav-drawer-link-active' : ''}`}
                           onClick={() => setIsOpen(false)}
                         >
                           {isProjectPage && <ArrowLeft className="mr-2 h-4 w-4" />}

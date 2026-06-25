@@ -1,12 +1,12 @@
 {
   "id": "pixelcut",
-  "image": "/Projects/pixelcut/pixelcut.png",
+  "image": "/Projects/pixelcut/screenshot4.png",
   "name": "Pixel Cut",
   "title": "Pixel Cut",
   "subtitle": "A 2D platformer game made using Unity.",
-  "titleImg": "/Projects/pixelcut/pixelcut.png",
+  "titleImg": "/Projects/pixelcut/screenshot4.png",
   "heroImage": {
-    "src": "/Projects/pixelcut/pixelcut.png",
+    "src": "/Projects/pixelcut/screenshot4.png",
     "alt": "Pixel Cut"
   },
   "type": "game",
