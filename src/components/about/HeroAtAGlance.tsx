@@ -60,7 +60,7 @@ const ExperienceCard = ({
       <motion.div
         layout
         transition={cardTransition}
-        className={`select-none rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-[#1a1a1a] p-5 cursor-pointer hover:shadow-lg dark:hover:shadow-black/20 flex flex-col relative ${isExpanded ? '' : 'h-full'}`}
+        className={`home-glance-surface select-none rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-[#1a1a1a] p-5 cursor-pointer hover:shadow-lg dark:hover:shadow-black/20 flex flex-col relative ${isExpanded ? '' : 'h-full'}`}
       >
         {/* Header */}
         <motion.div layout="position" className="flex items-center gap-4 mb-5">
@@ -70,10 +70,10 @@ const ExperienceCard = ({
             className="w-14 h-14 rounded-xl object-contain bg-gray-50 dark:bg-gray-800 p-1 flex-shrink-0"
           />
           <div className="flex-1 min-w-0">
-            <p className="text-xs font-mono text-gray-400 dark:text-gray-600 mt-0.5">
+            <p className="home-glance-eyebrow text-xs font-mono text-gray-400 dark:text-gray-600 mt-0.5">
               {exp.company}
             </p>
-            <h3 className="text-xl font-medium text-gray-900 dark:text-gray-100 leading-tight">
+            <h3 className="home-glance-title text-xl font-medium text-gray-900 dark:text-gray-100 leading-tight">
               {exp.desg}
             </h3>
           </div>
@@ -131,7 +131,7 @@ const ExperienceCard = ({
           {exp.skills.slice(0, 6).map((skill) => (
             <span
               key={skill}
-              className="px-2.5 py-1 text-xs font-medium rounded-full bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-400"
+              className="home-glance-chip px-2.5 py-1 text-xs font-medium rounded-full bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-400"
             >
               {skill}
             </span>
@@ -147,7 +147,7 @@ const ExperienceCard = ({
             className="mt-6 space-y-5"
           >
             {/* Role description */}
-            <p className="text-sm font-medium text-gray-800 dark:text-gray-200 leading-relaxed">
+            <p className="home-glance-copy home-glance-copy-strong text-sm font-medium text-gray-800 dark:text-gray-200 leading-relaxed">
               {exp.desc}
             </p>
 
@@ -156,14 +156,14 @@ const ExperienceCard = ({
 
             {/* Contributions */}
             <div>
-              <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-gray-400 dark:text-gray-600 mb-3">
+              <p className="home-glance-meta text-[10px] font-bold uppercase tracking-[0.15em] text-gray-400 dark:text-gray-600 mb-3">
                 Key Contributions
               </p>
               <div className="space-y-3">
                 {exp.resps.map((r, i) => (
                   <div key={i} className="flex gap-3 items-start">
                     <span className="flex-shrink-0 mt-1.5 w-1.5 h-1.5 rounded-full bg-gray-400 dark:bg-gray-600" />
-                    <p className="text-[13px] text-gray-600 dark:text-gray-400 leading-relaxed">
+                    <p className="home-glance-copy text-[13px] text-gray-600 dark:text-gray-400 leading-relaxed">
                       {r}
                     </p>
                   </div>
@@ -177,7 +177,7 @@ const ExperienceCard = ({
                 exp.skills.slice(6).map((skill) => (
                   <span
                     key={skill}
-                    className="px-2 py-0.5 text-[11px] font-medium rounded-md bg-gray-100 dark:bg-gray-800/60 text-gray-500 dark:text-gray-500"
+                    className="home-glance-chip home-glance-chip-muted px-2 py-0.5 text-[11px] font-medium rounded-md bg-gray-100 dark:bg-gray-800/60 text-gray-500 dark:text-gray-500"
                   >
                     {skill}
                   </span>
@@ -187,7 +187,7 @@ const ExperienceCard = ({
                 href={exp.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800/60 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
+                className="home-glance-inline-link inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800/60 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
                 onClick={(e) => e.stopPropagation()}
               >
                 <ExternalLink className="w-3 h-3" />
@@ -229,7 +229,7 @@ const EducationCard = ({
         <motion.div
           layout
           transition={cardTransition}
-          className="select-none h-full rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-[#1a1a1a] p-5 cursor-pointer hover:shadow-lg dark:hover:shadow-black/20 flex flex-col relative"
+          className="home-glance-surface select-none h-full rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-[#1a1a1a] p-5 cursor-pointer hover:shadow-lg dark:hover:shadow-black/20 flex flex-col relative"
         >
           {/* Class-of badge — same cutout style as ExperienceCard's duration badge */}
           {!isExpanded && (
@@ -259,17 +259,17 @@ const EducationCard = ({
               className="w-14 h-14 rounded-xl object-contain bg-gray-50 dark:bg-gray-800 p-1 flex-shrink-0"
             />
             <div className="flex-1 min-w-0">
-              <p className="text-xs font-mono text-gray-400 dark:text-gray-600 mt-0.5">
+              <p className="home-glance-eyebrow text-xs font-mono text-gray-400 dark:text-gray-600 mt-0.5">
                 {latestEducation.institute}
               </p>
-              <h3 className="text-xl font-medium text-gray-900 dark:text-gray-100 leading-tight">
+              <h3 className="home-glance-title text-xl font-medium text-gray-900 dark:text-gray-100 leading-tight">
                 {latestEducation.degree}
               </h3>
             </div>
           </motion.div>
 
           {/* Date row */}
-          <motion.div layout="position" className="flex items-center gap-2 text-xs text-gray-700 dark:text-gray-500 mb-5">
+          <motion.div layout="position" className="home-glance-date flex items-center gap-2 text-xs text-gray-700 dark:text-gray-500 mb-5">
             <Calendar className="w-3.5 h-3.5" />
             {latestEducation.session}
           </motion.div>
@@ -280,13 +280,13 @@ const EducationCard = ({
               {courses.slice(0, 4).map((course) => (
                 <span
                   key={course}
-                  className="px-2.5 py-1 text-xs font-medium rounded-full bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-400"
+                  className="home-glance-chip px-2.5 py-1 text-xs font-medium rounded-full bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-400"
                 >
                   {course}
                 </span>
               ))}
               {thesis.length > 0 && (
-                <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-400">
+                <span className="home-glance-chip px-2.5 py-1 text-xs font-medium rounded-full bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-400">
                   Thesis
                 </span>
               )}
@@ -303,11 +303,11 @@ const EducationCard = ({
             >
               {thesis.length > 0 && (
                 <div className="rounded-2xl bg-gray-100 dark:bg-gray-800/60 p-3">
-                  <p className="text-[11px] font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-500 mb-1.5">
+                  <p className="home-glance-meta text-[11px] font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-500 mb-1.5">
                     Thesis
                   </p>
                   {thesis.map((t, i) => (
-                    <p key={i} className="text-sm text-gray-800 dark:text-gray-200 leading-relaxed">
+                    <p key={i} className="home-glance-copy text-sm text-gray-800 dark:text-gray-200 leading-relaxed">
                       {t}
                     </p>
                   ))}
@@ -316,14 +316,14 @@ const EducationCard = ({
 
               {courses.length > 0 && (
                 <div>
-                  <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-gray-400 dark:text-gray-600 mb-2">
+                  <p className="home-glance-meta text-[10px] font-bold uppercase tracking-[0.15em] text-gray-400 dark:text-gray-600 mb-2">
                     Courses
                   </p>
                   <div className="flex flex-wrap gap-1.5">
                     {courses.map((course) => (
                       <span
                         key={course}
-                        className="px-2.5 py-1 text-xs font-medium rounded-full bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-400"
+                        className="home-glance-chip px-2.5 py-1 text-xs font-medium rounded-full bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-400"
                       >
                         {course}
                       </span>
@@ -361,14 +361,14 @@ const ResearchCard = ({
       <motion.div
         layout
         transition={cardTransition}
-        className="select-none h-full rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-[#1a1a1a] p-5 cursor-pointer hover:shadow-lg dark:hover:shadow-black/20 flex flex-col"
+        className="home-glance-surface select-none h-full rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-[#1a1a1a] p-5 cursor-pointer hover:shadow-lg dark:hover:shadow-black/20 flex flex-col"
       >
         {/* Header */}
         <motion.div layout="position" className="mb-4">
-          <h3 className="text-xl font-medium text-gray-900 dark:text-gray-100 leading-tight">
+          <h3 className="home-glance-title text-xl font-medium text-gray-900 dark:text-gray-100 leading-tight">
             Publications & Research
           </h3>
-          <p className="text-xs font-mono text-gray-400 dark:text-gray-600 mt-1">
+          <p className="home-glance-eyebrow text-xs font-mono text-gray-400 dark:text-gray-600 mt-1">
             {researchData.length} paper{researchData.length !== 1 && 's'} &middot; New York University
           </p>
         </motion.div>
@@ -383,7 +383,7 @@ const ResearchCard = ({
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
-                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                className="home-glance-tag-link inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
               >
                 <LinkIcon className="w-3 h-3" />
                 <span>Paper {i + 1}</span>
@@ -407,12 +407,12 @@ const ResearchCard = ({
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
-                className="block p-3 rounded-lg bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                className="home-glance-paper block p-3 rounded-lg bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
               >
-                <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p className="home-glance-copy home-glance-copy-strong text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
                   {item.title}
                 </p>
-                <p className="text-xs text-gray-400 dark:text-gray-600 mt-1">
+                <p className="home-glance-source text-xs text-gray-400 dark:text-gray-600 mt-1">
                   {item.source}
                 </p>
               </a>
@@ -448,14 +448,14 @@ const SkillsCard = ({
       layout
       onClick={onToggle}
       transition={cardTransition}
-      className="select-none rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-[#1a1a1a] p-5 cursor-pointer hover:shadow-lg dark:hover:shadow-black/20 flex flex-col"
+      className="home-glance-surface select-none rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-[#1a1a1a] p-5 cursor-pointer hover:shadow-lg dark:hover:shadow-black/20 flex flex-col"
     >
       <motion.div layout="position" className="mb-4 flex items-start justify-between gap-3">
         <div>
-          <h3 className="text-xl font-medium text-gray-900 dark:text-gray-100 leading-tight">
+          <h3 className="home-glance-title text-xl font-medium text-gray-900 dark:text-gray-100 leading-tight">
             Skills & Technologies
           </h3>
-          <p className="text-xs font-mono text-gray-400 dark:text-gray-600 mt-1">
+          <p className="home-glance-eyebrow text-xs font-mono text-gray-400 dark:text-gray-600 mt-1">
             {allSkills.length} technologies &middot; {DOMAINS.length} domains
           </p>
         </div>
@@ -473,7 +473,7 @@ const SkillsCard = ({
         {DOMAINS.map((d) => (
           <span
             key={d}
-            className="px-2.5 py-1 text-xs font-medium rounded-full bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-400"
+            className="home-glance-chip px-2.5 py-1 text-xs font-medium rounded-full bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-400"
           >
             {d}
           </span>
@@ -489,7 +489,7 @@ const SkillsCard = ({
         >
           {skillsData.map((category) => (
             <div key={category.category}>
-              <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-gray-400 dark:text-gray-600 mb-3">
+              <p className="home-glance-meta text-[10px] font-bold uppercase tracking-[0.15em] text-gray-400 dark:text-gray-600 mb-3">
                 {category.category}
               </p>
               <div className="space-y-2">
@@ -502,7 +502,7 @@ const SkillsCard = ({
                         {skill.name[0]}
                       </span>
                     )}
-                    <span className="text-sm text-gray-700 dark:text-gray-300 flex-1 truncate">
+                    <span className="home-glance-skill text-sm text-gray-700 dark:text-gray-300 flex-1 truncate">
                       {skill.name}
                     </span>
                     <div className="flex gap-1 flex-shrink-0">
@@ -543,7 +543,6 @@ const HeroAtAGlance = () => {
     <section className="home-section home-index-section select-none" id="AtAGlance">
       <div className="home-section-inner">
         <header className="home-section-heading">
-          <div className="home-section-number" aria-hidden="true">02</div>
           <div>
             <p className="home-section-label">Snapshot / credentials / stack</p>
             <h2>At a Glance</h2>

@@ -23,7 +23,7 @@
   --nav-radius: 16px;
   --nav-inner-radius: 12px;
   border-radius: var(--nav-radius);
-  box-shadow: none;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
   display: grid;
   gap: 0.75rem;
   grid-template-columns: minmax(9rem, 1fr) auto minmax(9rem, 1fr);
@@ -38,7 +38,7 @@
 .site-nav-scrolled {
   background: color-mix(in srgb, var(--nav-paper) 88%, transparent);
   border-color: color-mix(in srgb, var(--nav-rule) 90%, transparent);
-  box-shadow: none;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.1);
   backdrop-filter: blur(18px) saturate(1.15);
 }
 
@@ -47,13 +47,13 @@
   --nav-rule: rgba(255, 255, 255, 0.13);
   background: rgba(5, 5, 5, 0.94);
   border-color: rgba(255, 255, 255, 0.12);
-  box-shadow: none;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
 }
 
 .dark .site-nav-scrolled {
   background: rgba(5, 5, 5, 0.97);
   border-color: rgba(255, 255, 255, 0.16);
-  box-shadow: none;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.34);
 }
 
 .site-nav-brand {
@@ -88,18 +88,10 @@
 
 .site-nav-menu {
   align-items: center;
-  background: color-mix(in srgb, var(--nav-ink) 5%, transparent);
-  border: 1px solid color-mix(in srgb, var(--nav-rule) 58%, transparent);
-  border-radius: var(--nav-radius);
   display: none;
-  gap: 0.18rem;
+  gap: 0.28rem;
   justify-self: center;
-  padding: 0.2rem;
-}
-
-.dark .site-nav-menu {
-  background: #0d0d0d;
-  border-color: rgba(255, 255, 255, 0.1);
+  padding: 0;
 }
 
 .site-nav-link {

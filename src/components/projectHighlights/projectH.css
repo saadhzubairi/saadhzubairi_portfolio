@@ -6,3 +6,29 @@
     flex-direction: column;
     user-select: none !important;
 }
+
+.projecth-grid {
+    align-items: stretch;
+}
+
+.projecth-card-slot {
+    min-width: 0;
+}
+
+.projecth-card-slot > * {
+    height: 100%;
+}
+
+.projecth .project-card {
+    height: 100%;
+}
+
+.projecth .project-card-surface {
+    width: 100%;
+}
+
+.projecth .project-card-content p {
+    font-size: clamp(0.98rem, 1vw, 1.08rem);
+    letter-spacing: -0.012em;
+    line-height: 1.6;
+}

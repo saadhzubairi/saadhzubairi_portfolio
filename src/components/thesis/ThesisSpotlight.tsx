@@ -32,7 +32,6 @@ const ThesisSpotlight = () => {
     <section className="home-section home-index-section thesis-spotlight" id="Thesis">
       <div className="home-section-inner">
         <header className="home-section-heading">
-          <div className="home-section-number" aria-hidden="true">03</div>
           <div>
             <p className="home-section-label">Research thesis / NYU Tandon</p>
             <h2>Thesis</h2>
@@ -48,8 +47,8 @@ const ThesisSpotlight = () => {
             <div className="thesis-hero">
               <div className="thesis-copy">
                 <p className="thesis-eyebrow">May 2026 / Advisor: Ivan Selesnick</p>
-                <h3>
-                  LBEADS-NET: Algorithm Unrolling for Learned Baseline
+                <h3 className="thesis-title">
+                  <span className="thesis-title-strong">LBEADS-NET</span>: Algorithm Unrolling for Learned Baseline
                   Estimation and Denoising in Chromatographic Signals
                 </h3>
                 <p className="thesis-lede">
@@ -59,12 +58,22 @@ const ThesisSpotlight = () => {
                 </p>
 
                 <div className="thesis-actions" aria-label="Thesis artifacts">
-                  <a href="/Thesis/lbeads-net-thesis.pdfs" target="_blank" rel="noopener noreferrer">
+                  <a
+                    className="home-action home-action-primary"
+                    href="/Thesis/lbeads-net-thesis.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <FileText className="h-4 w-4" />
                     Read thesis
                     <ArrowUpRight className="h-4 w-4" />
                   </a>
-                  <a href="/Thesis/lbeads-net-defense.pdf" target="_blank" rel="noopener noreferrer">
+                  <a
+                    className="home-action"
+                    href="/Thesis/lbeads-net-defense.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Presentation className="h-4 w-4" />
                     Defense deck
                     <ArrowUpRight className="h-4 w-4" />

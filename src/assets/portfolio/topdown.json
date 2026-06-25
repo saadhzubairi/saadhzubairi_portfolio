@@ -1,12 +1,12 @@
 {
   "id": "topdown",
-  "image": "/Projects/topdown/topdown.png",
+  "image": "/Projects/topdown/screenshot1.png",
   "name": "Top Down Shooter",
   "title": "Top Down Shooter",
   "subtitle": "A top-down shooter game made using Unity.",
-  "titleImg": "/Projects/topdown/topdown.png",
+  "titleImg": "/Projects/topdown/screenshot1.png",
   "heroImage": {
-    "src": "/Projects/topdown/topdown.png",
+    "src": "/Projects/topdown/screenshot1.png",
     "alt": "Top Down Shooter"
   },
   "type": "game",

@@ -8,14 +8,14 @@
 .thesis-panel {
   background: color-mix(in srgb, var(--thesis-ink) 3%, var(--thesis-paper) 97%);
   border: 1px solid var(--thesis-rule);
-  border-radius: 18px;
+  border-radius: 24px;
   overflow: hidden;
 }
 
 .thesis-hero {
   display: grid;
   gap: 1px;
-  grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.62fr);
+  grid-template-columns: minmax(0, 1.18fr) minmax(16rem, 0.58fr);
 }
 
 .thesis-copy,
@@ -27,7 +27,7 @@
 
 .thesis-copy {
   min-width: 0;
-  padding: clamp(1.35rem, 4vw, 3rem);
+  padding: clamp(1.2rem, 3vw, 2.35rem);
 }
 
 .thesis-eyebrow,
@@ -36,53 +36,36 @@
 .thesis-figure figcaption span {
   color: var(--thesis-muted);
   display: block;
-  font-size: 0.7rem;
-  font-weight: 650;
-  letter-spacing: 0.04em;
+  font-family: var(--home-font-sans);
+  font-size: 0.72rem;
+  font-weight: var(--home-black-weight);
+  letter-spacing: var(--home-caps-tracking);
   text-transform: uppercase;
 }
 
-.thesis-copy h3 {
+.thesis-title {
   color: var(--thesis-ink);
-  font-size: clamp(2.15rem, 6vw, 5.8rem);
-  font-weight: 250;
-  letter-spacing: -0.06em;
-  line-height: 0.92;
-  margin: 0.7rem 0 1.15rem;
-  max-width: 13ch;
+  font-size: 2.5rem;
+  font-weight: var(--home-display-weight);
+  line-height: 1.2;
+  margin: 0.75rem 0 1rem;
+  text-wrap: balance;
 }
 
 .thesis-lede {
   color: var(--thesis-muted);
-  font-size: clamp(1rem, 1.5vw, 1.18rem);
-  line-height: 1.65;
-  max-width: 46rem;
+  font-size: clamp(0.96rem, 1.08vw, 1.03rem);
+  font-weight: var(--home-copy-weight);
+  letter-spacing: -0.01em;
+  line-height: 1.68;
+  max-width: 36rem;
 }
 
 .thesis-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 1.5rem;
-}
-
-.thesis-actions a {
-  align-items: center;
-  border: 1px solid var(--thesis-ink);
-  border-radius: 8px;
-  color: var(--thesis-ink);
-  display: inline-flex;
-  font-size: 0.9rem;
-  font-weight: 650;
-  gap: 0.5rem;
-  min-height: 2.75rem;
-  padding: 0 1rem;
-  transition: background-color 180ms ease, color 180ms ease;
-}
-
-.thesis-actions a:hover {
-  background: var(--thesis-ink);
-  color: var(--thesis-paper);
+  gap: 0.85rem;
+  margin-top: 1.4rem;
 }
 
 .thesis-metrics {
@@ -94,8 +77,8 @@
 .thesis-metric {
   border-bottom: 1px solid var(--thesis-rule);
   border-left: 1px solid var(--thesis-rule);
-  min-height: 10rem;
-  padding: 1.25rem;
+  min-height: 8.9rem;
+  padding: 1.05rem;
 }
 
 .thesis-metric:nth-child(odd) {
@@ -109,16 +92,16 @@
 .thesis-metric strong {
   color: var(--thesis-ink);
   display: block;
-  font-size: clamp(2.75rem, 6vw, 5.2rem);
-  font-weight: 260;
-  letter-spacing: -0.06em;
-  line-height: 0.88;
+  font-size: clamp(2.15rem, 4vw, 3.95rem);
+  font-weight: var(--home-black-weight);
+  letter-spacing: -0.07em;
+  line-height: 0.9;
 }
 
 .thesis-metric span {
   line-height: 1.35;
-  margin-top: 1rem;
-  max-width: 11rem;
+  margin-top: 0.8rem;
+  max-width: 9rem;
 }
 
 .thesis-visual-grid {
@@ -136,7 +119,7 @@
 .thesis-findings article {
   border-bottom: 1px solid var(--thesis-rule);
   border-left: 1px solid var(--thesis-rule);
-  padding: 1.2rem;
+  padding: 1.05rem 1.1rem 1.15rem;
 }
 
 .thesis-findings article:first-child {
@@ -150,17 +133,20 @@
 
 .thesis-findings h4 {
   color: var(--thesis-ink);
-  font-size: 1.3rem;
-  font-weight: 450;
-  letter-spacing: -0.03em;
-  line-height: 1.05;
-  margin: 0.45rem 0 0.6rem;
+  font-size: 1.2rem;
+  font-weight: var(--home-medium-weight);
+  letter-spacing: -0.04em;
+  line-height: 1.08;
+  margin: 0.4rem 0 0.5rem;
+  text-wrap: balance;
 }
 
 .thesis-findings p {
   color: var(--thesis-muted);
-  font-size: 0.94rem;
-  line-height: 1.55;
+  font-size: 0.92rem;
+  font-weight: var(--home-copy-weight);
+  letter-spacing: -0.01em;
+  line-height: 1.58;
 }
 
 @media (max-width: 900px) {
@@ -191,14 +177,14 @@
 
 @media (max-width: 640px) {
   .thesis-panel {
-    border-radius: 14px;
+    border-radius: 20px;
   }
 
   .thesis-copy {
     padding: 1.15rem;
   }
 
-  .thesis-copy h3 {
+  .thesis-title {
     max-width: none;
   }
 

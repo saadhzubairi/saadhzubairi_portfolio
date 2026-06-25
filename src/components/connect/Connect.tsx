@@ -3,19 +3,18 @@ import { ArrowUpRight } from 'lucide-react';
 import '../home/home.css';
 
 type Channel = {
-  no: string;
   label: string;
   value: string;
   href: string;
 };
 
 const channels: Channel[] = [
-  { no: '01', label: 'Email', value: 'saadhzubairi@outlook.com', href: 'mailto:saadhzubairi@outlook.com' },
-  { no: '02', label: 'LinkedIn', value: 'in/saadhzubairi', href: 'https://www.linkedin.com/in/saadhzubairi/' },
-  { no: '03', label: 'GitHub', value: '@saadhzubairi', href: 'https://github.com/saadhzubairi/' },
-  { no: '04', label: 'Discord', value: 'saadhzubairi#1469', href: 'https://discord.com/users/saadhzubairi#1469' },
-  { no: '05', label: 'Calendly', value: 'Book a 30-min call', href: 'https://calendly.com/saadhzubairi/30min?month=2025-08' },
-  { no: '06', label: 'Zoom', value: 'My personal room', href: 'https://nyu.zoom.us/my/saadhzubairi' },
+  { label: 'Email', value: 'saadhzubairi@outlook.com', href: 'mailto:saadhzubairi@outlook.com' },
+  { label: 'LinkedIn', value: 'in/saadhzubairi', href: 'https://www.linkedin.com/in/saadhzubairi/' },
+  { label: 'GitHub', value: '@saadhzubairi', href: 'https://github.com/saadhzubairi/' },
+  { label: 'Discord', value: 'saadhzubairi#1469', href: 'https://discord.com/users/saadhzubairi#1469' },
+  { label: 'Calendly', value: 'Book a 30-min call', href: 'https://calendly.com/saadhzubairi/30min?month=2025-08' },
+  { label: 'Zoom', value: 'My personal room', href: 'https://nyu.zoom.us/my/saadhzubairi' },
 ];
 
 const ease = [0.23, 0.74, 0.19, 1] as const;
@@ -35,7 +34,7 @@ const Connect = () => {
           className="home-contact-meta"
         >
           <span>
-            04 / Contact
+            Contact
           </span>
           <span>
             New York, NY
@@ -51,7 +50,7 @@ const Connect = () => {
         >
           Get in
           <br />
-          <span className="font-serif font-normal italic">touch.</span>
+          <span className="home-contact-title-strong">touch.</span>
         </motion.h2>
 
         <motion.p
@@ -84,10 +83,6 @@ const Connect = () => {
                 aria-hidden
                 className="home-contact-link-fill"
               />
-
-              <span className="home-contact-no">
-                {c.no}
-              </span>
 
               <span className="home-contact-channel">
                 {c.label}

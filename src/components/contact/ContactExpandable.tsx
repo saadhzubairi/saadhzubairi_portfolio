@@ -51,7 +51,7 @@ export default function ContactExpandable({
       <ExpandableScreenTrigger>
         <div
           className={cn(
-            "group inline-flex h-11 items-center gap-2 rounded-full border border-gray-200 px-6 text-sm font-medium text-gray-600 transition-all duration-300 hover:border-gray-400 hover:text-gray-900 dark:border-gray-700/70 dark:text-gray-300 dark:hover:border-gray-500 dark:hover:text-white",
+            "group inline-flex items-center gap-2 rounded-full border border-gray-200 px-6 text-sm font-medium text-gray-600 transition-all duration-300 hover:border-gray-400 hover:text-gray-900 dark:border-gray-700/70 dark:text-gray-300 dark:hover:border-gray-500 dark:hover:text-white",
             triggerClassName
           )}
         >
@@ -63,13 +63,13 @@ export default function ContactExpandable({
       <ExpandableScreenContent className="bg-primary">
         <div className="relative z-10 mx-auto flex h-full w-full max-w-3xl flex-col justify-center gap-10 p-6 sm:p-10 lg:p-16">
           <div className="space-y-3">
-            <p className="font-mono text-xs uppercase tracking-[0.25em] text-primary-foreground/60">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary-foreground/60">
               Get in touch
             </p>
-            <h2 className="text-4xl font-medium leading-none tracking-tight text-primary-foreground sm:text-5xl lg:text-6xl">
+            <h2 className="text-4xl font-[340] leading-[0.92] tracking-[-0.06em] text-primary-foreground sm:text-5xl lg:text-6xl">
               Let&apos;s build something.
             </h2>
-            <p className="max-w-md text-sm leading-relaxed text-primary-foreground/70 sm:text-base">
+            <p className="max-w-md text-sm tracking-[-0.01em] leading-relaxed text-primary-foreground/70 sm:text-base">
               Have a project, a role, or just want to say hi? Reach me directly
               on any of these.
             </p>

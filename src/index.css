@@ -119,7 +119,10 @@
   body {
     @apply bg-background text-foreground;
     animation: fade-in 500ms ease-out 300ms both;
+    font-family: "SF Pro", sans-serif;
     font-feature-settings: "rlig" 1, "calt" 1;
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
   }
 }
 @keyframes fade-in {

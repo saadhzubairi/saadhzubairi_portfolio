@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import './portfoliopage.css';
 import {
   CutoutCard,
   CutoutCardMedia,
@@ -48,14 +49,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data, onH = false }) => {
         <CutoutCardMedia className="project-card-media">
           <div className="absolute inset-0" style={{ background: gradient }} />
 
-          <div className="project-card-title-band">
-            <motion.h3 className="project-card-media-title" variants={stagger.item}
+          <div className="project-card-title-band ">
+            <motion.h5 className="project-card-media-title" variants={stagger.item}
               initial={{ opacity: 0, y: 22 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.15, ease: [0.23, 0.74, 0.19, 1] }}
             >
               {title}
-            </motion.h3>
+            </motion.h5>
           </div>
 
           {screenshotSrc && (
@@ -87,21 +88,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data, onH = false }) => {
         </CutoutCardMedia>
 
         {/* Content */}
-        <CutoutCardContent className="project-card-content flex flex-col p-4">
+        {/* <CutoutCardContent className="project-card-content flex flex-col p-4">
           <motion.div
             animate="show"
             className="contents"
             initial="hidden"
             variants={stagger.container}
           >
-            <motion.p
-              className="text-sm text-muted-foreground line-clamp-3"
-              variants={stagger.item}
-            >
-              {subtitle}
-            </motion.p>
           </motion.div>
-        </CutoutCardContent>
+        </CutoutCardContent> */}
       </CutoutCard>
     </div>
   );

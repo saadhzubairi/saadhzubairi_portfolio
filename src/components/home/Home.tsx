@@ -67,19 +67,7 @@ const Home = () => {
       id="Home"
       className="home-section home-hero"
     >
-      <div
-        aria-hidden
-        className="home-hero-watermark"
-      >
-        <span>Zubairi</span>
-      </div>
-
       <div className="home-section-inner home-hero-grid">
-        <div className="home-hero-index" aria-hidden="true">
-          <span>Index</span>
-          <strong>01</strong>
-        </div>
-
         <div className="home-hero-copy">
           <p className="home-section-label">Software Engineer</p>
           <h1 className="home-hero-title">
@@ -87,14 +75,14 @@ const Home = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, ease: [0.23, 0.74, 0.19, 1] }}
-              className="">
+              className="font-black">
               Saad
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, ease: [0.23, 0.74, 0.19, 1] }}
-              className="">
+              className="font-black">
               Zubairi
             </motion.div>
           </h1>
