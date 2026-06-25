@@ -59,7 +59,7 @@ const ThesisSpotlight = ({ embedded = false }: ThesisSpotlightProps) => {
               <div className="thesis-actions" aria-label="Thesis artifacts">
                 <a
                   className="home-action home-action-primary"
-                  href="/Thesis/lbeads-net-thesis.pdf"
+                  href="/Thesis/lbeads-net-thesis.pdfs"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
