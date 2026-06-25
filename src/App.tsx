@@ -17,6 +17,7 @@ import GameProjectPage from './components/ProjectPage/GameProjectPage';
 import BentoSkills from './components/utils/Quillian';
 import HeroAtAGlance from './components/about/HeroAtAGlance';
 import { ProjectH } from './components/projectHighlights/ProjectH';
+import ThesisSpotlight from './components/thesis/ThesisSpotlight';
 import Connect from './components/connect/Connect';
 import AnimatedPage from './components/AnimatedPage';
 
@@ -74,6 +75,7 @@ function App() {
                 <AnimatedPage>
                   <Home />
                   <HeroAtAGlance />
+                  <ThesisSpotlight />
                   <ProjectH />
                   <Connect />
                 </AnimatedPage>

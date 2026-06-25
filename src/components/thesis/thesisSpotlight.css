@@ -1,0 +1,229 @@
+.thesis-spotlight {
+  --thesis-ink: hsl(var(--foreground));
+  --thesis-paper: hsl(var(--background));
+  --thesis-muted: hsl(var(--muted-foreground));
+  --thesis-rule: color-mix(in srgb, var(--thesis-ink) 16%, transparent);
+}
+
+.thesis-panel {
+  background: color-mix(in srgb, var(--thesis-ink) 3%, var(--thesis-paper) 97%);
+  border: 1px solid var(--thesis-rule);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.thesis-hero {
+  display: grid;
+  gap: 1px;
+  grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.62fr);
+}
+
+.thesis-copy,
+.thesis-metrics,
+.thesis-findings,
+.thesis-figure {
+  background: var(--thesis-paper);
+}
+
+.thesis-copy {
+  min-width: 0;
+  padding: clamp(1.35rem, 4vw, 3rem);
+}
+
+.thesis-eyebrow,
+.thesis-metric span,
+.thesis-findings span,
+.thesis-figure figcaption span {
+  color: var(--thesis-muted);
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.thesis-copy h3 {
+  color: var(--thesis-ink);
+  font-size: clamp(2.15rem, 6vw, 5.8rem);
+  font-weight: 250;
+  letter-spacing: -0.06em;
+  line-height: 0.92;
+  margin: 0.7rem 0 1.15rem;
+  max-width: 13ch;
+}
+
+.thesis-lede {
+  color: var(--thesis-muted);
+  font-size: clamp(1rem, 1.5vw, 1.18rem);
+  line-height: 1.65;
+  max-width: 46rem;
+}
+
+.thesis-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.thesis-actions a {
+  align-items: center;
+  border: 1px solid var(--thesis-ink);
+  border-radius: 8px;
+  color: var(--thesis-ink);
+  display: inline-flex;
+  font-size: 0.9rem;
+  font-weight: 650;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0 1rem;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.thesis-actions a:hover {
+  background: var(--thesis-ink);
+  color: var(--thesis-paper);
+}
+
+.thesis-metrics {
+  border-left: 1px solid var(--thesis-rule);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.thesis-metric {
+  border-bottom: 1px solid var(--thesis-rule);
+  border-left: 1px solid var(--thesis-rule);
+  min-height: 10rem;
+  padding: 1.25rem;
+}
+
+.thesis-metric:nth-child(odd) {
+  border-left: 0;
+}
+
+.thesis-metric:nth-last-child(-n + 2) {
+  border-bottom: 0;
+}
+
+.thesis-metric strong {
+  color: var(--thesis-ink);
+  display: block;
+  font-size: clamp(2.75rem, 6vw, 5.2rem);
+  font-weight: 260;
+  letter-spacing: -0.06em;
+  line-height: 0.88;
+}
+
+.thesis-metric span {
+  line-height: 1.35;
+  margin-top: 1rem;
+  max-width: 11rem;
+}
+
+.thesis-visual-grid {
+  border-top: 1px solid var(--thesis-rule);
+  display: grid;
+  gap: 1px;
+  grid-template-columns: 1fr;
+}
+
+.thesis-findings {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.thesis-findings article {
+  border-bottom: 1px solid var(--thesis-rule);
+  border-left: 1px solid var(--thesis-rule);
+  padding: 1.2rem;
+}
+
+.thesis-findings article:first-child {
+  border-left: 0;
+}
+
+.thesis-findings article,
+.thesis-findings article:last-child {
+  border-bottom: 0;
+}
+
+.thesis-findings h4 {
+  color: var(--thesis-ink);
+  font-size: 1.3rem;
+  font-weight: 450;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin: 0.45rem 0 0.6rem;
+}
+
+.thesis-findings p {
+  color: var(--thesis-muted);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 900px) {
+  .thesis-hero,
+  .thesis-visual-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .thesis-metrics {
+    border-left: 0;
+    border-top: 1px solid var(--thesis-rule);
+  }
+
+  .thesis-findings {
+    grid-template-columns: 1fr;
+  }
+
+  .thesis-findings article,
+  .thesis-findings article:first-child {
+    border-bottom: 1px solid var(--thesis-rule);
+    border-left: 0;
+  }
+
+  .thesis-findings article:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .thesis-panel {
+    border-radius: 14px;
+  }
+
+  .thesis-copy {
+    padding: 1.15rem;
+  }
+
+  .thesis-copy h3 {
+    max-width: none;
+  }
+
+  .thesis-actions {
+    flex-direction: column;
+  }
+
+  .thesis-actions a {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .thesis-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .thesis-metric,
+  .thesis-metric:nth-last-child(-n + 2) {
+    border-bottom: 1px solid var(--thesis-rule);
+    border-left: 0;
+    min-height: 8rem;
+  }
+
+  .thesis-metric:last-child {
+    border-bottom: 0;
+  }
+
+}

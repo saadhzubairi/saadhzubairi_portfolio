@@ -41,7 +41,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data, onH = false }) => {
   return (
     <div
       onClick={handleClick}
-      className={cn('project-card cursor-pointer h-full', onH ? 'w-80' : '')}
+      className={cn('project-card cursor-pointer h-full', onH ? 'w-84' : '')}
     >
       <CutoutCard className={cn(cutoutCardSurfaceClassName, 'project-card-surface h-full flex flex-col', onH && 'mx-4')}>
         {/* Media — gradient backdrop + faux browser window, mirrors ProjectPage's Banner */}
@@ -49,19 +49,27 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data, onH = false }) => {
           <div className="absolute inset-0" style={{ background: gradient }} />
 
           <div className="project-card-title-band">
-            <motion.h3 className="project-card-media-title" variants={stagger.item}>
+            <motion.h3 className="project-card-media-title" variants={stagger.item}
+              initial={{ opacity: 0, y: 22 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.15, ease: [0.23, 0.74, 0.19, 1] }}
+            >
               {title}
             </motion.h3>
           </div>
 
           {screenshotSrc && (
-            <div className="project-card-shot">
+            <motion.div
+              initial={{ opacity: 0, y: 122 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.15, ease: [0.23, 0.74, 0.19, 1] }}
+              className="project-card-shot">
               <img
                 src={screenshotSrc}
                 alt={screenshotAlt}
                 className="project-card-shot-image"
               />
-            </div>
+            </motion.div>
           )}
 
           <CutoutCardOverlay />

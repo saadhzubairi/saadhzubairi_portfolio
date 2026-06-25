@@ -286,7 +286,7 @@ const EducationCard = ({
                 </span>
               ))}
               {thesis.length > 0 && (
-                <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300">
+                <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-400">
                   Thesis
                 </span>
               )}
@@ -302,12 +302,12 @@ const EducationCard = ({
               className="space-y-4"
             >
               {thesis.length > 0 && (
-                <div className="rounded-2xl bg-purple-100 dark:bg-purple-900/40 p-3">
-                  <p className="text-[11px] font-semibold uppercase tracking-wider text-purple-700 dark:text-purple-300 mb-1.5">
+                <div className="rounded-2xl bg-gray-100 dark:bg-gray-800/60 p-3">
+                  <p className="text-[11px] font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-500 mb-1.5">
                     Thesis
                   </p>
                   {thesis.map((t, i) => (
-                    <p key={i} className="text-sm text-purple-900 dark:text-purple-200 leading-relaxed">
+                    <p key={i} className="text-sm text-gray-800 dark:text-gray-200 leading-relaxed">
                       {t}
                     </p>
                   ))}

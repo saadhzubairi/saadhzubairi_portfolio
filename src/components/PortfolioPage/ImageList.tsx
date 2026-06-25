@@ -218,17 +218,23 @@ const MasonryImageList: React.FC = () => {
                             onClick={() => openLightbox(i)}
                             sx={{ cursor: "pointer", "&:hover img": { opacity: 0.85 } }}
                         >
-                            <img
-                                src={`/pics/${encodeURIComponent(file)}`}
-                                alt={file.replace(/\.[^.]+$/, "").replace(/[_~-]/g, " ")}
-                                loading="lazy"
-                                style={{
-                                    borderRadius: 8,
-                                    display: "block",
-                                    width: "100%",
-                                    transition: "opacity 0.2s",
-                                }}
-                            />
+                            
+                            <motion.div
+                                initial={{ opacity: 0, y: -160 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.25, delay: (i%20)*0.01, ease: [0.23, 0.74, 0.19, 1] }} >
+                                <img
+                                    src={`/pics/${encodeURIComponent(file)}`}
+                                    alt={file.replace(/\.[^.]+$/, "").replace(/[_~-]/g, " ")}
+                                    loading="lazy"
+                                    style={{
+                                        borderRadius: 4,
+                                        display: "block",
+                                        width: "100%",
+                                        transition: "opacity 0.2s",
+                                    }}
+                                />
+                            </motion.div>
                         </ImageListItem>
                     ))}
                 </ImageList>

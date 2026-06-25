@@ -81,25 +81,49 @@ const Home = () => {
         </div>
 
         <div className="home-hero-copy">
-          <p className="home-section-label">Portfolio / software / systems</p>
+          <p className="home-section-label">Software Engineer</p>
           <h1 className="home-hero-title">
-            Saad
-            <br />
-            Zubairi
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, ease: [0.23, 0.74, 0.19, 1] }}
+              className="">
+              Saad
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, ease: [0.23, 0.74, 0.19, 1] }}
+              className="">
+              Zubairi
+            </motion.div>
           </h1>
-          <div className="home-hero-role">
+          <motion.div
+            initial={{ opacity: 0, y: 22 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.15, ease: [0.23, 0.74, 0.19, 1] }}
+            className="home-hero-role">
             <RoleIsland />
-          </div>
+          </motion.div>
           <div className="home-action-row">
-            <Link
-              to="/portfolio"
-              className="home-action home-action-primary"
-            >
-              View my work
-              <ArrowRight className="h-4 w-4" />
-            </Link>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.0, ease: [0.23, 0.74, 0.19, 1] }}
+              className="">
+              <Link
+                to="/portfolio"
+                className="home-action home-action-primary"
+              >
+                View my work
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </motion.div>
 
-            <a
+            <motion.a
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1, ease: [0.23, 0.74, 0.19, 1] }}
               href="/SaadZ.pdf"
               target="_blank"
               rel="noopener noreferrer"
@@ -107,9 +131,16 @@ const Home = () => {
             >
               My resume
               <ArrowUpRight className="h-4 w-4" />
-            </a>
+            </motion.a>
 
-            <ContactExpandable triggerClassName="home-action" />
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2, ease: [0.23, 0.74, 0.19, 1] }}
+              className="">
+              <ContactExpandable triggerClassName="home-action" />
+
+            </motion.div>
           </div>
         </div>
 

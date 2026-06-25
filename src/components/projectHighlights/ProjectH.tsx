@@ -161,7 +161,7 @@ export const ProjectH: React.FC = () => {
     <section className="home-section home-index-section projecth" id="Featured">
       <div className="home-section-inner">
         <header className="home-section-heading">
-          <div className="home-section-number" aria-hidden="true">03</div>
+          <div className="home-section-number" aria-hidden="true">04</div>
           <div>
             <p className="home-section-label">Selected projects / built systems</p>
             <h2>Featured Projects</h2>
